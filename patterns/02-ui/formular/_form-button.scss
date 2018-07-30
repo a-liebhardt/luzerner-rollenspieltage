@@ -1,90 +1,113 @@
-[role='button'] {
-  button {
-    display: block;
-    border: 0;
-    color: $color--black;
-    padding: 0.2rem 0;
-    cursor: pointer;
-    position: relative;
-    background: transparent;
-    text-decoration: none;
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+  box-shadow: inset 0 0 0 $width $color;
+  color: $color;
+  transition: color $duration $duration/3;
+  position: relative;
 
-    &:hover,
-    &:active,
-    &:focus {
-      outline: none;
-    }
+  &::before,
+  &::after {
+    content: '';
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    pointer-events: none;
+    position: absolute;
+    width: 0; height: 0;
 
-    .label {
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == 'left', 'right', 'left');
+
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+
+  &::after {
+    $v-side: if($vertical == 'top', 'bottom', 'top');
+
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
       width: 100%;
       height: 100%;
-      z-index: 10;
-      text-decoration: none;
+    }
 
-      strong {
-        padding: 0rem 0.6rem;
-        font-size: 1.6rem;
-        text-decoration: none;
-      }
-
-      &.label-icon.label-text {
-        i {
-          svg {
-            transform: translateY(-0.1rem);
-          }
-        }
-      }
+    &::before {
+      transition-delay: 0s, 0s, $duration;
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 110%;
-      height: 110%;
-      max-width: 100%;
-      max-height: 100%;
-      padding: 0;
-      transition: all 100ms;
-      z-index: 5;
-      border-radius: 0.4rem;
+      transition-delay: 0s, $duration, 0s;
+    }
+  }
+}
+
+// .draw-border {
+//   @include btn-border-drawing(#58afd1, #ffe593, 4px, bottom, right);
+// }
+
+[role='button'] {
+
+  &[class*='col-'] {
+    display: block;
+  }
+
+  button {
+    @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, top, left, 200ms);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    padding: 1.2rem 4.2rem;
+    border-radius: 0.4rem;
+
+    label {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
     }
 
-    &.btn-text {
-      //min-width: 12rem;
-      //height: 5rem;
-      padding: 1.2rem 0.2rem;
-
-      .label {
-        width: 100%;
-        z-index: 10;
-        min-width: 17rem;
-
-        &[icon-pos='before-absolute'] {
-          padding-left: 0.4em;
-        }
-
-        &[icon-pos='after-absolute'] {
-          padding-right: 0.4em;
-        }
-      }
+    &:active {
+      outline: 0.2rem solid $color--yellow-40;
     }
 
-    &.btn-border {
-      background-color: transparent;
+    // https://codemyui.com/tag/button/
 
-      svg {
-        fill: $color--black;
-      }
+    // font-size: 2rem;
+    // color: $color--white;
+    // text-transform: uppercase;
+    // text-align: center;
+    // letter-spacing: 0.4rem;
+    // background: $color--black-5;
+    // padding: 0.8rem 4.2rem;
+    // transition: all 300ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    // transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    // border-radius: 0.3rem;
+    // cursor: pointer;
 
-      &::after {
-        //opacity: 0.3;
-        border-width: 0.2rem;
-        border-style: solid;
-        border-color: $color--black;
-      }
-    }
+    // label {
+    //   text-decoration: none;
+    //   color: $color--black-60;
+    //   cursor: pointer;
+    // }
+
+    // &:hover {
+    //   box-shadow: 0 2rem 0.5rem -1rem rgba($color--black, 0.4);
+    //   transform: translateY(0.4rem) scale(1.06);
+    // }
   }
 }

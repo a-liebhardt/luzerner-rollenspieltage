@@ -12,8 +12,12 @@ fieldset {
   padding: 0 0 2.4rem;
 
   & > legend {
-    font-weight: 300;
+    font-weight: $base--font-weight-semibold;
     font-size: 1.6rem;
+    margin: 0 0.4rem;
+    padding: 0 0 0.2rem;
+    border-bottom: 0.4rem solid $color--black-10;
+    width: calc(100% - 0.8rem);
   }
 }
 
