@@ -1,0 +1,22 @@
+status: prototype
+context:
+  navigation-class: "example-class"
+  navigation-role: "navigation"
+  navigation-items:
+    -
+      link-href: "#"
+      label-text: "Nav 1"
+      navigation-active: true
+    -
+      link-href: "#"
+      label-text: "Nav 2"
+      navigation-items:
+        -
+          link-href: "#"
+          label-text: "Sub 1"
+        -
+          link-href: "#"
+          label-text: "Sub 2"
+    -
+      link-href: "#"
+      label-text: "Nav 3"

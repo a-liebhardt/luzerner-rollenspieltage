@@ -1,0 +1,21 @@
+status: prototype
+context:
+  label-for: "demo-select-1"
+  label-text: "Demo Select Field 1"
+  select-id: "demo-select-1"
+  select-name: "demo[select-1]"
+  select-class: "example-select-class col-m-6"
+  select-role: "select"
+  select-items:
+    -
+      select-value: "-1"
+      select-label: "Demo Select Field 1"
+    -
+      select-value: "1"
+      select-label: "Opt 1"
+    -
+      select-value: "2"
+      select-label: "Opt 2"
+    -
+      select-value: "3"
+      select-label: "Opt 3"

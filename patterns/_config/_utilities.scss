@@ -1,0 +1,19 @@
+.u-hide {
+  display: none;
+}
+
+.u-no-bullet {
+  list-style-type: none;
+}
+
+%u-clearfix {
+  @include clearfix;
+}
+
+.u-hide-text {
+  @include hide-text;
+}
+
+.u-no-margin-top {
+  margin-top: 0;
+}

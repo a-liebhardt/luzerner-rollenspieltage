@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["env", {
+      "useBuiltIns": true
+    }]
+  ],
+  "plugins": [
+    "transform-proto-to-assign",
+    ["transform-es2015-classes", {
+      "loose": true
+    }]
+  ]
+}

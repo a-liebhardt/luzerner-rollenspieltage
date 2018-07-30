@@ -1,0 +1,7 @@
+status: prototype
+context:
+  main-nav-items: '@main-nav.items'
+  meta:
+    - Impressum
+    - Datenschutz
+    - Problem melden

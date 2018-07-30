@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="grid__row">
+      <div class="footer__nav">
+        {{> '@main-nav' modifier="main-nav--inverted main-nav--tight" items=main-nav-items}}
+      </div>
+    </div>
+    <div class="grid__row">
+      <div class="footer__meta">
+        <div class="footer__copyright">© 2018 Luzerner Rollenspieltage</div>
+        <ul class="footer__meta-nav">
+          {{#each meta}}
+            <li><a href="#">{{this}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+

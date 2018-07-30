@@ -1,0 +1,7 @@
+status: prototype
+context:
+  label-text: "Link Label Text"
+  label-icon: "arrow-right"
+  label-icon-pos: "before"
+  label-icon-modifier: "icon-xs"
+  link-href: "#"

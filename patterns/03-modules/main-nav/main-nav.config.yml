@@ -1,0 +1,42 @@
+status: prototype
+context:
+  items:
+    - text: Lorem Ipsum
+      items:
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+    - text: Lorem Ipsum
+      items:
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+    - text: Lorem Ipsum
+      items:
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+    - text: Lorem Ipsum
+      items:
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+        - Lorem Ipsum
+
+variants:
+  - name: inverted thight
+    context:
+      modifier: main-nav--inverted main-nav--tight
+      items: '@main-nav.items'

@@ -1,0 +1,25 @@
+<div class="table-wrapper">
+  <h4>Tabellentitel h4</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Format</th>
+        <th class="table--align-left">Format</th>
+        <th class="table--align-center">Format</th>
+        <th class="table--align-right">Format</th>
+        <th class="table--align-justify">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each rows}}
+        <tr>
+          <td>Row {{this}} with long copy</td>
+          <td class="table--align-left">Row {{this}}</td>
+          <td class="table--align-center">Row {{this}}</td>
+          <td class="table--align-right">Row {{this}}</td>
+          <td class="table--align-justify">Row {{this}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

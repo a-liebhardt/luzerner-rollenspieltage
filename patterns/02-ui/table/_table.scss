@@ -1,0 +1,57 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 4.5rem;
+  margin-top: 3rem;
+  text-align: left;
+
+  caption {
+    caption-side: bottom;
+    display: table-caption;
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.4em;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  th {
+    font-size: 1.8rem;
+    line-height: 1.4em;
+    vertical-align: top;
+    padding: 1rem 0;
+    text-align: left;
+    font-weight: normal;
+    font-weight: bold;
+
+    &:not(:first-child) {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  td {
+    border: 0.1rem solid $color--black-10;
+    font-size: 1.8rem;
+    line-height: 1.4em;
+    vertical-align: top;
+    text-align: left;
+    padding: 1.6rem 1.5rem;
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

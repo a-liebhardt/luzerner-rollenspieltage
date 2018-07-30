@@ -1,0 +1,9 @@
+{{#if navigation-items}}
+  <{{#if navigation-ol}}ol{{else}}ul{{/if}} {{#if navigation-role}}role="{{navigation-role}}"{{/if}} {{#if navigation-class}}class="{{navigation-class}}"{{/if}}>
+    {{#each navigation-items}}
+      <li class="{{#if navigation-current}}current{{/if}} {{#if navigation-active}}active{{/if}} {{navigation-class}}" {{{navigation-attr}}}>
+        {{> @navlist-item}}
+      </li>
+    {{/each}}
+  </{{#if navigation-ol}}ol{{else}}ul{{/if}}>
+{{/if}}

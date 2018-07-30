@@ -1,0 +1,80 @@
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+
+  svg {
+    display: inline-flex;
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    fill: currentColor;
+    pointer-events: none;
+  }
+
+  use {
+    pointer-events: none;
+  }
+
+  &.icon-xxs {
+    svg {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+
+  &.icon-xs {
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &.icon-s {
+    svg {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+
+  &.icon-l {
+    svg {
+      width: 3.75rem;
+      height: 3.75rem;
+    }
+  }
+
+  &.icon-xl {
+    svg {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  &.icon-xxl {
+    svg {
+      width: 5.25rem;
+      height: 5.25rem;
+    }
+  }
+}
+
+// sprite with all icons as symbol
+//stylelint-disable declaration-no-important
+.icon__sprite {
+  position: fixed !important;
+  left: -9999rem !important;
+  width: 0.1rem !important;
+  overflow: hidden !important;
+}
+//stylelint-enable declaration-no-important
+
+
+// inlinesvg support reset
+// ----------------------------------------------------------
+.inlinesvg .icon {
+  background-repeat: repeat;
+  background-size: auto auto;
+}

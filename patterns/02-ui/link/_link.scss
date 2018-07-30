@@ -1,0 +1,12 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+
+  label {
+    cursor: pointer;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

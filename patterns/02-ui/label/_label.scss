@@ -1,0 +1,73 @@
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  i {
+    position: relative;
+    width: auto;
+  }
+
+  strong {
+    font-weight: $base--font-weight-regular;
+  }
+
+  &[icon-pos='before'] {
+    i {
+      order: 1;
+    }
+
+    strong {
+      order: 2;
+      padding-left: 1rem;
+    }
+  }
+
+  &[icon-pos='after'] {
+    i {
+      order: 2;
+    }
+
+    strong {
+      order: 1;
+      padding-right: 1rem;
+    }
+  }
+
+  &[icon-pos='before-absolute'] {
+    padding-left: 3em;
+
+    i {
+      position: absolute;
+      left: 0.95em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &[icon-pos='after-absolute'] {
+    padding-right: 3em;
+
+    i {
+      position: absolute;
+      right: 0.95em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.bold {
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &.align-left {
+    justify-content: flex-start;
+  }
+
+  &.align-right {
+    justify-content: flex-end;
+  }
+}

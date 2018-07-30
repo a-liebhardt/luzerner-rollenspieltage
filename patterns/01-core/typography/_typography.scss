@@ -1,0 +1,252 @@
+html,
+body {
+  font-family: $base--font-family;
+  font-weight: $base--font-weight-regular;
+  font-style: normal;
+  font-size: $base--font-size;
+  line-height: 1.6;
+  color: $color--black;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $base--font-family;
+  font-weight: $base--font-weight-bold;
+  font-style: normal;
+  text-rendering: auto;
+  color: $color--black;
+  line-height: 1.6;
+  margin: 0 0 1.6em;
+}
+
+h1,
+.h1 {
+  font-size: 2.8rem;
+}
+
+h2,
+.h2 {
+  font-size: 2.4rem;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.7rem;
+}
+
+h6,
+.h6 {
+  font-size: 1.7rem;
+}
+
+i {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: $base--font-weight-bold;
+}
+
+span,
+label {
+  font-family: $base--font-family;
+  font-weight: inherit;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-rendering: auto;
+}
+
+figcaption {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: $base--font-family;
+  font-weight: $base--font-weight-regular;
+}
+
+q {
+  font-weight: $base--font-weight-bold;
+
+  &::before {
+    content: '\00ab';
+  }
+
+  &::after {
+    content: '\00bb';
+  }
+}
+
+a {
+  color: inherit;
+  font-weight: $base--font-weight-regular;
+}
+
+p {
+  font-family: $base--font-family;
+  font-weight: $base--font-weight-light;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  text-rendering: auto;
+
+  strong {
+    font-weight: $base--font-weight-bold;
+  }
+
+  a,
+  a * {
+    &:not([role='button']) {
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+
+  a {
+    font-weight: $base--font-weight-regular;
+
+    &:not([role='button']) {
+      &:hover {
+        color: inherit;
+        opacity: 0.6;
+        text-decoration: underline;
+      }
+
+      &:active {
+        opacity: 0.6;
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
+  }
+}
+
+pre {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+code {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 1.6em;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: $base--font-weight-light;
+
+  li {
+    margin-bottom: 1.2rem;
+  }
+
+  ul,
+  ol {
+    margin-top: 1.2rem;
+    margin-left: 0;
+  }
+}
+
+ul:not([role]) {
+  list-style: none;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: '\2013';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.6em;
+    }
+  }
+}
+
+ol:not([role]) {
+  list-style: none;
+  counter-reset: ol-counter;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: counter(ol-counter) '.';
+      counter-increment: ol-counter;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.6em;
+    }
+  }
+}
+
+hr {
+  border: 0.1rem solid $color--black;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+small {
+  font-size: 1rem;
+}
+
+blockquote {
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    position: relative;
+    color: $color--black-40;
+    margin: 1.6rem 0;
+
+    &::before {
+      content: '\00ab';
+      font-size: 1em;
+      display: inline-block;
+      padding-right: 0.2em;
+    }
+
+    &::after {
+      content: '\00bb';
+      font-size: 1em;
+      display: inline-block;
+      padding-left: 0.2em;
+    }
+  }
+
+  footer {
+    font-size: 1.6rem;
+    font-weight: $base--font-weight-light;
+    width: 75%;
+    color: $color--black-80;
+  }
+}

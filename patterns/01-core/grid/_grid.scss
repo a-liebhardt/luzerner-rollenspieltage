@@ -1,0 +1,83 @@
+$breakpoints: xs, s, m, l, xl, xxl;
+$sizes: #{$mq-xs}, #{$mq-s}, #{$mq-m}, #{$mq-l}, #{$mq-xl}, #{$mq-xxl};
+$grid-gap: 1rem;
+
+.container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: $page-maxWidth;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  [class*='col-'] {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    margin: 0 auto #{$grid-gap};
+    width: 100%;
+    max-width: 100%;
+    transition: max-width 300ms ease-in-out;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    @media screen and (min-width: nth($sizes, $i)) {
+      $mq: nth($breakpoints, $i);
+
+      .col-#{$mq}-0 {
+        width: 0;
+        max-width: 0;
+        overflow: hidden;
+      }
+
+      @for $j from 1 through 12 {
+        .col-#{$mq}-#{$j} {
+          max-width: calc(100% / 12 * #{$j} - #{$grid-gap});
+        }
+      }
+    }
+  }
+}
+
+// Make grid visible for demonstration
+.row .show-grid,
+.show-grid .row {
+  [class*='col-'] {
+    position: relative;
+    padding: 0.8rem 1.6rem;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 2px solid magenta;
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.4em;
+    }
+
+    i {
+      white-space: nowrap;
+    }
+
+    @for $i from 1 through length($breakpoints) {
+      @media screen and (min-width: nth($sizes, $i)) {
+        $mq: nth($breakpoints, $i);
+
+        .marker-#{$mq} {
+          color: magenta;
+        }
+      }
+    }
+  }
+}

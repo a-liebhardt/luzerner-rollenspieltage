@@ -1,0 +1,5 @@
+status: prototype
+context:
+  fieldset-name: "example-fieldset-name"
+  fieldset-class: "example-fieldset-class"
+  fieldset-legend: "Fieldset Legend"

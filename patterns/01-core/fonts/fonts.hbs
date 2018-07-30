@@ -1,0 +1,14 @@
+<ul class="font-list" role="list">
+    {{#each items}}
+    <li>
+        <small>{{family}}</small>
+        {{#each ../sizes}}
+        <p>
+          <span style="font-family:{{../family}}; font-weight:{{../weight}}; font-size:{{size}};">Aa</span>
+          <i style="font-family:{{../family}}; font-weight:{{../weight}}; font-size:{{size}};">Aa</i>
+        </p>
+        <small>{{../label}}, {{size}}</small>
+        {{/each}}
+    </li>
+    {{/each}}
+</ul>

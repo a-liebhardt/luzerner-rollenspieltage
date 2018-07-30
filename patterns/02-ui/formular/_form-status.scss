@@ -1,0 +1,198 @@
+// STATES
+[data-info] {
+  margin-bottom: 2.4rem;
+
+  &[role='text'],
+  &[role='password'],
+  &[role='email'],
+  &[role='number'],
+  &[role='url'],
+  &[role='tel'],
+  &[role='time'],
+  &[role='date'],
+  &[role='datetime'],
+  &[role='month'],
+  &[role='week'],
+  &[role='search'],
+  &[role='range'],
+  &[role='reset'] {
+    &::after {
+      content: attr(data-info);
+      position: absolute;
+      z-index: 100;
+      bottom: -3rem;
+      left: -0.1rem;
+      min-height: 3rem;
+      display: block;
+      padding: 0.4rem 3.6rem 0.4rem 1.6rem;
+      font-size: 1.4rem;
+      color: $color--black;
+      padding-right: 2.8rem;
+      background: no-repeat right center;
+      background-image: inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28"><path fill="' + $color--black-40 + '" d="M16 6.667c-5.2 0-9.333 4.133-9.333 9.333s4.133 9.333 9.333 9.333c5.2 0 9.333-4.133 9.333-9.333s-4.133-9.333-9.333-9.333zM16 24c-4.4 0-8-3.6-8-8s3.6-8 8-8c4.4 0 8 3.6 8 8s-3.6 8-8 8z"></path><path fill="' + $color--black + '" d="M17.333 26.667v-16h-4v1.333h2.667v14.667h-2.667v1.333h6.667v-1.333h-2.667z"></path><path fill="' + $color--black + '" d="M16 8h1.333v-2.667h-1.333v2.667z"></path></svg>');
+    }
+  }
+
+  &[role='select'] {
+    .selection-container {
+      &::after {
+        content: attr(data-info);
+        position: absolute;
+        z-index: 100;
+        bottom: -3rem;
+        width: 100%;
+        min-height: 3rem;
+        display: block;
+        padding: 0.4rem 3.6rem 0.4rem 1.6rem;
+        font-size: 1.4rem;
+        color: $color--black;
+      }
+    }
+  }
+
+  &[role='textarea'] {
+    .text-container {
+      &::after {
+        content: attr(data-info);
+        position: absolute;
+        z-index: 100;
+        bottom: -3rem;
+        left: -0.1rem;
+        width: calc(100% + 0.2rem);
+        min-height: 3rem;
+        display: block;
+        padding: 0.4rem 3.6rem 0.4rem 1rem;
+        font-size: 1.4rem;
+        color: $color--black;
+      }
+    }
+  }
+}
+
+[data-error] {
+  margin-bottom: 2.4rem;
+  border-color: $color--red;
+
+  span {
+    &.liner {
+      &::before {
+        border-color: $color--red;
+      }
+    }
+  }
+
+  .label {
+    //color: $color--red;
+  }
+
+  &[role='text'],
+  &[role='password'],
+  &[role='email'],
+  &[role='number'],
+  &[role='url'],
+  &[role='tel'],
+  &[role='time'],
+  &[role='date'],
+  &[role='datetime'],
+  &[role='month'],
+  &[role='week'],
+  &[role='search'],
+  &[role='range'],
+  &[role='reset'] {
+    //border-bottom-color: $color--red;
+
+    &::after {
+      content: attr(data-error);
+      position: absolute;
+      z-index: 100;
+      bottom: -3rem;
+      left: -0.1rem;
+      width: calc(100% + 0.2rem);
+      min-height: 3rem;
+      display: block;
+      padding: 0.4rem 3.6rem 0.4rem 1.6rem;
+      font-size: 1.4rem;
+      color: $color--white;
+      background: $color--red;
+    }
+  }
+
+  &[role='radio'],
+  &[role='checkbox'] {
+    &::after {
+      bottom: -2rem;
+    }
+  }
+
+  &[role='select'] {
+    .selection-container {
+      &::after {
+        content: attr(data-error);
+        position: absolute;
+        z-index: 100;
+        bottom: -3rem;
+        width: 100%;
+        min-height: 3rem;
+        display: block;
+        padding: 0.4rem 3.6rem 0.4rem 1.6rem;
+        font-size: 1.4rem;
+        color: $color--white;
+        background: $color--red;
+      }
+
+      select {
+        //color: $color--red;
+        border-color: $color--red;
+      }
+    }
+  }
+
+  &[role='textarea'] {
+    .text-container {
+      textarea {
+        color: $color--red;
+        border-color: $color--red;
+      }
+
+      &::after {
+        content: attr(data-error);
+        position: absolute;
+        z-index: 100;
+        bottom: -3rem;
+        left: -0.1rem;
+        width: calc(100% + 0.2rem);
+        min-height: 3rem;
+        display: block;
+        padding: 0.4rem 3.6rem 0.4rem 1rem;
+        font-size: 1.4rem;
+        color: $color--white;
+        background: $color--red;
+      }
+    }
+  }
+}
+
+/* input:invalid {
+  color: $color--red;
+  border-color: $color--red;
+}
+
+input:invalid ~ div,
+input:invalid ~ span {
+  color: $color--red;
+
+  &::before {
+    border-color: $color--red;
+  }
+
+  &::after {
+    content: attr(data-error);
+    font-size: 1.4rem;
+    display: block;
+    color: $color--white;
+    background: $color--red;
+    position: absolute;
+    bottom: -3rem;
+    padding: 0.4rem 0.8rem;
+  }
+} */

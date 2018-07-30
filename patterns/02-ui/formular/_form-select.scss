@@ -1,0 +1,89 @@
+[role='select'] {
+  position: relative;
+  border-bottom: 0.1rem solid $color--black-20;
+
+  label {
+    padding: 0.8rem 1.6rem 0;
+    display: inline-block;
+    opacity: 0;
+    transition: all 100ms ease-in-out;
+  }
+
+  select {
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    color: $color--black;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-family: $base--font-family;
+    font-weight: $base--font-weight-light;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0.4rem 1rem 1.6rem 1.6rem;
+    position: relative;
+    z-index: 100;
+    transform: translateY(-0.4em);
+    transition: all 300ms ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:focus:valid {
+      outline: 0;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    option {
+      color: $color--black;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+      color: $color--black;
+
+      &::-ms-value {
+        color: $color--black;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.has-content {
+    label {
+      opacity: 1;
+      padding: 0.8rem 1.6rem 0;
+    }
+
+    select {
+      transform: translateY(0);
+      padding: 0.8rem 1rem 1.2rem 1.6rem;
+      color: $color--black;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: no-repeat center center;
+    background-image: inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="' + $color--black + '" d="M27.6 10.667l-11.6 11.6-11.467-11.6-1.067 1.067 12.533 12.4 12.533-12.4z"></path></svg>');
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &[disabled] {
+    border-color: $color--black-20;
+  }
+}

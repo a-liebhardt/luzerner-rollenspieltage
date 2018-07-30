@@ -1,0 +1,18 @@
+status: wip
+context:
+  colors:
+    'white': "rgb(255,255,255);Weiss"
+    'black': "rgb(0,0,0);Schwarz"
+    'black-':
+      '80': "#333333"
+      '60': "#666666"
+      '40': "#999999"
+      '20': "#CCCCCC"
+      '10': "#E5E5E5"
+      '5': "#fafafa"
+    'red': "rgb(255,0,0);Signal Red"
+    'blue': "rgb(0,0,255);Signal Blue"
+    'green': "rgb(0,255,0);Signal Green"
+    'yellow': "rgb(255,255,0);Signal Yellow"
+    'orange': "#F49E00;Signal Orange"
+    'lightgreen': "#A5C400;Signal Lightgreen"

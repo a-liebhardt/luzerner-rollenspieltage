@@ -1,0 +1,186 @@
+[role='input'],
+[role='text'],
+[role='password'],
+[role='email'],
+[role='number'],
+[role='url'],
+[role='tel'],
+[role='search'] {
+  display: flex;
+  flex-direction: column;
+  // border: 0.1rem solid $color--black;
+  border-bottom: 0.1rem solid $color--black-20;
+
+  label {
+    padding: 0.8rem 1.6rem 0;
+    display: inline-block;
+    opacity: 0;
+    transition: all 100ms ease-in-out;
+    order: -1;
+  }
+
+  input {
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    color: $color--black;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-family: $base--font-family;
+    font-weight: $base--font-weight-light;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0.4rem 1rem 1.6rem 1.6rem;
+    position: relative;
+    z-index: 100;
+    transform: translateY(-0.4em);
+    transition: all 300ms ease-in-out;
+
+    &:focus:valid {
+      outline: 0;
+    }
+  }
+
+  &.has-content {
+    label {
+      opacity: 1;
+      padding: 0.8rem 1.6rem 0;
+    }
+
+    input {
+      transform: translateY(0);
+      padding: 0.8rem 1rem 1.2rem 1.6rem;
+    }
+  }
+}
+
+[role='time'],
+[role='date'],
+[role='datetime'],
+[role='month'],
+[role='week'] {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid $color--black;
+
+  label {
+    padding: 0.8rem 1.6rem 0;
+    display: inline-block;
+    //opacity: 0;
+    transition: all 100ms ease-in-out;
+    opacity: 1;
+    order: -1;
+  }
+
+  input {
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    color: $color--black-60;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-family: $base--font-family;
+    font-weight: $base--font-weight-light;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0.8rem 0 1.2rem 1.6rem;
+    position: relative;
+    z-index: 100;
+    //transform: translateY(-0.4em);
+    transition: all 300ms ease-in-out;
+
+    &::-webkit-datetime-edit-week-field {
+      color: $color--black-60;
+    }
+
+    &::-webkit-datetime-edit-month-field {
+      color: $color--black-60;
+    }
+
+    &::-webkit-datetime-edit-day-field {
+      color: $color--black-60;
+    }
+
+    &::-webkit-datetime-edit-year-field {
+      color: $color--black-60;
+    }
+
+    &::-webkit-clear-button {
+      font-size: 1.6rem;
+      height: 3rem;
+      margin-right: 0;
+    }
+
+    &::-webkit-inner-spin-button {
+      opacity: 0;
+    }
+
+    &::-webkit-datetime-edit {
+
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      color: transparent;
+      background: no-repeat center center;
+      background-image: inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="' + $color--black + '" d="M15.333 26h1.333v-5.333h5.333v-1.333h-5.333v-5.333h-1.333v5.333h-5.333v1.333h5.333z"></path><path fill="' + $color--black + '" d="M25.333 2.667v-1.333h-1.333v1.333h-16v-1.333h-1.333v1.333h-5.333v28h29.333v-28h-5.333zM29.333 29.333h-26.667v-18.667h26.667v18.667zM29.333 9.333h-26.667v-5.333h4v1.333h1.333v-1.333h16v1.333h1.333v-1.333h4v5.333z"></path></svg>');
+      width: 1.6rem;
+      height: 1.6rem;
+      transform: translateX(-1rem);
+    }
+
+    &:focus:valid {
+      outline: 0;
+    }
+  }
+
+  &.has-content {
+    strong {
+      //opacity: 1;
+      //padding: 0.8rem 1.6rem 0;
+    }
+
+    input {
+      transform: translateY(0);
+      //padding: 0.6rem 1rem 1.2rem 1.6rem;
+      color: $color--black;
+
+      &::-webkit-datetime-edit-week-field {
+        color: $color--black;
+      }
+
+      &::-webkit-datetime-edit-month-field {
+        color: $color--black;
+      }
+
+      &::-webkit-datetime-edit-day-field {
+        color: $color--black;
+      }
+
+      &::-webkit-datetime-edit-year-field {
+        color: $color--black;
+      }
+
+      &::-webkit-calendar-picker-indicator {
+        background-image: inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="' + $color--black + '" d="M13.333 26.267l9.867-9.733-1.067-1.067-8.8 8.933-3.467-3.6-1.067 1.067z"></path><path fill="' + $color--black + '" d="M25.333 2.667v-1.333h-1.333v1.333h-16v-1.333h-1.333v1.333h-5.333v28h29.333v-28h-5.333zM29.333 29.333h-26.667v-18.667h26.667v18.667zM2.667 9.333v-5.333h4v1.333h1.333v-1.333h16v1.333h1.333v-1.333h4v5.333h-26.667z"></path></svg>');
+      }
+    }
+  }
+
+  &[data-valid-label] {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &[data-error-label] {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &[disabled] {
+    border-color: $color--black-20;
+  }
+}

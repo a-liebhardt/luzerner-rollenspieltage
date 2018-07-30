@@ -1,0 +1,29 @@
+{
+  "extends": "stylelint-config-partystreusel",
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "comment-empty-line-before": [ "always", {
+      "ignore": ["stylelint-commands", "after-comment"]
+    } ],
+    "declaration-colon-space-after": "always",
+    "indentation": ["space", {
+      "except": ["value"],
+      "ignore": ["inside-parens", "param", "value"],
+      "indentInsideParens": "once-at-root-twice-in-block"
+    }],
+    "max-empty-lines": 2,
+    "rule-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    } ],
+    "unit-whitelist": ["em", "rem", "%", "s", "vh", "vw", "px", "ms", "s", "fr", "deg"],
+    "at-rule-no-unknown": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "length-zero-no-unit": null,
+    "selector-max-specificity": null,
+    "selector-class-pattern": null,
+    "max-nesting-depth": null,
+    "no-descending-specificity": null
+  }
+}

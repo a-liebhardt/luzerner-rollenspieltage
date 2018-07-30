@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+  // Is needed for a "sticky footer".
+  > main {
+    min-height: calc(100vh - 22.9rem); // REM value is a sum of header + footer + footer margin.
+  }
+}
+
+#back-to-top {
+  padding: 6.9rem 0 0;
+  display: block;
+}
+
+body {
+  // Viewport overlay handling
+  &.viewport-freeze {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 0;
+    opacity: 0;
+    background: rgba($color--black, 0.32);
+    transition: opacity 300ms ease-in-out;
+  }
+
+  &.overlay {
+    &::after {
+      max-height: 100%;
+      opacity: 1;
+    }
+  }
+
+  // Importing CSS Breakpoints Into JavaScript
+  // https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+  &::before {
+    content: 'mobile';
+    // Prevent from displaying.
+    display: none;
+  }
+
+  @media screen and (min-width: #{$mq-m}) {
+    &::before {
+      content: 'tablet';
+    }
+  }
+
+  @media screen and (min-width: #{$mq-l}) {
+    &::before {
+      content: 'desktop';
+    }
+  }
+}

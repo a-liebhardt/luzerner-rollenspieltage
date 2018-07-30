@@ -1,0 +1,88 @@
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  object-fit: contain;
+  // Polyfill-Notation for object-fit-images
+  font-family: 'object-fit: contain;';
+  display: inline-block;
+
+  &.cover {
+    object-fit: cover;
+    // Polyfill-Notation for object-fit-images
+    font-family: 'object-fit: cover;';
+    height: 100%;
+  }
+
+  &.scale-in {
+    transform: scale(1.05);
+    transition: all 600ms ease-in-out;
+
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  &.scale-out {
+    transform: scale(1);
+    transition: all 600ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+figure,
+picture {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  display: block;
+
+  &.cover {
+    height: 100%;
+  }
+
+  &.scale-in {
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &.scale-out {
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+figcaption {
+  font-size: 1.344rem;
+}
+
+// Medium
+// ----------------------------------------
+@media screen and (min-width: $mq-m) {
+  figcaption {
+    font-size: 1.288rem;
+  }
+}
+
+// LARGE
+// ----------------------------------------
+@media screen and (min-width: $mq-l) {
+  figcaption {
+    font-size: 1.4rem;
+  }
+}

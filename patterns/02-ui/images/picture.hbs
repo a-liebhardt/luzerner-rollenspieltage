@@ -1,0 +1,10 @@
+<picture {{#if picture-title}}title="{{picture-title}}"{{/if}} {{#if picture-class}}class="{{picture-class}}"{{/if}}>
+  {{#if picture-source-xxl}}<source srcset="{{picture-source-xxl}}" media="(min-width: 2400px)">{{/if}}
+  {{#if picture-source-xl}}<source srcset="{{picture-source-xl}}" media="(min-width: 1200px)">{{/if}}
+  {{#if picture-source-l}}<source srcset="{{picture-source-l}}" media="(min-width: 1000px)">{{/if}}
+  {{#if picture-source-m}}<source srcset="{{picture-source-m}}" media="(min-width: 800px)">{{/if}}
+  {{#if picture-source-s}}<source srcset="{{picture-source-s}}" media="(min-width: 600px)">{{/if}}
+  {{#if picture-source-xs}}<source srcset="{{picture-source-xs}}" media="(min-width: 400px)">{{/if}}
+  {{#if picture-source-xxs}}<source srcset="{{picture-source-xxs}}" >{{/if}}
+  {{> @image}}
+</picture>

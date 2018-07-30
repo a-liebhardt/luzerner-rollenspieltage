@@ -1,0 +1,8 @@
+<label {{#if label-for}}for="{{label-for}}"{{/if}} class="{{#if label-icon}}label-icon{{/if}} {{#if label-text}}label-text{{/if}} {{label-class}}" {{#if label-icon-pos}}icon-pos="{{label-icon-pos}}"{{/if}} {{#if label-error}}data-error="{{label-error}}"{{/if}} >
+  {{#if label-icon}}
+    {{> @icon icon-name=label-icon icon-modifier=label-icon-modifier}}
+  {{/if}}
+  {{#if label-text}}
+    <strong>{{{label-text}}}</strong>
+  {{/if}}
+</label>
