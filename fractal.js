@@ -222,8 +222,7 @@ const distribute = function (args, done) {
   const copyAssetsTo = (source, target) => {
     const list = fs.readdirSync(source);
     for (var i = 0; i < list.length; i++) {
-      const filepath = path.join(source, list[i]);
-      const filename = filepath.split('/').slice(-1)[0];
+      const filename = list[i];
       fs.copyFile(path.join(__dirname, `${source}${filename}`), path.join(__dirname, `${target}${filename}`), (err) => {
         if (err) throw err;
         console.log(`Build ready for '${target}${filename}'`);
