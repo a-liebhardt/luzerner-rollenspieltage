@@ -48,18 +48,28 @@
 @mixin font-face($name, $filepath, $weight:normal, $style:normal) {
   @font-face {
     font-family: '#{$name}';
-    src: url($filepath + '.eot');
-    src: url('#{$filepath}.eot?#iefix') format('embedded-opentype'),
-        url('#{$filepath}.woff2') format('woff2'),
-        url('#{$filepath}.woff') format('woff'),
-        url('#{$filepath}.ttf')  format('truetype'),
-        url('#{$filepath}.svg##{$name}') format('svg');
+    // src: url($filepath + '.eot');
+    // src: url('#{$filepath}.eot?#iefix') format('embedded-opentype'),
+    //     url('#{$filepath}.woff2') format('woff2'),
+    //     url('#{$filepath}.woff') format('woff'),
+    //     url('#{$filepath}.ttf') format('truetype'),
+    //     url('#{$filepath}.svg##{$name}') format('svg');
+    src: url('#{$filepath}.ttf');
     font-weight: $weight;
     font-style: $style;
     font-stretch: normal;
   }
 }
 
-// @include font-face('Frutiger', '../fonts/Frutiger-LT-W01-45-Light', $base--font-weight-light, normal);
-// @include font-face('Frutiger', '../fonts/Frutiger-LT-W01-55-Roman', $base--font-weight-regular, normal);
-// @include font-face('Frutiger', '../fonts/Frutiger-LT-W01-65-Bold', $base--font-weight-bold, normal);
+// https://fonts.google.com/
+// @include font-face('Ubuntu', '../fonts/Ubuntu-Light', $base--font-weight-light, normal);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-LightItalic', $base--font-weight-light, italic);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-Regular', $base--font-weight-regular, normal);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-Italic', $base--font-weight-regular, italic);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-Medium', $base--font-weight-medium, normal);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-MediumItalic', $base--font-weight-medium, italic);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-Bold', $base--font-weight-bold, normal);
+// @include font-face('Ubuntu', '../fonts/Ubuntu-BoldItalic', $base--font-weight-bold, italic);
+// @include font-face('Gloria Hallelujah', '../fonts/GloriaHallelujah', $base--font-weight-regular, normal);
+
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ubuntu:300,300i,400,400i,500,700');

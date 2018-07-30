@@ -135,7 +135,7 @@ const updateColor = function (args, done) {
         }
 
         // Create the RGB variable
-        newColorsSection += `${currentColorId}: rgb(${rgbValue[0]}, ${rgbValue[1]}, ${rgbValue[2]});\n${endOfLine}`;
+        newColorsSection += `${currentColorId}: rgb(${rgbValue[0]}, ${rgbValue[1]}, ${rgbValue[2]});${endOfLine}`;
       }
       if (level == 0) {
         // Close group

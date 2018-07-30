@@ -1,7 +1,7 @@
 {
   "name": "luzerner-rollenspieltage",
-  "title": "Luzerner Rollenspieltage Styleguide",
-  "description": "## Getting started",
+  "title": "Luzerner Rollenspieltage Pattern library",
+  "description": "Pattern library for development, testing and deployment of the 'Luzerner Rollenspieltage' webpage",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Luzerner Rollenspieltage",

@@ -23,15 +23,15 @@ module.exports = () => {
           loaders: ['babel-loader', 'eslint-loader'],
           exclude: [/node_modules/],
         },
-        {
-          test: /\.(woff2?|ttf|otf|eot)$/,
-          loader: 'file-loader',
-          exclude: /node_modules/,
-          options: {
-            name: '[name].[ext]',
-            outputPath: '../fonts/',
-          },
-        },
+        // {
+        //   test: /\.(woff2?|ttf|otf|eot)$/,
+        //   loader: 'file-loader',
+        //   exclude: /node_modules/,
+        //   options: {
+        //     name: '[name].[ext]',
+        //     outputPath: '../fonts/',
+        //   },
+        // },
         {
           test: /\.scss$/,
           use: [
@@ -72,7 +72,12 @@ module.exports = () => {
         allChunks: true,
       }),
       new CopyWebpackPlugin([
-        { from: 'patterns/**/*.json', to: '../rest/', flatten: true }
+        { from: 'patterns/static/*', to: '../', flatten: true },
+        { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
+        { from: 'patterns/**/*.ttf', to: '../fonts/', flatten: true },
+        { from: 'patterns/**/*.otf', to: '../fonts/', flatten: true },
+        { from: 'patterns/**/*.eot', to: '../fonts/', flatten: true },
+        { from: 'patterns/**/*.woff2', to: '../fonts/', flatten: true }
       ], {
         debug: false,
         context: __dirname,

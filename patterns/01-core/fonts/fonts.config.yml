@@ -10,13 +10,21 @@ context:
   items:
     -
       label: 'Light'
-      family: 'Frutiger'
+      family: 'Ubuntu'
       weight: '300'
     -
       label: 'Roman'
-      family: 'Frutiger'
+      family: 'Ubuntu'
       weight: '400'
     -
+      label: 'Medium'
+      family: 'Ubuntu'
+      weight: '500'
+    -
       label: 'Bold'
-      family: 'Frutiger'
+      family: 'Ubuntu'
       weight: '700'
+    -
+      label: 'Roman'
+      family: 'Gloria Hallelujah'
+      weight: '400'
