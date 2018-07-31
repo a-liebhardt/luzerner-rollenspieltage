@@ -11,4 +11,39 @@ exports.init = (() => {
 
     return value;
   };
+
+  // Update scroll information
+  let lastScrollPosition = 0;
+  let ticking = false;
+
+  const updateScroll = (scrollPos) => {
+    if (lastScrollPosition > scrollPos) {
+      document.body.classList.add('up');
+      document.body.classList.remove('down');
+    } else {
+      document.body.classList.add('down');
+      document.body.classList.remove('up');
+    }
+
+    if (scrollPos) {
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+  };
+
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        //updateScroll(window.scrollY);
+        //lastScrollPosition = window.scrollY;
+        updateScroll(window.pageYOffset); // IE11
+        lastScrollPosition = window.pageYOffset; // IE11
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
 });

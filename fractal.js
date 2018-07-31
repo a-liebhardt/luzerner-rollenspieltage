@@ -189,6 +189,7 @@ const distribute = function (args, done) {
   };
 
   const clonePages = (pageBody) => {
+    let files = 0;
     for (let item of app.components.flatten()) {
       if (item.relViewPath.match(/^pages\//g)) {
         if (item.status.label === 'Ready') {
@@ -202,11 +203,15 @@ const distribute = function (args, done) {
             // Write file to dest
             fs.writeFile(path.join(__dirname, `${root}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
               if (err) throw err;
+              files++;
               console.log(`Build ready for '${root}${item.handle}.html'`);
             });
           });
         }
       }
+    }
+    if (!files) {
+      console.warn(`Warning: No page available. Please make sure to ready pages in order to distribute.`);
     }
   };
 
@@ -248,6 +253,11 @@ const distribute = function (args, done) {
       fs.mkdir(path.join(__dirname, `${root}images/`), (err) => {
         if (err) throw err;
         copyAssetsTo('build/images/', `${root}images/`);
+      });
+
+      fs.mkdir(path.join(__dirname, `${root}fonts/`), (err) => {
+        if (err) throw err;
+        copyAssetsTo('build/fonts/', `${root}fonts/`);
       });
     });
   });
