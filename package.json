@@ -89,7 +89,8 @@
     "underscore": "^1.9.1",
     "moment": "^2.22.2",
     "validate.js": "^0.12.0",
-    "form-serialize": "^0.7.2"
+    "form-serialize": "^0.7.2",
+    "flatpickr": "^4.5.1"
   },
   "homepage": "https://github.com/a-liebhardt/luzerner-rollenspieltage#readme",
   "main": ".eslintrc.js",

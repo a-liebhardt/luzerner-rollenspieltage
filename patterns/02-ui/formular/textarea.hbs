@@ -1,5 +1,5 @@
 {{#with textarea}}
-<section {{#if textarea-class}}class="form-group {{textarea-class}}"{{/if}} role="textbox">
+<section class="form-group {{textarea-class}}" role="textbox">
   <textarea {{#if textarea-id}}id="{{textarea-id}}"{{/if}} {{#if textarea-name}}name="{{textarea-name}}"{{/if}} {{#if textarea-placeholder}}placeholder="{{textarea-placeholder}}"{{/if}} {{#if textarea-info}}data-info="{{textarea-info}}"{{/if}} {{#if textarea-error}}data-error="{{textarea-error}}"{{/if}} {{#if textarea-readonly}}readonly{{/if}} {{#if textarea-disabled}}disabled{{/if}} {{#if textarea-required}}required{{/if}} {{{textarea-attr}}}>{{textarea-value}}</textarea>
   {{> @label}}
   <aside class="messages"></aside>
