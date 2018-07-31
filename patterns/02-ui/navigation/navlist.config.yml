@@ -1,22 +1,42 @@
 status: prototype
 context:
-  navigation-class: "example-class"
   navigation-role: "navigation"
+  navigation-class: "example-class"
   navigation-items:
     -
-      link-href: "#"
-      label-text: "Nav 1"
+      link:
+        link-href: "#"
+        label:
+          label-role: "note"
+          label-text: "Nav 1"
+          icon:
+            icon-name: "arrow-right"
+            icon-pos: "after"
+            icon-class: "icon-xs"
       navigation-active: true
+      navigation-role: "navigation"
     -
-      link-href: "#"
-      label-text: "Nav 2"
+      link:
+        link-href: "#"
+        label:
+          label-text: "Nav 2"
+      navigation-role: "navigation"
       navigation-items:
         -
-          link-href: "#"
-          label-text: "Sub 1"
+          link:
+            link-href: "#"
+            label:
+              label-text: "Sub 1"
+          navigation-role: "navigation"
         -
-          link-href: "#"
-          label-text: "Sub 2"
+          link:
+            link-href: "#"
+            label:
+              label-text: "Sub 2"
+          navigation-role: "navigation"
     -
-      link-href: "#"
-      label-text: "Nav 3"
+      link:
+        link-href: "#"
+        label:
+          label-text: "Nav 3"
+      navigation-role: "navigation"

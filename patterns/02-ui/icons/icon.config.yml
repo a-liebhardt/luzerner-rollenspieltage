@@ -1,3 +1,4 @@
 status: ready
 context:
-  name: close
+  icon:
+    icon-name: close

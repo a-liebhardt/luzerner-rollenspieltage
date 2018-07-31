@@ -1,4 +1,5 @@
-<article {{#if article-class}}class="{{article-class}}"{{/if}}>
+{{#with article}}
+<article role="article" {{#if article-class}}class="{{article-class}}"{{/if}}>
   {{#if article-link}}<a href="{{article-link}}">{{/if}}
   {{^article-hide-header}}
   <header>
@@ -36,3 +37,4 @@
   {{/article-hide-footer}}
   {{#if article-link}}</a>{{/if}}
 </article>
+{{/with}}

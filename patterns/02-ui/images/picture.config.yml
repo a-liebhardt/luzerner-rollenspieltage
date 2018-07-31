@@ -1,14 +1,30 @@
 status: ready
 context:
-  picture-title: "Picture title text"
-  picture-source-xxl: "https://picsum.photos/2480/2048/?random&blur"
-  picture-source-xl: "https://picsum.photos/1240/1024/?random&blur"
-  picture-source-l: "https://picsum.photos/1024/768/?random&blur"
-  picture-source-m: "https://picsum.photos/800/600/?random&blur"
-  picture-source-s: "https://picsum.photos/600/400/?random&blur"
-  picture-source-xs: "https://picsum.photos/480/320/?random&blur"
-  picture-source-xxs: "https://picsum.photos/320/240/?random&blur"
-  image-alt: "Image alternative text"
-  image-class: "example-image-class"
-  image-source: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-  image-lazyload: "https://picsum.photos/2480/2048/?random&blur"
+  picture:
+    picture-title: "Picture title text"
+    picture-sources:
+      -
+        viewport: 2400
+        source: "https://picsum.photos/2480/2048/?random&blur"
+      -
+        viewport: 1200
+        source: "https://picsum.photos/1240/1024/?random&blur"
+      -
+        viewport: 1000
+        source: "https://picsum.photos/1024/768/?random&blur"
+      -
+        viewport: 800
+        source: "https://picsum.photos/800/600/?random&blur"
+      -
+        viewport: 600
+        source: "https://picsum.photos/600/400/?random&blur"
+      -
+        viewport: 400
+        source: "https://picsum.photos/480/320/?random&blur"
+      -
+        source: "https://picsum.photos/320/240/?random&blur"
+    image:
+      image-alt: "Image alternative text"
+      image-class: "example-image-class"
+      image-source: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      image-lazyload: "https://picsum.photos/1024/768/?random&blur"

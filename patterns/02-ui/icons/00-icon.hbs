@@ -1,5 +1,7 @@
-<i class="icon icon--{{#if icon-name}}{{icon-name}}{{^}}close{{/if}} {{icon-modifier}}">
+{{#with icon}}
+<i class="icon icon--{{#if icon-name}}{{icon-name}}{{^}}close{{/if}} {{icon-class}}">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <use xlink:href="#{{#if icon-name}}{{icon-name}}{{^}}close{{/if}}" />
   </svg>
 </i>
+{{/with}}

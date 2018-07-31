@@ -1,6 +1,8 @@
 status: prototype
 context:
-  label-text: "Link Label Text"
-  label-icon: "arrow-right"
-  label-icon-pos: "before"
-  label-icon-modifier: "icon-xs"
+  label:
+    label-text: "Link Label Text"
+    icon:
+      icon-name: "arrow-right"
+      icon-pos: "before"
+      icon-class: "icon-xs"

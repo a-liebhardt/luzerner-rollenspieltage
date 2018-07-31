@@ -1,6 +1,8 @@
 status: prototype
 context:
-  label-text: "Form button"
-  button-class: "example-button-class col-m-6"
-  button-type: "submit"
-  button-role: "button"
+  button:
+    button-class: "example-button-class col-m-6"
+    button-type: "submit"
+    button-role: "button"
+    label:
+      label-text: "Form button"

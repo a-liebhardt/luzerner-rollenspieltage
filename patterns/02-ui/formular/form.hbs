@@ -1,5 +1,7 @@
-<form action="{{form-action}}" method="{{#if form-method}}{{form-method}}{{^}}post{{/if}}" {{#if form-name}}name="{{form-name}}"{{/if}}>
+{{#with form}}
+<form action="{{form-action}}" role="form" method="{{#if form-method}}{{form-method}}{{^}}post{{/if}}" {{#if form-name}}name="{{form-name}}"{{/if}} {{#if form-class}}class="{{form-class}}"{{/if}}>
   {{#each form-items}}
     {{> @fieldset}}
   {{/each}}
 </form>
+{{/with}}

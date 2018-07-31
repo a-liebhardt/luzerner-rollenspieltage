@@ -1,7 +1,7 @@
-{{#if select-role}}
-<div {{#if select-class}}class="form-group {{select-class}}"{{/if}} role="{{select-role}}">
+{{#with select}}
+<div {{#if select-class}}class="form-group {{select-class}}"{{/if}} role="select">
   {{> @label}}
-  <select {{#if select-id}}id="{{select-id}}"{{/if}} {{#if select-name}}name="{{select-name}}"{{/if}} {{#if select-info}}data-info="{{select-info}}"{{/if}} {{#if select-error}}data-error="{{select-error}}"{{/if}} {{#if select-readonly}}readonly{{/if}} {{#if select-disabled}}disabled{{/if}} {{#if select-required}}required{{/if}} {{{select-attr}}}>
+  <select {{#if select-id}}id="{{select-id}}"{{/if}} {{#if select-name}}name="{{select-name}}"{{/if}} {{#if select-info}}data-info="{{select-info}}"{{/if}} {{#if select-error}}data-error="{{select-error}}"{{/if}} {{#if select-multiple}}multiple{{/if}} {{#if select-readonly}}readonly{{/if}} {{#if select-disabled}}disabled{{/if}} {{#if select-required}}required{{/if}} {{{select-attr}}}>
     {{#each select-items}}
       <option {{#if select-value}}value="{{select-value}}"{{/if}}>{{select-label}}</option>
     {{/each}}
@@ -15,4 +15,4 @@
   </select>
   <aside class="messages"></aside>
 </div>
-{{/if}}
+{{/with}}

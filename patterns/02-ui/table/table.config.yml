@@ -1,9 +1,10 @@
 status: prototype
 context:
-  rows:
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
+  table:
+    table-rows:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6

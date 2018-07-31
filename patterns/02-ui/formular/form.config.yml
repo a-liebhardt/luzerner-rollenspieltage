@@ -1,101 +1,86 @@
 status: wip
 context:
-  form-name: "example-form-name"
-  form-action: "http://localhost:3000/rest/form.json"
-  form-method: "get"
-  form-items:
-    -
-      fieldset-name: "example-fieldset-name"
-      fieldset-class: "example-fieldset-class"
-      fieldset-legend: "Input Group 1"
-      fieldset-items:
-        -
-          fieldset-row-items:
-            -
-              label-for: "demo-input-1"
-              label-text: "Demo Input Field 1"
-              input-id: "demo-input-1"
-              input-name: "example-form[name]"
-              input-placeholder: "Demo Input Field 1"
-              input-class: "example-input-class col-m-6"
-              # Don't need for text > input-type: "text"
-              input-role: "input"
-              input-autocomplete: "input"
-            -
-              label-for: "demo-input-2"
-              label-text: "Demo Email Field 2"
-              input-id: "demo-input-2"
-              input-name: "example-form[email]"
-              input-placeholder: "Demo Email Field 2"
-              input-class: "example-input-class col-m-6"
-              input-type: "email"
-              input-role: "input"
-              input-autocomplete: "email"
-        -
-          fieldset-row-items:
-            -
-              label-for: "demo-input-3"
-              label-text: "Demo Password Field 3"
-              input-id: "demo-input-3"
-              input-name: "example-form[password]"
-              input-placeholder: "Demo Password Field 3"
-              input-class: "example-input-class col-m-6"
-              input-type: "password"
-              input-role: "input"
-              input-autocomplete: "current-password"
-            -
-              label-for: "demo-input-4"
-              label-text: "Demo Password Field 4"
-              input-id: "demo-input-4"
-              input-name: "example-form[confirm-password]"
-              input-placeholder: "Demo Password Field 4"
-              input-class: "example-input-class col-m-6"
-              input-type: "password"
-              input-role: "input"
-              input-autocomplete: "current-password"
-    -
-      fieldset-name: "example-fieldset-name"
-      fieldset-class: "example-fieldset-class"
-      fieldset-legend: "Select Group 2"
-      fieldset-items:
-        -
-          fieldset-row-items:
-            -
-              label-for: "demo-select-1"
-              label-text: "Demo Select Field 1"
-              select-id: "demo-select-1"
-              select-name: "example-form[select-1]"
-              select-class: "example-select-class col-m-6"
-              select-role: "select"
-              select-items:
-                -
-                  select-value: "-1"
-                  select-label: "Demo Select Field 1"
-                -
-                  select-value: "1"
-                  select-label: "Opt 1"
-                -
-                  select-value: "2"
-                  select-label: "Opt 2"
-                -
-                  select-value: "3"
-                  select-label: "Opt 3"
-            -
-              label-for: "demo-select-2"
-              label-text: "Demo Select Field 2"
-              select-id: "demo-select-2"
-              select-name: "example-form[select-2]"
-              select-class: "example-select-class col-m-6"
-              select-role: "select"
-              select-optgroups:
-                -
+  form:
+    form-name: "example-form-name"
+    form-action: "http://localhost:3000/rest/form.json"
+    form-method: "get"
+    form-items:
+      -
+        fieldset-name: "example-fieldset-name"
+        fieldset-class: "example-fieldset-class"
+        fieldset-legend: "Input Group 1"
+        fieldset-items:
+          -
+            fieldset-row-items:
+              -
+                input:
+                  label:
+                    label-for: "demo-input-1"
+                    label-text: "Demo Input Field 1"
+                  input-role: "input"
+                  # Don't need for text > input-type: "text"
+                  input-id: "demo-input-1"
+                  input-name: "example-form[name]"
+                  input-placeholder: "Demo Input Field 1"
+                  input-class: "example-input-class col-m-6"
+                  input-autocomplete: "input"
+              -
+                input:
+                  label:
+                    label-for: "demo-input-2"
+                    label-text: "Demo Email Field 2"
+                  input-role: "input"
+                  input-type: "email"
+                  input-id: "demo-input-2"
+                  input-name: "example-form[email]"
+                  input-placeholder: "Demo Email Field 2"
+                  input-class: "example-input-class col-m-6"
+                  input-autocomplete: "email"
+          -
+            fieldset-row-items:
+              -
+                input:
+                  label:
+                    label-for: "demo-input-3"
+                    label-text: "Demo Password Field 3"
+                  input-role: "input"
+                  input-type: "password"
+                  input-id: "demo-input-3"
+                  input-name: "example-form[password]"
+                  input-placeholder: "Demo Password Field 3"
+                  input-class: "example-input-class col-m-6"
+                  input-autocomplete: "password"
+              -
+                input:
+                  label:
+                    label-for: "demo-input-4"
+                    label-text: "Demo Password Field 4"
+                  input-role: "input"
+                  input-type: "password"
+                  input-id: "demo-input-4"
+                  input-name: "example-form[confirm-password]"
+                  input-placeholder: "Demo Password Field 4"
+                  input-class: "example-input-class col-m-6"
+                  input-autocomplete: "current-password"
+      -
+        fieldset-name: "example-fieldset-name"
+        fieldset-class: "example-fieldset-class"
+        fieldset-legend: "Select Group 2"
+        fieldset-items:
+          -
+            fieldset-row-items:
+              -
+                select:
+                  label:
+                    label-for: "demo-select-1"
+                    label-text: "Demo Select Field 1"
+                  select-id: "demo-select-1"
+                  select-name: "example-form[select-1]"
+                  select-class: "example-select-class col-m-6"
                   select-items:
                     -
                       select-value: "-1"
-                      select-label: "Demo Select Field 2"
-                -
-                  select-optgroups-label: "Opt Group 1"
-                  select-items:
+                      select-label: "Demo Select Field 1"
                     -
                       select-value: "1"
                       select-label: "Opt 1"
@@ -105,77 +90,129 @@ context:
                     -
                       select-value: "3"
                       select-label: "Opt 3"
-                -
-                  select-optgroups-label: "Opt Group 2"
-                  select-items:
+              -
+                select:
+                  label:
+                    label-for: "demo-select-2"
+                    label-text: "Demo Select Field 2"
+                  select-id: "demo-select-2"
+                  select-name: "example-form[select-2]"
+                  select-class: "example-select-class col-m-6"
+                  select-optgroups:
                     -
-                      select-value: "4"
-                      select-label: "Opt 4"
+                      select-items:
+                        -
+                          select-value: "-1"
+                          select-label: "Demo Select Field 2"
                     -
-                      select-value: "5"
-                      select-label: "Opt 5"
+                      select-optgroups-label: "Opt Group 1"
+                      select-items:
+                        -
+                          select-value: "1"
+                          select-label: "Opt 1"
+                        -
+                          select-value: "2"
+                          select-label: "Opt 2"
+                        -
+                          select-value: "3"
+                          select-label: "Opt 3"
                     -
-                      select-value: "6"
-                      select-label: "Opt 6"
-    -
-      fieldset-name: "example-fieldset-name"
-      fieldset-class: "example-fieldset-class"
-      fieldset-legend: "Checkbox Group 3"
-      fieldset-items:
-        -
-          fieldset-row-items:
-            -
-              label-for: "demo-checkbox-1"
-              label-text: "Demo Checkbox Field 1"
-              input-id: "demo-checkbox-1"
-              input-name: "example-form[checkbox-1]"
-              input-class: "example-checkbox-class col-m-6"
-              input-type: "checkbox"
-              input-role: "checkbox"
-            -
-              label-for: "demo-checkbox-2"
-              label-text: "Demo Checkbox Field 2"
-              input-id: "demo-checkbox-2"
-              input-name: "example-form[checkbox-2]"
-              input-class: "example-checkbox-class col-m-6"
-              input-type: "checkbox"
-              input-role: "checkbox"
-    -
-      fieldset-name: "example-fieldset-name"
-      fieldset-class: "example-fieldset-class"
-      fieldset-legend: "Radiobox Group 4"
-      fieldset-items:
-        -
-          fieldset-row-items:
-            -
-              label-for: "demo-radiobox-1"
-              label-text: "Demo Radiobox Field 1"
-              input-id: "demo-radiobox-1"
-              input-name: "example-form[radiobox]"
-              input-class: "example-radiobox-class col-m-6"
-              input-type: "radio"
-              input-role: "radiobox"
-              input-value: "radio-1 set"
-            -
-              label-for: "demo-radiobox-2"
-              label-text: "Demo Radiobox Field 2"
-              input-id: "demo-radiobox-2"
-              input-name: "example-form[radiobox]"
-              input-class: "example-radiobox-class col-m-6"
-              input-type: "radio"
-              input-role: "radiobox"
-              input-value: "radio-2 set"
-    -
-      fieldset-items:
-        -
-          fieldset-row-items:
-            -
-              label-text: "Reset form"
-              button-class: "example-button-class col-m-6"
-              button-type: "reset"
-              button-role: "button"
-            -
-              label-text: "Submit form"
-              button-class: "example-button-class col-m-6"
-              button-type: "submit"
-              button-role: "button"
+                      select-optgroups-label: "Opt Group 2"
+                      select-items:
+                        -
+                          select-value: "4"
+                          select-label: "Opt 4"
+                        -
+                          select-value: "5"
+                          select-label: "Opt 5"
+                        -
+                          select-value: "6"
+                          select-label: "Opt 6"
+      -
+        fieldset-name: "example-fieldset-name"
+        fieldset-class: "example-fieldset-class"
+        fieldset-legend: "Checkbox Group 3"
+        fieldset-items:
+          -
+            fieldset-row-items:
+              -
+                input:
+                  label:
+                    label-for: "demo-checkbox-1"
+                    label-text: "Demo Checkbox Field 1"
+                  input-role: "checkbox"
+                  input-type: "checkbox"
+                  input-id: "demo-checkbox-1"
+                  input-name: "example-form[checkbox-1]"
+                  input-class: "example-checkbox-class col-m-6"
+              -
+                input:
+                  label:
+                    label-for: "demo-checkbox-2"
+                    label-text: "Demo Checkbox Field 2"
+                  input-role: "checkbox"
+                  input-type: "checkbox"
+                  input-id: "demo-checkbox-2"
+                  input-name: "example-form[checkbox-2]"
+                  input-class: "example-checkbox-class col-m-6"
+      -
+        fieldset-name: "example-fieldset-name"
+        fieldset-class: "example-fieldset-class"
+        fieldset-legend: "Radiobox Group 4"
+        fieldset-items:
+          -
+            fieldset-row-items:
+              -
+                input:
+                  label:
+                    label-for: "demo-radiobox-1"
+                    label-text: "Demo Radiobox Field 1"
+                  input-role: "radiobox"
+                  input-type: "radio"
+                  input-id: "demo-radiobox-1"
+                  input-name: "example-form[radiobox]"
+                  input-class: "example-radiobox-class col-m-6"
+                  input-value: "radio-1 set"
+              -
+                input:
+                  label:
+                    label-for: "demo-radiobox-2"
+                    label-text: "Demo Radiobox Field 2"
+                  input-role: "radiobox"
+                  input-type: "radio"
+                  input-id: "demo-radiobox-2"
+                  input-name: "example-form[radiobox]"
+                  input-class: "example-radiobox-class col-m-6"
+                  input-value: "radio-2 set"
+      -
+        fieldset-name: "example-fieldset-name"
+        fieldset-class: "example-fieldset-class"
+        fieldset-legend: "Textarea Group 5"
+        fieldset-items:
+          -
+            fieldset-row-items:
+              -
+                textarea:
+                  label:
+                    label-for: "demo-textarea-1"
+                    label-text: "Demo Textarea Field 1"
+                  textarea-id: "demo-textarea-1"
+                  textarea-name: "example-form[textarea]"
+                  textarea-placeholder: "Demo Textarea Field 1"
+                  textarea-class: "example-textarea-class col-m-12"
+      -
+        fieldset-items:
+          -
+            fieldset-row-items:
+              -
+                button:
+                  label:
+                    label-text: "Reset form"
+                  button-class: "example-button-class col-m-6"
+                  button-type: "reset"
+              -
+                button:
+                  label:
+                    label-text: "Submit form"
+                  button-class: "example-button-class col-m-6"
+                  button-type: "submit"

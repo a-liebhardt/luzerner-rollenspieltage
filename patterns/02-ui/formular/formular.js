@@ -201,7 +201,7 @@ exports.init = (() => {
     }
   });
 
-  const elements = document.querySelectorAll('input, select');
+  const elements = document.querySelectorAll('input, textarea, select');
   const handleChange = (e) => {
     e.stopPropagation();
     if (e.target.value && e.target.value !== '-1') {
@@ -215,5 +215,17 @@ exports.init = (() => {
     element.addEventListener('change', handleChange);
     element.addEventListener('keyup', handleChange);
     element.addEventListener('paste', handleChange);
+  });
+
+  const textareaAutosize = (e) => {
+    window.requestAnimationFrame(() => {
+      e.target.style.cssText = 'height:auto; overflow:hidden;';
+      e.target.style.cssText = `height:${e.target.scrollHeight}px; overflow:hidden;`;
+    });
+  };
+
+  const textareas = document.querySelectorAll('textarea');
+  textareas.forEach((textarea) => {
+    textarea.addEventListener('keydown', textareaAutosize);
   });
 });

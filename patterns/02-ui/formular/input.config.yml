@@ -1,11 +1,15 @@
 status: prototype
 context:
-  label-for: "demo-input-1"
-  label-text: "Demo Input Field 1"
-  input-id: "demo-input-1"
-  input-name: "demo[input-1]"
-  input-placeholder: "Demo Input Field 1"
-  input-class: "example-input-class col-m-6"
-  # Don't need for text > input-type: "text"
-  input-role: "input"
-  input-autocomplete: "input"
+  input:
+    label:
+      label-for: "demo-input-1"
+      label-text: "Demo Input Field 1"
+    input-role: "input"
+    # input-role: "checkbox"
+    # input-role: "radio"
+    input-type: "text"
+    input-id: "demo-input-1"
+    input-name: "demo[input-1]"
+    input-placeholder: "Demo Input Field 1"
+    input-class: "example-input-class col-m-6"
+    input-autocomplete: "input"
