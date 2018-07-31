@@ -4,4 +4,4 @@ context:
     image-alt: "Image alternative text"
     image-class: "example-image-class"
     image-source: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-    image-lazyload: "https://picsum.photos/2480/2048/?random&blur"
+    image-lazyload: "https://picsum.photos/1024/768/?random&blur"

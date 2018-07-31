@@ -1,5 +1,5 @@
 {{#with select}}
-<div {{#if select-class}}class="form-group {{select-class}}"{{/if}} role="select">
+<section {{#if select-class}}class="form-group {{select-class}}"{{/if}} role="select">
   {{> @label}}
   <select {{#if select-id}}id="{{select-id}}"{{/if}} {{#if select-name}}name="{{select-name}}"{{/if}} {{#if select-info}}data-info="{{select-info}}"{{/if}} {{#if select-error}}data-error="{{select-error}}"{{/if}} {{#if select-multiple}}multiple{{/if}} {{#if select-readonly}}readonly{{/if}} {{#if select-disabled}}disabled{{/if}} {{#if select-required}}required{{/if}} {{{select-attr}}}>
     {{#each select-items}}
@@ -14,5 +14,5 @@
     {{/each}}
   </select>
   <aside class="messages"></aside>
-</div>
+</section>
 {{/with}}

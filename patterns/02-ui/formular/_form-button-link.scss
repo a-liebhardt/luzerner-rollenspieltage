@@ -56,8 +56,8 @@
 //   @include btn-border-drawing(#58afd1, #ffe593, 4px, bottom, right);
 // }
 
-[role='button'] {
-  @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, bottom, left, 100ms);
+.button-link {
+  @include btn-border-drawing($color--black-40, $color--black-20, 0.4rem, bottom, left, 100ms);
 
   background: none;
   border: none;
@@ -77,8 +77,13 @@
     cursor: pointer;
   }
 
+  &:hover,
   &:active {
-    border: 0.2rem solid $color--cyan-40;
+    text-decoration: none;
+  }
+
+  &:active {
+    border: 0.2rem solid $color--black-40;
   }
 
   // https://codemyui.com/tag/button/

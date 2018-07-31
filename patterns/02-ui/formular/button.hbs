@@ -1,7 +1,5 @@
 {{#with button}}
-<div {{#if button-class}}class="{{button-class}}"{{/if}} role="button">
-  <button {{#if button-type}}type="{{button-type}}"{{/if}} class="{{#if label-text}}button-text{{/if}} {{#if label-icon}}button-icon{{/if}} {{button-modifier}}" {{#if button-slider}}item-slider="{{button-slider}}"{{/if}} {{#if button-attr}}{{button-attr}}{{/if}}>
-    {{> @label}}
-  </button>
-</div>
+<button role="button" {{#if button-type}}type="{{button-type}}"{{/if}} class="{{#if label-text}}button-text{{/if}} {{#if label-icon}}button-icon{{/if}} {{button-class}}" {{#if button-slider}}item-slider="{{button-slider}}"{{/if}} {{#if button-attr}}{{button-attr}}{{/if}}>
+  {{> @label}}
+</button>
 {{/with}}

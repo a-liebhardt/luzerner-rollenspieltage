@@ -16,13 +16,19 @@ $grid-gap: 1rem;
   flex-wrap: wrap;
 
   [class*='col-'] {
-    display: flex;
-    justify-content: stretch;
-    flex-direction: column;
+    display: block;
+    // justify-content: stretch;
+    // flex-direction: column;
     margin: 0 auto #{$grid-gap};
     width: 100%;
     max-width: 100%;
     transition: max-width 300ms ease-in-out;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 
   @for $i from 1 through length($breakpoints) {
