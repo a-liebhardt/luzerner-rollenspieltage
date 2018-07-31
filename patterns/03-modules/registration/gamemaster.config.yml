@@ -1,0 +1,221 @@
+status: prototype
+context:
+  form-1:
+    form:
+      form-name: "gamemaster"
+      form-action: "http://localhost:3000/rest/form.json"
+      form-method: "get"
+      form-class: "form-1"
+      form-items:
+        -
+          fieldset-legend: "Gamemaster informations"
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  input:
+                    label:
+                      label-for: "gamemaster-name"
+                      label-text: "Your Firstname, Lastname"
+                    input-id: "gamemaster-name"
+                    input-name: "gamemaster[name]"
+                    input-placeholder: "Your Firstname, Lastname"
+                    input-class: "col-m-12"
+                    # Don't need for text > input-type: "text"
+                    input-role: "input"
+                    input-autocomplete: "input"
+            -
+              fieldset-row-items:
+                -
+                  input:
+                    label:
+                      label-for: "gamemaster-email"
+                      label-text: "Your Email"
+                    input-id: "gamemaster-email"
+                    input-name: "gamemaster[email]"
+                    input-placeholder: "Your Email"
+                    input-class: "col-m-12"
+                    input-type: "email"
+                    input-role: "input"
+                    input-autocomplete: "email"
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  button:
+                    label:
+                      label-text: "Submit"
+                    button-class: "submit-button col-m-6"
+                    button-type: "submit"
+                    button-role: "button"
+  form-2:
+    form:
+      form-name: "game"
+      form-action: "http://localhost:3000/rest/form.json"
+      form-method: "get"
+      form-class: "form-2"
+      form-items:
+        -
+          fieldset-legend: "Game informations"
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  input:
+                    label:
+                      label-for: "game-title"
+                      label-text: "Title of your game"
+                    input-id: "game-title"
+                    input-name: "game[title]"
+                    input-placeholder: "Title of your game"
+                    input-class: "col-m-12"
+                    # Don't need for text > input-type: "text"
+                    input-role: "input"
+                    input-autocomplete: "input"
+            -
+              fieldset-row-items:
+                -
+                  textarea:
+                    label:
+                      label-for: "game-description"
+                      label-text: "A short description of your game"
+                    textarea-id: "game-description"
+                    textarea-name: "game[description]"
+                    textarea-placeholder: "A short description of your game"
+                    textarea-class: "col-m-12"
+                    textarea-role: "textarea"
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  link:
+                    label:
+                      label-text: "Back to previous form"
+                    link-class: "back-link col-m-6"
+                    link-href: "#form-1"
+                -
+                  button:
+                    label:
+                      label-text: "Submit"
+                    button-class: "submit-button col-m-6"
+                    button-type: "submit"
+                    button-role: "button"
+  form-3:
+    form:
+      form-name: "organization"
+      form-action: "http://localhost:3000/rest/form.json"
+      form-method: "get"
+      form-class: "form-3"
+      form-items:
+        -
+          fieldset-legend: "Organization informations"
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  input:
+                    label:
+                      label-for: "organization-datetime-1"
+                      label-text: "Your first game date and time"
+                    input-id: "organization-datetime-1"
+                    input-name: "organization[datetime-1]"
+                    input-placeholder: "Your first game date and time"
+                    input-class: "col-m-6"
+                    input-type: "datetime"
+                    input-role: "input"
+                -
+                  input:
+                    label:
+                      label-for: "organization-datetime-2"
+                      label-text: "Your first game date and time"
+                    input-id: "organization-datetime-2"
+                    input-name: "organization[datetime-2]"
+                    input-placeholder: "Your first game date and time"
+                    input-class: "col-m-6"
+                    input-type: "datetime"
+                    input-role: "input"
+            -
+              fieldset-row-items:
+                -
+                  select:
+                    label:
+                      label-for: "organization-ruleset"
+                      label-text: "The ruleset you are playing"
+                    select-id: "organization-ruleset"
+                    select-name: "organization[ruleset]"
+                    select-class: "col-m-12"
+                    select-role: "select"
+                    select-items:
+                      -
+                        select-value: "-1"
+                        select-label: "The ruleset you are playing"
+                      -
+                        select-value: "1"
+                        select-label: "Dungeons&Dragons 3.5 Edition"
+                      -
+                        select-value: "2"
+                        select-label: "Dungeons&Dragons 4 Edition"
+                      -
+                        select-value: "3"
+                        select-label: "Dungeons&Dragons 5 Edition"
+            -
+              fieldset-row-items:
+                -
+                  input:
+                    label:
+                      label-for: "organization-opt-1"
+                      label-text: "For Beginners"
+                    input-id: "organization-opt-1"
+                    input-name: "organization[opt-1]"
+                    input-class: "col-m-3"
+                    input-type: "checkbox"
+                    input-role: "checkbox"
+                -
+                  input:
+                    label:
+                      label-for: "organization-opt-2"
+                      label-text: "For Veterans"
+                    input-id: "organization-opt-2"
+                    input-name: "organization[opt-2]"
+                    input-class: "col-m-3"
+                    input-type: "checkbox"
+                    input-role: "checkbox"
+                -
+                  input:
+                    label:
+                      label-for: "organization-opt-3"
+                      label-text: "For Kids only"
+                    input-id: "organization-opt-3"
+                    input-name: "organization[opt-3]"
+                    input-class: "col-m-3"
+                    input-type: "checkbox"
+                    input-role: "checkbox"
+                -
+                  input:
+                    label:
+                      label-for: "organization-opt-4"
+                      label-text: "For Adults only"
+                    input-id: "organization-opt-4"
+                    input-name: "organization[opt-4]"
+                    input-class: "col-m-3"
+                    input-type: "checkbox"
+                    input-role: "checkbox"
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  link:
+                    label:
+                      label-text: "Back to previous form"
+                    link-class: "back-link col-m-6"
+                    link-href: "#form-1"
+                -
+                  button:
+                    label:
+                      label-text: "Submit"
+                    button-class: "submit-button col-m-6"
+                    button-type: "submit"
+                    button-role: "button"

@@ -6,6 +6,7 @@ import Formular from './02-ui/formular/formular';
 import Form from './02-ui/formular/form';
 import Fullpage from './02-ui/pagescroller/fullpage';
 // import Header from './03-modules/header/header';
+import Gamemaster from './03-modules/registration/gamemaster';
 
 // Custom scripts
 // https://www.npmjs.com/package/css-element-queries
@@ -42,4 +43,6 @@ ready(() => {
   // Init pattern scripts
   Formular.init();
   Form.init();
+  // Header.init();
+  Gamemaster.init();
 });
