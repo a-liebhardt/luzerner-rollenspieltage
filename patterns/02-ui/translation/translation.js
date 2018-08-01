@@ -86,7 +86,7 @@ exports.init = (() => {
     const init = () => {
       const ajax = new XMLHttpRequest();
       ajax.open('GET', '/translations.json', true);
-      ajax.onload = function(e) {
+      ajax.onload = () => {
         self.setAll(ajax.responseText);
         window.requestAnimationFrame(self.update);
       }

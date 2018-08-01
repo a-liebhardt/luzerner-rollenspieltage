@@ -228,21 +228,28 @@ const distribute = function (args, done) {
     const copyFile = (from, to) => {
       fs.copyFile(from, to, (err) => {
         if (err) throw err;
-        console.log(`Build ready for '${to}'`);
+        console.log(`Dist ready: ${to}`);
       });
     };
 
     items.forEach((item) => {
-      const stats = fs.statSync(path.join(__dirname, item.source));
-      if (stats.isFile()) {
-        copyFile(path.join(__dirname, item.source), path.join(__dirname, item.target));
-      }
-      if (stats.isDirectory()) {
-        const list = fs.readdirSync(item.source);
-        for (var i = 0; i < list.length; i++) {
-          const filename = list[i];
-          copyFile(path.join(__dirname, `${item.source}${filename}`), path.join(__dirname, `${item.target}${filename}`));
+      try {
+        const stats = fs.statSync(path.join(__dirname, item.source));
+        if (stats.isFile()) {
+          copyFile(path.join(__dirname, item.source), path.join(__dirname, item.target));
         }
+        if (stats.isDirectory()) {
+          fs.mkdir(path.join(__dirname, item.target), (err) => {
+            if (err) throw err;
+            const list = fs.readdirSync(item.source);
+            for (var i = 0; i < list.length; i++) {
+              const filename = list[i];
+              copyFile(path.join(__dirname, `${item.source}${filename}`), path.join(__dirname, `${item.target}${filename}`));
+            }
+          });
+        }
+      } catch(e) {
+        console.warn(`Warning: Not found ${item.source}`);
       }
     });
   };
@@ -260,35 +267,11 @@ const distribute = function (args, done) {
         { source: 'build/manifest.json', target: `${root}/manifest.json` },
         { source: 'build/favicon.ico', target: `${root}/favicon.ico` },
         { source: 'build/robots.txt', target: `${root}/robots.txt` },
+        { source: 'build/css/', target: `${root}css/` },
+        { source: 'build/js/', target: `${root}js/` },
+        { source: 'build/images/', target: `${root}images/` },
+        { source: 'build/fonts/', target: `${root}fonts/` },
       ]);
-
-      fs.mkdir(path.join(__dirname, `${root}css/`), (err) => {
-        if (err) throw err;
-        copyAssetsTo([
-          { source: 'build/css/', target: `${root}css/` },
-        ]);
-      });
-
-      fs.mkdir(path.join(__dirname, `${root}js/`), (err) => {
-        if (err) throw err;
-        copyAssetsTo([
-          { source: 'build/js/', target: `${root}js/` },
-        ]);
-      });
-
-      fs.mkdir(path.join(__dirname, `${root}images/`), (err) => {
-        if (err) throw err;
-        copyAssetsTo([
-          { source: 'build/images/', target: `${root}images/` },
-        ]);
-      });
-
-      fs.mkdir(path.join(__dirname, `${root}fonts/`), (err) => {
-        if (err) throw err;
-        copyAssetsTo([
-          { source: 'build/fonts/', target: `${root}fonts/` },
-        ]);
-      });
     });
   });
 
