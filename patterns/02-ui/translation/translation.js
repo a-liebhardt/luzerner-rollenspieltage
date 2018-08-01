@@ -9,7 +9,8 @@ exports.init = (() => {
     let translations = {};
     let language = '';
 
-    this.get = function(iso, key) {
+    this.get = function(key) {
+      let iso = self.getLanguage();
       if (typeof translations[iso] === 'undefined') {
         // In case of for example 'en-US' fallback to main language 'en'
         iso = iso.split('-')[0];
@@ -71,7 +72,7 @@ exports.init = (() => {
       const els = document.querySelectorAll('[i18n]');
       els.forEach((el) => {
         const key = el.getAttribute('i18n');
-        const value = self.get(iso, key);
+        const value = self.get(key);
         if (value) {
           // Update placeholder if exists
           if (el.hasAttribute('placeholder')) el.setAttribute('placeholder', value);

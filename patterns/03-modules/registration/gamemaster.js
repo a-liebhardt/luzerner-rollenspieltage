@@ -60,17 +60,29 @@ exports.init = (() => {
       'gamemaster[name]': {
         // Email is required
         presence: {
-          message: '^Please enter your Name',
+          // message: '^Please enter your Name',
+          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+            const i18n = window.t18n.get('form-1.input.name.error');
+            return `^${i18n}`;
+          }
         },
       },
       'gamemaster[email]': {
         // Email is required
         presence: {
-          message: '^Please enter your Email',
+          // message: '^Please enter your Email',
+          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+            const i18n = window.t18n.get('form-1.input.email.error.1');
+            return `^${i18n}`;
+          }
         },
         // and must be an email (duh)
         email: {
-          message: '^Email doesn\'t look correct',
+          // message: '^Email doesn\'t look correct',
+          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+            const i18n = window.t18n.get('form-1.input.email.error.2');
+            return `^${i18n}`;
+          }
         },
       },
     },
@@ -92,7 +104,11 @@ exports.init = (() => {
       'game[title]': {
         // Email is required
         presence: {
-          message: '^Please enter a game name',
+          // message: '^Please enter a game name',
+          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+            const i18n = window.t18n.get('form-2.input.title.error');
+            return `^${i18n}`;
+          }
         },
       },
     },
@@ -119,7 +135,13 @@ exports.init = (() => {
         });
         if (inputValue > 0) return true;
         return {
-          presence: {message: '^Please enter at least one starttime'},
+          // presence: {message: '^Please enter at least one starttime'},
+          presence: {
+            message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+              const i18n = window.t18n.get('form-3.input.starttime.error');
+              return `^${i18n}`;
+            }
+          }
         };
       },
       'organization[starttime-2]': function(value, attributes, attributeName, options, constraints) {
@@ -130,7 +152,13 @@ exports.init = (() => {
         });
         if (inputValue > 0) return true;
         return {
-          presence: {message: '^Please enter at least one starttime'},
+          // presence: {message: '^Please enter at least one starttime'},
+          presence: {
+            message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+              const i18n = window.t18n.get('form-3.input.starttime.error');
+              return `^${i18n}`;
+            }
+          }
         };
       },
       'organization[starttime-3]': function(value, attributes, attributeName, options, constraints) {
@@ -141,7 +169,13 @@ exports.init = (() => {
         });
         if (inputValue > 0) return true;
         return {
-          presence: {message: '^Please enter at least one starttime'},
+          // presence: {message: '^Please enter at least one starttime'},
+          presence: {
+            message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+              const i18n = window.t18n.get('form-3.input.starttime.error');
+              return `^${i18n}`;
+            }
+          }
         };
       },
     },
