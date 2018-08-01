@@ -3,7 +3,16 @@ context:
   article:
     article-hide-small: true
     article-title: "totam et est rem quia"
+    article-title-i18n: "article.title.demo"
     article-title-tag: "h1"
     article-subtitle: "Fugit ducimus accusamus rerum nihil accusantium omnis nihil et et et. ad omnis totam aut incidunt molestiae ullam hic voluptatem et et nisi sed. praesentium et exercitationem aliquid earum suscipit occaecati est. odit laboriosam nam quis dolores officiis sapiente eos ipsum voluptates"
+    article-subtitle-i18n: "article.subtitle.demo"
     article-body: "<p>Fugit ducimus accusamus rerum nihil accusantium omnis nihil et et et. ad omnis totam aut incidunt molestiae ullam hic voluptatem et et nisi sed. praesentium et exercitationem aliquid earum suscipit occaecati est. odit laboriosam nam quis dolores officiis sapiente eos ipsum voluptates</p><p>Can have <a href='#'>links</a> and <strong>important</strong> text.</p><p>Accusantium repellendus occaecati quis nulla cumque quia. quo velit ut laborum alias error iure vel deserunt rerum laboriosam sit ea. rerum iure id quidem praesentium ut numquam iure perferendis iusto dolorem. excepturi cumque error ab alias. accusantium praesentium sed nihil voluptas iusto</p><p><strong>Unordered list</strong></p><ul><li>The items are many</li><li>Many are them</li><li>No matter the order</li></ul><p><strong>Ordered List</strong></p><ol><li>When order is</li><li>Then numbers are</li><li>Stay clean</li></ol><p>This text contains <sup>superscript</sup> and <sub>subscript</sub> text.</p>"
     article-hide-footer: true
+t18n:
+  'de-DE':
+    'article.title.demo': "Lorem ipsum (DE)"
+    'article.subtitle.demo': "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. (DE)"
+  'en-EN':
+    'article.title.demo': "Lorem ipsum (EN)"
+    'article.subtitle.demo': "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. (EN)"

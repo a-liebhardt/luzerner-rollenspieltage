@@ -16,8 +16,8 @@
     "url": "https://github.com/a-liebhardt/luzerner-rollenspieltage/issues"
   },
   "scripts": {
-    "start": "npm-run-all clean --parallel imagemin svgsprite color webpack:dev fractal:start",
-    "build": "npm-run-all clean --parallel imagemin svgsprite color webpack:build --sequential fractal:build",
+    "start": "npm-run-all clean --parallel imagemin svgsprite color i18n webpack:dev fractal:start",
+    "build": "npm-run-all clean --parallel imagemin svgsprite color i18n webpack:build --sequential fractal:build",
     "webpack:dev": "cross-env NODE_ENV=development webpack --watch",
     "webpack:build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "fractal:start": "fractal start --sync --watch",
@@ -30,6 +30,7 @@
     "deploy": "npm-run-all build deploy:github",
     "deploy:github": "gh-pages -d build",
     "color": "fractal fractal:color",
+    "i18n": "fractal fractal:i18n",
     "fractal:dist": "fractal fractal:dist",
     "dist": "npm-run-all build fractal:dist"
   },
@@ -74,7 +75,8 @@
     "stylelint": "^9.1.3",
     "svg-sprite": "^1.4.0",
     "webpack": "^3.8.1",
-    "yamljs": "^0.2.8 "
+    "yamljs": "^0.2.8",
+    "glob": "^7.1.2"
   },
   "dependencies": {
     "css-element-queries": "^0.4.0",

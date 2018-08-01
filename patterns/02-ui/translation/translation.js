@@ -1,9 +1,11 @@
 exports.init = (() => {
   /* eslint-disable */
   const t18n = new function() {
+    const self = this;
     const browserLanguage = navigator.languages && navigator.languages[0] || // Chrome / Firefox
       navigator.language || // All browsers
       navigator.userLanguage; // IE <= 10
+    const t18nUpdates = document.querySelectorAll('[t18n-update]');
     let translations = {};
     let language = '';
 
@@ -18,17 +20,6 @@ exports.init = (() => {
       return translations[iso][key];
     };
 
-    this.getAll = function(iso) {
-      if (typeof translations[iso] === 'undefined') {
-        // In case of for example 'en-US' fallback to main language 'en'
-        iso = iso.split('-')[0];
-      }
-      if (typeof translations[iso] === 'undefined' || typeof translations[iso][key] === 'undefined') {
-        return false;
-      }
-      return translations[iso];
-    };
-
     this.set = function(iso, key, value) {
       if (typeof translations[iso] === 'undefined') {
         translations[iso] = {};
@@ -36,7 +27,16 @@ exports.init = (() => {
       translations[iso][key] = value;
     };
 
-    this.setAll = function(iso, value) {
+    this.setAll = function(value) {
+      if (typeof value === 'string') {
+        translations = JSON.parse(value);
+      }
+      if (typeof value === 'object') {
+        translations = value;
+      }
+    };
+
+    this.setAllByIso = function(iso, value) {
       if (typeof value === 'string') {
         translations[iso] = JSON.parse(value);
       }
@@ -53,8 +53,59 @@ exports.init = (() => {
     };
 
     this.setLanguage = function(iso) {
+      console.info(`New language is ${iso}`);
       language = iso;
     };
+
+    this.update = () => {
+      const iso = self.getLanguage();
+      // Update all updater settings
+      t18nUpdates.forEach((t18nUpdate) => {
+        if (['select'].indexOf(t18nUpdate.nodeName.toLowerCase()) > -1) {
+          t18nUpdate.value = iso;
+        } else {
+          t18nUpdate.setAttribute('t18n-update', iso);
+        }
+      });
+      // Update all labels
+      const els = document.querySelectorAll('[i18n]');
+      els.forEach((el) => {
+        const key = el.getAttribute('i18n');
+        const value = self.get(iso, key);
+        if (value) {
+          // Update placeholder if exists
+          if (el.hasAttribute('placeholder')) el.setAttribute('placeholder', value);
+          // Handle special elements
+          if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.label = value;
+          // Update html of everything which has no value
+          else if (typeof el.value === 'undefined') el.innerHTML = value;
+        }
+      });
+    };
+
+    const t18nHandleUpdate = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // Get current iso language
+      let iso = e.target.getAttribute('t18n-update');
+      if (['select'].indexOf(e.target.nodeName.toLowerCase()) > -1) {
+        iso = e.target.value;
+      }
+      self.setLanguage(iso);
+      // Update translations
+      self.update();
+    };
+
+    t18nUpdates.forEach((t18nUpdate) => {
+      if (['select'].indexOf(t18nUpdate.nodeName.toLowerCase()) > -1) {
+        t18nUpdate.addEventListener('change', t18nHandleUpdate);
+      } else {
+        t18nUpdate.addEventListener('click', t18nHandleUpdate);
+      }
+    });
+
+    self.setLanguage(browserLanguage);
+    window.requestAnimationFrame(self.update);
 
     return this;
   };
@@ -62,33 +113,10 @@ exports.init = (() => {
 
   window.t18n = t18n;
 
-  const update = () => {
-    const iso = window.t18n.getLanguage();
-    const els = document.querySelectorAll('[i18n]');
-    els.forEach((el) => {
-      const key = el.getAttribute('i18n');
-      const value = window.t18n.get(iso, key);
-      if (value) {
-        // Update placeholder if exists
-        if (el.hasAttribute('placeholder')) el.setAttribute('placeholder', value);
-        // Handle special elements
-        if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.label = value;
-        // Update html of everything which has no value
-        else if (typeof el.value === 'undefined') el.innerHTML = value;
-      }
-    });
-  };
-  // update();
-
-  // window.t18n.set('de', 'demo.label', 'Hallo Welt 1');
-  // window.t18n.set('en', 'demo.label', 'Hello World 1');
+  window.t18n.set('de', 'demo.label', 'Hallo Welt 1');
+  window.t18n.set('en', 'demo.label', 'Hello World 1');
   // window.t18n.setAll('de', { 'demo.label': 'Hallo Welt 2' });
   // window.t18n.setAll('en', { 'demo.label': 'Hello World 2' });
-  window.t18n.setAll('de', '{"demo.label":"Hallo Welt 3"}');
-  window.t18n.setAll('en', '{"demo.label":"Hello World 3"}');
-  const updateLang = (e) => {
-    window.t18n.setLanguage(e.target.value);
-    update();
-  };
-  document.querySelector('#t18n-picker').addEventListener('change', updateLang);
+  // window.t18n.setAll('de', '{"demo.label":"Hallo Welt 3"}');
+  // window.t18n.setAll('en', '{"demo.label":"Hello World 3"}');
 });

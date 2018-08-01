@@ -8,6 +8,8 @@ import Fullpage from './02-ui/pagescroller/fullpage';
 import Translation from './02-ui/translation/translation';
 // import Header from './03-modules/header/header';
 import Gamemaster from './03-modules/registration/gamemaster';
+// Translation is auto generated and will hold all t18n yml configurations
+import Translations from './translations';
 
 // Custom scripts
 // https://www.npmjs.com/package/css-element-queries
@@ -47,4 +49,6 @@ ready(() => {
   Translation.init();
   // Header.init();
   Gamemaster.init();
+  // Translation
+  Translations.init();
 });

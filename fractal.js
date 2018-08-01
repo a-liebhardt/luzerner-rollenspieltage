@@ -266,3 +266,45 @@ const distribute = function (args, done) {
 };
 
 fractal.cli.command('fractal:dist', distribute);
+
+const i18n = function (args, done) {
+  // Local dependencies
+  const glob = require('glob');
+  const os = require('os');
+  const yaml = require('yamljs');
+  const fs = require('fs');
+  const endOfLine = os.EOL;
+  const fileYML = './patterns/**/*.config.yml';
+  const fileJS = './patterns/translations.js';
+  const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 't18n' node, choose your ISO key like 'en-EN' and define t18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using t18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.t18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
+  let t18nBody = {};
+
+  glob(path.join(__dirname, fileYML), {}, (err, files) => {
+    if (err) throw err;
+    files.forEach((file) => {
+      const configYAML = yaml.load(file);
+      if (typeof configYAML.t18n !== 'undefined') {
+        // console.log(file);
+        // console.log(configYAML.t18n);
+        Object.keys(configYAML.t18n).forEach(function(iso) {
+          if (typeof t18nBody[iso] === 'undefined') {
+            t18nBody[iso] = {};
+          }
+          Object.keys(configYAML.t18n[iso]).forEach(function(key) {
+            t18nBody[iso][key] = configYAML.t18n[iso][key];
+          });
+        });
+      }
+    });
+    // console.log(t18nBody);
+    htmlBody = fileJSBody.replace(/###BODY###/g, JSON.stringify(t18nBody));
+    // Write file to dest
+    fs.writeFile(path.join(__dirname, fileJS), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
+      if (err) throw err;
+      console.log(`Translation updated in '${fileJS}'`);
+    });
+  });
+  done();
+};
+
+fractal.cli.command('fractal:i18n', i18n);

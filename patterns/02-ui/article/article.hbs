@@ -15,10 +15,10 @@
       </small>
     {{/article-hide-small}}
     {{#if article-title}}
-      <{{#if article-title-tag}}{{article-title-tag}}{{else}}h2{{/if}}>{{{article-title}}}</{{#if article-title-tag}}{{article-title-tag}}{{else}}h2{{/if}}>
+      <{{#if article-title-tag}}{{article-title-tag}}{{else}}h2{{/if}} {{#if article-title-i18n}}i18n="{{article-title-i18n}}"{{/if}}>{{{article-title}}}</{{#if article-title-tag}}{{article-title-tag}}{{else}}h2{{/if}}>
     {{/if}}
     {{#if article-subtitle}}
-      <p>{{{article-subtitle}}}</p>
+      <p {{#if article-subtitle-i18n}}i18n="{{article-subtitle-i18n}}"{{/if}}>{{{article-subtitle}}}</p>
     {{/if}}
   </header>
   {{/article-hide-header}}

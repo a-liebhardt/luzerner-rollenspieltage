@@ -16,3 +16,4 @@ build/
 public/
 yarn-error.log
 .vscode/*
+patterns/translations.js
