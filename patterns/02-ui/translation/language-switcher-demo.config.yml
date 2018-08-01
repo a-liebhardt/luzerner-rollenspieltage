@@ -1,0 +1,6 @@
+status: ready
+t18n:
+  'de-DE':
+    'demo.label': "Hallo Welt (DE)"
+  'en-EN':
+    'demo.label': "Hello World (EN)"

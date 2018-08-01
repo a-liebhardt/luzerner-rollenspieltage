@@ -173,11 +173,11 @@ const distribute = function (args, done) {
     const list = fs.readdirSync(dir);
     for (var i = 0; i < list.length; i++) {
       const filename = path.join(dir, list[i]);
-      const stat = fs.statSync(filename);
+      const stats = fs.statSync(filename);
 
       if(filename == '.' || filename == '..') {
         // pass these files
-      } else if(stat.isDirectory()) {
+      } else if(stats.isDirectory()) {
         // rmdir recursively
         rmdir(filename);
       } else {
@@ -224,15 +224,27 @@ const distribute = function (args, done) {
     });
   };
 
-  const copyAssetsTo = (source, target) => {
-    const list = fs.readdirSync(source);
-    for (var i = 0; i < list.length; i++) {
-      const filename = list[i];
-      fs.copyFile(path.join(__dirname, `${source}${filename}`), path.join(__dirname, `${target}${filename}`), (err) => {
+  const copyAssetsTo = (items) => {
+    const copyFile = (from, to) => {
+      fs.copyFile(from, to, (err) => {
         if (err) throw err;
-        console.log(`Build ready for '${target}${filename}'`);
+        console.log(`Build ready for '${to}'`);
       });
-    }
+    };
+
+    items.forEach((item) => {
+      const stats = fs.statSync(path.join(__dirname, item.source));
+      if (stats.isFile()) {
+        copyFile(path.join(__dirname, item.source), path.join(__dirname, item.target));
+      }
+      if (stats.isDirectory()) {
+        const list = fs.readdirSync(item.source);
+        for (var i = 0; i < list.length; i++) {
+          const filename = list[i];
+          copyFile(path.join(__dirname, `${item.source}${filename}`), path.join(__dirname, `${item.target}${filename}`));
+        }
+      }
+    });
   };
 
   fs.remove(path.join(__dirname, root), () => {
@@ -240,24 +252,42 @@ const distribute = function (args, done) {
       if (err) throw err;
       buildWebPage();
 
+      copyAssetsTo([
+        { source: 'build/translations.json', target: `${root}/translations.json` },
+        { source: 'build/apple-icon-180x180.png', target: `${root}/apple-icon-180x180.png` },
+        { source: 'build/favicon-32x32.png', target: `${root}/favicon-32x32.png` },
+        { source: 'build/favicon-16x16.png', target: `${root}/favicon-16x16.png` },
+        { source: 'build/manifest.json', target: `${root}/manifest.json` },
+        { source: 'build/favicon.ico', target: `${root}/favicon.ico` },
+        { source: 'build/robots.txt', target: `${root}/robots.txt` },
+      ]);
+
       fs.mkdir(path.join(__dirname, `${root}css/`), (err) => {
         if (err) throw err;
-        copyAssetsTo('build/css/', `${root}css/`);
+        copyAssetsTo([
+          { source: 'build/css/', target: `${root}css/` },
+        ]);
       });
 
       fs.mkdir(path.join(__dirname, `${root}js/`), (err) => {
         if (err) throw err;
-        copyAssetsTo('build/js/', `${root}js/`);
+        copyAssetsTo([
+          { source: 'build/js/', target: `${root}js/` },
+        ]);
       });
 
       fs.mkdir(path.join(__dirname, `${root}images/`), (err) => {
         if (err) throw err;
-        copyAssetsTo('build/images/', `${root}images/`);
+        copyAssetsTo([
+          { source: 'build/images/', target: `${root}images/` },
+        ]);
       });
 
       fs.mkdir(path.join(__dirname, `${root}fonts/`), (err) => {
         if (err) throw err;
-        copyAssetsTo('build/fonts/', `${root}fonts/`);
+        copyAssetsTo([
+          { source: 'build/fonts/', target: `${root}fonts/` },
+        ]);
       });
     });
   });
@@ -275,8 +305,8 @@ const i18n = function (args, done) {
   const fs = require('fs');
   const endOfLine = os.EOL;
   const fileYML = './patterns/**/*.config.yml';
-  const fileJS = './patterns/translations.js';
-  const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 't18n' node, choose your ISO key like 'en-EN' and define t18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using t18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.t18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
+  const fileJS = './public/translations.json';
+  // const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 't18n' node, choose your ISO key like 'en-EN' and define t18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using t18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.t18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
   let t18nBody = {};
 
   glob(path.join(__dirname, fileYML), {}, (err, files) => {
@@ -297,7 +327,8 @@ const i18n = function (args, done) {
       }
     });
     // console.log(t18nBody);
-    htmlBody = fileJSBody.replace(/###BODY###/g, JSON.stringify(t18nBody));
+    // htmlBody = fileJSBody.replace(/###BODY###/g, JSON.stringify(t18nBody));
+    htmlBody = JSON.stringify(t18nBody);
     // Write file to dest
     fs.writeFile(path.join(__dirname, fileJS), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
       if (err) throw err;

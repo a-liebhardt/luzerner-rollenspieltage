@@ -53,7 +53,7 @@ exports.init = (() => {
     };
 
     this.setLanguage = function(iso) {
-      console.info(`New language is ${iso}`);
+      console.info(`Language isset to ${iso}`);
       language = iso;
     };
 
@@ -83,6 +83,16 @@ exports.init = (() => {
       });
     };
 
+    const init = () => {
+      const ajax = new XMLHttpRequest();
+      ajax.open('GET', '/translations.json', true);
+      ajax.onload = function(e) {
+        self.setAll(ajax.responseText);
+        window.requestAnimationFrame(self.update);
+      }
+      ajax.send();
+    }
+
     const t18nHandleUpdate = (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -105,7 +115,7 @@ exports.init = (() => {
     });
 
     self.setLanguage(browserLanguage);
-    window.requestAnimationFrame(self.update);
+    init();
 
     return this;
   };
@@ -113,8 +123,8 @@ exports.init = (() => {
 
   window.t18n = t18n;
 
-  window.t18n.set('de', 'demo.label', 'Hallo Welt 1');
-  window.t18n.set('en', 'demo.label', 'Hello World 1');
+  // window.t18n.set('de-DE', 'demo.label', 'Hallo Welt 1');
+  // window.t18n.set('en-EN', 'demo.label', 'Hello World 1');
   // window.t18n.setAll('de', { 'demo.label': 'Hallo Welt 2' });
   // window.t18n.setAll('en', { 'demo.label': 'Hello World 2' });
   // window.t18n.setAll('de', '{"demo.label":"Hallo Welt 3"}');
