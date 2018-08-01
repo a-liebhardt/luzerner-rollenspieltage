@@ -3,12 +3,12 @@
   {{> @label}}
   <select {{#if select-id}}id="{{select-id}}"{{/if}} {{#if select-name}}name="{{select-name}}"{{/if}} {{#if select-info}}data-info="{{select-info}}"{{/if}} {{#if select-error}}data-error="{{select-error}}"{{/if}} {{#if select-multiple}}multiple{{/if}} {{#if select-readonly}}readonly{{/if}} {{#if select-disabled}}disabled{{/if}} {{#if select-required}}required{{/if}} {{{select-attr}}}>
     {{#each select-items}}
-      <option {{#if select-value}}value="{{select-value}}"{{/if}}>{{select-label}}</option>
+      <option {{#if select-value}}value="{{select-value}}"{{/if}} {{#if option-i18n}}i18n="{{option-i18n}}"{{/if}}>{{select-label}}</option>
     {{/each}}
     {{#each select-optgroups}}
-      <optgroup {{#if select-optgroups-label}}value="{{select-optgroups-label}}"{{/if}}>
+      <optgroup {{#if select-optgroups-label}}value="{{select-optgroups-label}}"{{/if}} {{#if option-i18n}}i18n="{{optgroup-i18n}}"{{/if}}>
       {{#each select-items}}
-        <option {{#if select-value}}value="{{select-value}}"{{/if}}>{{select-label}}</option>
+        <option {{#if select-value}}value="{{select-value}}"{{/if}} {{#if option-i18n}}i18n="{{option-i18n}}"{{/if}}>{{select-label}}</option>
       {{/each}}
       </optgroup>
     {{/each}}

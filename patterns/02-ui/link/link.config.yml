@@ -4,7 +4,13 @@ context:
     link-href: "#"
     label:
       label-text: "Link Label Text"
+      label-text-i18n: "link.label.text.demo"
       icon:
         icon-name: "arrow-right"
         icon-pos: "before"
         icon-class: "icon-xs"
+t18n:
+  'de-DE':
+    'link.label.text.demo': "Link Label Text (DE)"
+  'en-EN':
+    'link.label.text.demo': "Link Label Text (EN)"

@@ -4,8 +4,15 @@ context:
     label:
       label-for: "demo-textarea-1"
       label-text: "Demo Textarea Field 1"
+      label-text-i18n: "textarea.label.text.demo"
     textarea-role: "textarea"
     textarea-id: "demo-textarea-1"
     textarea-name: "demo[textarea-1]"
     textarea-placeholder: "Demo Textarea Field 1"
-    textarea-class: "example-textarea-class col-m-6"
+    textarea-i18n: "textarea.label.text.demo"
+    textarea-class: "example-textarea-class"
+t18n:
+  'de-DE':
+    'textarea.label.text.demo': "Demo Textarea Field 1 (DE)"
+  'en-EN':
+    'textarea.label.text.demo': "Demo Textarea Field 1 (DE)"

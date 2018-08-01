@@ -4,6 +4,7 @@ context:
     label:
       label-for: "demo-select-1"
       label-text: "Demo Select Field 1"
+      label-text-i18n: "label.text.demo"
     select-role: "select"
     select-id: "demo-select-1"
     select-name: "demo[select-1]"
@@ -12,12 +13,27 @@ context:
       -
         select-value: "-1"
         select-label: "Demo Select Field 1"
+        option-i18n: "label.text.demo"
       -
         select-value: "1"
         select-label: "Opt 1"
+        option-i18n: "option.demo.1"
       -
         select-value: "2"
         select-label: "Opt 2"
+        option-i18n: "option.demo.2"
       -
         select-value: "3"
         select-label: "Opt 3"
+        option-i18n: "option.demo.3"
+t18n:
+  'de-DE':
+    'label.text.demo': "Demo Select Field 1 (DE)"
+    'option.demo.1': "Opt 1 (DE)"
+    'option.demo.2': "Opt 2 (DE)"
+    'option.demo.3': "Opt 3 (DE)"
+  'en-EN':
+    'label.text.demo': "Demo Select Field 1 (EN)"
+    'option.demo.1': "Opt 1 (EN)"
+    'option.demo.2': "Opt 2 (EN)"
+    'option.demo.3': "Opt 3 (EN)"

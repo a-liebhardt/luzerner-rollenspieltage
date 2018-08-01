@@ -1,8 +1,14 @@
 status: prototype
 context:
   button:
-    button-class: "example-button-class col-m-6"
+    button-class: "example-button-class"
     button-type: "submit"
     button-role: "button"
     label:
       label-text: "Form button"
+      label-text-i18n: "button.label.text.demo"
+t18n:
+  'de-DE':
+    'button.label.text.demo': "Form button (DE)"
+  'en-EN':
+    'button.label.text.demo': "Form button (EN)"

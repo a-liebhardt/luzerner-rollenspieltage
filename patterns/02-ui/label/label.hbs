@@ -2,7 +2,7 @@
 <label role="note" {{#if label-for}}for="{{label-for}}"{{/if}} class="{{#with icon}}label-icon{{/with}} {{#if label-text}}label-text{{/if}} {{label-class}}" {{#with icon}}icon-pos="{{icon-pos}}"{{/with}} {{#if label-error}}data-error="{{label-error}}"{{/if}} >
   {{> @icon}}
   {{#if label-text}}
-    <strong>{{{label-text}}}</strong>
+    <strong {{#if label-text-i18n}}i18n="{{label-text-i18n}}"{{/if}}>{{{label-text}}}</strong>
   {{/if}}
 </label>
 {{/with}}

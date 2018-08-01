@@ -4,6 +4,7 @@ context:
     label:
       label-for: "demo-input-1"
       label-text: "Demo Input Field 1"
+      label-text-i18n: "label.text.demo"
     input-role: "input"
     # input-role: "checkbox"
     # input-role: "radio"
@@ -11,5 +12,11 @@ context:
     input-id: "demo-input-1"
     input-name: "demo[input-1]"
     input-placeholder: "Demo Input Field 1"
-    input-class: "example-input-class col-m-6"
+    input-i18n: "label.text.demo"
+    input-class: "example-input-class"
     input-autocomplete: "input"
+t18n:
+  'de-DE':
+    'label.text.demo': "Demo Input Field 1 (DE)"
+  'en-EN':
+    'label.text.demo': "Demo Input Field 1 (EN)"

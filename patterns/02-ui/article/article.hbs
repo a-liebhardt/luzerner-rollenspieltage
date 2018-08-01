@@ -23,7 +23,7 @@
   </header>
   {{/article-hide-header}}
   {{#if article-body}}
-  <main>{{{article-body}}}</main>
+  <main {{#if article-body-i18n}}i18n="{{article-body-i18n}}"{{/if}}>{{{article-body}}}</main>
   {{/if}}
   {{^article-hide-footer}}
   <footer>
