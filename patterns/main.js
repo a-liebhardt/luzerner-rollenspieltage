@@ -5,6 +5,7 @@ import Spinner from './02-ui/spinner/matrix';
 import Formular from './02-ui/formular/formular';
 import Form from './02-ui/formular/form';
 import Fullpage from './02-ui/pagescroller/fullpage';
+import Translation from './02-ui/translation/translation';
 // import Header from './03-modules/header/header';
 import Gamemaster from './03-modules/registration/gamemaster';
 
@@ -43,6 +44,7 @@ ready(() => {
   // Init pattern scripts
   Formular.init();
   Form.init();
+  Translation.init();
   // Header.init();
   Gamemaster.init();
 });
