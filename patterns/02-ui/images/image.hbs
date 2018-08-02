@@ -1,3 +1,3 @@
 {{#with image}}
-<img role="img" alt="{{image-alt}}" class="lazyload {{image-class}}" src="{{image-source}}" {{#if image-lazyload}}data-src="{{image-lazyload}}"{{/if}} />
+<img role="img" alt="{{image-alt}}" class="lazyload {{image-class}}" src="{{image-source}}" {{#if image-lazyload}}data-src="{{image-lazyload}}"{{/if}} {{#if image-i18n}}i18n="{{image-i18n}}"{{/if}} />
 {{/with}}

@@ -1,4 +1,4 @@
-# status: wip
+status: wip
 context:
   navigation-role: "navigation"
   navigation-class: "example-class"

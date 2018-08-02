@@ -2,7 +2,7 @@
 <figure class="image-set {{figure-class}}">
   {{> @picture}}
   {{#if figure-caption}}
-  <figcaption>
+  <figcaption {{#if figure-caption-i18n}}i18n="{{figure-caption-i18n}}"{{/if}}>
     {{{figure-caption}}}
   </figcaption>
   {{/if}}
