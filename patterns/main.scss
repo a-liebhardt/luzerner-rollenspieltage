@@ -37,7 +37,7 @@
 @import '02-ui/label/label';
 @import '02-ui/link/link';
 @import '02-ui/lightbox/lightbox';
-@import '02-ui/spinner/matrix';
+@import '02-ui/spinner/spinner-matrix';
 @import '02-ui/article/article';
 @import '02-ui/flip-container/flip-container';
 @import '02-ui/formular/form';
@@ -55,7 +55,11 @@
 
 // Modules
 // ----------------------------------------
+@import '03-modules/content-panel0/panel0';
+@import '03-modules/content-panel1/panel1';
+@import '03-modules/content-panel2/panel2';
+@import '03-modules/content-panel3/panel3';
+@import '03-modules/content-panel4/panel4';
 @import '03-modules/footer/default';
 @import '03-modules/header/default';
-@import '03-modules/main-nav/default';
 @import '03-modules/registration/registration';
