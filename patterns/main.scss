@@ -2,8 +2,9 @@
 @import 'node-normalize-scss/normalize';
 
 // Module imports
+/* stylelint-disable */
 @import 'flatpickr/dist/flatpickr';
-
+/* stylelint-enable */
 
 // Project settings
 @import '_config/mixins';
@@ -38,6 +39,7 @@
 @import '02-ui/lightbox/lightbox';
 @import '02-ui/spinner/matrix';
 @import '02-ui/article/article';
+@import '02-ui/flip-container/flip-container';
 @import '02-ui/formular/form';
 @import '02-ui/formular/form-button-link';
 @import '02-ui/formular/form-button';
