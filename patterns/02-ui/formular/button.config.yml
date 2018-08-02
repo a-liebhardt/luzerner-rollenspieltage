@@ -1,4 +1,4 @@
-status: prototype
+# status: wip
 context:
   button:
     button-class: "example-button-class"
@@ -7,7 +7,7 @@ context:
     label:
       label-text: "Form button"
       label-text-i18n: "button.label.text.demo"
-t18n:
+i18n:
   'de-DE':
     'button.label.text.demo': "Form button (DE)"
   'en-EN':

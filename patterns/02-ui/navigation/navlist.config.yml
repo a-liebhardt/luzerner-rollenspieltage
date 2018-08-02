@@ -1,4 +1,4 @@
-status: prototype
+# status: wip
 context:
   navigation-role: "navigation"
   navigation-class: "example-class"
@@ -45,7 +45,7 @@ context:
           label-text: "Nav 3"
           label-text-i18n: "navigation.link.label.text.demo.3"
       navigation-role: "navigation"
-t18n:
+i18n:
   'de-DE':
     'navigation.link.label.text.demo.1': "Nav 1 (DE)"
     'navigation.link.label.text.demo.2': "Nav 2 (DE)"

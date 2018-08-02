@@ -10,6 +10,29 @@ fractal.set('project.version', pkg.version);
  */
 fractal.components.set('path', path.join(__dirname, 'patterns'));
 fractal.components.set('label', 'Patterns');
+fractal.components.set('default.status', 'prototype');
+fractal.components.set('statuses', {
+  prototype: {
+    label: 'Prototype',
+    description: 'Do not implement.',
+    color: '#FF3333'
+  },
+  wip: {
+      label: 'WiP',
+      description: 'Work in progress. Implement with caution.',
+      color: '#FF9233'
+  },
+  ready: {
+      label: 'Ready',
+      description: 'Ready to implement.',
+      color: '#29CC29'
+  },
+  published: {
+    label: 'Published',
+    description: 'Is published.',
+    color: '#FF00E9'
+  }
+});
 
 /*
  * Documentation pages.
@@ -192,7 +215,7 @@ const distribute = function (args, done) {
     let files = 0;
     for (let item of app.components.flatten()) {
       if (item.relViewPath.match(/^pages\//g)) {
-        if (item.status.label === 'Ready') {
+        if (item.status.label === 'Published') {
           item.render().then(function(contentBody){
             // content to page wrapper
             let htmlBody = pageBody.replace(/\{\{\{ yield \}\}\}/, contentBody);
@@ -204,15 +227,17 @@ const distribute = function (args, done) {
             fs.writeFile(path.join(__dirname, `${root}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
               if (err) throw err;
               files++;
-              console.log(`Build ready for '${root}${item.handle}.html'`);
+              console.log(`Dist ready: '${root}${item.handle}.html'`);
             });
           });
         }
       }
     }
-    if (!files) {
-      console.warn(`Warning: No page available. Please make sure to ready pages in order to distribute.`);
-    }
+    setTimeout(() => {
+      if (!files) {
+        console.warn(`Warning: No page released. Please make sure to set status 'published' for pages in order to distribute.`);
+      }
+    }, 1000);
   };
 
   const buildWebPage = () => {
@@ -289,29 +314,29 @@ const i18n = function (args, done) {
   const endOfLine = os.EOL;
   const fileYML = './patterns/**/*.config.yml';
   const fileJS = './public/translations.json';
-  // const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 't18n' node, choose your ISO key like 'en-EN' and define t18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using t18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.t18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
-  let t18nBody = {};
+  // const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 'i18n' node, choose your ISO key like 'en-EN' and define i18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using i18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.i18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
+  let i18nBody = {};
 
   glob(path.join(__dirname, fileYML), {}, (err, files) => {
     if (err) throw err;
     files.forEach((file) => {
       const configYAML = yaml.load(file);
-      if (typeof configYAML.t18n !== 'undefined') {
+      if (configYAML && typeof configYAML.i18n !== 'undefined') {
         // console.log(file);
-        // console.log(configYAML.t18n);
-        Object.keys(configYAML.t18n).forEach(function(iso) {
-          if (typeof t18nBody[iso] === 'undefined') {
-            t18nBody[iso] = {};
+        // console.log(configYAML.i18n);
+        Object.keys(configYAML.i18n).forEach(function(iso) {
+          if (typeof i18nBody[iso] === 'undefined') {
+            i18nBody[iso] = {};
           }
-          Object.keys(configYAML.t18n[iso]).forEach(function(key) {
-            t18nBody[iso][key] = configYAML.t18n[iso][key];
+          Object.keys(configYAML.i18n[iso]).forEach(function(key) {
+            i18nBody[iso][key] = configYAML.i18n[iso][key];
           });
         });
       }
     });
-    // console.log(t18nBody);
-    // htmlBody = fileJSBody.replace(/###BODY###/g, JSON.stringify(t18nBody));
-    htmlBody = JSON.stringify(t18nBody);
+    // console.log(i18nBody);
+    // htmlBody = fileJSBody.replace(/###BODY###/g, JSON.stringify(i18nBody));
+    htmlBody = JSON.stringify(i18nBody);
     // Write file to dest
     fs.writeFile(path.join(__dirname, fileJS), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
       if (err) throw err;

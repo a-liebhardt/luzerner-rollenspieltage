@@ -1,4 +1,4 @@
-status: prototype
+# status: wip
 context:
   input:
     label:
@@ -15,7 +15,7 @@ context:
     input-i18n: "label.text.demo"
     input-class: "example-input-class"
     input-autocomplete: "input"
-t18n:
+i18n:
   'de-DE':
     'label.text.demo': "Demo Input Field 1 (DE)"
   'en-EN':

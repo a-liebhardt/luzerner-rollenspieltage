@@ -435,7 +435,7 @@ context:
       article-title-tag: "h1"
       article-subtitle: "Thank you very much for helping us making this event a special one for every role player. <br />We will check your registration and come back to you in the next couple of days.<br />Have a good time, till we meet again.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
       article-subtitle-i18n: "form-4.article.subtitle"
-t18n:
+i18n:
   'de-DE':
     'form-1.input.name': "Dein Vorname, Nachname"
     'form-1.input.name.error': "Bitte trage deinen Namen ein"

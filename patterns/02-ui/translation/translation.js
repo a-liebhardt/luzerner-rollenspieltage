@@ -76,6 +76,8 @@ exports.init = (() => {
         if (value) {
           // Update placeholder if exists
           if (el.hasAttribute('placeholder')) el.setAttribute('placeholder', value);
+          if (el.hasAttribute('title')) el.setAttribute('title', value);
+          if (el.hasAttribute('alt')) el.setAttribute('alt', value);
           // Handle special elements
           if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.label = value;
           // Update html of everything which has no value
@@ -84,24 +86,33 @@ exports.init = (() => {
       });
     };
 
-    const init = () => {
-      const ajax = new XMLHttpRequest();
-      ajax.open('GET', '/translations.json', true);
-      ajax.onload = () => {
-        self.setAll(ajax.responseText);
-        window.requestAnimationFrame(self.update);
-      }
-      ajax.send();
-    }
+    self.setLanguage(browserLanguage);
 
-    const t18nHandleUpdate = (e) => {
+    const t18nHandleUpdateSelect = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // Get current iso language
+      let iso = e.target.value;
+      document.querySelectorAll('select[t18n-update]').forEach((item) => {
+        item.value = iso;
+      });
+      self.setLanguage(iso);
+      // Update translations
+      self.update();
+    };
+
+    const t18nHandleUpdateClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
       // Get current iso language
       let iso = e.target.getAttribute('t18n-update');
-      if (['select'].indexOf(e.target.nodeName.toLowerCase()) > -1) {
-        iso = e.target.value;
-      }
+      document.querySelectorAll('*:not(select)[t18n-update]').forEach((item) => {
+        if (item.getAttribute('t18n-update') === iso) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
       self.setLanguage(iso);
       // Update translations
       self.update();
@@ -109,13 +120,22 @@ exports.init = (() => {
 
     t18nUpdates.forEach((t18nUpdate) => {
       if (['select'].indexOf(t18nUpdate.nodeName.toLowerCase()) > -1) {
-        t18nUpdate.addEventListener('change', t18nHandleUpdate);
+        t18nUpdate.addEventListener('change', t18nHandleUpdateSelect);
       } else {
-        t18nUpdate.addEventListener('click', t18nHandleUpdate);
+        t18nUpdate.addEventListener('click', t18nHandleUpdateClick);
       }
     });
 
-    self.setLanguage(browserLanguage);
+    const init = () => {
+      const ajax = new XMLHttpRequest();
+      ajax.open('GET', '/translations.json', true);
+      ajax.onload = () => {
+        self.setAll(ajax.responseText);
+        document.querySelector('html').classList.add('i18n-ready');
+        window.requestAnimationFrame(self.update);
+      }
+      ajax.send();
+    }
     init();
 
     return this;
@@ -124,6 +144,7 @@ exports.init = (() => {
 
   window.t18n = t18n;
 
+  // Example setters
   // window.t18n.set('de-DE', 'demo.label', 'Hallo Welt 1');
   // window.t18n.set('en-EN', 'demo.label', 'Hello World 1');
   // window.t18n.setAll('de', { 'demo.label': 'Hallo Welt 2' });

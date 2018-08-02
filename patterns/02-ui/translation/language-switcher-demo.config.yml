@@ -1,5 +1,5 @@
 status: ready
-t18n:
+i18n:
   'de-DE':
     'demo.label': "Hallo Welt (DE)"
   'en-EN':

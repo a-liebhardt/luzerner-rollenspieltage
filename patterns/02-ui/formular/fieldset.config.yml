@@ -1,4 +1,4 @@
-status: prototype
+# status: wip
 context:
   fieldset-name: "example-fieldset-name"
   fieldset-class: "example-fieldset-class"

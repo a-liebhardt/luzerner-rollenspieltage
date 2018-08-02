@@ -1,4 +1,4 @@
-status: prototype
+# status: wip
 context:
   select:
     label:
@@ -26,7 +26,7 @@ context:
         select-value: "3"
         select-label: "Opt 3"
         option-i18n: "option.demo.3"
-t18n:
+i18n:
   'de-DE':
     'label.text.demo': "Demo Select Field 1 (DE)"
     'option.demo.1': "Opt 1 (DE)"

@@ -64,7 +64,7 @@ exports.init = (() => {
       formHref += `?params=${params}`;
     }
     xhttp.open(formMethod, formHref, true);
-    xhttp.setRequestHeader('Content-type', 'application/json');
+    xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.send(params);
   };
 

@@ -1,4 +1,4 @@
-status: prototype
+# status: wip
 context:
   article:
     article-hide-small: true
