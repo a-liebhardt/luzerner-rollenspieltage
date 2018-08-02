@@ -29,7 +29,7 @@ fractal.components.set('statuses', {
   },
   published: {
     label: 'Published',
-    description: 'Is published.',
+    description: 'Is published. Do not change!',
     color: '#FF00E9'
   }
 });

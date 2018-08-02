@@ -1,7 +1,7 @@
 // Scripts
 import Layout from './01-core/layout/layout';
 import Lightbox from './02-ui/lightbox/lightbox';
-import Spinner from './02-ui/spinner/matrix';
+import Spinner from './02-ui/spinner/spinner-matrix';
 import Formular from './02-ui/formular/formular';
 import Form from './02-ui/formular/form';
 import Fullpage from './02-ui/pagescroller/fullpage';
