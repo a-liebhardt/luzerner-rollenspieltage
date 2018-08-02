@@ -1,0 +1,16 @@
+<div role="select" class="has-content">
+  <select i18n-update>
+    <option value="en-EN" i18n="link1.label.text.demo">en</option>
+    <option value="de-DE" i18n="link2.label.text.demo">de</option>
+  </select>
+</div>
+<hr />
+{{> @link link-1}}
+{{> @link link-2}}
+<hr />
+<p i18n="demo.label" title="Hello World">Hello World</p>
+<input type="text" placeholder="Hello World" i18n="demo.label" />
+<input type="text" placeholder="Hello World" value="Value shouldn't change!" i18n="demo.label" />
+<select>
+  <option i18n="demo.label">Hello World</option>
+</select>

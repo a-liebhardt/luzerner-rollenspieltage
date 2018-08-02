@@ -1,0 +1,33 @@
+status: ready
+context:
+  link-1:
+    link:
+      link-href: "#"
+      i18n-update: "en-EN"
+      label:
+        label-text: "English"
+        label-text-i18n: "link1.label.text.demo"
+        icon:
+          icon-name: "arrow-right"
+          icon-pos: "before"
+          icon-class: "icon-xs"
+  link-2:
+    link:
+      link-href: "#"
+      i18n-update: "de-DE"
+      label:
+        label-text: "German"
+        label-text-i18n: "link2.label.text.demo"
+        icon:
+          icon-name: "arrow-right"
+          icon-pos: "before"
+          icon-class: "icon-xs"
+i18n:
+  'de-DE':
+    'demo.label': "Hallo Welt (DE)"
+    'link1.label.text.demo': "Englisch (DE)"
+    'link2.label.text.demo': "Deutsch (DE)"
+  'en-EN':
+    'demo.label': "Hello World (EN)"
+    'link1.label.text.demo': "English (EN)"
+    'link2.label.text.demo': "German (EN)"

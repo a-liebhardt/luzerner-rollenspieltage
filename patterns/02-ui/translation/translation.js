@@ -1,11 +1,11 @@
 exports.init = (() => {
   /* eslint-disable */
-  const t18n = new function() {
+  const i18n = new function() {
     const self = this;
     const browserLanguage = navigator.languages && navigator.languages[0] || // Chrome / Firefox
       navigator.language || // All browsers
       navigator.userLanguage; // IE <= 10
-    const t18nUpdates = document.querySelectorAll('[t18n-update]');
+    const i18nUpdates = document.querySelectorAll('[i18n-update]');
     let translations = {};
     let language = '';
 
@@ -54,20 +54,12 @@ exports.init = (() => {
     };
 
     this.setLanguage = function(iso) {
-      console.info(`Language isset to ${iso}`);
+      console.info(`Language set to '${iso}'`);
       language = iso;
     };
 
     this.update = () => {
-      const iso = self.getLanguage();
-      // Update all updater settings
-      t18nUpdates.forEach((t18nUpdate) => {
-        if (['select'].indexOf(t18nUpdate.nodeName.toLowerCase()) > -1) {
-          t18nUpdate.value = iso;
-        } else {
-          t18nUpdate.setAttribute('t18n-update', iso);
-        }
-      });
+      i18nRefreshAllUpdater();
       // Update all labels
       const els = document.querySelectorAll('[i18n]');
       els.forEach((el) => {
@@ -88,41 +80,47 @@ exports.init = (() => {
 
     self.setLanguage(browserLanguage);
 
-    const t18nHandleUpdateSelect = (e) => {
+    const i18nRefreshAllUpdater = () => {
+      const iso = self.getLanguage();
+      document.querySelectorAll('[i18n-update]').forEach((item) => {
+        if (['select'].indexOf(item.nodeName.toLowerCase()) > -1) {
+          item.value = iso;
+        } else {
+          if (item.getAttribute('i18n-update') === iso) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        }
+      });
+    };
+
+    const i18nHandleUpdateSelect = (e) => {
       e.preventDefault();
       e.stopPropagation();
       // Get current iso language
       let iso = e.target.value;
-      document.querySelectorAll('select[t18n-update]').forEach((item) => {
-        item.value = iso;
-      });
       self.setLanguage(iso);
       // Update translations
       self.update();
     };
 
-    const t18nHandleUpdateClick = (e) => {
+    const i18nHandleUpdateClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
+      const target = ['a'].indexOf(e.target.nodeName.toLowerCase()) > -1 ? e.target : e.target.closest('a');
       // Get current iso language
-      let iso = e.target.getAttribute('t18n-update');
-      document.querySelectorAll('*:not(select)[t18n-update]').forEach((item) => {
-        if (item.getAttribute('t18n-update') === iso) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
+      let iso = target.getAttribute('i18n-update');
       self.setLanguage(iso);
       // Update translations
       self.update();
     };
 
-    t18nUpdates.forEach((t18nUpdate) => {
-      if (['select'].indexOf(t18nUpdate.nodeName.toLowerCase()) > -1) {
-        t18nUpdate.addEventListener('change', t18nHandleUpdateSelect);
+    i18nUpdates.forEach((i18nUpdate) => {
+      if (['select'].indexOf(i18nUpdate.nodeName.toLowerCase()) > -1) {
+        i18nUpdate.addEventListener('change', i18nHandleUpdateSelect);
       } else {
-        t18nUpdate.addEventListener('click', t18nHandleUpdateClick);
+        i18nUpdate.addEventListener('click', i18nHandleUpdateClick);
       }
     });
 
@@ -142,13 +140,13 @@ exports.init = (() => {
   };
   /* eslint-enable */
 
-  window.t18n = t18n;
+  window.i18n = i18n;
 
   // Example setters
-  // window.t18n.set('de-DE', 'demo.label', 'Hallo Welt 1');
-  // window.t18n.set('en-EN', 'demo.label', 'Hello World 1');
-  // window.t18n.setAll('de', { 'demo.label': 'Hallo Welt 2' });
-  // window.t18n.setAll('en', { 'demo.label': 'Hello World 2' });
-  // window.t18n.setAll('de', '{"demo.label":"Hallo Welt 3"}');
-  // window.t18n.setAll('en', '{"demo.label":"Hello World 3"}');
+  // window.i18n.set('de-DE', 'demo.label', 'Hallo Welt 1');
+  // window.i18n.set('en-EN', 'demo.label', 'Hello World 1');
+  // window.i18n.setAll('de', { 'demo.label': 'Hallo Welt 2' });
+  // window.i18n.setAll('en', { 'demo.label': 'Hello World 2' });
+  // window.i18n.setAll('de', '{"demo.label":"Hallo Welt 3"}');
+  // window.i18n.setAll('en', '{"demo.label":"Hello World 3"}');
 });

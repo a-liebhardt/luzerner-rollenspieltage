@@ -1,6 +1,0 @@
-status: ready
-i18n:
-  'de-DE':
-    'demo.label': "Hallo Welt (DE)"
-  'en-EN':
-    'demo.label': "Hello World (EN)"
