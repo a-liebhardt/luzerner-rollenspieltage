@@ -1,3 +1,5 @@
 status: wip
 context:
+  panel0-config: '@panel0'
+  panel1-config: '@panel1'
   panel3-config: '@panel3'

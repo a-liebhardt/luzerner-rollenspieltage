@@ -1,0 +1,47 @@
+// #fullpage {
+// 	& > .fp-section {
+// 		& > .fp-tableCell {
+// 			overflow: hidden;
+// 		}
+// 	}
+// }
+
+#fp-nav {
+	position: fixed;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+
+		li {
+			margin: 0.8rem;
+
+			a {
+				display: block;
+				width: 4rem;
+				height: 4rem;
+				background: $color--black-40;
+
+				&.active {
+					background: $color--black-20;
+				}
+			}
+
+			.fp-tooltip {
+				padding: 0.4rem 0.8rem;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}

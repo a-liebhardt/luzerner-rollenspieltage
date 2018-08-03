@@ -37,6 +37,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 2000ms ease-in-out 0s forwards;
 
   .sk-cube {
     width: 27%;
@@ -105,5 +107,15 @@
 
   35% {
     transform: scale3d(0, 0, 1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
