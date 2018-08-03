@@ -34,37 +34,31 @@ h6,
   margin: 0 0 0.8em;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: 4.6rem;
   margin: 0 0 0.4em;
 }
 
-h2,
-.h2 {
+h2 {
   font-size: 3.4rem;
   margin: 0 0 0.5em;
 }
 
-h3,
-.h3 {
+h3 {
   font-size: 2.8rem;
   margin: 0 0 0.6em;
 }
 
-h4,
-.h4 {
+h4 {
   font-size: 2.4rem;
   margin: 0 0 0.7em;
 }
 
-h5,
-.h5 {
+h5 {
   font-size: 2rem;
 }
 
-h6,
-.h6 {
+h6 {
   font-size: 1.6rem;
 }
 
@@ -135,7 +129,7 @@ p {
       color: $color--blue-80;
       text-decoration: underline;
     }
-}
+  }
 }
 
 pre {

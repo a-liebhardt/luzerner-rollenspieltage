@@ -1,10 +1,10 @@
 {
-  "extends": "stylelint-config-partystreusel",
+  "extends": "stylelint",
   "rules": {
-    "block-no-empty": null,
+    "block-no-empty": true,
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [ "always", {
-      "ignore": ["stylelint-commands", "after-comment"]
+      "ignore": ["after-comment", "stylelint-commands"]
     } ],
     "declaration-colon-space-after": "always",
     "indentation": ["space", {
@@ -17,13 +17,13 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["em", "rem", "%", "s", "vh", "vw", "px", "ms", "s", "fr", "deg"],
+    "unit-whitelist": ["em", "rem", "%", "vh", "vw", "ms", "s", "fr", "deg"],
     "at-rule-no-unknown": null,
     "declaration-block-no-redundant-longhand-properties": null,
     "length-zero-no-unit": null,
     "selector-max-specificity": null,
     "selector-class-pattern": null,
-    "max-nesting-depth": null,
+    "max-nesting-depth": 6,
     "no-descending-specificity": null
   }
 }
