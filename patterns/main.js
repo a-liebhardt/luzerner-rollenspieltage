@@ -7,6 +7,7 @@ import Form from './02-ui/formular/form';
 import Fullpage from './02-ui/pagescroller/fullpage';
 import Translation from './02-ui/translation/translation';
 // import Header from './03-modules/header/header';
+import Contact from './03-modules/contact/contact';
 import Gamemaster from './03-modules/registration/gamemaster';
 
 // Custom scripts
@@ -46,5 +47,6 @@ ready(() => {
   Form.init();
   Translation.init();
   // Header.init();
+  Contact.init();
   Gamemaster.init();
 });

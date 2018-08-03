@@ -1,7 +1,7 @@
 import Fullpage from 'fullpage.js';
 
 exports.init = (() => {
-  Fullpage('#fullpage', {
+  Fullpage('#pagescroller', {
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     // Navigation
     menu: '#menu',

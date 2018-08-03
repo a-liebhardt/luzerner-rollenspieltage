@@ -62,7 +62,7 @@ exports.init = (() => {
         presence: {
           // message: '^Please enter your Name',
           message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('form-1.input.name.error');
+            const i18n = window.i18n.get('registration.form-1.input.name.error');
             if (!i18n) return '^Please enter your Name';
             return `^${i18n}`;
           }
@@ -73,7 +73,7 @@ exports.init = (() => {
         presence: {
           // message: '^Please enter your Email',
           message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('form-1.input.email.error.1');
+            const i18n = window.i18n.get('registration.form-1.input.email.error.1');
             if (!i18n) return '^Please enter your Email';
             return `^${i18n}`;
           }
@@ -82,7 +82,7 @@ exports.init = (() => {
         email: {
           // message: '^Email doesn\'t look correct',
           message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('form-1.input.email.error.2');
+            const i18n = window.i18n.get('registration.form-1.input.email.error.2');
             if (!i18n) return '^Email doesn\'t look correct';
             return `^${i18n}`;
           }
@@ -109,7 +109,7 @@ exports.init = (() => {
         presence: {
           // message: '^Please enter a game name',
           message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('form-2.input.title.error');
+            const i18n = window.i18n.get('registration.form-2.input.title.error');
             if (!i18n) return '^Please enter a game name';
             return `^${i18n}`;
           }
@@ -142,7 +142,7 @@ exports.init = (() => {
           // presence: {message: '^Please enter at least one starttime'},
           presence: {
             message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-              const i18n = window.i18n.get('form-3.input.starttime.error');
+              const i18n = window.i18n.get('registration.form-3.input.starttime.error');
               if (!i18n) return '^Please enter a game name';
               return `^${i18n}`;
             }
@@ -160,7 +160,7 @@ exports.init = (() => {
           // presence: {message: '^Please enter at least one starttime'},
           presence: {
             message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-              const i18n = window.i18n.get('form-3.input.starttime.error');
+              const i18n = window.i18n.get('registration.form-3.input.starttime.error');
               if (!i18n) return '^Please enter a game name';
               return `^${i18n}`;
             }
@@ -178,7 +178,7 @@ exports.init = (() => {
           // presence: {message: '^Please enter at least one starttime'},
           presence: {
             message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-              const i18n = window.i18n.get('form-3.input.starttime.error');
+              const i18n = window.i18n.get('registration.form-3.input.starttime.error');
               return `^${i18n}`;
             }
           }

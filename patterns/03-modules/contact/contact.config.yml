@@ -1,0 +1,108 @@
+status: ready
+context:
+  form-1:
+    form:
+      form-name: "contact"
+      form-action: "http://penandpaperdayweb20180727100723.azurewebsites.net/api/ContactUs"
+      form-method: "post"
+      form-class: "form-1 contact-step active"
+      form-items:
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    input:
+                      label:
+                        label-for: "contact-name"
+                        label-text: "Your Firstname, Lastname"
+                        label-text-i18n: "contact.form-1.input.name"
+                      input-id: "contact-name"
+                      input-name: "contact[name]"
+                      input-placeholder: "Your Firstname, Lastname"
+                      input-i18n: "contact.form-1.input.name"
+                      input-class: ""
+                      # Don't need for text > input-type: "text"
+                      input-role: "input"
+                      input-autocomplete: "name"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    input:
+                      label:
+                        label-for: "contact-email"
+                        label-text: "Your Email"
+                        label-text-i18n: "contact.form-1.email.name"
+                      input-id: "contact-email"
+                      input-name: "contact[email]"
+                      input-placeholder: "Your Email"
+                      input-i18n: "contact.form-1.email.name"
+                      input-class: ""
+                      input-type: "email"
+                      input-role: "input"
+                      input-autocomplete: "email"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    textarea:
+                      label:
+                        label-for: "contact-message"
+                        label-text: "Your message"
+                        label-text-i18n: "contact.form-1.input.message"
+                      textarea-id: "contact-message"
+                      textarea-name: "contact[message]"
+                      textarea-placeholder: "Your message"
+                      textarea-i18n: "contact.form-1.input.message"
+                      textarea-class: ""
+                      textarea-role: "textarea"
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12 align-center"
+                    button:
+                      label:
+                        label-text: "Send us your message"
+                        label-text-i18n: "contact.form-1.button.next"
+                      button-class: "submit-button"
+                      button-type: "submit"
+                      button-role: "button"
+  form-2:
+    panel-class: "form-2 contact-step"
+    article:
+      article-hide-small: true
+      article-title: "Message recieved"
+      article-title-i18n: "contact.form-2.article.title"
+      article-title-tag: "h1"
+      article-subtitle: "Thanky you very much for your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+      article-subtitle-i18n: "contact.form-2.article.subtitle"
+i18n:
+  'de-DE':
+    'contact.form-1.input.name': "Dein Vorname, Nachname"
+    'contact.form-1.input.name.error': "Bitte trage deinen Namen ein"
+    'contact.form-1.email.name': "Deine E-Mail"
+    'contact.form-1.input.email.error.1': "Bitte trage deine E-Mail ein"
+    'contact.form-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
+    'contact.form-1.input.message': "Deine Nachricht"
+    'contact.form-1.button.next': "Sende uns deine Nachricht"
+    'contact.form-2.article.title': "Nachricht erhalten"
+    'contact.form-2.article.subtitle': "Vielen Dank für deine Nachricht<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
+  'en-EN':
+    'contact.form-1.input.name': "Your Firstname, Lastname"
+    'contact.form-1.input.name.error': "Please enter your Name"
+    'contact.form-1.email.name': "Your Email"
+    'contact.form-1.input.email.error.1': "Please enter your Email"
+    'contact.form-1.input.email.error.2': "Email doesn't look correct"
+    'contact.form-1.input.message': "Your message"
+    'contact.form-1.button.next': "Send us your message"
+    'contact.form-2.article.title': "Message recieved"
+    'contact.form-2.article.subtitle': "Thanky you very much for your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+

@@ -1,8 +1,18 @@
 .panel1 {
-	background: $color--black-10;
+  background: $color--black-10;
+  position: relative;
 
-	figure {
-		width: 60rem;
-		height: auto;
-	}
+  figure.emotion {
+    width: 60rem;
+    height: auto;
+  }
+
+  figure.logo {
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+    height: auto;
+  }
 }
