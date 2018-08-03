@@ -1,5 +1,6 @@
-// Cloned from flatpickr/dist/flatpickr.css
-// Because of https://github.com/sass/node-sass/issues/2362
+// Cloned flatpickr/dist/flatpickr.css
+// because of https://github.com/sass/node-sass/issues/2362
+/* stylelint-disable */
 .flatpickr-calendar {
   background: transparent;
   opacity: 0;
@@ -741,3 +742,4 @@ span.flatpickr-weekday {
             transform: translate3d(0, 0, 0);
   }
 }
+/* stylelint-enable */
