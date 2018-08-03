@@ -1,19 +1,26 @@
+# IDEs
+/.idea
+*.iml
+*~
+.vscode/*
+
+# System files
 .DS_Store
-*.gem
-.bundle
-*.lock
-pkg/*
+
+# Caches / Tmp Folders
 tmp/
+.sass-cache/
+node_modules/
+
+# Logs
 log/
-.sass-cache
-node_modules
-.project
-.publish
-.chrome
+yarn-error.log
+
+# Ignored Build Folders
 assets/
 dist/
 build/
 public/
-yarn-error.log
-.vscode/*
+
+# Custom
 patterns/translations.js
