@@ -2,6 +2,8 @@
 import flatpickr from 'flatpickr';
 
 exports.init = (() => {
+  const formId = 'gamemaster';
+
   flatpickr('.datetime input', {
     altInput: true,
     altFormat: 'F j, Y',
@@ -31,14 +33,14 @@ exports.init = (() => {
   });
 
   const handleFormSubmit = (e) => {
-    const forms = e.target.closest('.gamemaster').querySelectorAll('form');
+    const forms = e.target.closest(`.${formId}`).querySelectorAll('form');
     forms.forEach((form) => {
       form.classList.remove('active');
     });
     e.target.classList.add('active');
   };
 
-  const forms = document.querySelectorAll('.gamemaster form');
+  const forms = document.querySelectorAll(`.${formId} form`);
   forms.forEach((form) => {
     form.addEventListener('submit', handleFormSubmit);
   });
@@ -49,15 +51,15 @@ exports.init = (() => {
     currentForm.previousElementSibling.classList.add('active');
   };
 
-  const backlinks = document.querySelectorAll('.gamemaster form a.back-link');
+  const backlinks = document.querySelectorAll(`.${formId} form a.back-link`);
   backlinks.forEach((backlink) => {
     backlink.addEventListener('click', handleBacklink);
   });
 
   /* eslint-disable */
   window.formRules.setRule({
-    'gamemaster': {
-      'gamemaster[name]': {
+    'User': {
+      'User[name]': {
         // Email is required
         presence: {
           // message: '^Please enter your Name',
@@ -68,7 +70,7 @@ exports.init = (() => {
           }
         },
       },
-      'gamemaster[email]': {
+      'User[email]': {
         // Email is required
         presence: {
           // message: '^Please enter your Email',
@@ -94,17 +96,27 @@ exports.init = (() => {
 
   // Set demo success
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('gamemaster', (data) => {
+  window.formCallOnSuccess.setFunc('User', (data, status) => {
     // console.log('succes', 'gamemaster', data);
-    document.querySelector('.gamemaster .form-2').classList.add('active');
-    document.querySelector('.gamemaster .form-1').classList.remove('active');
+    document.querySelector(`.${formId} .form-2`).classList.add('active');
+    document.querySelector(`.${formId} .form-1`).classList.remove('active');
+  });
+
+  window.formCallOnError.setFunc('User', (data, status) => {
+    console.log('error', 'User', data);
+    const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
+    let i18n = window.i18n.get('registration.form.request.error');
+    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    btnFormGroup.classList.add('has-error');
+    btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
+    console.log('error', formId, data);
   });
   /* eslint-enable */
 
   /* eslint-disable */
   window.formRules.setRule({
-    'game': {
-      'game[title]': {
+    'Game': {
+      'Game[title]': {
         // Email is required
         presence: {
           // message: '^Please enter a game name',
@@ -121,18 +133,27 @@ exports.init = (() => {
 
   // Set demo success
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('game', (data) => {
+  window.formCallOnSuccess.setFunc('Game', (data, status) => {
     // console.log('succes', 'gamemaster', data);
-    document.querySelector('.gamemaster .form-3').classList.add('active');
-    document.querySelector('.gamemaster .form-2').classList.remove('active');
+    document.querySelector(`.${formId} .form-3`).classList.add('active');
+    document.querySelector(`.${formId} .form-2`).classList.remove('active');
+  });
+
+  window.formCallOnError.setFunc('Game', (data, status) => {
+    const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
+    let i18n = window.i18n.get('registration.form.request.error');
+    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    btnFormGroup.classList.add('has-error');
+    btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
+    console.log('error', formId, data);
   });
   /* eslint-enable */
 
   /* eslint-disable */
   window.formRules.setRule({
-    'organization': {
-      'organization[starttime-1]': function(value, attributes, attributeName, options, constraints) {
-        const inputs = document.querySelectorAll('.gamemaster .starttime input');
+    'Organization': {
+      'Organization[starttime-1]': function(value, attributes, attributeName, options, constraints) {
+        const inputs = document.querySelectorAll(`.${formId} .starttime input`);
         let inputValue = 0;
         inputs.forEach(function(input) {
           inputValue += input.value.length;
@@ -149,8 +170,8 @@ exports.init = (() => {
           }
         };
       },
-      'organization[starttime-2]': function(value, attributes, attributeName, options, constraints) {
-        const inputs = document.querySelectorAll('.gamemaster .starttime input');
+      'Organization[starttime-2]': function(value, attributes, attributeName, options, constraints) {
+        const inputs = document.querySelectorAll(`.${formId} .starttime input`);
         let inputValue = 0;
         inputs.forEach(function(input) {
           inputValue += input.value.length;
@@ -167,8 +188,8 @@ exports.init = (() => {
           }
         };
       },
-      'organization[starttime-3]': function(value, attributes, attributeName, options, constraints) {
-        const inputs = document.querySelectorAll('.gamemaster .starttime input');
+      'Organization[starttime-3]': function(value, attributes, attributeName, options, constraints) {
+        const inputs = document.querySelectorAll(`.${formId} .starttime input`);
         let inputValue = 0;
         inputs.forEach(function(input) {
           inputValue += input.value.length;
@@ -190,10 +211,19 @@ exports.init = (() => {
 
   // Set demo success
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('organization', (data) => {
+  window.formCallOnSuccess.setFunc('Organization', (data, status) => {
     // console.log('succes', 'gamemaster', data);
-    document.querySelector('.gamemaster .form-4').classList.add('active');
-    document.querySelector('.gamemaster .form-3').classList.remove('active');
+    document.querySelector(`.${formId} .form-4`).classList.add('active');
+    document.querySelector(`.${formId} .form-3`).classList.remove('active');
+  });
+
+  window.formCallOnError.setFunc('Organization', (data, status) => {
+    const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
+    let i18n = window.i18n.get('contact.form.request.error');
+    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    btnFormGroup.classList.add('has-error');
+    btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
+    console.log('error', formId, data);
   });
   /* eslint-enable */
 });

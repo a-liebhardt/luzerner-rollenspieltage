@@ -2,9 +2,11 @@ status: wip
 context:
   form-1:
     form:
-      form-name: "gamemaster"
+      form-name: "User"
       form-action: "http://localhost:3000/rest/form.json"
-      form-method: "get"
+      form-method: "post"
+      # form-action: ""
+      # form-method: "post"
       form-class: "form-1 registration-step active"
       form-items:
         -
@@ -21,7 +23,7 @@ context:
                         label-text: "Your Firstname, Lastname"
                         label-text-i18n: "registration.form-1.input.name"
                       input-id: "gamemaster-name"
-                      input-name: "gamemaster[name]"
+                      input-name: "User[name]"
                       input-placeholder: "Your Firstname, Lastname"
                       input-i18n: "registration.form-1.input.name"
                       input-class: ""
@@ -39,7 +41,7 @@ context:
                         label-text: "Your Email"
                         label-text-i18n: "registration.form-1.email.name"
                       input-id: "gamemaster-email"
-                      input-name: "gamemaster[email]"
+                      input-name: "User[email]"
                       input-placeholder: "Your Email"
                       input-i18n: "registration.form-1.email.name"
                       input-class: ""
@@ -57,14 +59,16 @@ context:
                       label:
                         label-text: "Register as Gamemaster"
                         label-text-i18n: "registration.form-1.button.next"
-                      button-class: "submit-button"
+                      button-class: "submit-group"
                       button-type: "submit"
                       button-role: "button"
   form-2:
     form:
-      form-name: "game"
+      form-name: "Game"
       form-action: "http://localhost:3000/rest/form.json"
       form-method: "get"
+      # form-action: ""
+      # form-method: "post"
       form-class: "form-2 registration-step"
       form-items:
         -
@@ -81,7 +85,7 @@ context:
                         label-text: "Title of your game"
                         label-text-i18n: "registration.form-2.input.title"
                       input-id: "game-title"
-                      input-name: "game[title]"
+                      input-name: "Game[title]"
                       input-placeholder: "Title of your game"
                       input-i18n: "registration.form-2.input.title"
                       input-class: ""
@@ -99,7 +103,7 @@ context:
                         label-text: "A short description of your game"
                         label-text-i18n: "registration.form-2.input.description"
                       textarea-id: "game-description"
-                      textarea-name: "game[description]"
+                      textarea-name: "Game[description]"
                       textarea-placeholder: "A short description of your game"
                       textarea-i18n: "registration.form-2.input.description"
                       textarea-class: ""
@@ -111,11 +115,11 @@ context:
                     wrapper-class: "col-m-12"
                     input:
                       label:
-                        label-for: "organization-gametype"
+                        label-for: "game-gametype"
                         label-text: "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
                         label-text-i18n: "registration.form-2.input.gametype"
-                      input-id: "organization-gametype"
-                      input-name: "organization[gametype]"
+                      input-id: "game-gametype"
+                      input-name: "Game[gametype]"
                       input-placeholder: "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
                       input-i18n: "registration.form-2.input.gametype"
                       input-class: ""
@@ -128,11 +132,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-1"
+                        label-for: "game-opt-1"
                         label-text: "Is Fantasy"
                         label-text-i18n: "registration.form-2.input.opt.1"
-                      input-id: "organization-opt-1"
-                      input-name: "organization[opt-1]"
+                      input-id: "game-opt-1"
+                      input-name: "Game[opt-1]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -141,11 +145,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-2"
+                        label-for: "game-opt-2"
                         label-text: "Is SciFi"
                         label-text-i18n: "registration.form-2.input.opt.2"
-                      input-id: "organization-opt-2"
-                      input-name: "organization[opt-2]"
+                      input-id: "game-opt-2"
+                      input-name: "Game[opt-2]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -154,11 +158,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-3"
+                        label-for: "game-opt-3"
                         label-text: "Is Noire"
                         label-text-i18n: "registration.form-2.input.opt.3"
-                      input-id: "organization-opt-3"
-                      input-name: "organization[opt-3]"
+                      input-id: "game-opt-3"
+                      input-name: "Game[opt-3]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -167,11 +171,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-4"
+                        label-for: "game-opt-4"
                         label-text: "Is Different"
                         label-text-i18n: "registration.form-2.input.opt.4"
-                      input-id: "organization-opt-4"
-                      input-name: "organization[opt-4]"
+                      input-id: "game-opt-4"
+                      input-name: "Game[opt-4]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -182,11 +186,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-5"
+                        label-for: "game-opt-5"
                         label-text: "For Beginners"
                         label-text-i18n: "registration.form-2.input.opt.5"
-                      input-id: "organization-opt-5"
-                      input-name: "organization[opt-5]"
+                      input-id: "game-opt-5"
+                      input-name: "Game[opt-5]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -195,11 +199,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-6"
+                        label-for: "game-opt-6"
                         label-text: "For Veterans"
                         label-text-i18n: "registration.form-2.input.opt.6"
-                      input-id: "organization-opt-6"
-                      input-name: "organization[opt-6]"
+                      input-id: "game-opt-6"
+                      input-name: "Game[opt-6]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -208,11 +212,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-7"
+                        label-for: "game-opt-7"
                         label-text: "For Kids only"
                         label-text-i18n: "registration.form-2.input.opt.7"
-                      input-id: "organization-opt-7"
-                      input-name: "organization[opt-7]"
+                      input-id: "game-opt-7"
+                      input-name: "Game[opt-7]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -221,11 +225,11 @@ context:
                     wrapper-class: "col-m-3"
                     input:
                       label:
-                        label-for: "organization-opt-8"
+                        label-for: "game-opt-8"
                         label-text: "For Adults only"
                         label-text-i18n: "registration.form-2.input.opt.8"
-                      input-id: "organization-opt-8"
-                      input-name: "organization[opt-8]"
+                      input-id: "game-opt-8"
+                      input-name: "Game[opt-8]"
                       input-class: ""
                       input-type: "checkbox"
                       input-role: "checkbox"
@@ -245,18 +249,24 @@ context:
                 -
                   wrapper:
                     wrapper-class: "col-m-6 align-right"
+                    input:
+                      input-name: "User[id]"
+                      input-class: "hidden"
+                      input-type: "hidden"
                     button:
                       label:
                         label-text: "Submit your game"
                         label-text-i18n: "registration.form-2.button.next"
-                      button-class: "submit-button"
+                      button-class: "submit-group"
                       button-type: "submit"
                       button-role: "button"
   form-3:
     form:
-      form-name: "organization"
+      form-name: "Organization"
       form-action: "http://localhost:3000/rest/form.json"
       form-method: "get"
+      # form-action: ""
+      # form-method: "post"
       form-class: "form-3 registration-step"
       form-items:
         -
@@ -273,7 +283,7 @@ context:
                         label-text: "Your first game date will be"
                         label-text-i18n: "registration.form-3.input.datetime.1"
                       input-id: "organization-datetime-1"
-                      input-name: "organization[datetime-1]"
+                      input-name: "Organization[datetime-1]"
                       input-placeholder: "Your first game date will be"
                       input-i18n: "registration.form-3.input.datetime.1"
                       input-class: "datetime has-content"
@@ -288,7 +298,7 @@ context:
                         label-text: "The starttime will be"
                         label-text-i18n: "registration.form-3.input.starttime"
                       input-id: "organization-starttime-1"
-                      input-name: "organization[starttime-1]"
+                      input-name: "Organization[starttime-1]"
                       input-placeholder: "The starttime will be"
                       input-i18n: "registration.form-3.input.starttime"
                       input-class: "starttime"
@@ -303,7 +313,7 @@ context:
                         label-text: "Estimated game hours"
                         label-text-i18n: "registration.form-3.input.duration"
                       input-id: "organization-duration-1"
-                      input-name: "organization[duration-1]"
+                      input-name: "Organization[duration-1]"
                       input-placeholder: "Estimated game hours"
                       input-i18n: "registration.form-3.input.duration"
                       input-class: "duration has-content"
@@ -320,7 +330,7 @@ context:
                         label-text: "Your second game date will be"
                         label-text-i18n: "registration.form-3.input.datetime.2"
                       input-id: "organization-datetime-2"
-                      input-name: "organization[datetime-2]"
+                      input-name: "Organization[datetime-2]"
                       input-placeholder: "Your second game date will be"
                       input-i18n: "registration.form-3.input.datetime.2"
                       input-class: "datetime has-content"
@@ -335,7 +345,7 @@ context:
                         label-text: "The starttime will be"
                         label-text-i18n: "registration.form-3.input.starttime"
                       input-id: "organization-starttime-2"
-                      input-name: "organization[starttime-2]"
+                      input-name: "Organization[starttime-2]"
                       input-placeholder: "The starttime will be"
                       input-i18n: "registration.form-3.input.starttime"
                       input-class: "starttime"
@@ -350,7 +360,7 @@ context:
                         label-text: "Estimated game hours"
                         label-text-i18n: "registration.form-3.input.duration"
                       input-id: "organization-duration-2"
-                      input-name: "organization[duration-2]"
+                      input-name: "Organization[duration-2]"
                       input-placeholder: "Estimated game hours"
                       input-i18n: "registration.form-3.input.duration"
                       input-class: "duration has-content"
@@ -367,7 +377,7 @@ context:
                         label-text: "Your third game date will be"
                         label-text-i18n: "registration.form-3.input.datetime.3"
                       input-id: "organization-datetime-3"
-                      input-name: "organization[datetime-3]"
+                      input-name: "Organization[datetime-3]"
                       input-placeholder: "Your third game date will be"
                       input-i18n: "registration.form-3.input.datetime.3"
                       input-class: "datetime has-content"
@@ -382,7 +392,7 @@ context:
                         label-text: "The starttime will be"
                         label-text-i18n: "registration.form-3.input.starttime"
                       input-id: "organization-starttime-3"
-                      input-name: "organization[starttime-3]"
+                      input-name: "Organization[starttime-3]"
                       input-placeholder: "The starttime will be"
                       input-i18n: "registration.form-3.input.starttime"
                       input-class: "starttime"
@@ -397,7 +407,7 @@ context:
                         label-text: "Estimated game hours"
                         label-text-i18n: "registration.form-3.input.duration"
                       input-id: "organization-duration-3"
-                      input-name: "organization[duration-3]"
+                      input-name: "Organization[duration-3]"
                       input-placeholder: "Estimated game hours"
                       input-i18n: "registration.form-3.input.duration"
                       input-class: "duration has-content"
@@ -419,11 +429,15 @@ context:
                 -
                   wrapper:
                     wrapper-class: "col-m-6 align-right"
+                    input:
+                      input-name: "User[id]"
+                      input-class: "hidden"
+                      input-type: "hidden"
                     button:
                       label:
                         label-text: "Finish registration"
                         label-text-i18n: "registration.form-3.button.next"
-                      button-class: "submit-button"
+                      button-class: "submit-group"
                       button-type: "submit"
                       button-role: "button"
   form-4:
@@ -437,6 +451,7 @@ context:
       article-subtitle-i18n: "registration.form-4.article.subtitle"
 i18n:
   'de-DE':
+    'registration.form.request.error': "Deine Registrierung ist fehlgeschlagen. <br /><a href=\"mailto:info@example.ch\">Bitte kontaktiere uns hier</a>."
     'registration.form-1.input.name': "Dein Vorname, Nachname"
     'registration.form-1.input.name.error': "Bitte trage deinen Namen ein"
     'registration.form-1.email.name': "Deine E-Mail"
@@ -468,6 +483,7 @@ i18n:
     'registration.form-4.article.title': "Herzlich Willkommen Spielleiter"
     'registration.form-4.article.subtitle': "Vielen Dank dafür, dass du uns dabei hilfst diesen Event zu etwas besonderen für alle Rollenspieler zu machen. <br />Wir prüfen deine Registrierung und würden uns in den nächsten Tagen wieder bei dir melden. <br />Bis dahin wünschen wir dir alles Gute.<br />Das Luzerner Rollenspieltage Team"
   'en-EN':
+    'registration.form.request.error': "Your registration request failed. <br /><a href=\"mailto:info@example.ch\">Please contact us here</a>."
     'registration.form-1.input.name': "Your Firstname, Lastname"
     'registration.form-1.input.name.error': "Please enter your Name"
     'registration.form-1.email.name': "Your Email"

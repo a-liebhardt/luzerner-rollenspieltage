@@ -1,5 +1,5 @@
 exports.init = (() => {
-  const formId = 'ContactUs';
+  const formId = 'contact';
 
   const handleFormSubmit = (e) => {
     const forms = e.target.closest(`.${formId}`).querySelectorAll('form');
@@ -53,7 +53,7 @@ exports.init = (() => {
   /* eslint-enable */
 
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc(formId, (data, status) => {
+  window.formCallOnSuccess.setFunc('ContactUs', (data, status) => {
     const formGroups = document.querySelectorAll(`.${formId} .form-group`);
     formGroups.forEach((formGroup) => {
       formGroup.classList.remove('has-error');
@@ -63,12 +63,12 @@ exports.init = (() => {
     document.querySelector(`.${formId} .form-1`).classList.remove('active');
   });
 
-  window.formCallOnError.setFunc(formId, (data, status) => {
+  window.formCallOnError.setFunc('ContactUs', (data, status) => {
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('contact.form.request.error');
     if (!i18n) i18n = '^Your contact request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
-    btnFormGroup.querySelector('.messages').innerHTML = i18n;
+    btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
     console.log('error', formId, data);
   });
   /* eslint-enable */
