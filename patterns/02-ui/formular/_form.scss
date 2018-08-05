@@ -24,6 +24,12 @@ fieldset {
 .form-group {
   position: relative;
   padding: 1.6rem 0 0;
+  display: inline-flex;
+  justify-self: stretch;
+  justify-content: stretch;
+  align-self: stretch;
+  align-content: stretch;
+  height: 100%;
 
   aside.messages {
     position: absolute;

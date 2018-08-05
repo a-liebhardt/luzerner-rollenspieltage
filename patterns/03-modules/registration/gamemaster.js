@@ -1,6 +1,8 @@
 // es modules are recommended, if available, especially for typescript
 import Flatpickr from 'flatpickr';
-import {de as German} from 'flatpickr/dist/l10n/de.js';
+/* eslint-disable */
+import { de as German } from 'flatpickr/dist/l10n/de';
+/* eslint-enable */
 
 exports.init = (() => {
   const formId = 'gamemaster';

@@ -19,7 +19,8 @@ $grid-gap: 1rem;
     display: block;
     // justify-content: stretch;
     // flex-direction: column;
-    margin: 0 auto #{$grid-gap};
+    // margin: 0 auto #{$grid-gap};
+    margin: 0 auto;
     width: 100%;
     max-width: 100%;
     transition: max-width 300ms ease-in-out;
@@ -43,7 +44,8 @@ $grid-gap: 1rem;
 
       @for $j from 1 through 12 {
         .col-#{$mq}-#{$j} {
-          max-width: calc(100% / 12 * #{$j} - #{$grid-gap});
+          // max-width: calc(100% / 12 * #{$j} - #{$grid-gap});
+          max-width: calc(100% / 12 * #{$j});
         }
       }
     }

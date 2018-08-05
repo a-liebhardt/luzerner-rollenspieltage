@@ -1,3 +1,19 @@
 status: wip
 context:
+  article-config:
+    article:
+      article-hide-small: true
+      article-title: "Like to help as Gamemaster?"
+      article-title-i18n: "panel3.article.title"
+      article-title-tag: "h3"
+      article-body: "<p>We looking for gamemaster which help us out on this event. So if you are a gamemaster und you like to help please register.</p>"
+      article-body-i18n: "panel3.article.body"
+      article-hide-footer: true
   gamemaster-config: '@gamemaster'
+i18n:
+  'de-DE':
+    'panel3.article.title': "Möchtest du als Spielleiter helfen?"
+    'panel3.article.body': "<p>Wir suchen Spielleiter welche uns an dem Event helfen möchten. So melde dich an wenn du helfen möchtest.</p>"
+  'en-EN':
+    'panel3.article.title': "Like to help as Gamemaster?"
+    'panel3.article.body': "<p>We looking for gamemaster which help us out on this event. So if you are a gamemaster und you like to help please register.</p>"

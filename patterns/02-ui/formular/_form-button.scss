@@ -59,6 +59,7 @@
 [role='button'] {
   &.submit-group {
     display: inline-block;
+    padding: 0;
   }
 
   button {
@@ -75,6 +76,7 @@
     border-radius: 0.4rem;
     border: 0.2rem solid transparent;
     outline: none;
+    height: 100%;
 
     label {
       text-decoration: none;

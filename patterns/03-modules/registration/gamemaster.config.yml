@@ -129,7 +129,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-1"
@@ -142,7 +142,7 @@ context:
                       input-role: "checkbox"
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-2"
@@ -155,7 +155,7 @@ context:
                       input-role: "checkbox"
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-3"
@@ -168,7 +168,7 @@ context:
                       input-role: "checkbox"
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-4"
@@ -183,7 +183,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-5"
@@ -196,7 +196,7 @@ context:
                       input-role: "checkbox"
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-6"
@@ -209,7 +209,7 @@ context:
                       input-role: "checkbox"
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-7"
@@ -222,7 +222,7 @@ context:
                       input-role: "checkbox"
                 -
                   wrapper:
-                    wrapper-class: "col-m-3"
+                    wrapper-class: "col-xs-6 col-m-3"
                     input:
                       label:
                         label-for: "game-opt-8"
@@ -239,7 +239,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-6"
+                    wrapper-class: "col-xs-6"
                     link:
                       label:
                         label-text: "Back to previous form"
@@ -248,7 +248,7 @@ context:
                       link-href: "#form-1"
                 -
                   wrapper:
-                    wrapper-class: "col-m-6 align-right"
+                    wrapper-class: "col-xs-6 align-right"
                     input:
                       input-name: "User[id]"
                       input-class: "hidden"
@@ -276,7 +276,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-12 col-l-4"
                     input:
                       label:
                         label-for: "organization-datetime-1"
@@ -291,7 +291,7 @@ context:
                       input-role: "input"
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-5 col-l-4"
                     input:
                       label:
                         label-for: "organization-starttime-1"
@@ -306,7 +306,7 @@ context:
                       input-role: "input"
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-7 col-l-4"
                     input:
                       label:
                         label-for: "organization-duration-1"
@@ -323,7 +323,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-12 col-l-4"
                     input:
                       label:
                         label-for: "organization-datetime-2"
@@ -338,7 +338,7 @@ context:
                       input-role: "input"
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-5 col-l-4"
                     input:
                       label:
                         label-for: "organization-starttime-2"
@@ -353,7 +353,7 @@ context:
                       input-role: "input"
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-7 col-l-4"
                     input:
                       label:
                         label-for: "organization-duration-2"
@@ -370,7 +370,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-12 col-l-4"
                     input:
                       label:
                         label-for: "organization-datetime-3"
@@ -385,7 +385,7 @@ context:
                       input-role: "input"
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-5 col-l-4"
                     input:
                       label:
                         label-for: "organization-starttime-3"
@@ -400,7 +400,7 @@ context:
                       input-role: "input"
                 -
                   wrapper:
-                    wrapper-class: "col-m-4"
+                    wrapper-class: "col-xs-7 col-l-4"
                     input:
                       label:
                         label-for: "organization-duration-3"
@@ -419,7 +419,7 @@ context:
               fieldset-row-items:
                 -
                   wrapper:
-                    wrapper-class: "col-m-6"
+                    wrapper-class: "col-xs-6"
                     link:
                       label:
                         label-text: "Back to previous form"
@@ -428,7 +428,7 @@ context:
                       link-href: "#form-2"
                 -
                   wrapper:
-                    wrapper-class: "col-m-6 align-right"
+                    wrapper-class: "col-xs-6 align-right"
                     input:
                       input-name: "User[id]"
                       input-class: "hidden"

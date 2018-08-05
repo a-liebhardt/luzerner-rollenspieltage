@@ -1,3 +1,19 @@
 status: wip
 context:
-  # contact-config: '@contact'
+  article-config:
+    article:
+      article-hide-small: true
+      article-title: "Time and Date"
+      article-title-i18n: "panel2.article.title"
+      article-title-tag: "h3"
+      article-body: "<p>Pfarrei St. Johannes, Luzern</p><p>Samstag, 6. October 18</p><p>from 9 a.m. to 18 p.m.</p>"
+      article-body-i18n: "panel2.article.body"
+      article-hide-footer: true
+  gamemaster-config: '@gamemaster'
+i18n:
+  'de-DE':
+    'panel2.article.title': "Ort und Ablauf"
+    'panel2.article.body': "<p>Pfarrei St. Johannes, Luzern</p><p>Samstag, 6. Oktober 18</p><p>von 9 Uhr bis 18 Uhr</p>"
+  'en-EN':
+    'panel2.article.title': "Time and Date"
+    'panel2.article.body': "<p>Pfarrei St. Johannes, Luzern</p><p>Samstag, 6. October 18</p><p>from 9 a.m. to 18 p.m.</p>"
