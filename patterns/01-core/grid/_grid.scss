@@ -3,9 +3,9 @@ $sizes: #{$mq-xs}, #{$mq-s}, #{$mq-m}, #{$mq-l}, #{$mq-xl}, #{$mq-xxl};
 $grid-gap: 1rem;
 
 .container {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: relative;
+  // left: 50%;
+  // transform: translateX(-50%);
   width: 100%;
   max-width: $page-maxWidth;
 }

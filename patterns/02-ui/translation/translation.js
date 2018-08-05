@@ -53,6 +53,13 @@ exports.init = (() => {
       return browserLanguage;
     };
 
+    this.getLanguageIso = function() {
+      if (language.length) {
+        return language.split('-')[0];
+      }
+      return browserLanguage.split('-')[0];
+    };
+
     this.setLanguage = function(iso) {
       console.info(`Language set to '${iso}'`);
       language = iso;

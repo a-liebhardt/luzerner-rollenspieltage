@@ -4,7 +4,7 @@ context:
     form:
       form-name: "User"
       form-action: "http://localhost:3000/rest/form.json"
-      form-method: "post"
+      form-method: "get"
       # form-action: ""
       # form-method: "post"
       form-class: "form-1 registration-step active"
@@ -316,7 +316,7 @@ context:
                       input-name: "Organization[duration-1]"
                       input-placeholder: "Estimated game hours"
                       input-i18n: "registration.form-3.input.duration"
-                      input-class: "duration has-content"
+                      input-class: "duration"
                       input-type: "datetime-local"
                       input-role: "input"
             -
@@ -363,7 +363,7 @@ context:
                       input-name: "Organization[duration-2]"
                       input-placeholder: "Estimated game hours"
                       input-i18n: "registration.form-3.input.duration"
-                      input-class: "duration has-content"
+                      input-class: "duration"
                       input-type: "datetime-local"
                       input-role: "input"
             -
@@ -410,7 +410,7 @@ context:
                       input-name: "Organization[duration-3]"
                       input-placeholder: "Estimated game hours"
                       input-i18n: "registration.form-3.input.duration"
-                      input-class: "duration has-content"
+                      input-class: "duration"
                       input-type: "datetime-local"
                       input-role: "input"
         -

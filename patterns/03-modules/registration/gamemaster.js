@@ -1,28 +1,35 @@
 // es modules are recommended, if available, especially for typescript
-import flatpickr from 'flatpickr';
+import Flatpickr from 'flatpickr';
+import {de as German} from 'flatpickr/dist/l10n/de.js';
 
 exports.init = (() => {
   const formId = 'gamemaster';
 
-  flatpickr('.datetime input', {
+  Flatpickr('.datetime input', {
     altInput: true,
     altFormat: 'F j, Y',
     dateFormat: 'Y-m-d',
     defaultDate: '2018-10-06',
     minDate: '2018-10-06',
     maxDate: '2018-10-06',
+    locale: window.i18n.getLanguageIso(),
   });
 
-  flatpickr('.starttime input', {
+  Flatpickr('.starttime input', {
     dateFormat: 'H:i',
+    defaultDate: '09:00',
     noCalendar: true,
     enableTime: true,
     time_24hr: true,
     minTime: '09:00',
     maxTime: '18:00',
+    locale: window.i18n.getLanguageIso(),
+    onReady() {
+      this.input.value = '';
+    },
   });
 
-  flatpickr('.duration input', {
+  Flatpickr('.duration input', {
     dateFormat: 'h',
     defaultDate: '2:00',
     noCalendar: true,
@@ -30,6 +37,10 @@ exports.init = (() => {
     time_24hr: true,
     minTime: '1:00',
     maxTime: '4:00',
+    locale: window.i18n.getLanguageIso(),
+    onReady() {
+      this.input.value = '';
+    },
   });
 
   const handleFormSubmit = (e) => {
