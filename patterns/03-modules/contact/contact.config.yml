@@ -2,7 +2,9 @@ status: ready
 context:
   form-1:
     form:
-      form-name: "contact"
+      form-name: "ContactUs"
+      # form-action: "http://localhost:3000/rest/form.json"
+      # form-method: "get"
       form-action: "http://penandpaperdayweb20180727100723.azurewebsites.net/api/ContactUs"
       form-method: "post"
       form-class: "form-1 contact-step active"
@@ -20,7 +22,7 @@ context:
                         label-text: "Your Firstname, Lastname"
                         label-text-i18n: "contact.form-1.input.name"
                       input-id: "contact-name"
-                      input-name: "contact[name]"
+                      input-name: "ContactUs[name]"
                       input-placeholder: "Your Firstname, Lastname"
                       input-i18n: "contact.form-1.input.name"
                       input-class: ""
@@ -38,7 +40,7 @@ context:
                         label-text: "Your Email"
                         label-text-i18n: "contact.form-1.email.name"
                       input-id: "contact-email"
-                      input-name: "contact[email]"
+                      input-name: "ContactUs[email]"
                       input-placeholder: "Your Email"
                       input-i18n: "contact.form-1.email.name"
                       input-class: ""
@@ -56,7 +58,7 @@ context:
                         label-text: "Your message"
                         label-text-i18n: "contact.form-1.input.message"
                       textarea-id: "contact-message"
-                      textarea-name: "contact[message]"
+                      textarea-name: "ContactUs[message]"
                       textarea-placeholder: "Your message"
                       textarea-i18n: "contact.form-1.input.message"
                       textarea-class: ""
@@ -72,7 +74,7 @@ context:
                       label:
                         label-text: "Send us your message"
                         label-text-i18n: "contact.form-1.button.next"
-                      button-class: "submit-button"
+                      button-class: "submit-group"
                       button-type: "submit"
                       button-role: "button"
   form-2:
@@ -86,6 +88,7 @@ context:
       article-subtitle-i18n: "contact.form-2.article.subtitle"
 i18n:
   'de-DE':
+    'contact.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:info@example.ch\">Bitte kontaktiere uns hier</a>."
     'contact.form-1.input.name': "Dein Vorname, Nachname"
     'contact.form-1.input.name.error': "Bitte trage deinen Namen ein"
     'contact.form-1.email.name': "Deine E-Mail"
@@ -96,6 +99,7 @@ i18n:
     'contact.form-2.article.title': "Nachricht erhalten"
     'contact.form-2.article.subtitle': "Vielen Dank für deine Nachricht<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
   'en-EN':
+    'contact.form.request.error': "Your contact request failed. <br /><a href=\"mailto:info@example.ch\">Please contact us here</a>."
     'contact.form-1.input.name': "Your Firstname, Lastname"
     'contact.form-1.input.name.error': "Please enter your Name"
     'contact.form-1.email.name': "Your Email"

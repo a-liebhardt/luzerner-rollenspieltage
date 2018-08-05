@@ -65,6 +65,18 @@ fieldset {
       background: red;
       color: white;
 
+      a {
+        color: $color--white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:active {
+          color: $color--black-20;
+        }
+      }
+
       &::after {
         border-bottom: 0.5rem solid red;
       }

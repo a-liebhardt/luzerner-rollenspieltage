@@ -48,6 +48,27 @@ exports.init = (() => {
 
   window.formCallOnSuccess = RestCallSuccess;
 
+  /* eslint-disable */
+  const RestCallError = new function() {
+    let funcs = {};
+
+    this.getFunc = function(formName) {
+      if (typeof funcs[formName] === 'undefined') {
+        return false;
+      }
+      return funcs[formName];
+    };
+
+    this.setFunc = function(formName, func) {
+      funcs[formName] = func;
+    };
+
+    return this;
+  };
+  /* eslint-enable */
+
+  window.formCallOnError = RestCallError;
+
   const RestCall = (formHref, formMethod, formParams, formName) => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
@@ -56,7 +77,15 @@ exports.init = (() => {
         if (!func) {
           return;
         }
-        func(xhttp.responseText);
+        func(xhttp.responseText, xhttp.status);
+        return;
+      }
+      if (xhttp.readyState === 4 && xhttp.status !== 200) {
+        const func = window.formCallOnError.getFunc(formName);
+        if (!func) {
+          return;
+        }
+        func(xhttp.responseText, xhttp.status);
       }
     };
     const params = JSON.stringify(formParams);

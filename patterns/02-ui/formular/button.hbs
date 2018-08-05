@@ -1,5 +1,8 @@
 {{#with button}}
-<button role="button" {{#if button-type}}type="{{button-type}}"{{/if}} class="{{#if label-text}}button-text{{/if}} {{#if label-icon}}button-icon{{/if}} {{button-class}}" {{#if button-slider}}item-slider="{{button-slider}}"{{/if}} {{#if button-attr}}{{button-attr}}{{/if}}>
-  {{> @label}}
-</button>
+<section class="form-group {{#if label-text}}button-text{{/if}} {{#if label-icon}}button-icon{{/if}} {{button-class}}" role="button" {{#if button-attr}}{{button-attr}}{{/if}}>
+  <button {{#if button-type}}type="{{button-type}}"{{/if}} {{#if button-slider}}item-slider="{{button-slider}}"{{/if}}>
+    {{> @label}}
+  </button>
+  <aside class="messages"></aside>
+</section>
 {{/with}}

@@ -1,21 +1,23 @@
 exports.init = (() => {
+  const formId = 'ContactUs';
+
   const handleFormSubmit = (e) => {
-    const forms = e.target.closest('.contact').querySelectorAll('form');
+    const forms = e.target.closest(`.${formId}`).querySelectorAll('form');
     forms.forEach((form) => {
       form.classList.remove('active');
     });
     e.target.classList.add('active');
   };
 
-  const forms = document.querySelectorAll('.contact form');
+  const forms = document.querySelectorAll(`.${formId} form`);
   forms.forEach((form) => {
     form.addEventListener('submit', handleFormSubmit);
   });
 
   /* eslint-disable */
   window.formRules.setRule({
-    'contact': {
-      'contact[name]': {
+    'ContactUs': {
+      'ContactUs[name]': {
         // Email is required
         presence: {
           // message: '^Please enter your Name',
@@ -26,7 +28,7 @@ exports.init = (() => {
           }
         },
       },
-      'contact[email]': {
+      'ContactUs[email]': {
         // Email is required
         presence: {
           // message: '^Please enter your Email',
@@ -51,10 +53,23 @@ exports.init = (() => {
   /* eslint-enable */
 
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('contact', (data) => {
+  window.formCallOnSuccess.setFunc(formId, (data, status) => {
+    const formGroups = document.querySelectorAll(`.${formId} .form-group`);
+    formGroups.forEach((formGroup) => {
+      formGroup.classList.remove('has-error');
+    });
     // console.log('succes', 'gamemaster', data);
-    document.querySelector('.contact .form-2').classList.add('active');
-    document.querySelector('.contact .form-1').classList.remove('active');
+    document.querySelector(`.${formId} .form-2`).classList.add('active');
+    document.querySelector(`.${formId} .form-1`).classList.remove('active');
+  });
+
+  window.formCallOnError.setFunc(formId, (data, status) => {
+    const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
+    let i18n = window.i18n.get('contact.form.request.error');
+    if (!i18n) i18n = '^Your contact request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    btnFormGroup.classList.add('has-error');
+    btnFormGroup.querySelector('.messages').innerHTML = i18n;
+    console.log('error', formId, data);
   });
   /* eslint-enable */
 });

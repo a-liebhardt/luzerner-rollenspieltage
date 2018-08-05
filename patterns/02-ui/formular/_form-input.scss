@@ -11,6 +11,10 @@
   // border: 0.1rem solid $color--black;
   border-bottom: 0.1rem solid $color--black-20;
 
+  &.hidden {
+    display: none;
+  }
+
   label {
     padding: 0.8rem 1.6rem 0;
     display: inline-block;
