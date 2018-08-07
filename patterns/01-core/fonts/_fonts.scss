@@ -62,14 +62,14 @@
 }
 
 // https://fonts.google.com/
-// @include font-face('Ubuntu', '../fonts/Ubuntu-Light', $base--font-weight-light, normal);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-LightItalic', $base--font-weight-light, italic);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-Regular', $base--font-weight-regular, normal);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-Italic', $base--font-weight-regular, italic);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-Medium', $base--font-weight-medium, normal);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-MediumItalic', $base--font-weight-medium, italic);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-Bold', $base--font-weight-bold, normal);
-// @include font-face('Ubuntu', '../fonts/Ubuntu-BoldItalic', $base--font-weight-bold, italic);
-// @include font-face('Gloria Hallelujah', '../fonts/GloriaHallelujah', $base--font-weight-regular, normal);
+// @include font-face('Ubuntu', './fonts/Ubuntu-Light', $base--font-weight-light, normal);
+// @include font-face('Ubuntu', './fonts/Ubuntu-LightItalic', $base--font-weight-light, italic);
+// @include font-face('Ubuntu', './fonts/Ubuntu-Regular', $base--font-weight-regular, normal);
+// @include font-face('Ubuntu', './fonts/Ubuntu-Italic', $base--font-weight-regular, italic);
+// @include font-face('Ubuntu', './fonts/Ubuntu-Medium', $base--font-weight-medium, normal);
+// @include font-face('Ubuntu', './fonts/Ubuntu-MediumItalic', $base--font-weight-medium, italic);
+// @include font-face('Ubuntu', './fonts/Ubuntu-Bold', $base--font-weight-bold, normal);
+// @include font-face('Ubuntu', './fonts/Ubuntu-BoldItalic', $base--font-weight-bold, italic);
+// @include font-face('Gloria Hallelujah', './fonts/GloriaHallelujah', $base--font-weight-regular, normal);
 
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ubuntu:300,300i,400,400i,500,700');
