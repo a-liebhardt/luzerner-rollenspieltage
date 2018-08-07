@@ -10,9 +10,10 @@ import Fullpage from './02-ui/pagescroller/fullpage';
 import Translation from './02-ui/translation/translation';
 // Modules
 // import Header from './03-modules/header/header';
-import Contact from './03-modules/contact/contact';
+import Contact from './03-modules/communications/contact';
+import KeepMePosted from './03-modules/communications/keep-me-posted';
 import Panel3 from './03-modules/content-panel3/panel3';
-import Gamemaster from './03-modules/registration/gamemaster';
+import Gamemaster from './03-modules/registrations/gamemaster';
 
 // Custom scripts
 // https://www.npmjs.com/package/css-element-queries
@@ -52,6 +53,7 @@ ready(() => {
   Translation.init();
   // Header.init();
   Contact.init();
+  KeepMePosted.init();
   Panel3.init();
   Gamemaster.init();
 });

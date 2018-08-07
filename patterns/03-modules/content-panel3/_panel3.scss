@@ -10,9 +10,14 @@
     .flip-front,
     .flip-back {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100%;
+
+      [flip-reset] {
+        text-align: right;
+      }
     }
 
     &.no-flip {
