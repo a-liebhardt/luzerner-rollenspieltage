@@ -1,3 +1,40 @@
 .panel3 {
-  text-align: center;
+  .flipper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 50vh;
+
+    .flip-front,
+    .flip-back {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    &.no-flip {
+      min-height: 0;
+      opacity: 0;
+    }
+
+    &.flip {
+      min-height: 100vh;
+    }
+
+    @media screen and (min-width: #{$mq-l}) {
+      min-height: 100vh;
+
+      &.no-flip {
+        min-height: 100vh;
+        opacity: 1;
+      }
+
+      &.flip {
+        min-height: 100vh;
+      }
+    }
+  }
 }

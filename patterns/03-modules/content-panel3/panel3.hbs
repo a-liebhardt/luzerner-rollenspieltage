@@ -1,8 +1,28 @@
 <div class="row container panel3">
-  <div class="col-l-10 col-xl-8 col-xxl-6">
-    {{> @article article-config}}
+  <div class="col-l-6">
+    <section class="flipper">
+      <div class="flip-front">
+        <!-- front content -->
+        flip me
+      </div>
+      <div class="flip-back">
+        <!-- back content -->
+        <p flip-reset>Reset</p>
+        {{> @gamemaster gamemaster-config}}
+      </div>
+    </section>
   </div>
-  <div class="col-l-10 col-xl-8 col-xxl-6">
-    {{> @gamemaster gamemaster-config}}
+  <div class="col-l-6">
+    <section class="flipper">
+      <div class="flip-front">
+        <!-- front content -->
+        flip me
+      </div>
+      <div class="flip-back">
+        <!-- back content -->
+        <p flip-reset>Reset</p>
+        {{> @gamemaster gamemaster-config}}
+      </div>
+    </section>
   </div>
 </div>

@@ -3,7 +3,7 @@
 	perspective: 1000px;
 	width: 100%;
 	height: 100%;
-  transition: 600ms;
+  transition: all 600ms;
   transform-style: preserve-3d;
   position: relative;
 
@@ -35,9 +35,4 @@
 	&.flip {
 		transform: rotateY(180deg);
 	}
-}
-
-// Flip container if i18n is ready
-html.i18n-ready .flipper {
-	transform: rotateY(180deg);
 }

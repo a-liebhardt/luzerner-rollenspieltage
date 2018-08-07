@@ -1,13 +1,17 @@
 // Scripts
+// Core
 import Layout from './01-core/layout/layout';
+// UI
 import Lightbox from './02-ui/lightbox/lightbox';
 import Spinner from './02-ui/spinner/spinner-matrix';
 import Formular from './02-ui/formular/formular';
 import Form from './02-ui/formular/form';
 import Fullpage from './02-ui/pagescroller/fullpage';
 import Translation from './02-ui/translation/translation';
+// Modules
 // import Header from './03-modules/header/header';
 import Contact from './03-modules/contact/contact';
+import Panel3 from './03-modules/content-panel3/panel3';
 import Gamemaster from './03-modules/registration/gamemaster';
 
 // Custom scripts
@@ -48,5 +52,6 @@ ready(() => {
   Translation.init();
   // Header.init();
   Contact.init();
+  Panel3.init();
   Gamemaster.init();
 });
