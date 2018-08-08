@@ -1,5 +1,8 @@
 main.content {
   section[data-anchor]:not([data-anchor="page1"]) {
-    margin: 0 2rem;
+    // padding: 0 2rem;
+    // padding: 10rem 2rem;
+    // overflow-y: auto;
+    // overflow-x: hidden;
   }
 }

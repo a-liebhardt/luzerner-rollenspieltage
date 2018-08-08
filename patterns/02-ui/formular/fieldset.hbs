@@ -1,4 +1,4 @@
-<fieldset {{#if fieldset-name}}name="{{fieldset-name}}"{{/if}} {{#if fieldset-class}}class="{{fieldset-class}}"{{/if}}>
+<fieldset {{#if fieldset-name}}name="{{fieldset-name}}"{{/if}} {{#if fieldset-class}}class="{{fieldset-class}}"{{/if}} {{{fieldset-attr}}}>
   {{#if fieldset-legend}}<legend>{{fieldset-legend}}</legend>{{/if}}
   {{#each fieldset-items}}
     {{> @form-row}}

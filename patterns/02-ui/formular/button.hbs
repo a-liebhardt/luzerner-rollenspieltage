@@ -1,5 +1,5 @@
 {{#with button}}
-<section class="form-group {{#if label-text}}button-text{{/if}} {{#if label-icon}}button-icon{{/if}} {{button-class}}" role="button" {{#if button-attr}}{{button-attr}}{{/if}}>
+<section class="form-group {{#if label-text}}button-text{{/if}} {{#if label-icon}}button-icon{{/if}} {{button-class}}" role="button" {{{button-attr}}}>
   <button {{#if button-type}}type="{{button-type}}"{{/if}} {{#if button-slider}}item-slider="{{button-slider}}"{{/if}}>
     {{> @label}}
   </button>

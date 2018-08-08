@@ -1,5 +1,7 @@
 .panel2 {
-  text-align: center;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   .data {
     align-content: center;

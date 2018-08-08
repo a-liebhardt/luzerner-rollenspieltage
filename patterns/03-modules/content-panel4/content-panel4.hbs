@@ -1,0 +1,18 @@
+<div class="row container panel4">
+  <div class="col-m-6">
+    {{> @article article-config}}
+  </div>
+  <div class="col-m-6">
+    <section class="flipper">
+      <div class="flip-front">
+        <!-- front content -->
+        {{> @label contact-article-config}}
+      </div>
+      <div class="flip-back">
+        <!-- back content -->
+        {{> @label close-config}}
+        {{> @contact contact-config}}
+      </div>
+    </section>
+  </div>
+</div>

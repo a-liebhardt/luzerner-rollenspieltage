@@ -3,11 +3,11 @@
     <section class="flipper">
       <div class="flip-front">
         <!-- front content -->
-        flip me (gamer)
+        {{> @label keep-me-posted-article-config}}
       </div>
       <div class="flip-back">
         <!-- back content -->
-        <p flip-reset>Close Panel</p>
+        {{> @label close-config}}
         {{> @keep-me-posted keep-me-posted-config}}
       </div>
     </section>
@@ -16,11 +16,11 @@
     <section class="flipper">
       <div class="flip-front">
         <!-- front content -->
-        flip me (gamemaster)
+        {{> @label gamemaster-article-config}}
       </div>
       <div class="flip-back">
         <!-- back content -->
-        <p flip-reset>Close Panel</p>
+        {{> @label close-config}}
         {{> @gamemaster gamemaster-config}}
       </div>
     </section>

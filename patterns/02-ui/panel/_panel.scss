@@ -1,4 +1,8 @@
 .panel {
+  // max-height: 100vh;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+
   &.background-lightgrey {
     background: $color--black-10;
   }

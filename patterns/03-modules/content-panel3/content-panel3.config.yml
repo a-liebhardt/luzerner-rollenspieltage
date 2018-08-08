@@ -1,0 +1,41 @@
+status: wip
+context:
+  keep-me-posted-config: '@keep-me-posted'
+  keep-me-posted-article-config:
+    label:
+      label-text: "Gamer Registration is not open yet.<br />Click here to keep posted"
+      label-text-i18n: "panel3.keep-me-posted-article.text"
+      label-attr: "menu-close"
+      icon:
+        icon-name: "arrow-right"
+        icon-pos: "after"
+        icon-class: "icon-xs"
+  gamemaster-config: '@gamemaster'
+  gamemaster-article-config:
+    label:
+      label-text: "Click here to register as Gamemaster"
+      label-text-i18n: "panel3.gamemaster.text"
+      label-attr: "menu-close"
+      icon:
+        icon-name: "arrow-right"
+        icon-pos: "after"
+        icon-class: "icon-xs"
+  close-config:
+    label:
+      label-attr: "flip-reset"
+      label-class: "align-center"
+      icon:
+        icon-name: "menu-close"
+        icon-pos: "after"
+        icon-class: "icon-m"
+i18n:
+  'de-DE':
+    # 'panel3.article.title': "Möchtest du als Spielleiter helfen?"
+    # 'panel3.article.body': "<p>Wir suchen Spielleiter welche uns an dem Event helfen möchten. So melde dich an wenn du helfen möchtest.</p>"
+    'panel3.keep-me-posted-article.text': "Spieler Registrierung ist noch nicht geöffnet.<br />Halte dich hier auf dem laufenden"
+    'panel3.gamemaster.text': "Registriere dich als Gamemaster"
+  'en-EN':
+    # 'panel3.article.title': "Like to help as Gamemaster?"
+    # 'panel3.article.body': "<p>We looking for gamemaster which help us out on this event. So if you are a gamemaster und you like to help please register.</p>"
+    'panel3.keep-me-posted-article.text': "Gamer Registration is not open yet.<br />Click here to keep posted"
+    'panel3.gamemaster.text': "Register as Gamemaster"

@@ -67,6 +67,10 @@ label {
     justify-content: flex-start;
   }
 
+  &.align-center {
+    justify-content: center;
+  }
+
   &.align-right {
     justify-content: flex-end;
   }

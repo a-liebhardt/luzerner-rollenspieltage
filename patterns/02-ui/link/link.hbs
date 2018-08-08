@@ -1,5 +1,5 @@
 {{#with link}}
-<a role="link" {{#if link-href}}href="{{link-href}}"{{/if}} class="link {{#with label}}link-text{{/with}} {{#with label}}{{#with icon}}link-icon{{/with}}{{/with}} {{link-class}}" {{#if link-target}}target="{{link-target}}"{{/if}} {{#if link-slider}}item-slider="{{link-slider}}"{{/if}} {{{link-attributes}}} {{#if i18n-update}}i18n-update="{{i18n-update}}"{{/if}}>
+<a role="link" {{#if link-href}}href="{{link-href}}"{{/if}} class="link {{#with label}}link-text{{/with}} {{#with label}}{{#with icon}}link-icon{{/with}}{{/with}} {{link-class}}" {{#if link-target}}target="{{link-target}}"{{/if}} {{#if link-slider}}item-slider="{{link-slider}}"{{/if}} {{#if i18n-update}}i18n-update="{{i18n-update}}"{{/if}} {{{link-attr}}}>
   {{> @label}}
 </a>
 {{/with}}

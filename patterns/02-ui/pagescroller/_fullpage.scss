@@ -1,17 +1,19 @@
 #pagescroller {
-  & > .fp-section > .fp-tableCell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  & > .fp-section {
+    & .fp-tableCell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 #fp-nav {
   position: fixed;
-  top: 2rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -31,8 +33,9 @@
         display: block;
         width: 3rem;
         height: 3rem;
-        margin: 0 0.5rem 1rem;
+        margin: 0.5rem;
         background: $color--black-40;
+        border-radius: 100%;
 
         &.active {
           width: 4rem;
