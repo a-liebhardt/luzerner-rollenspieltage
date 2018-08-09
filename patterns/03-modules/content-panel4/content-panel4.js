@@ -16,10 +16,19 @@ exports.init = (() => {
   };
 
   const panel = document.querySelector('.panel4');
-  panel.querySelectorAll('.flip-front').forEach((flipFront) => {
-    flipFront.addEventListener('click', flip);
-  });
-  panel.querySelectorAll('[flip-reset]').forEach((reset) => {
-    reset.addEventListener('click', flipReset);
-  });
+  if (panel) {
+    const fronts = panel.querySelectorAll('.flip-front');
+    if (fronts) {
+      fronts.forEach((flipFront) => {
+        flipFront.addEventListener('click', flip);
+      });
+    }
+
+    const resets = panel.querySelectorAll('[flip-reset]');
+    if (resets) {
+      resets.forEach((reset) => {
+        reset.addEventListener('click', flipReset);
+      });
+    }
+  }
 });

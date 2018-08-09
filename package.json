@@ -36,8 +36,8 @@
     "deploy": "npm-run-all build deploy:github",
     "deploy:github": "gh-pages -d build",
     "color": "fractal fractal:color",
-    "i18n:dev": "fractal fractal:i18n dev",
-    "i18n:build": "fractal fractal:i18n build",
+    "i18n:dev": "fractal fractal:i18n Prototype,WiP,Ready,Published",
+    "i18n:build": "fractal fractal:i18n Published",
     "fractal:dist": "fractal fractal:dist",
     "dist": "npm-run-all build fractal:dist"
   },

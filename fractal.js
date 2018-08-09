@@ -324,10 +324,8 @@ const i18n = function (args, done) {
   // const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 'i18n' node, choose your ISO key like 'en-EN' and define i18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using i18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.i18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
   let i18nBody = {};
   let statuses = [];
-  if (typeof args.build !== 'undefined') {
-    statuses = ['Published'];
-  } else {
-    statuses = ['Prototype', 'WiP', 'Ready', 'Published'];
+  if (typeof args.status !== 'undefined') {
+    statuses = args.status.toLowerCase().split(',');
   }
 
   glob(path.join(__dirname, fileYML), {}, (err, files) => {
@@ -361,4 +359,4 @@ const i18n = function (args, done) {
   done();
 };
 
-fractal.cli.command('fractal:i18n [build] [dev]', i18n);
+fractal.cli.command('fractal:i18n [status]', i18n);
