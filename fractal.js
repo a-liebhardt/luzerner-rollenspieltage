@@ -60,7 +60,7 @@ const updateColor = function (args, done) {
   const os = require('os');
   const yaml = require('yamljs');
   const hexRgb = require('hex-rgb');
-  const fs = require('fs');
+  const fs = require('fs-extra');
   // Array that stores color variables so they can be referenced by other variables
   const endOfLine = os.EOL;
   const colorsArray = [];
@@ -192,6 +192,7 @@ const distribute = function (args, done) {
   const app = this.fractal;
   const root = 'dist/';
   const dockerRoot = `${root}web/`;
+  const statuses = ['published'];
 
   const rmdir = (dir) => {
     const list = fs.readdirSync(dir);
@@ -215,8 +216,8 @@ const distribute = function (args, done) {
   const clonePages = (pageBody) => {
     let files = 0;
     for (let item of app.components.flatten()) {
-      if (item.relViewPath.match(/^pages\//g)) {
-        if (item.status.label === 'Published') {
+      if (item.viewPath.match(/(\/pages\/|\\pages\\)/g)) {
+        if (statuses.indexOf(item.status.label.toLowerCase()) >= 0) {
           item.render().then(function(contentBody){
             // content to page wrapper
             let htmlBody = pageBody.replace(/\{\{\{ yield \}\}\}/, contentBody);
@@ -228,7 +229,7 @@ const distribute = function (args, done) {
             fs.writeFile(path.join(__dirname, `${dockerRoot}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
               if (err) throw err;
               files++;
-              console.log(`Dist ready: '${dockerRoot}${item.handle}.html'`);
+              console.log(`Page ready: '${dockerRoot}${item.handle}.html'`);
             });
           });
         }
@@ -250,60 +251,26 @@ const distribute = function (args, done) {
     });
   };
 
-  const copyAssetsTo = (items) => {
-    const copyFile = (from, to) => {
-      fs.copyFile(from, to, (err) => {
-        if (err) throw err;
-        console.log(`Dist ready: ${to}`);
-      });
-    };
+  // Remove root folder
+  fs.remove(path.join(__dirname, root), () => {
+    // Add new root folder
+    fs.mkdir(path.join(__dirname, root), (err) => {
+      if (err) throw err;
 
-    items.forEach((item) => {
-      try {
-        const stats = fs.statSync(path.join(__dirname, item.source));
-        if (stats.isFile()) {
-          copyFile(path.join(__dirname, item.source), path.join(__dirname, item.target));
-        }
-        if (stats.isDirectory()) {
-          fs.mkdir(path.join(__dirname, item.target), (err) => {
-            if (err) throw err;
-            const list = fs.readdirSync(item.source);
-            for (var i = 0; i < list.length; i++) {
-              const filename = list[i];
-              copyFile(path.join(__dirname, `${item.source}${filename}`), path.join(__dirname, `${item.target}${filename}`));
+      fs.copy('patterns/docker', root, function (err) {
+        if (err) {
+          console.error(err);
+        } else {
+          fs.copy('public', dockerRoot, function (err) {
+            if (err) {
+              console.error(err);
+            } else {
+              console.log(`Dist ready on '${root}'`);
+              buildWebPage();
             }
           });
         }
-      } catch(e) {
-        console.warn(`Warning: Not found ${item.source}`);
-      }
-    });
-  };
-
-  fs.remove(path.join(__dirname, root), () => {
-    fs.mkdir(path.join(__dirname, root), (err) => {
-      if (err) throw err;
-      buildWebPage();
-
-      copyAssetsTo([
-        { source: 'patterns/docker/Dockerfile', target: `${root}Dockerfile` },
-        { source: 'patterns/docker/LICENSE', target: `${root}LICENSE` },
-        { source: 'patterns/docker/mime.types', target: `${root}mime.types` },
-        { source: 'patterns/docker/nginx.conf', target: `${root}nginx.conf` },
-        { source: 'patterns/docker/README.md', target: `${root}README.md` },
-        { source: 'patterns/docker/web', target: `${dockerRoot}/` },
-        { source: 'build/translations.json', target: `${dockerRoot}translations.json` },
-        { source: 'build/apple-icon-180x180.png', target: `${dockerRoot}apple-icon-180x180.png` },
-        { source: 'build/favicon-32x32.png', target: `${dockerRoot}favicon-32x32.png` },
-        { source: 'build/favicon-16x16.png', target: `${dockerRoot}favicon-16x16.png` },
-        { source: 'build/manifest.json', target: `${dockerRoot}manifest.json` },
-        { source: 'build/favicon.ico', target: `${dockerRoot}favicon.ico` },
-        { source: 'build/robots.txt', target: `${dockerRoot}robots.txt` },
-        { source: 'build/css/', target: `${dockerRoot}css/` },
-        { source: 'build/js/', target: `${dockerRoot}js/` },
-        { source: 'build/images/', target: `${dockerRoot}images/` },
-        { source: 'build/fonts/', target: `${dockerRoot}fonts/` },
-      ]);
+      });
     });
   });
 
@@ -317,7 +284,7 @@ const i18n = function (args, done) {
   const glob = require('glob');
   const os = require('os');
   const yaml = require('yamljs');
-  const fs = require('fs');
+  const fs = require('fs-extra');
   const endOfLine = os.EOL;
   const fileYML = './patterns/**/*.config.yml';
   const fileJS = './public/translations.json';
