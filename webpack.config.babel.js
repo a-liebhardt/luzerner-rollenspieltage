@@ -74,10 +74,6 @@ module.exports = () => {
       new CopyWebpackPlugin([
         { from: 'patterns/static/*', to: '../', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
-        // { from: 'patterns/**/*.ttf', to: '../fonts/', flatten: true },
-        // { from: 'patterns/**/*.otf', to: '../fonts/', flatten: true },
-        // { from: 'patterns/**/*.eot', to: '../fonts/', flatten: true },
-        // { from: 'patterns/**/*.woff2', to: '../fonts/', flatten: true },
       ], {
         debug: false,
         context: __dirname,

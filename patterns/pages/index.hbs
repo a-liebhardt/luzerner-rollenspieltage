@@ -1,0 +1,16 @@
+{{render '@header'}}
+<main id="pagescroller" class="content">
+  <section data-anchor="page1">
+    {{> @content-panel1 panel1-config}}
+  </section>
+  <section data-anchor="page2">
+    {{> @content-panel2 panel2-config}}
+  </section>
+  <section data-anchor="page3">
+    {{> @content-panel3 panel3-config}}
+  </section>
+  <section data-anchor="page4">
+    {{> @content-panel4 panel4-config}}
+  </section>
+</main>
+{{render '@footer'}}

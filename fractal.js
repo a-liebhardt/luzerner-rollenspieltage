@@ -191,6 +191,7 @@ const distribute = function (args, done) {
   const path = require('path');
   const app = this.fractal;
   const root = 'dist/';
+  const dockerRoot = `${root}web/`;
 
   const rmdir = (dir) => {
     const list = fs.readdirSync(dir);
@@ -224,10 +225,10 @@ const distribute = function (args, done) {
             htmlBody = htmlBody.replace(/\> \</g, '><');
             htmlBody = htmlBody.replace(/<!--[^\[](.*?)-->/g, '');
             // Write file to dest
-            fs.writeFile(path.join(__dirname, `${root}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
+            fs.writeFile(path.join(__dirname, `${dockerRoot}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
               if (err) throw err;
               files++;
-              console.log(`Dist ready: '${root}${item.handle}.html'`);
+              console.log(`Dist ready: '${dockerRoot}${item.handle}.html'`);
             });
           });
         }
@@ -285,17 +286,23 @@ const distribute = function (args, done) {
       buildWebPage();
 
       copyAssetsTo([
-        { source: 'build/translations.json', target: `${root}/translations.json` },
-        { source: 'build/apple-icon-180x180.png', target: `${root}/apple-icon-180x180.png` },
-        { source: 'build/favicon-32x32.png', target: `${root}/favicon-32x32.png` },
-        { source: 'build/favicon-16x16.png', target: `${root}/favicon-16x16.png` },
-        { source: 'build/manifest.json', target: `${root}/manifest.json` },
-        { source: 'build/favicon.ico', target: `${root}/favicon.ico` },
-        { source: 'build/robots.txt', target: `${root}/robots.txt` },
-        { source: 'build/css/', target: `${root}css/` },
-        { source: 'build/js/', target: `${root}js/` },
-        { source: 'build/images/', target: `${root}images/` },
-        { source: 'build/fonts/', target: `${root}fonts/` },
+        { source: 'patterns/docker/Dockerfile', target: `${root}Dockerfile` },
+        { source: 'patterns/docker/LICENSE', target: `${root}LICENSE` },
+        { source: 'patterns/docker/mime.types', target: `${root}mime.types` },
+        { source: 'patterns/docker/nginx.conf', target: `${root}nginx.conf` },
+        { source: 'patterns/docker/README.md', target: `${root}README.md` },
+        { source: 'patterns/docker/web', target: `${dockerRoot}/` },
+        { source: 'build/translations.json', target: `${dockerRoot}translations.json` },
+        { source: 'build/apple-icon-180x180.png', target: `${dockerRoot}apple-icon-180x180.png` },
+        { source: 'build/favicon-32x32.png', target: `${dockerRoot}favicon-32x32.png` },
+        { source: 'build/favicon-16x16.png', target: `${dockerRoot}favicon-16x16.png` },
+        { source: 'build/manifest.json', target: `${dockerRoot}manifest.json` },
+        { source: 'build/favicon.ico', target: `${dockerRoot}favicon.ico` },
+        { source: 'build/robots.txt', target: `${dockerRoot}robots.txt` },
+        { source: 'build/css/', target: `${dockerRoot}css/` },
+        { source: 'build/js/', target: `${dockerRoot}js/` },
+        { source: 'build/images/', target: `${dockerRoot}images/` },
+        { source: 'build/fonts/', target: `${dockerRoot}fonts/` },
       ]);
     });
   });
@@ -316,22 +323,30 @@ const i18n = function (args, done) {
   const fileJS = './public/translations.json';
   // const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 'i18n' node, choose your ISO key like 'en-EN' and define i18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using i18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.i18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
   let i18nBody = {};
+  let statuses = [];
+  if (typeof args.build !== 'undefined') {
+    statuses = ['Published'];
+  } else {
+    statuses = ['Prototype', 'WiP', 'Ready', 'Published'];
+  }
 
   glob(path.join(__dirname, fileYML), {}, (err, files) => {
     if (err) throw err;
     files.forEach((file) => {
       const configYAML = yaml.load(file);
-      if (configYAML && typeof configYAML.i18n !== 'undefined') {
+      if (configYAML && typeof configYAML.i18n !== 'undefined' && typeof configYAML.status !== 'undefined') {
         // console.log(file);
         // console.log(configYAML.i18n);
-        Object.keys(configYAML.i18n).forEach(function(iso) {
-          if (typeof i18nBody[iso] === 'undefined') {
-            i18nBody[iso] = {};
-          }
-          Object.keys(configYAML.i18n[iso]).forEach(function(key) {
-            i18nBody[iso][key] = configYAML.i18n[iso][key];
+        if (statuses.indexOf(configYAML.status.toLowerCase()) >= 0) {
+          Object.keys(configYAML.i18n).forEach(function(iso) {
+            if (typeof i18nBody[iso] === 'undefined') {
+              i18nBody[iso] = {};
+            }
+            Object.keys(configYAML.i18n[iso]).forEach(function(key) {
+              i18nBody[iso][key] = configYAML.i18n[iso][key];
+            });
           });
-        });
+        }
       }
     });
     // console.log(i18nBody);
@@ -346,4 +361,4 @@ const i18n = function (args, done) {
   done();
 };
 
-fractal.cli.command('fractal:i18n', i18n);
+fractal.cli.command('fractal:i18n [build] [dev]', i18n);
