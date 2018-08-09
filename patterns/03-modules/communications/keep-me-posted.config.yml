@@ -72,7 +72,7 @@ context:
       article-subtitle-i18n: "keep-me-posted.form-2.article.subtitle"
 i18n:
   'de-DE':
-    'keep-me-posted.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:info@example.ch\">Bitte kontaktiere uns hier</a>."
+    'keep-me-posted.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
     'keep-me-posted.form-1.input.name': "Dein Vorname, Nachname"
     'keep-me-posted.form-1.input.name.error': "Bitte trage deinen Namen ein"
     'keep-me-posted.form-1.email.name': "Deine E-Mail"
@@ -82,7 +82,7 @@ i18n:
     'keep-me-posted.form-2.article.title': "Vielen Dank für dein Interesse"
     'keep-me-posted.form-2.article.subtitle': "Wir werden dich informieren sobald die Registrierung für Spieler öffnet.<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
   'en-EN':
-    'keep-me-posted.form.request.error': "Your contact request failed. <br /><a href=\"mailto:info@example.ch\">Please contact us here</a>."
+    'keep-me-posted.form.request.error': "Your contact request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."
     'keep-me-posted.form-1.input.name': "Your Firstname, Lastname"
     'keep-me-posted.form-1.input.name.error': "Please enter your Name"
     'keep-me-posted.form-1.email.name': "Your Email"

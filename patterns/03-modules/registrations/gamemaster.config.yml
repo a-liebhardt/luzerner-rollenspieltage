@@ -451,7 +451,7 @@ context:
       article-subtitle-i18n: "registration.form-4.article.subtitle"
 i18n:
   'de-DE':
-    'registration.form.request.error': "Deine Registrierung ist fehlgeschlagen. <br /><a href=\"mailto:info@example.ch\">Bitte kontaktiere uns hier</a>."
+    'registration.form.request.error': "Deine Registrierung ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
     'registration.form-1.input.name': "Dein Vorname, Nachname"
     'registration.form-1.input.name.error': "Bitte trage deinen Namen ein"
     'registration.form-1.email.name': "Deine E-Mail"
@@ -483,7 +483,7 @@ i18n:
     'registration.form-4.article.title': "Herzlich Willkommen Spielleiter"
     'registration.form-4.article.subtitle': "Vielen Dank dafür, dass du uns dabei hilfst diesen Event zu etwas besonderen für alle Rollenspieler zu machen. <br />Wir prüfen deine Registrierung und würden uns in den nächsten Tagen wieder bei dir melden. <br />Bis dahin wünschen wir dir alles Gute.<br />Das Luzerner Rollenspieltage Team"
   'en-EN':
-    'registration.form.request.error': "Your registration request failed. <br /><a href=\"mailto:info@example.ch\">Please contact us here</a>."
+    'registration.form.request.error': "Your registration request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."
     'registration.form-1.input.name': "Your Firstname, Lastname"
     'registration.form-1.input.name.error': "Please enter your Name"
     'registration.form-1.email.name': "Your Email"

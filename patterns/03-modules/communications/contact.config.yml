@@ -88,7 +88,7 @@ context:
       article-subtitle-i18n: "contact.form-2.article.subtitle"
 i18n:
   'de-DE':
-    'contact.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:info@example.ch\">Bitte kontaktiere uns hier</a>."
+    'contact.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
     'contact.form-1.input.name': "Dein Vorname, Nachname"
     'contact.form-1.input.name.error': "Bitte trage deinen Namen ein"
     'contact.form-1.email.name': "Deine E-Mail"
@@ -99,7 +99,7 @@ i18n:
     'contact.form-2.article.title': "Nachricht erhalten"
     'contact.form-2.article.subtitle': "Vielen Dank für deine Nachricht<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
   'en-EN':
-    'contact.form.request.error': "Your contact request failed. <br /><a href=\"mailto:info@example.ch\">Please contact us here</a>."
+    'contact.form.request.error': "Your contact request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."
     'contact.form-1.input.name': "Your Firstname, Lastname"
     'contact.form-1.input.name.error': "Please enter your Name"
     'contact.form-1.email.name': "Your Email"

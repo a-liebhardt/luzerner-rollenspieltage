@@ -1,6 +1,8 @@
+$font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+
 html,
 body {
-  font-family: $base--font-family;
+  font-family: $font-family;
   font-weight: $base--font-weight-regular;
   font-style: normal;
   font-size: $base--font-size;
@@ -18,14 +20,8 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: $base--font-family;
+h6 {
+  font-family: $font-family;
   font-weight: $base--font-weight-bold;
   font-style: normal;
   text-rendering: auto;
@@ -76,7 +72,7 @@ strong {
 
 span,
 label {
-  font-family: $base--font-family;
+  font-family: $font-family;
   font-weight: inherit;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -103,7 +99,7 @@ a[role] {
 figcaption {
   font-size: 1.6rem;
   line-height: 1.6;
-  font-family: $base--font-family;
+  font-family: $font-family;
   font-weight: $base--font-weight-regular;
   margin: 0 0 1em;
 }
@@ -111,7 +107,7 @@ figcaption {
 p {
   font-size: 1.6rem;
   line-height: 1.6;
-  font-family: $base--font-family;
+  font-family: $font-family;
   font-weight: $base--font-weight-regular;
   margin: 0 0 1em;
   text-rendering: auto;
@@ -135,7 +131,7 @@ p {
 pre {
   font-size: 1.6rem;
   line-height: 1.6;
-  font-family: $base--font-family;
+  font-family: $font-family;
   font-weight: $base--font-weight-regular;
   margin: 0 0 1em;
 }
@@ -143,7 +139,7 @@ pre {
 code {
   font-size: 1.6rem;
   line-height: 1.6;
-  font-family: $base--font-family;
+  font-family: $font-family;
   font-weight: $base--font-weight-regular;
   margin: 0 0 1em;
 }

@@ -8,34 +8,14 @@ context:
         picture-i18n: ""
         picture-sources:
           -
-            viewport: 600
-            source: "https://picsum.photos/600/400/?random&blur"
-          -
-            viewport: 400
-            source: "https://picsum.photos/480/320/?random&blur"
-          -
-            source: "https://picsum.photos/320/240/?random&blur"
+            source: "/images/cover-dice-bag.jpg"
         image:
           image-alt: "Welcome to Luzerner Rollenspieltage"
           image-i18n: ""
           # image-class: ""
           image-source: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-          image-lazyload: "https://picsum.photos/2480/2048/?random&blur"
+          image-lazyload: "/images/cover-dice-bag.jpg"
   logo:
-    figure:
-      figure-class: "logo"
-      picture:
-        picture-title: "Luzerner Rollenspieltage Logo"
-        picture-i18n: ""
-        picture-sources:
-          -
-            viewport: 400
-            source: "https://picsum.photos/480/320/?random&blur"
-          -
-            source: "https://picsum.photos/320/240/?random&blur"
-        image:
-          image-alt: "Luzerner Rollenspieltage Logo"
-          image-i18n: ""
-          # image-class: ""
-          image-source: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-          image-lazyload: "https://picsum.photos/2480/2048/?random&blur"
+    icon:
+      icon-name: "LuzernerRollenspieltag"
+      icon-class: "logo"

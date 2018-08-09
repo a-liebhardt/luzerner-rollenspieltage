@@ -1,7 +1,7 @@
 {{#with picture}}
 <picture {{#if picture-title}}title="{{picture-title}}"{{/if}} {{#if picture-class}}class="{{picture-class}}"{{/if}} {{#if picture-i18n}}i18n="{{picture-i18n}}"{{/if}}>
   {{#each picture-sources}}
-    <source srcset="{{source}}" {{#if viewport}}media="(min-width: {{viewport}}px)"{{/if}}>
+    <source srcset="{{path source}}" {{#if viewport}}media="(min-width: {{viewport}}px)"{{/if}}>
   {{/each}}
   {{> @image}}
 </picture>

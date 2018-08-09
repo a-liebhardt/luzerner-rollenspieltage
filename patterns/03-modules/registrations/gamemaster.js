@@ -119,7 +119,7 @@ exports.init = (() => {
     console.log('error', 'User', data);
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('registration.form.request.error');
-    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
     console.log('error', formId, data);
@@ -155,7 +155,7 @@ exports.init = (() => {
   window.formCallOnError.setFunc('Game', (data, status) => {
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('registration.form.request.error');
-    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
     console.log('error', formId, data);
@@ -233,7 +233,7 @@ exports.init = (() => {
   window.formCallOnError.setFunc('Organization', (data, status) => {
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('contact.form.request.error');
-    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:info@example.ch">Please contact us here</a>.';
+    if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
     console.log('error', formId, data);

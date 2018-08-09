@@ -8,7 +8,6 @@
 [role='search'] {
   display: flex;
   flex-direction: column;
-  // border: 0.1rem solid $color--black;
   border-bottom: 0.1rem solid $color--black-20;
 
   &.hidden {
@@ -30,7 +29,7 @@
     color: $color--black;
     border-radius: 0;
     font-size: 1.6rem;
-    font-family: $base--font-family;
+    font-family: $font-family;
     font-weight: $base--font-weight-light;
     box-sizing: border-box;
     width: 100%;
@@ -84,7 +83,7 @@
     color: $color--black-60;
     border-radius: 0;
     font-size: 1.6rem;
-    font-family: $base--font-family;
+    font-family: $font-family;
     font-weight: $base--font-weight-light;
     box-sizing: border-box;
     width: 100%;

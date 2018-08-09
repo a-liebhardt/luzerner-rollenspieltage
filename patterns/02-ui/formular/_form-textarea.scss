@@ -1,9 +1,7 @@
 [role='textbox'] {
   display: flex;
   flex-direction: column;
-  // border: 0.1rem solid $color--black;
   border-bottom: 0.1rem solid $color--black-20;
-  // border-left: 0.1rem solid $color--black-20;
 
   label {
     padding: 0.8rem 1.6rem 0;
@@ -20,7 +18,7 @@
     color: $color--black;
     border-radius: 0;
     font-size: 1.6rem;
-    font-family: $base--font-family;
+    font-family: $font-family;
     font-weight: $base--font-weight-light;
     box-sizing: border-box;
     width: 100%;
