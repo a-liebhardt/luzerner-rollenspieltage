@@ -73,6 +73,7 @@ module.exports = () => {
       }),
       new CopyWebpackPlugin([
         { from: 'patterns/static/*', to: '../', flatten: true },
+        { from: 'patterns/vendor/*', to: '../vendor', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
       ], {
         debug: false,

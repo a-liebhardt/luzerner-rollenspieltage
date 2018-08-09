@@ -10,6 +10,10 @@ context:
         icon-name: "arrow-right"
         icon-pos: "after"
         icon-class: "icon-xs"
+  gamer:
+    icon:
+      icon-name: "people"
+      icon-class: "gamer"
   gamemaster-config: '@gamemaster'
   gamemaster-article-config:
     label:
@@ -20,6 +24,10 @@ context:
         icon-name: "arrow-right"
         icon-pos: "after"
         icon-class: "icon-xs"
+  gamemaster:
+    icon:
+      icon-name: "user_group_man_women"
+      icon-class: "gamemaster"
   close-config:
     label:
       label-attr: "flip-reset"
