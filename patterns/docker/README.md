@@ -1,27 +1,18 @@
-# docker-static-files-serve
+The Docker setup for PHP applications using PHP7-FPM and Nginx described in http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm
 
-A simple docker ngnix webserver
+## Instructions
+1. Checkout the repository
+  ```
+  docker-compose up
+  ```
 
-Run this command to build
-```
-docker build -t some-name .
-```
+2. Navigate to localhost:8080
 
-Once the build is complete run docker
-```
-docker run -p 5000:90 some-name
-```
+3. To clear cache
+  ```
+  docker system prune -a
+  ```
 
-Navigate to http://localhost:5000 to see the changes
+That's it! You have your local PHP setup using Docker
 
-To stop it use a new terminal window and type in
-```
-docker ps # get the id of the running container
-docker stop <container> # to kill it (gracefully)
-```
-
-Is based on
-https://github.com/arunkumars08/docker-static-files-serve
-
-For detailed reference, visit this link
-https://www.linkedin.com/pulse/serve-static-files-from-docker-via-nginx-basic-example-arun-kumar
+*Example of activated PHP logging* - https://github.com/mikechernev/dockerised-php/tree/feature/log-to-stdout

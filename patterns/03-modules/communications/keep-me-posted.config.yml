@@ -2,10 +2,10 @@ status: wip
 context:
   form-1:
     form:
-      form-name: "KeppMePosted"
+      form-name: "KeepMePosted"
       # form-action: "http://localhost:3000/rest/form.json"
       # form-method: "get"
-      form-action: "http://penandpaperdayweb20180727100723.azurewebsites.net/api/KeppMePosted"
+      form-action: "form.php"
       form-method: "post"
       form-class: "form-1 keep-me-posted-step active"
       form-items:
@@ -22,7 +22,7 @@ context:
                         label-text: "Your Firstname, Lastname"
                         label-text-i18n: "keep-me-posted.form-1.input.name"
                       input-id: "keep-me-posted-name"
-                      input-name: "KeppMePosted[name]"
+                      input-name: "KeepMePosted[name]"
                       input-placeholder: "Your Firstname, Lastname"
                       input-i18n: "keep-me-posted.form-1.input.name"
                       input-class: ""
@@ -40,7 +40,7 @@ context:
                         label-text: "Your Email"
                         label-text-i18n: "keep-me-posted.form-1.email.name"
                       input-id: "keep-me-posted-email"
-                      input-name: "KeppMePosted[email]"
+                      input-name: "KeepMePosted[email]"
                       input-placeholder: "Your Email"
                       input-i18n: "keep-me-posted.form-1.email.name"
                       input-class: ""

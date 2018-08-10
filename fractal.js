@@ -191,7 +191,7 @@ const distribute = function (args, done) {
   const path = require('path');
   const app = this.fractal;
   const root = 'dist/';
-  const dockerRoot = `${root}web/`;
+  const dockerRoot = `${root}www/`;
   const statuses = ['published'];
 
   const rmdir = (dir) => {
