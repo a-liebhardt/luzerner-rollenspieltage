@@ -28,7 +28,7 @@ exports.init = (() => {
    */
 
   const self = document.querySelector('.map');
-  const googleApiKey = 'XXX';
+  const googleApiKey = '{GOOGLE_MAP_APIKEY}';
   const gooleMapStyle = [
     {
       "elementType": "geometry",

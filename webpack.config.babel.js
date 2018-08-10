@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+const secrets = require(path.join(__dirname, 'secrets.json'));
 
 module.exports = () => {
   let config = {};
@@ -60,6 +61,13 @@ module.exports = () => {
               },
             },
           ],
+        },
+        {
+          test: /\.js$/,
+          loader: 'string-replace-loader',
+          options: {
+            multiple: secrets.replacements
+          }
         },
       ],
     },
