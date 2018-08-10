@@ -12,11 +12,11 @@ exports.init = (() => {
         address: 'Schädrütistrasse 26',
         zipCity: '6006 Luzern',
         country: 'Switzerland',
-        email: 'mail@rollenspieltag.ch'
+        email: 'mail@rollenspieltag.ch',
       },
       iso: 'CH',
-      info: ''
-    }
+      info: '',
+    },
   ];
 
   /* eslint-disable */
@@ -27,8 +27,8 @@ exports.init = (() => {
    * @return undefined
    */
 
-  const self = this.$el[0];
-  const googleApiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  const self = document.querySelector('.map');
+  const googleApiKey = 'XXX';
   const gooleMapStyle = [
     {
       "elementType": "geometry",
@@ -205,9 +205,6 @@ exports.init = (() => {
       }
       if ( conf.location.zipCity.length ) {
         data[ data.length ] = conf.location.zipCity;
-      }
-      if ( conf.location.phone.length ) {
-        data[ data.length ] = conf.location.phone;
       }
       if ( conf.location.email.length ) {
         data[ data.length ] = '<a href="mailto:' + conf.location.email + '">' + conf.location.email + '</a>';

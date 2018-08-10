@@ -12,6 +12,7 @@ import Translation from './02-ui/translation/translation';
 // import Header from './03-modules/header/header';
 import Contact from './03-modules/communications/contact';
 import KeepMePosted from './03-modules/communications/keep-me-posted';
+import Panel2 from './03-modules/content-panel2/content-panel2';
 import Panel3 from './03-modules/content-panel3/content-panel3';
 import Panel4 from './03-modules/content-panel4/content-panel4';
 import Gamemaster from './03-modules/registrations/gamemaster';
@@ -55,6 +56,7 @@ ready(() => {
   // Header.init();
   Contact.init();
   KeepMePosted.init();
+  Panel2.init();
   Panel3.init();
   Panel4.init();
   Gamemaster.init();
