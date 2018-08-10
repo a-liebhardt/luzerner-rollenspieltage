@@ -80,7 +80,7 @@ module.exports = () => {
         allChunks: true,
       }),
       new CopyWebpackPlugin([
-        { from: 'patterns/static/*', to: '../', flatten: true },
+        { from: 'patterns/static_www/*', to: '../', flatten: true },
         { from: 'patterns/vendor/*', to: '../vendor', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
       ], {

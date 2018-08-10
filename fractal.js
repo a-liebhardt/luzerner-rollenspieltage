@@ -257,7 +257,7 @@ const distribute = function (args, done) {
     fs.mkdir(path.join(__dirname, root), (err) => {
       if (err) throw err;
 
-      fs.copy('patterns/docker', root, function (err) {
+      fs.copy('patterns/static_docker', root, function (err) {
         if (err) {
           console.error(err);
         } else {
