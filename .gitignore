@@ -15,7 +15,7 @@ node_modules/
 # Logs
 log/
 yarn-error.log
-yarn.log
+yarn.lock
 
 # Ignored Build Folders
 assets/
