@@ -4,7 +4,7 @@ import Layout from './01-core/layout/layout';
 // UI
 import Lightbox from './02-ui/lightbox/lightbox';
 import Spinner from './02-ui/spinner/spinner-matrix';
-import Formular from './02-ui/formular/formular';
+import Formular from './02-ui/formular/default';
 import Form from './02-ui/formular/form';
 import Fullpage from './02-ui/pagescroller/fullpage';
 import Translation from './02-ui/translation/translation';
