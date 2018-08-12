@@ -5,6 +5,11 @@
   padding: 0 2rem;
 
   .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     align-content: center;
   }
 
@@ -21,13 +26,6 @@
   }
 
   @media screen and (min-width: #{$mq-m}) {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-
     .map {
       height: 100vh;
     }
