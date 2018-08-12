@@ -8,14 +8,14 @@ exports.init = (() => {
         mail: 'E-Mail',
       },
       location: {
-        company: 'Luzerner Rollenspieltage',
+        // company: 'Luzerner Rollenspieltage',
         address: 'Schädrütistrasse 26',
         zipCity: '6006 Luzern',
         country: 'Switzerland',
-        email: 'mail@rollenspieltag.ch',
+        // email: 'mail@rollenspieltag.ch',
       },
       iso: 'CH',
-      info: '',
+      info: 'Luzerner Rollenspieltage',
     },
   ];
 
@@ -192,24 +192,26 @@ exports.init = (() => {
 
   const initMap = () => {
     //const markerImage = '../images/mapMarker.png';
-    const markerImage = 'data:image/png;base64,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';
+    const markerImage = 'data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 26 18 24"><g><path fill="blue" d="M17.336,33.188l-6.746-6.547C10.149,26.215,9.571,26,8.996,26c-0.576,0-1.153,0.213-1.592,0.641l-6.749,6.547c-0.644,0.625-0.832,1.566-0.483,2.383c0.25,0.582,0.745,1.02,1.333,1.223v4.109c0,1.207,0.998,2.176,2.242,2.176h1.567l1.345,4.104c-2.492,0.209-4.263,0.74-4.263,1.363c0,0.803,2.955,1.455,6.6,1.455c3.646,0,6.6-0.65,6.6-1.453c0-0.623-1.771-1.156-4.261-1.365l1.344-4.104h1.566c1.243,0,2.262-0.969,2.262-2.176v-4.109c0.588-0.203,1.075-0.641,1.324-1.223C18.178,34.754,17.98,33.813,17.336,33.188z M14.257,34.746v6.148h-3.229L9,47.094c-0.002,0-0.004,0-0.004,0c-0.002,0-0.004,0-0.006,0l-2.029-6.199H3.753v-6.148H2.248l6.749-6.549l6.746,6.549H14.257z"/><path fill="blue" d="M8.354,35.6c0-0.268-0.221-0.482-0.497-0.482H6.041c-0.275,0-0.497,0.215-0.497,0.482v1.764c0,0.266,0.222,0.48,0.497,0.48h1.815c0.276,0,0.497-0.215,0.497-0.48V35.6z"/></g></svg>';
     const mapZoom = 16;
-    var map, infoWindow;
+    let map;
+    let infoWindow;
+    let activeId = 0;
 
-    var setAddressBox = (conf) => {
-      // const country = conf.location.country.length ? `<p>${conf.location.country}</p>` : '';
-      const company = conf.location.company.length ? `<h2>${conf.location.company}</h2>` : '';
+    const setAddressBox = (conf) => {
+      // const country = conf.location.country ? `<p>${conf.location.country}</p>` : '';
+      const company = conf.location.company ? `<h2>${conf.location.company}</h2>` : '';
       let data = [];
 
-      if (conf.location.address.length) {
+      if (conf.location.address) {
         data[ data.length ] = conf.location.address;
       }
 
-      if (conf.location.zipCity.length) {
+      if (conf.location.zipCity) {
         data[data.length] = conf.location.zipCity;
       }
 
-      if (conf.location.email.length) {
+      if (conf.location.email) {
         data[data.length] = `<a href="mailto:${conf.location.email}">${conf.location.email}</a>`;
       }
 
@@ -409,7 +411,11 @@ exports.init = (() => {
       if ( '' != hash && self.querySelectorAll(`.marker-menu ul li a[data-iso="${hash}"]`).length) {
         links = self.querySelectorAll(`.marker-menu ul li a[data-iso="${hash}"]`);
       }
-      console.info('select map by country:', hash);
+      if (links.length === 0) {
+        links = self.querySelectorAll(`.marker-menu ul li a`);
+      }
+      activeId = links[0].getAttribute('data-id');
+      console.info('select map by country:', links[0].getAttribute('data-iso'));
       links[0].click();
     };
 
@@ -448,6 +454,7 @@ exports.init = (() => {
     //   addClass(this, 'active');
 
     //   const dataId = parseInt(this.getAttribute('data-id'));
+    //   activeId = dataId;
     //   const latFloat = mapMarker[ dataId ].lat;
     //   const lngFloat = mapMarker[ dataId ].lng;
     //   setAddressBox(mapMarker[ dataId ]);
@@ -467,8 +474,7 @@ exports.init = (() => {
 
     live('click', 'a.show-extern', (e) => {
       e.preventDefault();
-      const active = self.querySelector('.marker-menu ul li a.active');
-      const dataId = parseInt(active.getAttribute('data-id'));
+      const dataId = parseInt(activeId);
       const location = mapMarker[dataId].location;
       setAddressBox(mapMarker[dataId]);
       let destination = [];
