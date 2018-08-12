@@ -4,21 +4,25 @@ $json = file_get_contents("php://input");
 
 if ($json) {
   $data = json_decode($json);
+  $formId = '';
+  $userId = '';
 
-  // $reciever = "mail@rollenspieltag.ch";
-  $reciever = "alexander@liebhardt.info";
+  // $receiver = "mail@rollenspieltag.ch";
+  $receiver = "alexander@liebhardt.info";
   $subject = "Neue Nachricht erhalten.";
 
   $msg = [];
   $msg[] = "Eine neue Nachricht wurde erhalten:";
 
   foreach ($data as $formName => $obj) {
-    $subject = "$iformName: $subject";
-    $msg[] = $iformName;
+    $formId = $formName;
+    $subject = "$formId: $subject";
+    $msg[] = $formId;
     $msg[] = "--";
 
     foreach($obj as $key => $value) {
       $msg[] = "$key: $value";
+      if ($formId === 'User' && $key === 'email') $userId = $value;
     }
 
     $msg[] = "--";
@@ -30,8 +34,12 @@ if ($json) {
       "Reply-To: noreply@example.com" . "\r\n" .
       "X-Mailer: PHP/" . phpversion();
 
-  if (mail($reciever, $subject, implode("\r\n", $msg), $header)) {
-    header("HTTP/1.0 202 Accepted");
+  if (mail($receiver, $subject, implode("\r\n", $msg), $header)) {
+    if ($formId === 'User') {
+      echo "{'id': '$userId'}";
+    } else {
+      header("HTTP/1.0 202 Accepted");
+    }
     exit;
   }
 }

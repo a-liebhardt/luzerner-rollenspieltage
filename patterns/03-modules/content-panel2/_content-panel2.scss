@@ -30,8 +30,13 @@
       z-index: 200;
       right: 0;
       bottom: 0;
-      width: 50%;
-      padding: 2rem 4rem 4rem 2rem;
+      width: 100%;
+      padding: 2rem 4rem 4rem;
+
+      @media screen and (min-width: #{$mq-l}) {
+        padding: 2rem 4rem 4rem 2rem;
+        width: 50%;
+      }
 
       a {
         font-size: 1.6rem;
@@ -51,9 +56,14 @@
       z-index: 100;
       right: 0;
       bottom: 0;
-      width: 50%;
+      width: 100%;
       background: $color--black-20;
-      padding: 2rem 4rem 6rem 2rem;
+      padding: 2rem 4rem 6rem;
+
+      @media screen and (min-width: #{$mq-l}) {
+        padding: 2rem 4rem 6rem 2rem;
+        width: 50%;
+      }
     }
   }
 

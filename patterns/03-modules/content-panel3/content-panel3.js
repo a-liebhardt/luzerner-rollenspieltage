@@ -3,6 +3,8 @@ exports.init = (() => {
     document.querySelectorAll('.panel3 .flipper').forEach((flipper) => {
       flipper.classList.remove('no-flip');
       flipper.classList.remove('flip');
+      flipper.closest('[class*="col-"]').classList.remove('is-flipped');
+      flipper.closest('[class*="col-"]').classList.remove('is-not-flipped');
     });
   };
 
@@ -10,9 +12,13 @@ exports.init = (() => {
     document.querySelectorAll('.panel3 .flipper').forEach((flipper) => {
       flipper.classList.add('no-flip');
       flipper.classList.remove('flip');
+      flipper.closest('[class*="col-"]').classList.add('is-not-flipped');
+      flipper.closest('[class*="col-"]').classList.remove('is-flipped');
     });
     e.target.closest('.flipper').classList.add('flip');
     e.target.closest('.flipper').classList.remove('no-flip');
+    e.target.closest('[class*="col-"]').classList.add('is-flipped');
+    e.target.closest('[class*="col-"]').classList.remove('is-not-flipped');
   };
 
   const panel = document.querySelector('.panel3');

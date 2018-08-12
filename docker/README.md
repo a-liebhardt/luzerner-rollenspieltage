@@ -16,11 +16,6 @@ The Docker setup for PHP applications using PHP7-FPM and Nginx described in http
 3. Stop Docker
   ```
   docker-compose stop
-
-  or
-
-  docker ps
-  docker stop {docker-id}
   ```
 
 4. To clear cache

@@ -186,12 +186,12 @@ const updateColor = function (args, done) {
 fractal.cli.command('fractal:color', updateColor);
 
 // Special func to distribute static html page
-const distribute = function (args, done) {
+const docker = function (args, done) {
   const fs = require('fs-extra')
   const path = require('path');
   const app = this.fractal;
-  const root = 'dist/';
-  const dockerRoot = `${root}www/`;
+  const root = 'docker/';
+  const dockerWWW = `${root}src/`;
   const statuses = ['published'];
 
   const rmdir = (dir) => {
@@ -226,10 +226,10 @@ const distribute = function (args, done) {
             htmlBody = htmlBody.replace(/\> \</g, '><');
             htmlBody = htmlBody.replace(/<!--[^\[](.*?)-->/g, '');
             // Write file to dest
-            fs.writeFile(path.join(__dirname, `${dockerRoot}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
+            fs.writeFile(path.join(__dirname, `${dockerWWW}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
               if (err) throw err;
               files++;
-              console.log(`Page ready: '${dockerRoot}${item.handle}.html'`);
+              console.log(`Page ready: '${dockerWWW}${item.handle}.html'`);
             });
           });
         }
@@ -261,7 +261,7 @@ const distribute = function (args, done) {
         if (err) {
           console.error(err);
         } else {
-          fs.copy('public', dockerRoot, function (err) {
+          fs.copy('public', dockerWWW, function (err) {
             if (err) {
               console.error(err);
             } else {
@@ -277,7 +277,7 @@ const distribute = function (args, done) {
   done();
 };
 
-fractal.cli.command('fractal:dist', distribute);
+fractal.cli.command('docker', docker);
 
 const i18n = function (args, done) {
   // Local dependencies
