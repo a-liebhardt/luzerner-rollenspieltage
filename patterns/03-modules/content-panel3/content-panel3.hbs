@@ -1,10 +1,14 @@
 <div class="row container panel3">
+  <div class="col-l-12">
+    {{> @article panel3-article-config}}
+  </div>
   <div class="col-l-6">
     <section class="flipper">
       <div class="flip-front">
         <!-- front content -->
         {{> @icon gamer}}
-        {{> @label keep-me-posted-article-config}}
+        {{> @article gamer-article-config}}
+        {{> @label keep-me-posted-label-config}}
       </div>
       <div class="flip-back">
         <!-- back content -->
@@ -18,7 +22,8 @@
       <div class="flip-front">
         <!-- front content -->
         {{> @icon gamemaster}}
-        {{> @label gamemaster-article-config}}
+        {{> @article gamemaster-article-config}}
+        {{> @label gamemaster-label-config}}
       </div>
       <div class="flip-back">
         <!-- back content -->

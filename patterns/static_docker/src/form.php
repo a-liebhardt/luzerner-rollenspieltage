@@ -37,7 +37,7 @@ if ($json) {
   // Mail do not work yet because of missing server smtp setup
   if (mail($receiver, $subject, implode("\r\n", $msg), $header)) {
     if ($formId === 'User') {
-      echo "'user':{'id': '$userId'}";
+      echo "{'id': '$userId'}";
     } else {
       header("HTTP/1.0 202 Accepted");
     }

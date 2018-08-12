@@ -4,6 +4,14 @@
   // overflow-y: auto;
   padding: 0 2rem;
 
+  @media screen and (min-width: #{$mq-l}) {
+    height: 100%;
+
+    [class*='col-'] {
+      height: 100%;
+    }
+  }
+
   .data {
     display: flex;
     flex-direction: column;
@@ -16,6 +24,7 @@
   .map {
     width: 100%;
     height: 50vh;
+    min-height: 60rem;
     background: $color--black-20;
     padding: 4rem;
     position: relative;

@@ -112,10 +112,11 @@ exports.init = (() => {
   window.formCallOnSuccess.setFunc('User', (data, status) => {
     // console.log('succes', 'gamemaster', data);
     if (data) {
-      const resp = JSON.parse(data);
+      const user = JSON.parse(data);
       const userIds = document.querySelectorAll('input[type="hidden"][name="User[id]"]');
       userIds.forEach((userId) => {
-        userId.value = resp.user.id;
+        userId.value = user.response;
+        // userId.value = user.id;
       });
     } else {
       console.error('Recievied invalid response. No User isste');
@@ -173,60 +174,41 @@ exports.init = (() => {
   /* eslint-enable */
 
   /* eslint-disable */
+  // const slotValidator = function(value, attributes, attributeName, options, constraints) {
+  //   const inputs = document.querySelectorAll(`.${formId} .slots input`);
+  //   let inputValue = 0;
+  //   inputs.forEach(function(input) {
+  //     inputValue += input.checked ? 1 : 0;
+  //   });
+  //   if (inputValue > 0) return true;
+  //   return {
+  //     presence: {
+  //       message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+  //         const i18n = window.i18n.get('registration.form-3.input.slot.error');
+  //         if (!i18n) return '^Please select at least one game slot';
+  //         return `^${i18n}`;
+  //       },
+  //     },
+  //   };
+  // };
+
   window.formRules.setRule({
     'Organization': {
-      'Organization[starttime-1]': function(value, attributes, attributeName, options, constraints) {
-        const inputs = document.querySelectorAll(`.${formId} .starttime input`);
-        let inputValue = 0;
-        inputs.forEach(function(input) {
-          inputValue += input.value.length;
-        });
-        if (inputValue > 0) return true;
-        return {
-          // presence: {message: '^Please enter at least one starttime'},
-          presence: {
-            message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-              const i18n = window.i18n.get('registration.form-3.input.starttime.error');
-              if (!i18n) return '^Please enter a game name';
-              return `^${i18n}`;
-            }
+      // 'Organization[slot-1-3]': slotValidator,
+      // 'Organization[slot-3-5]': slotValidator,
+      // 'Organization[slot-5-7]': slotValidator,
+      // 'Organization[slot-7-9]': slotValidator,
+      // 'Organization[slot-9-11]': slotValidator,
+      // 'Organization[slot-11-1]': slotValidator,
+      'Organization[coc]': {
+        // Code of Coduct is required
+        presence: {
+          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+            const i18n = window.i18n.get('registration.form-3.input.coc.error');
+            if (!i18n) return '^Please accept our Code of Conduct';
+            return `^${i18n}`;
           }
-        };
-      },
-      'Organization[starttime-2]': function(value, attributes, attributeName, options, constraints) {
-        const inputs = document.querySelectorAll(`.${formId} .starttime input`);
-        let inputValue = 0;
-        inputs.forEach(function(input) {
-          inputValue += input.value.length;
-        });
-        if (inputValue > 0) return true;
-        return {
-          // presence: {message: '^Please enter at least one starttime'},
-          presence: {
-            message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-              const i18n = window.i18n.get('registration.form-3.input.starttime.error');
-              if (!i18n) return '^Please enter a game name';
-              return `^${i18n}`;
-            }
-          }
-        };
-      },
-      'Organization[starttime-3]': function(value, attributes, attributeName, options, constraints) {
-        const inputs = document.querySelectorAll(`.${formId} .starttime input`);
-        let inputValue = 0;
-        inputs.forEach(function(input) {
-          inputValue += input.value.length;
-        });
-        if (inputValue > 0) return true;
-        return {
-          // presence: {message: '^Please enter at least one starttime'},
-          presence: {
-            message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-              const i18n = window.i18n.get('registration.form-3.input.starttime.error');
-              return `^${i18n}`;
-            }
-          }
-        };
+        },
       },
     },
   });
@@ -236,8 +218,8 @@ exports.init = (() => {
   /* eslint-disable */
   window.formCallOnSuccess.setFunc('Organization', (data, status) => {
     // console.log('succes', 'gamemaster', data);
-    document.querySelector(`.${formId} .form-4`).classList.add('active');
-    document.querySelector(`.${formId} .form-3`).classList.remove('active');
+    // document.querySelector(`.${formId} .form-4`).classList.add('active');
+    // document.querySelector(`.${formId} .form-3`).classList.remove('active');
   });
 
   window.formCallOnError.setFunc('Organization', (data, status) => {

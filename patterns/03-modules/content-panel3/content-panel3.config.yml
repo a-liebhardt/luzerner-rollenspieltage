@@ -1,21 +1,37 @@
 status: wip
 context:
+  panel3-article-config:
+    article:
+      article-hide-small: true
+      article-title: "Register now"
+      article-title-i18n: "panel3.panel.title"
+      article-title-tag: "h2"
+      article-hide-footer: true
   keep-me-posted-config: '@keep-me-posted'
-  keep-me-posted-article-config:
+  keep-me-posted-label-config:
     label:
       label-text: "Gamer Registration is not open yet.<br />Click here to keep posted"
-      label-text-i18n: "panel3.keep-me-posted-article.text"
+      label-text-i18n: "panel3.keep-me-posted.label.text"
       label-attr: "menu-close"
       icon:
         icon-name: "arrow-right"
         icon-pos: "after"
         icon-class: "icon-xs"
+  gamer-article-config:
+    article:
+      article-hide-small: true
+      article-title: "Gamer"
+      article-title-i18n: "panel3.gamer.article.title"
+      article-title-tag: "h3"
+      article-body: "<p>For questions don't hesitate and contact us.</p>"
+      article-body-i18n: "panel3.gamer.article.text"
+      article-hide-footer: true
   gamer:
     icon:
       icon-name: "people"
       icon-class: "gamer"
   gamemaster-config: '@gamemaster'
-  gamemaster-article-config:
+  gamemaster-label-config:
     label:
       label-text: "Click here to register as Gamemaster"
       label-text-i18n: "panel3.gamemaster.text"
@@ -24,6 +40,15 @@ context:
         icon-name: "arrow-right"
         icon-pos: "after"
         icon-class: "icon-xs"
+  gamemaster-article-config:
+    article:
+      article-hide-small: true
+      article-title: "Gamemaster"
+      article-title-i18n: "panel3.gamemaster.article.title"
+      article-title-tag: "h3"
+      article-body: "<p>For questions don't hesitate and contact us.</p>"
+      article-body-i18n: "panel3.gamemaster.article.text"
+      article-hide-footer: true
   gamemaster:
     icon:
       icon-name: "user_group_man_women"
@@ -38,12 +63,22 @@ context:
         icon-class: "icon-m"
 i18n:
   'de-DE':
+    'panel3.panel.title': "Anmelden"
     # 'panel3.article.title': "Möchtest du als Spielleiter helfen?"
     # 'panel3.article.body': "<p>Wir suchen Spielleiter welche uns an dem Event helfen möchten. So melde dich an wenn du helfen möchtest.</p>"
-    'panel3.keep-me-posted-article.text': "Spieler Registrierung ist noch nicht geöffnet.<br />Halte dich hier auf dem laufenden"
+    'panel3.keep-me-posted.label.text': "Spieler Registrierung ist noch nicht geöffnet.<br />Halte dich hier auf dem laufenden"
     'panel3.gamemaster.text': "Registriere dich als Gamemaster"
+    'panel3.gamer.article.title': "Spieler"
+    'panel3.gamer.article.text': "<p>Sobald die ersten Spielleiter sich bei uns gemeldet haben, werden wir die Spielrunden aufschalten. Du kannst dich dann online oder spontan vor Ort deinen Platz am Tisch reservieren.</p><p>Möchtest du gerne erinnert werden, sobald die ersten Runden online stehen?</p>"
+    'panel3.gamemaster.article.title': "Spielleiter"
+    'panel3.gamemaster.article.text': "<p>Euch Spielleleitern müssten wir nicht erklären, wie dankbar wir für euren Einsatz sind. Wir tun es trotzdem: Danke vielmals! Wir möchten euch darauf hinweisen, dass ihr bitte System-spezifisches Spielmaterial für eure Spieler mitnehmt. Für Schreibzeug sorgen wir.</p><p>Hast du noch nie geleitet oder fühlst dich noch unsicher als Spielleiter, darfst du dich gerne bei uns im Vorfeld melden. Erfahrene Spielleiter unterstützen dich vor Ort und stehen mit Rat und Tat zur Seite.</p>"
   'en-EN':
+    'panel3.panel.title': "Register now"
     # 'panel3.article.title': "Like to help as Gamemaster?"
     # 'panel3.article.body': "<p>We looking for gamemaster which help us out on this event. So if you are a gamemaster und you like to help please register.</p>"
-    'panel3.keep-me-posted-article.text': "Gamer Registration is not open yet.<br />Click here to keep posted"
+    'panel3.keep-me-posted.label.text': "Gamer Registration is not open yet.<br />Click here to keep posted"
     'panel3.gamemaster.text': "Register as Gamemaster"
+    'panel3.gamer.article.title': "Gamer"
+    'panel3.gamer.article.text': "<p>Sobald die ersten Spielleiter sich bei uns gemeldet haben, werden wir die Spielrunden aufschalten. Du kannst dich dann online oder spontan vor Ort deinen Platz am Tisch reservieren.</p><p>Möchtest du gerne erinnert werden, sobald die ersten Runden online stehen?</p>"
+    'panel3.gamemaster.article.title': "Gamemaster"
+    'panel3.gamemaster.article.text': "<p>Euch Spielleleitern müssten wir nicht erklären, wie dankbar wir für euren Einsatz sind. Wir tun es trotzdem: Danke vielmals! Wir möchten euch darauf hinweisen, dass ihr bitte System-spezifisches Spielmaterial für eure Spieler mitnehmt. Für Schreibzeug sorgen wir.</p><p>Hast du noch nie geleitet oder fühlst dich noch unsicher als Spielleiter, darfst du dich gerne bei uns im Vorfeld melden. Erfahrene Spielleiter unterstützen dich vor Ort und stehen mit Rat und Tat zur Seite.</p>"

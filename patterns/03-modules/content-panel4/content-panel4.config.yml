@@ -1,15 +1,15 @@
 status: wip
 context:
   contact-config: '@contact'
-  contact-article-config:
-    label:
-      label-text: "Send us a message here"
-      label-text-i18n: "panel4.label.text"
-      label-attr: "menu-close"
-      icon:
-        icon-name: "arrow-right"
-        icon-pos: "after"
-        icon-class: "icon-xs"
+  # contact-label-config:
+  #   label:
+  #     label-text: "Send us a message here"
+  #     label-text-i18n: "panel4.label.text"
+  #     label-attr: "menu-close"
+  #     icon:
+  #       icon-name: "arrow-right"
+  #       icon-pos: "after"
+  #       icon-class: "icon-xs"
   article-config:
     article:
       article-hide-small: true
@@ -19,21 +19,21 @@ context:
       article-body: "<p>For questions don't hesitate and contact us.</p>"
       article-body-i18n: "panel4.article.body"
       article-hide-footer: true
-  close-config:
-    label:
-      label-attr: "flip-reset"
-      label-class: "align-center"
-      icon:
-        icon-name: "menu-close"
-        icon-pos: "after"
-        icon-class: "icon-m"
+  # close-config:
+  #   label:
+  #     label-attr: "flip-reset"
+  #     label-class: "align-center"
+  #     icon:
+  #       icon-name: "menu-close"
+  #       icon-pos: "after"
+  #       icon-class: "icon-m"
 
 i18n:
   'de-DE':
-    'panel4.article.title': "Kontaktiere uns"
-    'panel4.article.body': "<p>Bei Fragen kontaktiere uns.</p>"
-    'panel4.label.text': "Sende uns hier eine Nachricht"
+    'panel4.article.title': "Kontakt"
+    'panel4.article.body': "<p>Da wir auf unserer Webseite lange nicht alle Fragen beantworten konnten, freuen wir uns auf deine Fragen und Inputs über das Kontaktformular. Wir werden uns innerhalb von 24 Stunden bei dir melden.</p>"
+    # 'panel4.label.text': "Sende uns hier eine Nachricht"
   'en-EN':
     'panel4.article.title': "Get in touch"
     'panel4.article.body': "<p>For questions don't hesitate and contact us.</p>"
-    'panel4.label.text': "Send us a message here"
+    # 'panel4.label.text': "Send us a message here"
