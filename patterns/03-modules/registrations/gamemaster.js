@@ -111,6 +111,16 @@ exports.init = (() => {
   /* eslint-disable */
   window.formCallOnSuccess.setFunc('User', (data, status) => {
     // console.log('succes', 'gamemaster', data);
+    if (data) {
+      const resp = JSON.parse(data);
+      const userIds = document.querySelectorAll('input[type="hidden"][name="User[id]"]');
+      userIds.forEach((userId) => {
+        userId.value = resp.user.id;
+      });
+    } else {
+      console.error('Recievied invalid response. No User isste');
+      console.log(data);
+    }
     document.querySelector(`.${formId} .form-2`).classList.add('active');
     document.querySelector(`.${formId} .form-1`).classList.remove('active');
   });
