@@ -19,7 +19,7 @@ yarn.lock
 
 # Ignored Build Folders
 assets/
-dist/
+docker/
 build/
 public/
 

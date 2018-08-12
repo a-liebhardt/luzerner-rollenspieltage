@@ -34,14 +34,17 @@ if ($json) {
       "Reply-To: noreply@example.com" . "\r\n" .
       "X-Mailer: PHP/" . phpversion();
 
+  // Mail do not work yet because of missing server smtp setup
   if (mail($receiver, $subject, implode("\r\n", $msg), $header)) {
     if ($formId === 'User') {
       echo "{'id': '$userId'}";
     } else {
       header("HTTP/1.0 202 Accepted");
     }
-    exit;
+  } else {
+    header("HTTP/1.0 500 Internal Server Error");
   }
+  exit;
 }
 
 header("HTTP/1.0 400 Bad Request");
