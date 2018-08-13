@@ -7,8 +7,7 @@ if ($json) {
   $formId = '';
   $userId = '';
 
-  // $receiver = "mail@rollenspieltag.ch";
-  $receiver = "alexander@liebhardt.info";
+  $receiver = "mail@rollenspieltag.ch";
   $sender = "noreply@rollenspieltag.ch"
   $subject = "Neue Nachricht erhalten.";
 
