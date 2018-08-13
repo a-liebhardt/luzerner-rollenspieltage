@@ -1,49 +1,5 @@
-// es modules are recommended, if available, especially for typescript
-import Flatpickr from 'flatpickr';
-/* eslint-disable */
-import { de as German } from 'flatpickr/dist/l10n/de';
-/* eslint-enable */
-
 exports.init = (() => {
   const formId = 'gamemaster';
-
-  Flatpickr('.datetime input', {
-    altInput: true,
-    altFormat: 'F j, Y',
-    dateFormat: 'Y-m-d',
-    defaultDate: '2018-10-06',
-    minDate: '2018-10-06',
-    maxDate: '2018-10-06',
-    locale: window.i18n.getLanguageIso(),
-  });
-
-  Flatpickr('.starttime input', {
-    dateFormat: 'H:i',
-    defaultDate: '09:00',
-    noCalendar: true,
-    enableTime: true,
-    time_24hr: true,
-    minTime: '09:00',
-    maxTime: '18:00',
-    locale: window.i18n.getLanguageIso(),
-    onReady() {
-      this.input.value = '';
-    },
-  });
-
-  Flatpickr('.duration input', {
-    dateFormat: 'h',
-    defaultDate: '2:00',
-    noCalendar: true,
-    enableTime: true,
-    time_24hr: true,
-    minTime: '1:00',
-    maxTime: '4:00',
-    locale: window.i18n.getLanguageIso(),
-    onReady() {
-      this.input.value = '';
-    },
-  });
 
   const handleFormSubmit = (e) => {
     const forms = e.target.closest(`.${formId}`).querySelectorAll('form');
@@ -187,7 +143,7 @@ exports.init = (() => {
   //         const i18n = window.i18n.get('registration.form-3.input.slot.error');
   //         if (!i18n) return '^Please select at least one game slot';
   //         return `^${i18n}`;
-  //       },
+  //       }
   //     },
   //   };
   // };
@@ -209,6 +165,14 @@ exports.init = (() => {
             return `^${i18n}`;
           }
         },
+        inclusion: {
+          within: [true],
+          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+            const i18n = window.i18n.get('registration.form-3.input.coc.error');
+            if (!i18n) return '^Please accept our Code of Conduct';
+            return `^${i18n}`;
+          }
+        }
       },
     },
   });
