@@ -1,4 +1,8 @@
 <?php
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 $json = file_get_contents("php://input");
 
@@ -8,7 +12,7 @@ if ($json) {
   $userId = '';
 
   $receiver = "mail@rollenspieltag.ch";
-  $sender = "noreply@rollenspieltag.ch"
+  $sender = "noreply@rollenspieltag.ch";
   $subject = "Neue Nachricht erhalten.";
 
   $msg = [];
@@ -30,10 +34,6 @@ if ($json) {
     $msg[] = "Die WP-API";
   }
 
-  // Import PHPMailer classes into the global namespace
-  // These must be at the top of your script, not inside a function
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
   $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
   try {
