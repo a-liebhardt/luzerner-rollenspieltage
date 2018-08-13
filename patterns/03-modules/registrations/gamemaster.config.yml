@@ -3,10 +3,10 @@ context:
   form-1:
     form:
       form-name: "User"
-      form-action: "http://localhost:3000/rest/form.json"
-      form-method: "get"
-      # form-action: ""
-      # form-method: "post"
+      # form-action: "http://localhost:3000/rest/form.json"
+      # form-method: "get"
+      form-action: "form.php"
+      form-method: "post"
       form-class: "form-1 registration-step active"
       form-items:
         -

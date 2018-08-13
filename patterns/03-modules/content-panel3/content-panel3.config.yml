@@ -7,12 +7,14 @@ context:
       article-title-i18n: "panel3.panel.title"
       article-title-tag: "h2"
       article-hide-footer: true
+      article-class: "headline"
   keep-me-posted-config: '@keep-me-posted'
   keep-me-posted-label-config:
     label:
-      label-text: "Gamer Registration is not open yet.<br />Click here to keep posted"
+      label-text: "Keep me posted"
       label-text-i18n: "panel3.keep-me-posted.label.text"
       label-attr: "menu-close"
+      label-class: "form-button"
       icon:
         icon-name: "arrow-right"
         icon-pos: "after"
@@ -36,6 +38,7 @@ context:
       label-text: "Click here to register as Gamemaster"
       label-text-i18n: "panel3.gamemaster.text"
       label-attr: "menu-close"
+      label-class: "form-button"
       icon:
         icon-name: "arrow-right"
         icon-pos: "after"
@@ -66,7 +69,7 @@ i18n:
     'panel3.panel.title': "Anmelden"
     # 'panel3.article.title': "Möchtest du als Spielleiter helfen?"
     # 'panel3.article.body': "<p>Wir suchen Spielleiter welche uns an dem Event helfen möchten. So melde dich an wenn du helfen möchtest.</p>"
-    'panel3.keep-me-posted.label.text': "Spieler Registrierung ist noch nicht geöffnet.<br />Halte dich hier auf dem laufenden"
+    'panel3.keep-me-posted.label.text': "Haltet mich auf dem laufenden"
     'panel3.gamemaster.text': "Registriere dich als Gamemaster"
     'panel3.gamer.article.title': "Spieler"
     'panel3.gamer.article.text': "<p>Sobald die ersten Spielleiter sich bei uns gemeldet haben, werden wir die Spielrunden aufschalten. Du kannst dich dann online oder spontan vor Ort deinen Platz am Tisch reservieren.</p><p>Möchtest du gerne erinnert werden, sobald die ersten Runden online stehen?</p>"
@@ -76,7 +79,7 @@ i18n:
     'panel3.panel.title': "Register now"
     # 'panel3.article.title': "Like to help as Gamemaster?"
     # 'panel3.article.body': "<p>We looking for gamemaster which help us out on this event. So if you are a gamemaster und you like to help please register.</p>"
-    'panel3.keep-me-posted.label.text': "Gamer Registration is not open yet.<br />Click here to keep posted"
+    'panel3.keep-me-posted.label.text': "Keep me posted"
     'panel3.gamemaster.text': "Register as Gamemaster"
     'panel3.gamer.article.title': "Gamer"
     'panel3.gamer.article.text': "<p>Sobald die ersten Spielleiter sich bei uns gemeldet haben, werden wir die Spielrunden aufschalten. Du kannst dich dann online oder spontan vor Ort deinen Platz am Tisch reservieren.</p><p>Möchtest du gerne erinnert werden, sobald die ersten Runden online stehen?</p>"

@@ -38,6 +38,47 @@
 
   [flip-reset] {
     display: block;
-    width: 100%;
+    width: 5rem;
+    height: 5rem;
+    background: $color--black-5;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 1rem;
+    transform: translateY(3rem);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    box-shadow: inset 0 0 2rem rgba($color--black, 0.2), 0 0 1rem rgba($color--black, 0.4);
+
+    .icon {
+      opacity: 0.3;
+      transition: all 200ms ease-in-out;
+    }
+
+    &:hover {
+      padding: 2rem;
+      margin: 0;
+      width: 7rem;
+      height: 7rem;
+      background: $color--white;
+      box-shadow: inset 0 0 4rem rgba($color--black, 0.2), 0 0 2rem rgba($color--black, 0.4);
+
+      .icon {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      padding: 2rem;
+      margin: 0;
+      width: 7rem;
+      height: 7rem;
+      background: $color--black-20;
+      box-shadow: inset 0 0 4rem rgba($color--black, 0.2), 0 0 2rem rgba($color--black, 0.4);
+      transition: all 0ms ease-in-out;
+
+      .icon {
+        opacity: 1;
+      }
+    }
   }
 }

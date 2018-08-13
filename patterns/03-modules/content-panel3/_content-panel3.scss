@@ -3,6 +3,59 @@
   // overflow: hidden;
   padding: 0 2rem;
 
+  .form-button {
+    @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, bottom, left, 100ms);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    padding: 1.2rem 4.2rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid transparent;
+    outline: none;
+
+    label {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    &:active {
+      border: 0.2rem solid $color--cyan-40;
+    }
+  }
+
+  article {
+    &.headline {
+      position: relative;
+
+      header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-2rem);
+        background: $color--cyan-40;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: 7rem;
+          color: $color--black-5;
+          text-shadow: 0 0 0.8rem $color--black-80;
+        }
+      }
+    }
+  }
+
   i.icon {
     &.gamer,
     &.gamemaster {

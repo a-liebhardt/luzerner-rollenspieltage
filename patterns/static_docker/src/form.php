@@ -28,7 +28,7 @@ if ($json) {
 
     $msg[] = "--";
     $msg[] = "Beste Grüsse";
-    $msg[] = "Die WP API";
+    $msg[] = "Die WP-API";
   }
 
   // Import PHPMailer classes into the global namespace
@@ -68,7 +68,7 @@ if ($json) {
 
     $mail->send();
     if ($formId === 'User') {
-      echo "{'id': '$userId'}";
+      echo "{'id':'$userId'}";
     } else {
       header("HTTP/1.0 202 Accepted");
     }

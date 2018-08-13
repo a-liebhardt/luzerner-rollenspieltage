@@ -65,7 +65,7 @@
   button {
     @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, bottom, left, 100ms);
 
-    background: none;
+    background: $color--white;
     border: none;
     cursor: pointer;
     font-size: 2rem;

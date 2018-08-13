@@ -10,6 +10,10 @@ context:
   #       icon-name: "arrow-right"
   #       icon-pos: "after"
   #       icon-class: "icon-xs"
+  icon-config:
+    icon:
+      icon-name: "dungeon-gate"
+      icon-class: "emotion"
   article-config:
     article:
       article-hide-small: true
