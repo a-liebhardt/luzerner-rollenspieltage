@@ -223,11 +223,22 @@ const docker = function (args, done) {
     }, 1000);
   };
 
-  fs.readFile('patterns/_preview-competition.hbs', {encoding:'utf8', flag:'r'}, (err, data) => {
-    if (err) throw err;
-    // Parse fractal paths
-    data = data.replace(/\{\{ path \'([0-9a-zA-Z\/\-.]*)'\}\}/g, '.$1');
-    clonePages(data);
+  const buildWebPage = () => {
+    fs.readFile('patterns/_preview-competition.hbs', {encoding:'utf8', flag:'r'}, (err, data) => {
+      if (err) throw err;
+      // Parse fractal paths
+      data = data.replace(/\{\{ path \'([0-9a-zA-Z\/\-.]*)'\}\}/g, '.$1');
+      clonePages(data);
+    });
+  };
+
+  fs.copy('public', dockerWWW, function (err) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Dist ready on '${root}'`);
+      buildWebPage();
+    }
   });
 
   done();

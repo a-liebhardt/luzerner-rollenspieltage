@@ -102,19 +102,6 @@ module.exports = () => {
             return Promise.resolve(Buffer.from(content, 'utf8'));
           }
         },
-        {
-          from: '**/*',
-          to: path.join(__dirname, '/docker/src'),
-          flatten: false,
-          context: path.join(__dirname, '/patterns/static_www'),
-          transform (content, path) {
-            content = content.toString();
-            secrets.replacements.forEach((obj) => {
-              content = content.replace(obj.search, obj.replace);
-            });
-            return Promise.resolve(Buffer.from(content, 'utf8'));
-          }
-        },
       ], {
         debug: false,
         context: __dirname,
