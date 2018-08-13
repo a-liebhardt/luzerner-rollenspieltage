@@ -63,7 +63,7 @@ module.exports = () => {
           ],
         },
         {
-          test: /\.js$/,
+          test: /\.(js|css|yml|html|php)$/,
           loader: 'string-replace-loader',
           options: {
             multiple: secrets.replacements
@@ -80,13 +80,45 @@ module.exports = () => {
         allChunks: true,
       }),
       new CopyWebpackPlugin([
-        { from: 'patterns/static_www/*', to: '../', flatten: true },
-        { from: 'patterns/vendor/*', to: '../vendor', flatten: true },
+        { from: 'patterns/static_www/**/*', to: '../', flatten: true },
+        { from: 'patterns/vendor/*', to: '../vendor/', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
       ], {
         debug: false,
         context: __dirname,
         copyUnmodified: true,
+      }),
+      new CopyWebpackPlugin([
+        {
+          from: '**/*',
+          to: path.join(__dirname, '/docker'),
+          flatten: false,
+          context: path.join(__dirname, '/patterns/static_docker'),
+          transform (content, path) {
+            content = content.toString();
+            secrets.replacements.forEach((obj) => {
+              content = content.replace(obj.search, obj.replace);
+            });
+            return Promise.resolve(Buffer.from(content, 'utf8'));
+          }
+        },
+        {
+          from: '**/*',
+          to: path.join(__dirname, '/docker/src'),
+          flatten: false,
+          context: path.join(__dirname, '/patterns/static_www'),
+          transform (content, path) {
+            content = content.toString();
+            secrets.replacements.forEach((obj) => {
+              content = content.replace(obj.search, obj.replace);
+            });
+            return Promise.resolve(Buffer.from(content, 'utf8'));
+          }
+        },
+      ], {
+        debug: false,
+        context: __dirname,
+        copyUnmodified: false,
       }),
     ],
   };

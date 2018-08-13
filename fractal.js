@@ -194,25 +194,6 @@ const docker = function (args, done) {
   const dockerWWW = `${root}src/`;
   const statuses = ['published'];
 
-  const rmdir = (dir) => {
-    const list = fs.readdirSync(dir);
-    for (var i = 0; i < list.length; i++) {
-      const filename = path.join(dir, list[i]);
-      const stats = fs.statSync(filename);
-
-      if(filename == '.' || filename == '..') {
-        // pass these files
-      } else if(stats.isDirectory()) {
-        // rmdir recursively
-        rmdir(filename);
-      } else {
-        // rm filename
-        fs.unlinkSync(filename);
-      }
-    }
-    return true;
-  };
-
   const clonePages = (pageBody) => {
     let files = 0;
     for (let item of app.components.flatten()) {
@@ -242,42 +223,35 @@ const docker = function (args, done) {
     }, 1000);
   };
 
-  const buildWebPage = () => {
-    fs.readFile('patterns/_preview-competition.hbs', {encoding:'utf8', flag:'r'}, (err, data) => {
-      if (err) throw err;
-      // Parse fractal paths
-      data = data.replace(/\{\{ path \'([0-9a-zA-Z\/\-.]*)'\}\}/g, '.$1');
-      clonePages(data);
-    });
-  };
-
-  // Remove root folder
-  fs.remove(path.join(__dirname, root), () => {
-    // Add new root folder
-    fs.mkdir(path.join(__dirname, root), (err) => {
-      if (err) throw err;
-
-      fs.copy('patterns/static_docker', root, function (err) {
-        if (err) {
-          console.error(err);
-        } else {
-          fs.copy('public', dockerWWW, function (err) {
-            if (err) {
-              console.error(err);
-            } else {
-              console.log(`Dist ready on '${root}'`);
-              buildWebPage();
-            }
-          });
-        }
-      });
-    });
+  fs.readFile('patterns/_preview-competition.hbs', {encoding:'utf8', flag:'r'}, (err, data) => {
+    if (err) throw err;
+    // Parse fractal paths
+    data = data.replace(/\{\{ path \'([0-9a-zA-Z\/\-.]*)'\}\}/g, '.$1');
+    clonePages(data);
   });
 
   done();
 };
 
 fractal.cli.command('docker', docker);
+
+const rmdocker = function (args, done) {
+  const fs = require('fs-extra')
+  const path = require('path');
+  const root = 'docker/';
+
+  // Remove root folder
+  fs.remove(path.join(__dirname, root), () => {
+    // Add new root folder
+    fs.mkdir(path.join(__dirname, root), (err) => {
+      if (err) throw err;
+      console.log(`Dist '${root}' is ready`);
+      done();
+    });
+  });
+};
+
+fractal.cli.command('rmdocker', rmdocker);
 
 const i18n = function (args, done) {
   // Local dependencies

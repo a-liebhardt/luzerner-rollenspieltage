@@ -26,3 +26,4 @@ public/
 # Custom
 patterns/translations.js
 secrets.json
+*.zip

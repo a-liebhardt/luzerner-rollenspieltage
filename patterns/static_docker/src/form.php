@@ -9,6 +9,7 @@ if ($json) {
 
   // $receiver = "mail@rollenspieltag.ch";
   $receiver = "alexander@liebhardt.info";
+  $sender = "noreply@rollenspieltag.ch"
   $subject = "Neue Nachricht erhalten.";
 
   $msg = [];
@@ -30,20 +31,52 @@ if ($json) {
     $msg[] = "Die WP API";
   }
 
-  $header = "From: noreply@example.com" . "\r\n" .
-      "Reply-To: noreply@example.com" . "\r\n" .
-      "X-Mailer: PHP/" . phpversion();
+  // Import PHPMailer classes into the global namespace
+  // These must be at the top of your script, not inside a function
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
-  // Mail do not work yet because of missing server smtp setup
-  if (mail($receiver, $subject, implode("\r\n", $msg), $header)) {
+  try {
+    //Server settings
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = '{PHP_MAILER_HOST}';                    // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = '{PHP_MAILER_USER}';                // SMTP username
+    $mail->Password = '{PHP_MAILER_PASSWORD}';            // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom($sender, 'WP Notifier');
+    $mail->addAddress($receiver, 'WP Form');
+    // $mail->addAddress('ellen@example.com');
+    // $mail->addReplyTo('info@example.com', 'Information');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
+
+    //Attachments
+    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = implode("\r\n", $msg);
+    $mail->AltBody = implode("\r\n", $msg);
+
+    $mail->send();
     if ($formId === 'User') {
       echo "{'id': '$userId'}";
     } else {
       header("HTTP/1.0 202 Accepted");
     }
-  } else {
+  } catch (Exception $e) {
+    // echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     header("HTTP/1.0 500 Internal Server Error");
   }
+
   exit;
 }
 

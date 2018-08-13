@@ -38,8 +38,9 @@
     "color": "fractal fractal:color",
     "i18n:dev": "fractal fractal:i18n Prototype,WiP,Ready,Published",
     "i18n:build": "fractal fractal:i18n Published",
+    "fractal:rmdocker": "fractal rmdocker",
     "fractal:docker": "fractal docker",
-    "build:docker": "npm-run-all build fractal:docker"
+    "build:docker": "npm-run-all fractal:rmdocker build fractal:docker"
   },
   "dependencies": {
     "css-element-queries": "^0.4.0",
