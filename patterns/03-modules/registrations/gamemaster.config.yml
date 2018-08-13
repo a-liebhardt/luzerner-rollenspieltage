@@ -362,7 +362,7 @@ context:
                     input:
                       label:
                         label-for: "coc"
-                        label-text: "I have read and accept the <a href='code-of-conduct.html'>Code of Conduct</a>"
+                        label-text: "I have read and accept the <a href='./code-of-conduct.html'>Code of Conduct</a>"
                         label-text-i18n: "registration.form-3.input.coc"
                       input-id: "coc"
                       input-name: "Organization[coc]"
@@ -433,7 +433,7 @@ i18n:
     'registration.form-3.input.slot.error': "Bitte wähle mindestens einen Spiel Termin aus"
     'registration.form-3.button.previous': "Zurück zur vorherigen Form"
     'registration.form-3.button.next': "Registrierung abschliessen"
-    'registration.form-3.input.coc': "Ich habe den <a href='code-of-conduct.html'>Code of Conduct</a> gelesen und aktzeptiere diesen"
+    'registration.form-3.input.coc': "Ich habe den <a href='./code-of-conduct.html'>Code of Conduct</a> gelesen und aktzeptiere diesen"
     'registration.form-3.input.coc.error': "Bitte aktzeptiere unseren Code of Conduct"
     'registration.form-4.article.title': "Herzlich Willkommen Spielleiter"
     'registration.form-4.article.subtitle': "Vielen Dank dafür, dass du uns dabei hilfst diesen Event zu etwas besonderen für alle Rollenspieler zu machen. <br />Wir prüfen deine Registrierung und würden uns in den nächsten Tagen wieder bei dir melden. <br />Bis dahin wünschen wir dir alles Gute.<br />Das Luzerner Rollenspieltage Team"
@@ -468,7 +468,7 @@ i18n:
     'registration.form-3.input.slot.error': "Please select at least one game slot"
     'registration.form-3.button.previous': "Back to previous form"
     'registration.form-3.button.next': "Finish registration"
-    'registration.form-3.input.coc': "I have read and accept the <a href='code-of-conduct.html'>Code of Conduct</a>"
+    'registration.form-3.input.coc': "I have read and accept the <a href='./code-of-conduct.html'>Code of Conduct</a>"
     'registration.form-3.input.coc.error': "Please accept our Code of Conduct"
     'registration.form-4.article.title': "Welcome Gamemaster"
     'registration.form-4.article.subtitle': "Thank you very much for helping us making this event a special one for every role player. <br />We will check your registration and come back to you in the next couple of days.<br />Have a good time, till we meet again.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
