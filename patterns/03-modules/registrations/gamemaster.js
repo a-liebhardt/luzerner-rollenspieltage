@@ -29,34 +29,22 @@ exports.init = (() => {
   window.formRules.setRule({
     'User': {
       'User[name]': {
-        // Email is required
+        // Name is required
         presence: {
           // message: '^Please enter your Name',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('registration.form-1.input.name.error');
-            if (!i18n) return '^Please enter your Name';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('registration.form-1.input.name.error', 'Please enter your Name')
         },
       },
       'User[email]': {
         // Email is required
         presence: {
           // message: '^Please enter your Email',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('registration.form-1.input.email.error.1');
-            if (!i18n) return '^Please enter your Email';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('registration.form-1.input.email.error.1', 'Please enter your Email')
         },
         // and must be an email (duh)
         email: {
           // message: '^Email doesn\'t look correct',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('registration.form-1.input.email.error.2');
-            if (!i18n) return '^Email doesn\'t look correct';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('registration.form-1.input.email.error.2', 'Email doesn\'t look correct')
         },
       },
     },
@@ -100,11 +88,7 @@ exports.init = (() => {
         // Email is required
         presence: {
           // message: '^Please enter a game name',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('registration.form-2.input.title.error');
-            if (!i18n) return '^Please enter a game name';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('registration.form-2.input.title.error', 'Please enter a game name')
         },
       },
     },
@@ -130,48 +114,67 @@ exports.init = (() => {
   /* eslint-enable */
 
   /* eslint-disable */
-  // const slotValidator = function(value, attributes, attributeName, options, constraints) {
-  //   const inputs = document.querySelectorAll(`.${formId} .slots input`);
-  //   let inputValue = 0;
-  //   inputs.forEach(function(input) {
-  //     inputValue += input.checked ? 1 : 0;
-  //   });
-  //   if (inputValue > 0) return true;
-  //   return {
-  //     presence: {
-  //       message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-  //         const i18n = window.i18n.get('registration.form-3.input.slot.error');
-  //         if (!i18n) return '^Please select at least one game slot';
-  //         return `^${i18n}`;
-  //       }
-  //     },
-  //   };
-  // };
+  const slotValidator = function(value, attributes, attributeName, options, constraints) {
+
+  };
+
+  window.formRules.setValidator('checkboxList', function(value, options, key, attributes) {
+    const inputs = document.querySelectorAll(`.${formId} .slots input`);
+    let inputValue = 0;
+    inputs.forEach(function(input) {
+      input.closest('.form-group').classList.remove('has-error');
+      inputValue += input.checked ? 1 : 0;
+    });
+    if (inputValue > 0) return;
+    return window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+  });
 
   window.formRules.setRule({
     'Organization': {
-      // 'Organization[slot-1-3]': slotValidator,
-      // 'Organization[slot-3-5]': slotValidator,
-      // 'Organization[slot-5-7]': slotValidator,
-      // 'Organization[slot-7-9]': slotValidator,
-      // 'Organization[slot-9-11]': slotValidator,
-      // 'Organization[slot-11-1]': slotValidator,
+      'Organization[slot-1-3]': {
+        // Code of Coduct is required
+        checkboxList: {
+          message: window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+        },
+      },
+      'Organization[slot-3-5]': {
+        // Code of Coduct is required
+        checkboxList: {
+          message: window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+        },
+      },
+      'Organization[slot-5-7]': {
+        // Code of Coduct is required
+        checkboxList: {
+          message: window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+        },
+      },
+      'Organization[slot-7-9]': {
+        // Code of Coduct is required
+        checkboxList: {
+          message: window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+        },
+      },
+      'Organization[slot-9-11]': {
+        // Code of Coduct is required
+        checkboxList: {
+          message: window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+        },
+      },
+      'Organization[slot-11-1]': {
+        // Code of Coduct is required
+        checkboxList: {
+          message: window.formRules.getMessage('registration.form-3.input.slot.error', 'Please select at least one game slot')
+        },
+      },
       'Organization[coc]': {
         // Code of Coduct is required
         presence: {
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('registration.form-3.input.coc.error');
-            if (!i18n) return '^Please accept our Code of Conduct';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('registration.form-3.input.coc.error', 'Please accept our Code of Conduct')
         },
         inclusion: {
           within: [true],
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('registration.form-3.input.coc.error');
-            if (!i18n) return '^Please accept our Code of Conduct';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('registration.form-3.input.coc.error', 'Please accept our Code of Conduct')
         }
       },
     },
@@ -182,8 +185,8 @@ exports.init = (() => {
   /* eslint-disable */
   window.formCallOnSuccess.setFunc('Organization', (data, status) => {
     // console.log('succes', 'gamemaster', data);
-    // document.querySelector(`.${formId} .form-4`).classList.add('active');
-    // document.querySelector(`.${formId} .form-3`).classList.remove('active');
+    document.querySelector(`.${formId} .form-4`).classList.add('active');
+    document.querySelector(`.${formId} .form-3`).classList.remove('active');
   });
 
   window.formCallOnError.setFunc('Organization', (data, status) => {

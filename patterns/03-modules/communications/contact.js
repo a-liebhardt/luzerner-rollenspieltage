@@ -18,34 +18,22 @@ exports.init = (() => {
   window.formRules.setRule({
     'ContactUs': {
       'ContactUs[name]': {
-        // Email is required
+        // Name is required
         presence: {
           // message: '^Please enter your Name',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('contact.form-1.input.name.error');
-            if (!i18n) return '^Please enter your Name';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('contact.form-1.input.name.error', 'Please enter your Name')
         },
       },
       'ContactUs[email]': {
         // Email is required
         presence: {
           // message: '^Please enter your Email',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('contact.form-1.input.email.error.1');
-            if (!i18n) return '^Please enter your Email';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('contact.form-1.input.email.error.1', 'Please enter your Email')
         },
         // and must be an email (duh)
         email: {
           // message: '^Email doesn\'t look correct',
-          message: function(value, attribute, validatorOptions, attributes, globalOptions) {
-            const i18n = window.i18n.get('contact.form-1.input.email.error.2');
-            if (!i18n) return '^Email doesn\'t look correct';
-            return `^${i18n}`;
-          }
+          message: window.formRules.getMessage('contact.form-1.input.email.error.2', 'Email doesn\'t look correct')
         },
       },
     },

@@ -21,6 +21,18 @@ exports.init = (() => {
       ruleSet = _.extend(ruleSet, newRule);
     };
 
+    this.setValidator = function(name, func) {
+      Validate.validators[name] = func;
+    };
+
+    this.getMessage = function(key, fallback) {
+      return function(value, attribute, validatorOptions, attributes, globalOptions) {
+        let i18n = window.i18n.get(key);
+        if (!i18n) i18n = fallback;
+        return `^${i18n}`;
+      };
+    };
+
     return this;
   };
   /* eslint-enable */
