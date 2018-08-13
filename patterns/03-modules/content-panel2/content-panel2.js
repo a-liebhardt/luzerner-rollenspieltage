@@ -28,6 +28,8 @@ exports.init = (() => {
    */
 
   const self = document.querySelector('.map');
+  if (!self) return;
+
   const googleApiKey = '{GOOGLE_MAP_APIKEY}';
   const gooleMapStyle = [
     {
@@ -194,9 +196,12 @@ exports.init = (() => {
     //const markerImage = '../images/mapMarker.png';
     const markerImage = 'data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 26 18 24"><g><path fill="blue" d="M17.336,33.188l-6.746-6.547C10.149,26.215,9.571,26,8.996,26c-0.576,0-1.153,0.213-1.592,0.641l-6.749,6.547c-0.644,0.625-0.832,1.566-0.483,2.383c0.25,0.582,0.745,1.02,1.333,1.223v4.109c0,1.207,0.998,2.176,2.242,2.176h1.567l1.345,4.104c-2.492,0.209-4.263,0.74-4.263,1.363c0,0.803,2.955,1.455,6.6,1.455c3.646,0,6.6-0.65,6.6-1.453c0-0.623-1.771-1.156-4.261-1.365l1.344-4.104h1.566c1.243,0,2.262-0.969,2.262-2.176v-4.109c0.588-0.203,1.075-0.641,1.324-1.223C18.178,34.754,17.98,33.813,17.336,33.188z M14.257,34.746v6.148h-3.229L9,47.094c-0.002,0-0.004,0-0.004,0c-0.002,0-0.004,0-0.006,0l-2.029-6.199H3.753v-6.148H2.248l6.749-6.549l6.746,6.549H14.257z"/><path fill="blue" d="M8.354,35.6c0-0.268-0.221-0.482-0.497-0.482H6.041c-0.275,0-0.497,0.215-0.497,0.482v1.764c0,0.266,0.222,0.48,0.497,0.48h1.815c0.276,0,0.497-0.215,0.497-0.48V35.6z"/></g></svg>';
     const mapZoom = 16;
+    const mapbox = self.querySelector('.mapbox');
     let map;
     let infoWindow;
     let activeId = 0;
+
+    if (!mapbox) return;
 
     const setAddressBox = (conf) => {
       // const country = conf.location.country ? `<p>${conf.location.country}</p>` : '';
