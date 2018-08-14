@@ -27,11 +27,14 @@ Use [yarn](https://yarnpkg.com) as your package manager, or npm.
     # Or you can generate a production ready build
     $ yarn build
 
+    # Generate a production ready build for docker.
+    $ yarn build:docker
+
     # Build the files for release.
-    npm run build
+    $ npm run build
 
     # Deploy the files from current branch to gh-pages (after build).
-    npm run deploy:github gh-pages
+    $ npm run deploy:github gh-pages
 
 
 ## Documentation
