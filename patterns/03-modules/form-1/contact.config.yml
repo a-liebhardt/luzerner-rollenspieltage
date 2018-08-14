@@ -1,4 +1,4 @@
-status: ready
+status: published
 context:
   config-step-1: '@contact-step1'
   config-step-2: '@contact-step2'

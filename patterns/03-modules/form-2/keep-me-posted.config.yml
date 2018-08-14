@@ -1,4 +1,4 @@
-status: wip
+status: published
 context:
   config-step-1: '@keep-me-posted-step1'
   config-step-2: '@keep-me-posted-step2'

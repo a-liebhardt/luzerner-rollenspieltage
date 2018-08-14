@@ -1,4 +1,4 @@
-status: wip
+status: published
 context:
   config-step-1: '@gamemaster-step1'
   config-step-2: '@gamemaster-step2'
