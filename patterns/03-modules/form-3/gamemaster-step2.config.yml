@@ -11,6 +11,7 @@ context:
       form-items:
         -
           fieldset-legend: "Game informations"
+          fieldset-legend-i18n: "registration.step-2.fieldset"
           fieldset-items:
             -
               fieldset-row-items:
@@ -200,6 +201,7 @@ context:
                       button-role: "button"
 i18n:
   'de-DE':
+    'registration.step-2.fieldset': "Spiel Daten"
     'registration.step-2.input.title': "Titel deines Spiels"
     'registration.step-2.input.title.error': "Bitte trage einen Spieltitel ein"
     'registration.step-2.input.description': "Eine kurze Spielbeschreibung"
@@ -215,6 +217,7 @@ i18n:
     'registration.step-2.button.previous': "Zurück zur vorherigen Form"
     'registration.step-2.button.next': "Spiel eintragen"
   'en-EN':
+    'registration.step-2.fieldset': "Game informations"
     'registration.step-2.input.title': "Title of your game"
     'registration.step-2.input.title.error': "Please enter a game name"
     'registration.step-2.input.description': "A short description of your game"

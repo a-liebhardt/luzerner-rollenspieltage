@@ -11,6 +11,7 @@ context:
       form-items:
         -
           fieldset-legend: "Gamemaster informations"
+          fieldset-legend-i18n: "registration.step-1.fieldset"
           fieldset-items:
             -
               fieldset-row-items:
@@ -64,6 +65,7 @@ context:
                       button-role: "button"
 i18n:
   'de-DE':
+    'registration.step-1.fieldset': "Spielleiter Daten"
     'registration.step-1.input.name': "Dein Vorname, Nachname"
     'registration.step-1.input.name.error': "Bitte trage deinen Namen ein"
     'registration.step-1.email.name': "Deine E-Mail"
@@ -71,6 +73,7 @@ i18n:
     'registration.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
     'registration.step-1.button.next': "Als Spielleiter registrieren"
   'en-EN':
+    'registration.step-1.fieldset': "Gamemaster informations"
     'registration.step-1.input.name': "Your Firstname, Lastname"
     'registration.step-1.input.name.error': "Please enter your Name"
     'registration.step-1.email.name': "Your Email"
