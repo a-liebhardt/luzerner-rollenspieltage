@@ -1,1 +1,35 @@
-# status: wip
+status: wip
+context:
+  nav-i18n-config:
+    navigation:
+      navigation-class: "i18n-selector"
+      navigation-items:
+        -
+          link:
+            link-href: "#"
+            i18n-update: "de-DE"
+            label:
+              label-text: "DE"
+              # label-text-i18n: "navigation.link.i18n.label.text.de"
+              icon:
+                icon-name: "de"
+                icon-pos: "before"
+                icon-class: "icon-s"
+        -
+          link:
+            link-href: "#"
+            i18n-update: "en-EN"
+            label:
+              label-text: "EN"
+              # label-text-i18n: "navigation.link.i18n.label.text.en"
+              icon:
+                icon-name: "en"
+                icon-pos: "before"
+                icon-class: "icon-s"
+# i18n:
+#   'de-DE':
+#     'navigation.link.i18n.label.text.en': "EN (DE)"
+#     'navigation.link.i18n.label.text.de': "DE (DE)"
+#   'en-EN':
+#     'navigation.link.i18n.label.text.en': "EN (EN)"
+#     'navigation.link.i18n.label.text.de': "DE (EN)"

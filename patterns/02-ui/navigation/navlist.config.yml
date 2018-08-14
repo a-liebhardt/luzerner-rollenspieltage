@@ -1,50 +1,46 @@
 status: wip
 context:
-  navigation-role: "navigation"
-  navigation-class: "example-class"
-  navigation-items:
-    -
-      link:
-        link-href: "#"
-        label:
-          label-role: "note"
-          label-text: "Nav 1"
-          label-text-i18n: "navigation.link.label.text.demo.1"
-          icon:
-            icon-name: "arrow-right"
-            icon-pos: "after"
-            icon-class: "icon-xs"
-      navigation-active: true
-      navigation-role: "navigation"
-    -
-      link:
-        link-href: "#"
-        label:
-          label-text: "Nav 2"
-          label-text-i18n: "navigation.link.label.text.demo.2"
-      navigation-role: "navigation"
-      navigation-items:
-        -
-          link:
-            link-href: "#"
-            label:
-              label-text: "Sub 1"
-              label-text-i18n: "navigation.link.label.text.demo.2.1"
-          navigation-role: "navigation"
-        -
-          link:
-            link-href: "#"
-            label:
-              label-text: "Sub 2"
-              label-text-i18n: "navigation.link.label.text.demo.1.2"
-          navigation-role: "navigation"
-    -
-      link:
-        link-href: "#"
-        label:
-          label-text: "Nav 3"
-          label-text-i18n: "navigation.link.label.text.demo.3"
-      navigation-role: "navigation"
+  navigation:
+    navigation-class: "example-class"
+    navigation-items:
+      -
+        link:
+          link-href: "#"
+          label:
+            label-text: "Nav 1"
+            label-text-i18n: "navigation.link.label.text.demo.1"
+            icon:
+              icon-name: "arrow-right"
+              icon-pos: "after"
+              icon-class: "icon-xs"
+      -
+        link:
+          link-href: "#"
+          label:
+            label-text: "Nav 2"
+            label-text-i18n: "navigation.link.label.text.demo.2"
+        navigation-current: true
+        navigation:
+          navigation-items:
+            -
+              link:
+                link-href: "#"
+                label:
+                  label-text: "Sub 1"
+                  label-text-i18n: "navigation.link.label.text.demo.2.1"
+            -
+              link:
+                link-href: "#"
+                label:
+                  label-text: "Sub 2"
+                  label-text-i18n: "navigation.link.label.text.demo.1.2"
+              navigation-active: true
+      -
+        link:
+          link-href: "#"
+          label:
+            label-text: "Nav 3"
+            label-text-i18n: "navigation.link.label.text.demo.3"
 i18n:
   'de-DE':
     'navigation.link.label.text.demo.1': "Nav 1 (DE)"
