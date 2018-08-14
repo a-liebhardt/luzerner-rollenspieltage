@@ -69,7 +69,7 @@ if ($json) {
 
     $mail->send();
     if ($formId === 'User') {
-      echo "{'id':'$userId'}";
+      echo "{\"id\":\"$userId\"}";
     } else {
       header("HTTP/1.0 202 Accepted");
     }
