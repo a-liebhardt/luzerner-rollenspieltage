@@ -1,6 +1,8 @@
 <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
+include("PHPMailer.php");
+include("SMTP.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -38,7 +40,7 @@ if ($json) {
 
   try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = '{PHP_MAILER_HOST}';                    // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -48,8 +50,8 @@ if ($json) {
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($sender, 'WP Notifier');
-    $mail->addAddress($receiver, 'WP Form');
+    $mail->setFrom($sender, 'Rollenspieltage Page');
+    $mail->addAddress($receiver, 'Rollenspieltage Form');
     // $mail->addAddress('ellen@example.com');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
@@ -60,14 +62,13 @@ if ($json) {
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(false);
     $mail->Subject = $subject;
     $mail->Body    = implode("\r\n", $msg);
-    $mail->AltBody = implode("\r\n", $msg);
 
     $mail->send();
     if ($formId === 'User') {
-      echo "{'id':'$userId'}";
+      echo "{\"id\":\"$userId\"}";
     } else {
       header("HTTP/1.0 202 Accepted");
     }
