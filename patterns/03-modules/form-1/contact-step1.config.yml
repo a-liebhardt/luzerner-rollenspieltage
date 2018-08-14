@@ -12,6 +12,16 @@ context:
         -
           fieldset:
             fieldset-items:
+              # -
+              #   group-row:
+              #     -
+              #       group-wrapper:
+              #         group-wrapper-class: "col-m-12"
+              #         article:
+              #           article-hide-header: true
+              #           article-body: "<p>To send as a message please enter your name and email. Those fields are mandatory.</p>"
+              #           article-body-i18n: "contact.step-1.article.body"
+              #           article-hide-footer: true
               -
                 group-row:
                   -
@@ -26,6 +36,7 @@ context:
                         input-name: "ContactUs[name]"
                         input-placeholder: "Your Firstname, Lastname"
                         input-i18n: "contact.step-1.input.name"
+                        input-required: true
                         input-class: ""
                         # Don't need for text > input-type: "text"
                         input-role: "input"
@@ -44,6 +55,7 @@ context:
                         input-name: "ContactUs[email]"
                         input-placeholder: "Your Email"
                         input-i18n: "contact.step-1.email.name"
+                        input-required: true
                         input-class: ""
                         input-type: "email"
                         input-role: "input"
@@ -81,6 +93,7 @@ context:
                         button-role: "button"
 i18n:
   'de-DE':
+    # 'contact.step-1.article.body': "<p>Um uns eine Nachricht zu senden trage bitte deinen Namen und deine Email ein. Dies sind Pflichteingaben.</p>"
     'contact.step-1.input.name': "Dein Vorname, Nachname"
     'contact.step-1.input.name.error': "Bitte trage deinen Namen ein"
     'contact.step-1.email.name': "Deine E-Mail"
@@ -89,6 +102,7 @@ i18n:
     'contact.step-1.input.message': "Deine Nachricht"
     'contact.step-1.button.next': "Sende uns deine Nachricht"
   'en-EN':
+    # 'contact.step-1.article.body': "<p>To send as a message please enter your name and email. Those fields are mandatory.</p>"
     'contact.step-1.input.name': "Your Firstname, Lastname"
     'contact.step-1.input.name.error': "Please enter your Name"
     'contact.step-1.email.name': "Your Email"

@@ -222,15 +222,18 @@ exports.init = (() => {
   // Hook up the form so we can prevent it from being posted
   const forms = document.querySelectorAll('form');
   forms.forEach((form) => {
-    form.addEventListener('submit', (ev) => {
-      const formName = form.getAttribute('name');
-      const formRule = window.formRules.getRule(formName);
-      if (!formRule) {
-        return;
-      }
-      ev.preventDefault();
-      handleFormSubmit(form, formRule);
+    form.querySelectorAll('[type="submit"]').forEach((submit) => {
+      submit.addEventListener('click', (ev) => {
+        const formName = ev.target.closest('form').getAttribute('name');
+        const formRule = window.formRules.getRule(formName);
+        if (!formRule) {
+          return;
+        }
+        ev.preventDefault();
+        handleFormSubmit(form, formRule);
+      });
     });
+
     // Hook up the inputs to validate on the fly
     const inputs = form.querySelectorAll('input, textarea, select');
     let i = 0;

@@ -28,6 +28,7 @@ context:
                         input-name: "Game[title]"
                         input-placeholder: "Title of your game"
                         input-i18n: "registration.step-2.input.title"
+                        input-required: true
                         input-class: ""
                         # Don't need for text > input-type: "text"
                         input-role: "input"

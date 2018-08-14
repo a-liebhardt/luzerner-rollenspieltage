@@ -136,6 +136,7 @@ context:
                           label-text-i18n: "registration.step-3.input.coc"
                         input-id: "coc"
                         input-name: "Organization[coc]"
+                        input-required: true
                         input-class: ""
                         input-type: "checkbox"
                         input-role: "checkbox"

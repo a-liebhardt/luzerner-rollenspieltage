@@ -16,15 +16,15 @@ exports.init = (() => {
 
   /* eslint-disable */
   window.formRules.setRule({
-    'KeppMePosted': {
-      'KeppMePosted[name]': {
+    'KeepMePosted': {
+      'KeepMePosted[name]': {
         // Email is required
         presence: {
           // message: '^Please enter your Name',
           message: window.formRules.getMessage('contact.step-1.input.name.error', 'Please enter your Name')
         },
       },
-      'KeppMePosted[email]': {
+      'KeepMePosted[email]': {
         // Email is required
         presence: {
           // message: '^Please enter your Email',
@@ -41,7 +41,7 @@ exports.init = (() => {
   /* eslint-enable */
 
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('KeppMePosted', (data, status) => {
+  window.formCallOnSuccess.setFunc('KeepMePosted', (data, status) => {
     const formGroups = document.querySelectorAll(`.${formId} .form-group`);
     formGroups.forEach((formGroup) => {
       formGroup.classList.remove('has-error');
@@ -51,7 +51,7 @@ exports.init = (() => {
     document.querySelector(`.${formId} .step-1`).classList.remove('active');
   });
 
-  window.formCallOnError.setFunc('KeppMePosted', (data, status) => {
+  window.formCallOnError.setFunc('KeepMePosted', (data, status) => {
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('contact.form.request.error');
     if (!i18n) i18n = 'Your contact request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';

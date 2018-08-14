@@ -28,6 +28,7 @@ context:
                         input-name: "User[name]"
                         input-placeholder: "Your Firstname, Lastname"
                         input-i18n: "registration.step-1.input.name"
+                        input-required: true
                         input-class: ""
                         # Don't need for text > input-type: "text"
                         input-role: "input"
@@ -46,6 +47,7 @@ context:
                         input-name: "User[email]"
                         input-placeholder: "Your Email"
                         input-i18n: "registration.step-1.email.name"
+                        input-required: true
                         input-class: ""
                         input-type: "email"
                         input-role: "input"
