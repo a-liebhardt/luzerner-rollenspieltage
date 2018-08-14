@@ -84,7 +84,7 @@ exports.init = (() => {
   const RestCall = (formHref, formMethod, formParams, formName) => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
-      if (xhttp.readyState === 4 && xhttp.status === 200) {
+      if (xhttp.readyState === 4 && xhttp.status > 199 && xhttp.status < 300) {
         const func = window.formCallOnSuccess.getFunc(formName);
         if (!func) {
           return;
