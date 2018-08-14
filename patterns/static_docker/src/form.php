@@ -50,8 +50,8 @@ if ($json) {
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($sender, 'WP Notifier');
-    $mail->addAddress($receiver, 'WP Form');
+    $mail->setFrom($sender, 'Rollenspieltage Page');
+    $mail->addAddress($receiver, 'Rollenspieltage Form');
     // $mail->addAddress('ellen@example.com');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
@@ -62,10 +62,9 @@ if ($json) {
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(false);
     $mail->Subject = $subject;
     $mail->Body    = implode("\r\n", $msg);
-    $mail->AltBody = implode("\r\n", $msg);
 
     $mail->send();
     if ($formId === 'User') {
