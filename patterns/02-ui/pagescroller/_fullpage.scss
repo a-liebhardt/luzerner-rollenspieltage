@@ -1,5 +1,7 @@
 #pagescroller {
   & > .fp-section {
+    overflow: hidden;
+
     & .fp-tableCell {
       display: flex;
       flex-direction: column;
@@ -45,7 +47,7 @@
     flex-direction: row;
 
     li {
-      width: 7rem;
+      width: 6.2rem;
       height: 6rem;
       display: flex;
       align-content: center;

@@ -1,6 +1,6 @@
 exports.init = (() => {
   const flipReset = () => {
-    document.querySelectorAll('.panel3 .flipper').forEach((flipper) => {
+    document.querySelectorAll('.panel4 .flipper').forEach((flipper) => {
       flipper.classList.remove('no-flip');
       flipper.classList.remove('flip');
       flipper.closest('[class*="col-"]').classList.remove('is-flipped');
@@ -9,7 +9,7 @@ exports.init = (() => {
   };
 
   const flip = (e) => {
-    document.querySelectorAll('.panel3 .flipper').forEach((flipper) => {
+    document.querySelectorAll('.panel4 .flipper').forEach((flipper) => {
       flipper.classList.add('no-flip');
       flipper.classList.remove('flip');
       flipper.closest('[class*="col-"]').classList.add('is-not-flipped');
@@ -21,7 +21,7 @@ exports.init = (() => {
     e.target.closest('[class*="col-"]').classList.remove('is-not-flipped');
   };
 
-  const panel = document.querySelector('.panel3');
+  const panel = document.querySelector('.panel4');
   if (panel) {
     const fronts = panel.querySelectorAll('.flip-front');
     if (fronts) {

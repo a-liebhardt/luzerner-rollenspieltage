@@ -1,7 +1,9 @@
 .panel4 {
+  margin: 0 auto;
   padding: 4rem 0 8rem;
 
-  .panel {
+  .flip-front,
+  .flip-back {
     padding: 0 4rem 4rem;
   }
 
@@ -13,7 +15,8 @@
       height: 100%;
     }
 
-    .panel {
+    .flip-front,
+    .flip-back {
       padding: 4rem 4rem 12rem;
     }
   }
@@ -46,6 +49,7 @@
   article {
     &.headline {
       position: relative;
+      height: 16rem;
 
       header {
         position: absolute;
@@ -54,7 +58,6 @@
         left: 0;
         width: 100%;
         text-align: center;
-        transform: translateX(-2rem);
         background: $color--cyan-40;
 
         h1,
@@ -90,52 +93,36 @@
     }
   }
 
-  .flipper {
-    padding: 0 4rem 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 40vh;
-    min-height: 50vh;
-
-    .flip-front,
-    .flip-back {
+  @media screen and (min-width: #{$mq-l}) {
+    .flipper {
+      padding: 0 4rem 4rem;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
-    }
-
-    &.no-flip {
-      min-height: 0;
-      opacity: 0;
-    }
-
-    &.flip {
       width: 100%;
+      height: auto;
+      min-height: 60rem;
+      transform: translateY(-12rem);
+
+      .flip-front,
+      .flip-back {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      &.no-flip {
+        min-height: 0;
+        opacity: 0;
+      }
+
+      &.flip {
+        width: 100%;
+      }
     }
 
-    @media screen and (min-width: #{$mq-l}) {
-      width: 40vw;
-      height: 80vh;
-    }
-  }
-
-  & > [class*=col-].is-flipped {
-    max-width: initial;
-    max-height: 100vh;
-  }
-
-  & > [class*=col-].is-not-flipped {
-    max-width: initial;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-
-  @media screen and (min-width: #{$mq-l}) {
     & > [class*=col-].is-flipped {
       &:nth-of-type(2) {
         .flip {
