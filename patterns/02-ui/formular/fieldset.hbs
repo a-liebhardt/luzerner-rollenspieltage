@@ -2,7 +2,7 @@
 <fieldset {{#if fieldset-name}}name="{{fieldset-name}}"{{/if}} {{#if fieldset-class}}class="{{fieldset-class}}"{{/if}} {{{fieldset-attr}}}>
   {{#if fieldset-legend}}<legend {{#if fieldset-legend-i18n}}i18n="{{fieldset-legend-i18n}}"{{/if}}>{{fieldset-legend}}</legend>{{/if}}
   {{#each fieldset-items}}
-    {{> @form-row}}
+    {{> @group-row}}
   {{/each}}
 </fieldset>
 {{/with}}

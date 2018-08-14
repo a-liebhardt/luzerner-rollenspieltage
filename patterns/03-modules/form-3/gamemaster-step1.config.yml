@@ -10,59 +10,61 @@ context:
       form-class: "step-1 registration-step active"
       form-items:
         -
-          fieldset-legend: "Gamemaster informations"
-          fieldset-legend-i18n: "registration.step-1.fieldset"
-          fieldset-items:
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    input:
-                      label:
-                        label-for: "gamemaster-name"
-                        label-text: "Your Firstname, Lastname"
-                        label-text-i18n: "registration.step-1.input.name"
-                      input-id: "gamemaster-name"
-                      input-name: "User[name]"
-                      input-placeholder: "Your Firstname, Lastname"
-                      input-i18n: "registration.step-1.input.name"
-                      input-class: ""
-                      # Don't need for text > input-type: "text"
-                      input-role: "input"
-                      input-autocomplete: "name"
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    input:
-                      label:
-                        label-for: "gamemaster-email"
-                        label-text: "Your Email"
-                        label-text-i18n: "registration.step-1.email.name"
-                      input-id: "gamemaster-email"
-                      input-name: "User[email]"
-                      input-placeholder: "Your Email"
-                      input-i18n: "registration.step-1.email.name"
-                      input-class: ""
-                      input-type: "email"
-                      input-role: "input"
-                      input-autocomplete: "email"
+          fieldset:
+            fieldset-legend: "Gamemaster informations"
+            fieldset-legend-i18n: "registration.step-1.fieldset"
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "gamemaster-name"
+                          label-text: "Your Firstname, Lastname"
+                          label-text-i18n: "registration.step-1.input.name"
+                        input-id: "gamemaster-name"
+                        input-name: "User[name]"
+                        input-placeholder: "Your Firstname, Lastname"
+                        input-i18n: "registration.step-1.input.name"
+                        input-class: ""
+                        # Don't need for text > input-type: "text"
+                        input-role: "input"
+                        input-autocomplete: "name"
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "gamemaster-email"
+                          label-text: "Your Email"
+                          label-text-i18n: "registration.step-1.email.name"
+                        input-id: "gamemaster-email"
+                        input-name: "User[email]"
+                        input-placeholder: "Your Email"
+                        input-i18n: "registration.step-1.email.name"
+                        input-class: ""
+                        input-type: "email"
+                        input-role: "input"
+                        input-autocomplete: "email"
         -
-          fieldset-items:
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12 align-center"
-                    button:
-                      label:
-                        label-text: "Register as Gamemaster"
-                        label-text-i18n: "registration.step-1.button.next"
-                      button-class: "submit-group"
-                      button-type: "submit"
-                      button-role: "button"
+          fieldset:
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12 align-center"
+                      button:
+                        label:
+                          label-text: "Register as Gamemaster"
+                          label-text-i18n: "registration.step-1.button.next"
+                        button-class: "submit-group"
+                        button-type: "submit"
+                        button-role: "button"
 i18n:
   'de-DE':
     'registration.step-1.fieldset': "Spielleiter Daten"

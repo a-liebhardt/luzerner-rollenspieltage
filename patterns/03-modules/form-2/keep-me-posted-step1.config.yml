@@ -10,57 +10,59 @@ context:
       form-class: "step-1 keep-me-posted-step active"
       form-items:
         -
-          fieldset-items:
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    input:
-                      label:
-                        label-for: "keep-me-posted-name"
-                        label-text: "Your Firstname, Lastname"
-                        label-text-i18n: "keep-me-posted.step-1.input.name"
-                      input-id: "keep-me-posted-name"
-                      input-name: "KeepMePosted[name]"
-                      input-placeholder: "Your Firstname, Lastname"
-                      input-i18n: "keep-me-posted.step-1.input.name"
-                      input-class: ""
-                      # Don't need for text > input-type: "text"
-                      input-role: "input"
-                      input-autocomplete: "name"
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    input:
-                      label:
-                        label-for: "keep-me-posted-email"
-                        label-text: "Your Email"
-                        label-text-i18n: "keep-me-posted.step-1.email.name"
-                      input-id: "keep-me-posted-email"
-                      input-name: "KeepMePosted[email]"
-                      input-placeholder: "Your Email"
-                      input-i18n: "keep-me-posted.step-1.email.name"
-                      input-class: ""
-                      input-type: "email"
-                      input-role: "input"
-                      input-autocomplete: "email"
+          fieldset:
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "keep-me-posted-name"
+                          label-text: "Your Firstname, Lastname"
+                          label-text-i18n: "keep-me-posted.step-1.input.name"
+                        input-id: "keep-me-posted-name"
+                        input-name: "KeepMePosted[name]"
+                        input-placeholder: "Your Firstname, Lastname"
+                        input-i18n: "keep-me-posted.step-1.input.name"
+                        input-class: ""
+                        # Don't need for text > input-type: "text"
+                        input-role: "input"
+                        input-autocomplete: "name"
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "keep-me-posted-email"
+                          label-text: "Your Email"
+                          label-text-i18n: "keep-me-posted.step-1.email.name"
+                        input-id: "keep-me-posted-email"
+                        input-name: "KeepMePosted[email]"
+                        input-placeholder: "Your Email"
+                        input-i18n: "keep-me-posted.step-1.email.name"
+                        input-class: ""
+                        input-type: "email"
+                        input-role: "input"
+                        input-autocomplete: "email"
         -
-          fieldset-items:
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12 align-center"
-                    button:
-                      label:
-                        label-text: "Tell me when registration opens"
-                        label-text-i18n: "keep-me-posted.step-1.button.next"
-                      button-class: "submit-group"
-                      button-type: "submit"
-                      button-role: "button"
+          fieldset:
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12 align-center"
+                      button:
+                        label:
+                          label-text: "Tell me when registration opens"
+                          label-text-i18n: "keep-me-posted.step-1.button.next"
+                        button-class: "submit-group"
+                        button-type: "submit"
+                        button-role: "button"
   form-2:
     panel-class: "form-2 keep-me-posted-step"
     article:

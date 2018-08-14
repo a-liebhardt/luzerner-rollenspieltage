@@ -10,73 +10,75 @@ context:
       form-class: "step-1 contact-step active"
       form-items:
         -
-          fieldset-items:
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    input:
-                      label:
-                        label-for: "contact-name"
-                        label-text: "Your Firstname, Lastname"
-                        label-text-i18n: "contact.step-1.input.name"
-                      input-id: "contact-name"
-                      input-name: "ContactUs[name]"
-                      input-placeholder: "Your Firstname, Lastname"
-                      input-i18n: "contact.step-1.input.name"
-                      input-class: ""
-                      # Don't need for text > input-type: "text"
-                      input-role: "input"
-                      input-autocomplete: "name"
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    input:
-                      label:
-                        label-for: "contact-email"
-                        label-text: "Your Email"
-                        label-text-i18n: "contact.step-1.email.name"
-                      input-id: "contact-email"
-                      input-name: "ContactUs[email]"
-                      input-placeholder: "Your Email"
-                      input-i18n: "contact.step-1.email.name"
-                      input-class: ""
-                      input-type: "email"
-                      input-role: "input"
-                      input-autocomplete: "email"
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12"
-                    textarea:
-                      label:
-                        label-for: "contact-message"
-                        label-text: "Your message"
-                        label-text-i18n: "contact.step-1.input.message"
-                      textarea-id: "contact-message"
-                      textarea-name: "ContactUs[message]"
-                      textarea-placeholder: "Your message"
-                      textarea-i18n: "contact.step-1.input.message"
-                      textarea-class: ""
-                      textarea-role: "textarea"
+          fieldset:
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "contact-name"
+                          label-text: "Your Firstname, Lastname"
+                          label-text-i18n: "contact.step-1.input.name"
+                        input-id: "contact-name"
+                        input-name: "ContactUs[name]"
+                        input-placeholder: "Your Firstname, Lastname"
+                        input-i18n: "contact.step-1.input.name"
+                        input-class: ""
+                        # Don't need for text > input-type: "text"
+                        input-role: "input"
+                        input-autocomplete: "name"
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "contact-email"
+                          label-text: "Your Email"
+                          label-text-i18n: "contact.step-1.email.name"
+                        input-id: "contact-email"
+                        input-name: "ContactUs[email]"
+                        input-placeholder: "Your Email"
+                        input-i18n: "contact.step-1.email.name"
+                        input-class: ""
+                        input-type: "email"
+                        input-role: "input"
+                        input-autocomplete: "email"
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      textarea:
+                        label:
+                          label-for: "contact-message"
+                          label-text: "Your message"
+                          label-text-i18n: "contact.step-1.input.message"
+                        textarea-id: "contact-message"
+                        textarea-name: "ContactUs[message]"
+                        textarea-placeholder: "Your message"
+                        textarea-i18n: "contact.step-1.input.message"
+                        textarea-class: ""
+                        textarea-role: "textarea"
         -
-          fieldset-items:
-            -
-              fieldset-row-items:
-                -
-                  wrapper:
-                    wrapper-class: "col-m-12 align-center"
-                    button:
-                      label:
-                        label-text: "Send us your message"
-                        label-text-i18n: "contact.step-1.button.next"
-                      button-class: "submit-group"
-                      button-type: "submit"
-                      button-role: "button"
+          fieldset:
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12 align-center"
+                      button:
+                        label:
+                          label-text: "Send us your message"
+                          label-text-i18n: "contact.step-1.button.next"
+                        button-class: "submit-group"
+                        button-type: "submit"
+                        button-role: "button"
 i18n:
   'de-DE':
     'contact.step-1.input.name': "Dein Vorname, Nachname"

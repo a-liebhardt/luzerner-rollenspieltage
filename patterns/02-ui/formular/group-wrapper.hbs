@@ -1,5 +1,5 @@
-{{#with wrapper}}
-<div {{#if wrapper-class}}class="{{wrapper-class}}"{{/if}}>
+{{#with group-wrapper}}
+<div {{#if group-wrapper-class}}class="{{group-wrapper-class}}"{{/if}}>
   {{> @input}}
   {{> @textarea}}
   {{> @select}}
@@ -7,6 +7,6 @@
   {{> @link}}
   {{> @label}}
   {{> @fieldset}}
-  {{> @form-wrapper}}
+  {{> @group-wrapper}}
 </div>
 {{/with}}
