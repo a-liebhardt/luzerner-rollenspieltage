@@ -1,7 +1,22 @@
 .panel4 {
-  // max-height: 100vh;
-  // overflow: hidden;
-  padding: 0 2rem;
+  padding: 4rem 0 8rem;
+
+  .panel {
+    padding: 0 4rem 4rem;
+  }
+
+  @media screen and (min-width: #{$mq-l}) {
+    padding: 0;
+    height: 100%;
+
+    [class*='col-'] {
+      height: 100%;
+    }
+
+    .panel {
+      padding: 4rem 4rem 12rem;
+    }
+  }
 
   .form-button {
     @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, bottom, left, 100ms);
@@ -76,6 +91,7 @@
   }
 
   .flipper {
+    padding: 0 4rem 4rem;
     display: flex;
     justify-content: center;
     align-items: center;

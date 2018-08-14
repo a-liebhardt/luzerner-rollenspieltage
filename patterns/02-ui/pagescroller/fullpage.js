@@ -34,9 +34,9 @@ exports.init = (() => {
     offsetSections: false,
     resetSliders: false,
     fadingEffect: false,
-    normalScrollElements: '#element1, .element2',
+    // normalScrollElements: '#element1, .element2',
     scrollOverflow: true,
-    scrollOverflowReset: false,
+    scrollOverflowReset: true,
     // scrollOverflowOptions: null,
     touchSensitivity: 15,
     normalScrollElementTouchThreshold: 5,
@@ -53,12 +53,12 @@ exports.init = (() => {
     // sectionsColor: ['#AAA', '#BBB', '#CCC', '#DDD'],
     // paddingTop: '3rem',
     // paddingBottom: '7rem',
-    fixedElements: '#header, #footer',
-    responsiveWidth: 0,
-    responsiveHeight: 0,
+    // fixedElements: '#header, #footer',
+    responsiveWidth: 1,
+    responsiveHeight: 1,
     responsiveSlides: false,
-    parallax: false,
-    parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+    // parallax: false,
+    // parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
 
     // Custom selectors
     sectionSelector: 'section[data-anchor]',
@@ -68,7 +68,14 @@ exports.init = (() => {
     // Events
     // onLeave: function(origin, destination, direction){},
     // afterLoad: function(origin, destination, direction){},
-    // afterRender: function(){},
+    // afterRender: function() {
+    //   document.querySelectorAll('.fp-scroller').forEach((scroller) => {
+    //     const style = window.getComputedStyle(scroller);
+    //     scroller.closest('.fp-scrollable').style.height = style.height;
+    //     scroller.closest('.fp-tableCell').style.height = style.height;
+    //     scroller.closest('.fp-section').style.height = style.height;
+    //   });
+    // },
     // afterResize: function(width, height){},
     // afterResponsive: function(isResponsive){},
     // afterSlideLoad: function(section, origin, destination, direction){},
