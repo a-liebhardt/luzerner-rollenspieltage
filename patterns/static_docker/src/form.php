@@ -1,6 +1,8 @@
 <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
+include("PHPMailer.php");
+include("SMTP.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -38,7 +40,7 @@ if ($json) {
 
   try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = '{PHP_MAILER_HOST}';                    // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
