@@ -1,0 +1,43 @@
+status: published
+context:
+  contact-config: '@contact'
+  # contact-label-config:
+  #   label:
+  #     label-text: "Send us a message here"
+  #     label-text-i18n: "panel5.label.text"
+  #     label-attr: "menu-close"
+  #     icon:
+  #       icon-name: "arrow-right"
+  #       icon-pos: "after"
+  #       icon-class: "icon-xs"
+  icon-config:
+    icon:
+      icon-name: "dungeon-gate"
+      icon-class: "emotion"
+  article-config:
+    article:
+      article-hide-small: true
+      article-title: "Get in touch"
+      article-title-i18n: "panel5.article.title"
+      article-title-tag: "h3"
+      article-body: "<p>Since we may not have answered all your questions on our website, we look forward to your questions and input via the contact form. We will contact you within 24 hours.</p>"
+      article-body-i18n: "panel5.article.body"
+      article-hide-footer: true
+  # close-config:
+  #   label:
+  #     label-attr: "flip-reset"
+  #     label-class: "align-center"
+  #     icon:
+  #       icon-name: "menu-close"
+  #       icon-pos: "after"
+  #       icon-class: "icon-m"
+
+i18n:
+  'de-DE':
+    'panel5.article.title': "Kontakt"
+    'panel5.article.body': "<p>Da wir auf unserer Webseite lange nicht alle Fragen beantworten konnten, freuen wir uns auf deine Fragen und Inputs über das Kontaktformular. Wir werden uns innerhalb von 24 Stunden bei dir melden.</p>"
+    # 'panel5.label.text': "Sende uns hier eine Nachricht"
+  'en-EN':
+    'panel5.article.title': "Get in touch"
+    'panel5.article.body': "<p>Since we may not have answered all your questions on our website, we look forward to your questions and input via the contact form. We will contact you within 24 hours.</p>"
+    # 'panel5.label.text': "Send us a message here"

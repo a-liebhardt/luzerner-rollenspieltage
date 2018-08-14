@@ -5,3 +5,4 @@ context:
   panel2-config: '@content-panel2'
   panel3-config: '@content-panel3'
   panel4-config: '@content-panel4'
+  panel5-config: '@content-panel5'

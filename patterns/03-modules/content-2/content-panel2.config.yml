@@ -1,19 +1,31 @@
 status: published
 context:
-  article-config:
+  article-welcome-config:
     article:
       article-hide-small: true
-      article-title: "Infos"
-      article-title-i18n: "panel2.article.title"
+      article-title: "Welcome"
+      article-title-i18n: "panel2.article.welcome.title"
       article-title-tag: "h3"
-      article-body: "<p>Pfarrei St. Johannes, Luzern</p><p>Samstag, 6. October 18</p><p>from 9 a.m. to 18 p.m.</p>"
-      article-body-i18n: "panel2.article.body"
+      article-body: "<p>Immerse yourself in boundless worlds of fantasy, where we will weave wonderful tales, experiencing unique stories together to be surprised again and again.</p><p>If you have never played pen-and-paper role-playing games before, you will find many dedicated people here to support your first steps in this creative hobby. If you do not know what role-playing games are, we have a short explanation for you:</p>"
+      article-body-i18n: "panel2.article.welcome.body"
       article-hide-footer: true
-  gamemaster-config: '@gamemaster'
+  article-explained-config:
+    article:
+      article-hide-small: true
+      article-title: "What is a Role-Playing Game?"
+      article-title-i18n: "panel2.article.explained.title"
+      article-title-tag: "h3"
+      article-body: "<p>A role-playing game, as played at our event, is often referred to as a tabletop role-playing game (because you play at a table) or a pen-and-paper role-playing game (because pens and paper are almost always involved).</p><p>Imagine a group of 3-5 people telling a story together. It compares well with improvisational theatre, with the addition of game rules and dice that may propel the story in an unforeseen direction.</p><p>In a classic role-playing game, one person at the table takes the role of the game master. The remaining players each take the role of a fictional character, while the game master takes care of the world where your story unfolds and the other characters that appear (so called non-player-characters).</p><p>Although it is the task of the game master to regularly challenge the characters, it's not about winning - cooperative storytelling is the focus and as long as you contribute something to the story you will feel like a winner.</p><p>If you would like to know more, <a href='#page4'>you are welcome to contact us.</a></p>"
+      article-body-i18n: "panel2.article.explained.body"
+      article-hide-footer: true
 i18n:
   'de-DE':
-    'panel2.article.title': "Infos"
-    'panel2.article.body': "<p>Der Luzerner Rollenspieltag findet am Samstag, 6. Oktober 2018, statt. Wir öffnen die Tore ab 12 Uhr, die ersten Spielrunden beginnen um 13 Uhr.</p><p>Spielzeiten: Samstag, 13 Uhr bis Sonntag, 1 Uhr<br />Eintritt: 5 Franken pro Person / für Spielleiter ist der Eintritt gratis<br />Adresse: Pfarrei St. Johannes, Schädrütistrasse 26, 6006 Luzern</p><p>Vom Bahnhof Luzern sind die Räumlichkeiten bequem in 15 Minuten erreichbar per Bus 8 (Würzenbachmatte) oder Bus 14 (Schlösslirain).</p><p>Wenn du von weiterher kommst und gerne stressfrei in Luzern übernachten möchtest, helfen wir dir gerne dabei deinen Aufenthalt zu planen. <br /><a href='#page4'>Melde dich doch bitte über das Kontaktformular.</a></p>"
+    'panel2.article.welcome.title': "Willkommen"
+    'panel2.article.welcome.body': "<p>Tauche mit uns ein in die unendliche Welt der Phantasie, wo wir gemeinsam einzigartige Geschichten erleben werden. Wundervolle Geschichten, die wir zusammen spinnen und ab und zu Entscheidungen dem Glück Überlassen, damit wir uns immer wieder von neuem Überraschen lassen können.</p><p>Wenn du noch nie sogenannte Pen-&-Paper-Rollenspiele gespielt hast, wirst du bei uns viele Spielleiter finden, die dich in deinen ersten Schritten in diesem kreativen Hobby mit grossem Engagement unterstützen werden. Bist du nicht ganz sicher, was ein Rollenspiel ist? Wir haben für dich eine kurze Erklärung zusammengestellt.</p>"
+    'panel2.article.explained.title': "Was ist ein Rollenspiel?"
+    'panel2.article.explained.body': "<p>Ein Rollenspiel, wie es an unserem Anlass gespielt wird, wird auch oft als Tabletop Rollenspiel (da man an einem Tisch spielt) oder Pen-&-Paper-Rollenspiel (oft mit Stift und Papier) genannt.</p><p>Du kannst dir darunter eine Spielrunde vorstellen aus durchschnittlich 3-5 Personen, welche gemeinsam eine Geschichte erzählen. Man kann es also gut mit einem Improvisationstheater vergleichen. Dazu kommen je nach Runde Spielregeln dazu, die sich oft in Form von Würfeln manifestieren, die die Geschichte in eine Richtung katapultieren können, wie du es dir zu Beginn gar nicht hättest vorstellen können.</p><p>In einem klassischen Rollenspiel hat eine Person am Tisch die Funktion des Spielleiters inne. Da die übrigen Spieler als pendant in die Rolle eines fiktiven Charakters eintauchen, kümmert sich der Spielleiter um alles andere; die anderen Charakter, die in der Geschichte auftauchen (sogenannte Nicht-Spieler-Charakater) und die ganze Welt, in der ihr spielen werdet.</p><p>Auch wenn es die Aufgabe des Spielleiters ist, die Charaktere im Spiel regelmässig herauszufordern, geht es nicht ums Gewinnen sondern das kooperative Geschichteerzählen ist im Fokus und alle, die etwas zur Story beigetragen haben werden sich als Gewinner fühlen.</p><p>Wenn du gerne mehr wissen möchtest, <a href='#page4'>darfst du dich ungeniert bei uns melden.</a></p>"
   'en-EN':
-    'panel2.article.title': "Infos"
-    'panel2.article.body': "<p>Pfarrei St. Johannes, Luzern</p><p>Samstag, 6. October 18</p><p>from 9 a.m. to 18 p.m.</p>"
+    'panel2.article.welcome.title': "Welcome"
+    'panel2.article.welcome.body': "<p>Immerse yourself in boundless worlds of fantasy, where we will weave wonderful tales, experiencing unique stories together to be surprised again and again.</p><p>If you have never played pen-and-paper role-playing games before, you will find many dedicated people here to support your first steps in this creative hobby. If you do not know what role-playing games are, we have a short explanation for you:</p>"
+    'panel2.article.explained.title': "What is a Role-Playing Game?"
+    'panel2.article.explained.body': "<p>A role-playing game, as played at our event, is often referred to as a tabletop role-playing game (because you play at a table) or a pen-and-paper role-playing game (because pens and paper are almost always involved).</p><p>Imagine a group of 3-5 people telling a story together. It compares well with improvisational theatre, with the addition of game rules and dice that may propel the story in an unforeseen direction.</p><p>In a classic role-playing game, one person at the table takes the role of the game master. The remaining players each take the role of a fictional character, while the game master takes care of the world where your story unfolds and the other characters that appear (so called non-player-characters).</p><p>Although it is the task of the game master to regularly challenge the characters, it's not about winning - cooperative storytelling is the focus and as long as you contribute something to the story you will feel like a winner.</p><p>If you would like to know more, <a href='#page4'>you are welcome to contact us.</a></p>"

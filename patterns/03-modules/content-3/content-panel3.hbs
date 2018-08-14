@@ -1,34 +1,18 @@
 <div class="row container panel3">
-  <div class="col-l-12">
-    {{> @article panel3-article-config}}
-  </div>
-  <div class="col-l-6">
-    <section class="flipper">
-      <div class="flip-front">
-        <!-- front content -->
-        {{> @icon gamer}}
-        {{> @article gamer-article-config}}
-        {{> @label keep-me-posted-label-config}}
-      </div>
-      <div class="flip-back">
-        <!-- back content -->
-        {{> @label close-config}}
-        {{> @keep-me-posted keep-me-posted-config}}
-      </div>
+  <div class="col-m-6">
+    <section class="panel data">
+      {{> @article article-info-config}}
     </section>
   </div>
-  <div class="col-l-6">
-    <section class="flipper">
-      <div class="flip-front">
-        <!-- front content -->
-        {{> @icon gamemaster}}
-        {{> @article gamemaster-article-config}}
-        {{> @label gamemaster-label-config}}
-      </div>
-      <div class="flip-back">
-        <!-- back content -->
-        {{> @label close-config}}
-        {{> @gamemaster gamemaster-config}}
+  <div class="col-m-6">
+    <section class="panel map">
+      <div class="mapbox"></div>
+      <nav class="marker-menu">
+        <a href="#" class="show-extern">Open in Google Maps</a>
+        <ul></ul>
+      </nav>
+      <div class="addressbox-wrap">
+        <div class="addressbox"></div>
       </div>
     </section>
   </div>

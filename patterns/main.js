@@ -10,9 +10,9 @@ import Fullpage from './02-ui/pagescroller/fullpage';
 import Translation from './02-ui/translation/translation';
 // Modules
 // import Header from './03-modules/header/header';
-import Panel2 from './03-modules/content-2/content-panel2';
 import Panel3 from './03-modules/content-3/content-panel3';
 import Panel4 from './03-modules/content-4/content-panel4';
+import Panel5 from './03-modules/content-5/content-panel5';
 import Form1 from './03-modules/form-1/contact';
 import Form2 from './03-modules/form-2/keep-me-posted';
 import Form3 from './03-modules/form-3/gamemaster';
@@ -54,9 +54,9 @@ ready(() => {
   Form.init();
   Translation.init();
   // Header.init();
-  Panel2.init();
   Panel3.init();
   Panel4.init();
+  Panel5.init();
   Form1.init();
   Form2.init();
   Form3.init();

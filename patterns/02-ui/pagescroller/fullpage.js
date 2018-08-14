@@ -6,7 +6,7 @@ exports.init = (() => {
     // Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors: ['page1', 'page2', 'page3', 'page4'],
+    anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
     navigation: true,
     // navigationPosition: 'right',
     // navigationTooltips: ['Opt 1', 'Opt 2', 'Opt 3', 'Opt 4'],

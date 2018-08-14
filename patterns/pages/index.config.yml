@@ -1,7 +1,3 @@
 status: published
 context:
-  panel0-config: '@content-panel0'
-  panel1-config: '@content-panel1'
-  panel2-config: '@content-panel2'
-  panel3-config: '@content-panel3'
-  panel4-config: '@content-panel4'
+  index-config: '@phase1'

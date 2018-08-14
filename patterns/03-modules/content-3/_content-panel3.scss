@@ -1,143 +1,93 @@
 .panel3 {
   // max-height: 100vh;
-  // overflow: hidden;
+  // overflow-x: hidden;
+  // overflow-y: auto;
   padding: 0 2rem;
 
-  .form-button {
-    @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, bottom, left, 100ms);
+  @media screen and (min-width: #{$mq-l}) {
+    height: 100%;
 
-    background: none;
-    border: none;
-    cursor: pointer;
-    line-height: 1.6;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    padding: 1.2rem 4.2rem;
-    border-radius: 0.4rem;
-    border: 0.2rem solid transparent;
-    outline: none;
-
-    label {
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    &:active {
-      border: 0.2rem solid $color--cyan-40;
-    }
-  }
-
-  article {
-    &.headline {
-      position: relative;
-
-      header {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        transform: translateX(-2rem);
-        background: $color--cyan-40;
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          font-size: 7rem;
-          color: $color--black-5;
-          text-shadow: 0 0 0.8rem $color--black-80;
-        }
-      }
-    }
-  }
-
-  i.icon {
-    &.gamer,
-    &.gamemaster {
-      svg {
-        width: 40%;
-        height: auto;
-        min-width: 24rem;
-        max-width: 46rem;
-      }
-    }
-
-
-    &.gamer {
-      svg {
-        fill: $color--black-20;
-      }
-    }
-  }
-
-  .flipper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 40vh;
-    min-height: 50vh;
-
-    .flip-front,
-    .flip-back {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    [class*='col-'] {
       height: 100%;
     }
+  }
 
-    &.no-flip {
-      min-height: 0;
-      opacity: 0;
-    }
+  .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    align-content: center;
+  }
 
-    &.flip {
+  .map {
+    width: 100%;
+    height: 50vh;
+    min-height: 60rem;
+    background: $color--black-20;
+    padding: 4rem 4rem 8rem;
+    position: relative;
+
+    .mapbox {
       width: 100%;
+      height: 100%;
+      box-shadow: 0 0 1rem rgba($color--black, 0.7);
+      border-radius: 1rem;
     }
 
-    @media screen and (min-width: #{$mq-l}) {
-      width: 40vw;
-      height: 80vh;
-    }
-  }
+    .marker-menu {
+      position: absolute;
+      z-index: 200;
+      right: 0;
+      bottom: 12rem;
+      width: 100%;
+      padding: 2rem 4rem 2rem;
 
-  & > [class*=col-].is-flipped {
-    max-width: initial;
-    max-height: 100vh;
-  }
-
-  & > [class*=col-].is-not-flipped {
-    max-width: initial;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-
-  @media screen and (min-width: #{$mq-l}) {
-    & > [class*=col-].is-flipped {
-      &:nth-of-type(2) {
-        .flip {
-          margin-left: 0;
-          left: 0;
-        }
+      @media screen and (min-width: #{$mq-l}) {
+        padding: 2rem 4rem 2rem 2rem;
+        width: 50%;
       }
 
-      &:nth-of-type(3) {
-        .flip {
-          margin-left: -50%;
-          left: 50%;
-        }
+      a {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: $color--white;
+      }
+
+      ul {
+        position: absolute;
+        top: -999rem;
+        left: -999rem;
+        visibility: hidden;
       }
     }
 
-    & > [class*=col-].is-not-flipped {
-      overflow: hidden;
+    .addressbox-wrap {
+      position: absolute;
+      z-index: 100;
+      right: 0;
+      bottom: 12rem;
+      width: 100%;
+      background: $color--cyan-40;
+      padding: 2rem 4rem 4rem;
+
+      .addressbox {
+        p {
+          color: $color--white;
+        }
+      }
+
+      @media screen and (min-width: #{$mq-l}) {
+        padding: 2rem 4rem 4rem 2rem;
+        width: 50%;
+      }
+    }
+  }
+
+  @media screen and (min-width: #{$mq-m}) {
+    .map {
+      height: 100vh;
     }
   }
 }
