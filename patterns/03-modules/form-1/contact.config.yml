@@ -1,0 +1,9 @@
+status: ready
+context:
+  config-step-1: '@contact-step1'
+  config-step-2: '@contact-step2'
+i18n:
+  'de-DE':
+    'contact.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
+  'en-EN':
+    'contact.form.request.error': "Your contact request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."

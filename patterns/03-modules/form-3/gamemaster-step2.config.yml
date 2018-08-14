@@ -1,0 +1,232 @@
+status: wip
+context:
+  step-2:
+    form:
+      form-name: "Game"
+      # form-action: "http://localhost:3000/rest/form.json"
+      # form-method: "get"
+      form-action: "form.php"
+      form-method: "post"
+      form-class: "step-2 registration-step"
+      form-items:
+        -
+          fieldset-legend: "Game informations"
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    input:
+                      label:
+                        label-for: "game-title"
+                        label-text: "Title of your game"
+                        label-text-i18n: "registration.step-2.input.title"
+                      input-id: "game-title"
+                      input-name: "Game[title]"
+                      input-placeholder: "Title of your game"
+                      input-i18n: "registration.step-2.input.title"
+                      input-class: ""
+                      # Don't need for text > input-type: "text"
+                      input-role: "input"
+                      input-autocomplete: "title"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    textarea:
+                      label:
+                        label-for: "game-description"
+                        label-text: "A short description of your game"
+                        label-text-i18n: "registration.step-2.input.description"
+                      textarea-id: "game-description"
+                      textarea-name: "Game[description]"
+                      textarea-placeholder: "A short description of your game"
+                      textarea-i18n: "registration.step-2.input.description"
+                      textarea-class: ""
+                      textarea-role: "textarea"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    input:
+                      label:
+                        label-for: "game-gametype"
+                        label-text: "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
+                        label-text-i18n: "registration.step-2.input.gametype"
+                      input-id: "game-gametype"
+                      input-name: "Game[gametype]"
+                      input-placeholder: "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
+                      input-i18n: "registration.step-2.input.gametype"
+                      input-class: ""
+                      input-type: "text"
+                      input-role: "input"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-1"
+                        label-text: "Is Fantasy"
+                        label-text-i18n: "registration.step-2.input.opt.1"
+                      input-id: "game-opt-1"
+                      input-name: "Game[opt-1]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-2"
+                        label-text: "Is SciFi"
+                        label-text-i18n: "registration.step-2.input.opt.2"
+                      input-id: "game-opt-2"
+                      input-name: "Game[opt-2]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-3"
+                        label-text: "Is Noire"
+                        label-text-i18n: "registration.step-2.input.opt.3"
+                      input-id: "game-opt-3"
+                      input-name: "Game[opt-3]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-4"
+                        label-text: "Is Different"
+                        label-text-i18n: "registration.step-2.input.opt.4"
+                      input-id: "game-opt-4"
+                      input-name: "Game[opt-4]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-5"
+                        label-text: "For Beginners"
+                        label-text-i18n: "registration.step-2.input.opt.5"
+                      input-id: "game-opt-5"
+                      input-name: "Game[opt-5]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-6"
+                        label-text: "For Veterans"
+                        label-text-i18n: "registration.step-2.input.opt.6"
+                      input-id: "game-opt-6"
+                      input-name: "Game[opt-6]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-7"
+                        label-text: "For Kids only"
+                        label-text-i18n: "registration.step-2.input.opt.7"
+                      input-id: "game-opt-7"
+                      input-name: "Game[opt-7]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 col-m-3"
+                    input:
+                      label:
+                        label-for: "game-opt-8"
+                        label-text: "For Adults only"
+                        label-text-i18n: "registration.step-2.input.opt.8"
+                      input-id: "game-opt-8"
+                      input-name: "Game[opt-8]"
+                      input-class: ""
+                      input-type: "checkbox"
+                      input-role: "checkbox"
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6"
+                    link:
+                      label:
+                        label-text: "Back to previous form"
+                        label-text-i18n: "registration.step-2.button.previous"
+                      link-class: "button-link back-link"
+                      link-href: "#form-1"
+                -
+                  wrapper:
+                    wrapper-class: "col-xs-6 align-right"
+                    input:
+                      input-name: "User[id]"
+                      input-class: "hidden"
+                      input-type: "hidden"
+                    button:
+                      label:
+                        label-text: "Submit your game"
+                        label-text-i18n: "registration.step-2.button.next"
+                      button-class: "submit-group"
+                      button-type: "submit"
+                      button-role: "button"
+i18n:
+  'de-DE':
+    'registration.step-2.input.title': "Titel deines Spiels"
+    'registration.step-2.input.title.error': "Bitte trage einen Spieltitel ein"
+    'registration.step-2.input.description': "Eine kurze Spielbeschreibung"
+    'registration.step-2.input.gametype': "Mit welchem Ruleset wirst du spielen? D&D, ShadowRun, Fade, ..."
+    'registration.step-2.input.opt.1': "Fantasy"
+    'registration.step-2.input.opt.2': "SciFi"
+    'registration.step-2.input.opt.3': "Noire"
+    'registration.step-2.input.opt.4': "Etwas anderes"
+    'registration.step-2.input.opt.5': "Für Anfänger"
+    'registration.step-2.input.opt.6': "Für Fortgeschrittene"
+    'registration.step-2.input.opt.7': "Nur für Kinder"
+    'registration.step-2.input.opt.8': "Nur für Erwachsene"
+    'registration.step-2.button.previous': "Zurück zur vorherigen Form"
+    'registration.step-2.button.next': "Spiel eintragen"
+  'en-EN':
+    'registration.step-2.input.title': "Title of your game"
+    'registration.step-2.input.title.error': "Please enter a game name"
+    'registration.step-2.input.description': "A short description of your game"
+    'registration.step-2.input.gametype': "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
+    'registration.step-2.input.opt.1': "Is Fantasy"
+    'registration.step-2.input.opt.2': "Is SciFi"
+    'registration.step-2.input.opt.3': "Is Noire"
+    'registration.step-2.input.opt.4': "Is Different"
+    'registration.step-2.input.opt.5': "For Beginners"
+    'registration.step-2.input.opt.6': "For Veterans"
+    'registration.step-2.input.opt.7': "For Kids only"
+    'registration.step-2.input.opt.8': "For Adults only"
+    'registration.step-2.button.previous': "Back to previous form"
+    'registration.step-2.button.next': "Submit your game"
+

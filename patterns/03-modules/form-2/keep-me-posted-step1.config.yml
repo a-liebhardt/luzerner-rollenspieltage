@@ -1,13 +1,13 @@
 status: wip
 context:
-  form-1:
+  step-1:
     form:
       form-name: "KeepMePosted"
       # form-action: "http://localhost:3000/rest/form.json"
       # form-method: "get"
       form-action: "form.php"
       form-method: "post"
-      form-class: "form-1 keep-me-posted-step active"
+      form-class: "step-1 keep-me-posted-step active"
       form-items:
         -
           fieldset-items:
@@ -20,11 +20,11 @@ context:
                       label:
                         label-for: "keep-me-posted-name"
                         label-text: "Your Firstname, Lastname"
-                        label-text-i18n: "keep-me-posted.form-1.input.name"
+                        label-text-i18n: "keep-me-posted.step-1.input.name"
                       input-id: "keep-me-posted-name"
                       input-name: "KeepMePosted[name]"
                       input-placeholder: "Your Firstname, Lastname"
-                      input-i18n: "keep-me-posted.form-1.input.name"
+                      input-i18n: "keep-me-posted.step-1.input.name"
                       input-class: ""
                       # Don't need for text > input-type: "text"
                       input-role: "input"
@@ -38,11 +38,11 @@ context:
                       label:
                         label-for: "keep-me-posted-email"
                         label-text: "Your Email"
-                        label-text-i18n: "keep-me-posted.form-1.email.name"
+                        label-text-i18n: "keep-me-posted.step-1.email.name"
                       input-id: "keep-me-posted-email"
                       input-name: "KeepMePosted[email]"
                       input-placeholder: "Your Email"
-                      input-i18n: "keep-me-posted.form-1.email.name"
+                      input-i18n: "keep-me-posted.step-1.email.name"
                       input-class: ""
                       input-type: "email"
                       input-role: "input"
@@ -57,7 +57,7 @@ context:
                     button:
                       label:
                         label-text: "Tell me when registration opens"
-                        label-text-i18n: "keep-me-posted.form-1.button.next"
+                        label-text-i18n: "keep-me-posted.step-1.button.next"
                       button-class: "submit-group"
                       button-type: "submit"
                       button-role: "button"
@@ -72,22 +72,16 @@ context:
       article-subtitle-i18n: "keep-me-posted.form-2.article.subtitle"
 i18n:
   'de-DE':
-    'keep-me-posted.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
-    'keep-me-posted.form-1.input.name': "Dein Vorname, Nachname"
-    'keep-me-posted.form-1.input.name.error': "Bitte trage deinen Namen ein"
-    'keep-me-posted.form-1.email.name': "Deine E-Mail"
-    'keep-me-posted.form-1.input.email.error.1': "Bitte trage deine E-Mail ein"
-    'keep-me-posted.form-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
-    'keep-me-posted.form-1.button.next': "Gebt Bescheid wenn die Registrierung für Spieler öffnet"
-    'keep-me-posted.form-2.article.title': "Vielen Dank für dein Interesse"
-    'keep-me-posted.form-2.article.subtitle': "Wir werden dich informieren sobald die Registrierung für Spieler öffnet.<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
+    'keep-me-posted.step-1.input.name': "Dein Vorname, Nachname"
+    'keep-me-posted.step-1.input.name.error': "Bitte trage deinen Namen ein"
+    'keep-me-posted.step-1.email.name': "Deine E-Mail"
+    'keep-me-posted.step-1.input.email.error.1': "Bitte trage deine E-Mail ein"
+    'keep-me-posted.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
+    'keep-me-posted.step-1.button.next': "Gebt Bescheid wenn die Registrierung für Spieler öffnet"
   'en-EN':
-    'keep-me-posted.form.request.error': "Your contact request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."
-    'keep-me-posted.form-1.input.name': "Your Firstname, Lastname"
-    'keep-me-posted.form-1.input.name.error': "Please enter your Name"
-    'keep-me-posted.form-1.email.name': "Your Email"
-    'keep-me-posted.form-1.input.email.error.1': "Please enter your Email"
-    'keep-me-posted.form-1.input.email.error.2': "Email doesn't look correct"
-    'keep-me-posted.form-1.button.next': "Tell me when registration for Gamers opens"
-    'keep-me-posted.form-2.article.title': "Thank you for your interest."
-    'keep-me-posted.form-2.article.subtitle': "We'll keep you posted as soon as our registration for Gamers opens.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+    'keep-me-posted.step-1.input.name': "Your Firstname, Lastname"
+    'keep-me-posted.step-1.input.name.error': "Please enter your Name"
+    'keep-me-posted.step-1.email.name': "Your Email"
+    'keep-me-posted.step-1.input.email.error.1': "Please enter your Email"
+    'keep-me-posted.step-1.input.email.error.2': "Email doesn't look correct"
+    'keep-me-posted.step-1.button.next': "Tell me when registration for Gamers opens"

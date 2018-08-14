@@ -1,0 +1,80 @@
+status: wip
+context:
+  step-1:
+    form:
+      form-name: "User"
+      # form-action: "http://localhost:3000/rest/form.json"
+      # form-method: "get"
+      form-action: "form.php"
+      form-method: "post"
+      form-class: "step-1 registration-step active"
+      form-items:
+        -
+          fieldset-legend: "Gamemaster informations"
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    input:
+                      label:
+                        label-for: "gamemaster-name"
+                        label-text: "Your Firstname, Lastname"
+                        label-text-i18n: "registration.step-1.input.name"
+                      input-id: "gamemaster-name"
+                      input-name: "User[name]"
+                      input-placeholder: "Your Firstname, Lastname"
+                      input-i18n: "registration.step-1.input.name"
+                      input-class: ""
+                      # Don't need for text > input-type: "text"
+                      input-role: "input"
+                      input-autocomplete: "name"
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12"
+                    input:
+                      label:
+                        label-for: "gamemaster-email"
+                        label-text: "Your Email"
+                        label-text-i18n: "registration.step-1.email.name"
+                      input-id: "gamemaster-email"
+                      input-name: "User[email]"
+                      input-placeholder: "Your Email"
+                      input-i18n: "registration.step-1.email.name"
+                      input-class: ""
+                      input-type: "email"
+                      input-role: "input"
+                      input-autocomplete: "email"
+        -
+          fieldset-items:
+            -
+              fieldset-row-items:
+                -
+                  wrapper:
+                    wrapper-class: "col-m-12 align-center"
+                    button:
+                      label:
+                        label-text: "Register as Gamemaster"
+                        label-text-i18n: "registration.step-1.button.next"
+                      button-class: "submit-group"
+                      button-type: "submit"
+                      button-role: "button"
+i18n:
+  'de-DE':
+    'registration.step-1.input.name': "Dein Vorname, Nachname"
+    'registration.step-1.input.name.error': "Bitte trage deinen Namen ein"
+    'registration.step-1.email.name': "Deine E-Mail"
+    'registration.step-1.input.email.error.1': "Bitte trage deine E-Mail ein"
+    'registration.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
+    'registration.step-1.button.next': "Als Spielleiter registrieren"
+  'en-EN':
+    'registration.step-1.input.name': "Your Firstname, Lastname"
+    'registration.step-1.input.name.error': "Please enter your Name"
+    'registration.step-1.email.name': "Your Email"
+    'registration.step-1.input.email.error.1': "Please enter your Email"
+    'registration.step-1.input.email.error.2': "Email doesn't look correct"
+    'registration.step-1.button.next': "Register as Gamemaster"
+

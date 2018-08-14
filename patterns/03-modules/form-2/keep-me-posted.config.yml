@@ -1,0 +1,9 @@
+status: wip
+context:
+  config-step-1: '@keep-me-posted-step1'
+  config-step-2: '@keep-me-posted-step2'
+i18n:
+  'de-DE':
+    'keep-me-posted.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
+  'en-EN':
+    'keep-me-posted.form.request.error': "Your contact request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."

@@ -1,13 +1,13 @@
 status: ready
 context:
-  form-1:
+  step-1:
     form:
       form-name: "ContactUs"
       # form-action: "http://localhost:3000/rest/form.json"
       # form-method: "get"
       form-action: "form.php"
       form-method: "post"
-      form-class: "form-1 contact-step active"
+      form-class: "step-1 contact-step active"
       form-items:
         -
           fieldset-items:
@@ -20,11 +20,11 @@ context:
                       label:
                         label-for: "contact-name"
                         label-text: "Your Firstname, Lastname"
-                        label-text-i18n: "contact.form-1.input.name"
+                        label-text-i18n: "contact.step-1.input.name"
                       input-id: "contact-name"
                       input-name: "ContactUs[name]"
                       input-placeholder: "Your Firstname, Lastname"
-                      input-i18n: "contact.form-1.input.name"
+                      input-i18n: "contact.step-1.input.name"
                       input-class: ""
                       # Don't need for text > input-type: "text"
                       input-role: "input"
@@ -38,11 +38,11 @@ context:
                       label:
                         label-for: "contact-email"
                         label-text: "Your Email"
-                        label-text-i18n: "contact.form-1.email.name"
+                        label-text-i18n: "contact.step-1.email.name"
                       input-id: "contact-email"
                       input-name: "ContactUs[email]"
                       input-placeholder: "Your Email"
-                      input-i18n: "contact.form-1.email.name"
+                      input-i18n: "contact.step-1.email.name"
                       input-class: ""
                       input-type: "email"
                       input-role: "input"
@@ -56,11 +56,11 @@ context:
                       label:
                         label-for: "contact-message"
                         label-text: "Your message"
-                        label-text-i18n: "contact.form-1.input.message"
+                        label-text-i18n: "contact.step-1.input.message"
                       textarea-id: "contact-message"
                       textarea-name: "ContactUs[message]"
                       textarea-placeholder: "Your message"
-                      textarea-i18n: "contact.form-1.input.message"
+                      textarea-i18n: "contact.step-1.input.message"
                       textarea-class: ""
                       textarea-role: "textarea"
         -
@@ -73,40 +73,25 @@ context:
                     button:
                       label:
                         label-text: "Send us your message"
-                        label-text-i18n: "contact.form-1.button.next"
+                        label-text-i18n: "contact.step-1.button.next"
                       button-class: "submit-group"
                       button-type: "submit"
                       button-role: "button"
-  form-2:
-    panel-class: "form-2 contact-step"
-    article:
-      article-hide-small: true
-      article-title: "Message recieved"
-      article-title-i18n: "contact.form-2.article.title"
-      article-title-tag: "h1"
-      article-subtitle: "Thanky you very much for your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
-      article-subtitle-i18n: "contact.form-2.article.subtitle"
 i18n:
   'de-DE':
-    'contact.form.request.error': "Das senden deiner Nachricht ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
-    'contact.form-1.input.name': "Dein Vorname, Nachname"
-    'contact.form-1.input.name.error': "Bitte trage deinen Namen ein"
-    'contact.form-1.email.name': "Deine E-Mail"
-    'contact.form-1.input.email.error.1': "Bitte trage deine E-Mail ein"
-    'contact.form-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
-    'contact.form-1.input.message': "Deine Nachricht"
-    'contact.form-1.button.next': "Sende uns deine Nachricht"
-    'contact.form-2.article.title': "Nachricht erhalten"
-    'contact.form-2.article.subtitle': "Vielen Dank für deine Nachricht<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
+    'contact.step-1.input.name': "Dein Vorname, Nachname"
+    'contact.step-1.input.name.error': "Bitte trage deinen Namen ein"
+    'contact.step-1.email.name': "Deine E-Mail"
+    'contact.step-1.input.email.error.1': "Bitte trage deine E-Mail ein"
+    'contact.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
+    'contact.step-1.input.message': "Deine Nachricht"
+    'contact.step-1.button.next': "Sende uns deine Nachricht"
   'en-EN':
-    'contact.form.request.error': "Your contact request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."
-    'contact.form-1.input.name': "Your Firstname, Lastname"
-    'contact.form-1.input.name.error': "Please enter your Name"
-    'contact.form-1.email.name': "Your Email"
-    'contact.form-1.input.email.error.1': "Please enter your Email"
-    'contact.form-1.input.email.error.2': "Email doesn't look correct"
-    'contact.form-1.input.message': "Your message"
-    'contact.form-1.button.next': "Send us your message"
-    'contact.form-2.article.title': "Message recieved"
-    'contact.form-2.article.subtitle': "Thanky you very much for your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+    'contact.step-1.input.name': "Your Firstname, Lastname"
+    'contact.step-1.input.name.error': "Please enter your Name"
+    'contact.step-1.email.name': "Your Email"
+    'contact.step-1.input.email.error.1': "Please enter your Email"
+    'contact.step-1.input.email.error.2': "Email doesn't look correct"
+    'contact.step-1.input.message': "Your message"
+    'contact.step-1.button.next': "Send us your message"
 

@@ -1,0 +1,19 @@
+status: ready
+context:
+  step-2:
+    panel-class: "step-2 contact-step"
+    article:
+      article-hide-small: true
+      article-title: "Message recieved"
+      article-title-i18n: "contact.step-2.article.title"
+      article-title-tag: "h1"
+      article-subtitle: "Thanky you very much for your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+      article-subtitle-i18n: "contact.step-2.article.subtitle"
+i18n:
+  'de-DE':
+    'contact.step-2.article.title': "Nachricht erhalten"
+    'contact.step-2.article.subtitle': "Vielen Dank für deine Nachricht<br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
+  'en-EN':
+    'contact.step-2.article.title': "Message recieved"
+    'contact.step-2.article.subtitle': "Thanky you very much for your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+

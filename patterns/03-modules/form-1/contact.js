@@ -21,19 +21,19 @@ exports.init = (() => {
         // Name is required
         presence: {
           // message: '^Please enter your Name',
-          message: window.formRules.getMessage('contact.form-1.input.name.error', 'Please enter your Name')
+          message: window.formRules.getMessage('contact.step-1.input.name.error', 'Please enter your Name')
         },
       },
       'ContactUs[email]': {
         // Email is required
         presence: {
           // message: '^Please enter your Email',
-          message: window.formRules.getMessage('contact.form-1.input.email.error.1', 'Please enter your Email')
+          message: window.formRules.getMessage('contact.step-1.input.email.error.1', 'Please enter your Email')
         },
         // and must be an email (duh)
         email: {
           // message: '^Email doesn\'t look correct',
-          message: window.formRules.getMessage('contact.form-1.input.email.error.2', 'Email doesn\'t look correct')
+          message: window.formRules.getMessage('contact.step-1.input.email.error.2', 'Email doesn\'t look correct')
         },
       },
     },
@@ -47,8 +47,8 @@ exports.init = (() => {
       formGroup.classList.remove('has-error');
     });
     // console.log('succes', 'gamemaster', data);
-    document.querySelector(`.${formId} .form-2`).classList.add('active');
-    document.querySelector(`.${formId} .form-1`).classList.remove('active');
+    document.querySelector(`.${formId} .step-2`).classList.add('active');
+    document.querySelector(`.${formId} .step-1`).classList.remove('active');
   });
 
   window.formCallOnError.setFunc('ContactUs', (data, status) => {
