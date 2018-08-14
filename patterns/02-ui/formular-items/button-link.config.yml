@@ -1,0 +1,13 @@
+status: ready
+context:
+  button-link:
+    link:
+      label:
+        label-text: "Back to previous form"
+      link-class: "button-link back-link"
+      link-href: "#"
+i18n:
+  'de-DE':
+    'button.label.text.demo': "Form button (DE)"
+  'en-EN':
+    'button.label.text.demo': "Form button (EN)"

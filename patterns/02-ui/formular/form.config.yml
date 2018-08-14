@@ -235,11 +235,12 @@ context:
                 -
                   group-wrapper:
                     group-wrapper-class: "col-m-4"
-                    link:
-                      label:
-                        label-text: "Back to previous form"
-                      link-class: "button-link back-link"
-                      link-href: "#"
+                    button-link:
+                      link:
+                        label:
+                          label-text: "Back to previous form"
+                        link-class: "button-link back-link"
+                        link-href: "#"
                 -
                   group-wrapper:
                     group-wrapper-class: "col-m-4 align-center"
