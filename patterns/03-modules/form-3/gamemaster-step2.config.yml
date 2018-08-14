@@ -181,12 +181,13 @@ context:
                   -
                     group-wrapper:
                       group-wrapper-class: "col-xs-6"
-                      link:
-                        label:
-                          label-text: "Back to previous form"
-                          label-text-i18n: "registration.step-2.button.previous"
-                        link-class: "button-link back-link"
-                        link-href: "#form-1"
+                      button-link:
+                        link:
+                          label:
+                            label-text: "Back to previous form"
+                            label-text-i18n: "registration.step-2.button.previous"
+                          link-class: "button-link back-link"
+                          link-href: "#form-1"
                   -
                     group-wrapper:
                       group-wrapper-class: "col-xs-6 align-right"
