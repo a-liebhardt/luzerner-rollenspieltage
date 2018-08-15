@@ -197,7 +197,7 @@ const docker = function (args, done) {
   const clonePages = (pageBody) => {
     let files = 0;
     for (let item of app.components.flatten()) {
-      if (item.viewPath.match(/(\/pages\/|\\pages\\)/g)) {
+      if (item.viewPath.match(/(\/|\\)([0-9]*-)?pages(\/|\\)/g)) {
         if (statuses.indexOf(item.status.label.toLowerCase()) >= 0) {
           item.render().then(function(contentBody){
             // content to page wrapper
