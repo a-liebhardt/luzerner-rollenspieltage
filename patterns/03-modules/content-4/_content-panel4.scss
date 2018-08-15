@@ -2,8 +2,7 @@
   margin: 0 auto;
   padding: 4rem 0 8rem;
 
-  .flip-front,
-  .flip-back {
+  .flipper {
     padding: 0 4rem 4rem;
   }
 
@@ -15,8 +14,7 @@
       height: 100%;
     }
 
-    .flip-front,
-    .flip-back {
+    .flipper {
       padding: 4rem 4rem 12rem;
     }
   }
@@ -85,7 +83,6 @@
       }
     }
 
-
     &.gamer {
       svg {
         fill: $color--black-20;
@@ -94,53 +91,19 @@
   }
 
   @media screen and (min-width: #{$mq-l}) {
-    .flipper {
-      padding: 0 4rem 4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: auto;
-      min-height: 60rem;
-      transform: translateY(-12rem);
-
-      .flip-front,
-      .flip-back {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-
-      &.no-flip {
-        min-height: 0;
-        opacity: 0;
-      }
-
-      &.flip {
+    & > .col-l-6 {
+      &.is-flipped {
         width: 100%;
-      }
-    }
-
-    & > [class*=col-].is-flipped {
-      &:nth-of-type(2) {
-        .flip {
-          margin-left: 0;
-          left: 0;
-        }
+        max-width: 100%;
       }
 
-      &:nth-of-type(3) {
-        .flip {
-          margin-left: -50%;
-          left: 50%;
-        }
+      &.is-not-flipped {
+        position: absolute;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
       }
-    }
-
-    & > [class*=col-].is-not-flipped {
-      overflow: hidden;
     }
   }
 }

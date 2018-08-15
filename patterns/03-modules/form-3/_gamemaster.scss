@@ -1,6 +1,7 @@
 .registration {
   width: 100%;
   max-width: 80rem;
+  margin: 0 auto;
 
   .registration-step {
     display: none;
@@ -26,7 +27,7 @@
 
 .registration-step {
   background: $color--black-5;
-  border-radius: 1rem;
+  // border-radius: 1rem;
   padding: 4rem 4rem 0;
   box-shadow: inset 0 0 4rem rgba($color--black, 0.2), 0 0 1rem rgba($color--black, 0.4);
 
