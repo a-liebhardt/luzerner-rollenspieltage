@@ -32,8 +32,9 @@ if ($json) {
     }
 
     $msg[] = "--";
-    $msg[] = "Beste Grüsse";
-    $msg[] = "Die WP-API";
+    $msg[] = "----BEGIN RAW----";
+    $msg[] = $json;
+    $msg[] = "----END RAW----";
   }
 
   $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -48,6 +49,7 @@ if ($json) {
     $mail->Password = '{PHP_MAILER_PASSWORD}';            // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
+    $mail->CharSet = 'UTF-8';
 
     //Recipients
     $mail->setFrom($sender, 'Rollenspieltage Page');
