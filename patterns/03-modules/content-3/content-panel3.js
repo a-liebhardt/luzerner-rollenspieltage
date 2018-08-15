@@ -472,10 +472,10 @@ exports.init = (() => {
     selectFirstEelement(hash);
 
     // Handle click for footer language selection links (to select corresponding contact map tab)
-    live('click', 'div.footer__linklist li a', (event) => {
-      let selectedCountry = event.target.href.substring(event.target.href.indexOf("#") + 1);
-      document.querySelector(`.marker-menu li a[data-iso="${selectedCountry}"]`).click()
-    });
+    // live('click', 'div.footer__linklist li a', (event) => {
+    //   let selectedCountry = event.target.href.substring(event.target.href.indexOf("#") + 1);
+    //   document.querySelector(`.marker-menu li a[data-iso="${selectedCountry}"]`).click()
+    // });
 
     live('click', 'a.show-extern', (e) => {
       e.preventDefault();
