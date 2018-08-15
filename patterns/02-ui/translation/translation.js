@@ -80,7 +80,7 @@ exports.init = (() => {
           // Handle special elements
           if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.label = value;
           // Update html of everything which has no value
-          else if (typeof el.value === 'undefined') el.innerHTML = value;
+          else if (typeof el.value === 'undefined' && ['figure', 'picture', 'img'].indexOf(el.nodeName.toLowerCase()) === -1) el.innerHTML = value;
         }
       });
     };

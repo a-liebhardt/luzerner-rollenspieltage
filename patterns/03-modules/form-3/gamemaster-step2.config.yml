@@ -3,10 +3,10 @@ context:
   step-2:
     form:
       form-name: "Game"
-      # form-action: "http://localhost:3000/rest/form.json"
-      # form-method: "get"
-      form-action: "form.php"
-      form-method: "post"
+      form-action: "http://localhost:3000/rest/form.json"
+      form-method: "get"
+      # form-action: "form.php"
+      # form-method: "post"
       form-class: "step-2 registration-step"
       form-items:
         -
@@ -67,11 +67,11 @@ context:
                       input:
                         label:
                           label-for: "game-gametype"
-                          label-text: "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
+                          label-text: "Please enter ruleset you will play: D&D, ShadowRun, Fate, ..."
                           label-text-i18n: "registration.step-2.input.gametype"
                         input-id: "game-gametype"
                         input-name: "Game[gametype]"
-                        input-placeholder: "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
+                        input-placeholder: "Please enter ruleset you will play: D&D, ShadowRun, Fate, ..."
                         input-i18n: "registration.step-2.input.gametype"
                         input-class: ""
                         input-type: "text"
@@ -83,7 +83,7 @@ context:
                       group-wrapper-class: "col-m-12 form-group"
                       article:
                         article-hide-header: true
-                        article-body: "<p>Please select:</p>"
+                        article-body: "<p>You like to offer something special? Please select:</p>"
                         article-body-i18n: "registration.step-2.article.opts"
                         article-hide-footer: true
               -
@@ -97,7 +97,7 @@ context:
                           label-text: "For Beginners"
                           label-text-i18n: "registration.step-2.input.opt.1"
                         input-id: "game-opt-1"
-                        input-name: "Game[opt-1]"
+                        input-name: "Game[for-beginners]"
                         input-class: ""
                         input-type: "checkbox"
                         input-role: "checkbox"
@@ -110,7 +110,7 @@ context:
                           label-text: "For Kids"
                           label-text-i18n: "registration.step-2.input.opt.2"
                         input-id: "game-opt-2"
-                        input-name: "Game[opt-2]"
+                        input-name: "Game[for-kids]"
                         input-class: ""
                         input-type: "checkbox"
                         input-role: "checkbox"
@@ -123,7 +123,20 @@ context:
                           label-text: "Adults only"
                           label-text-i18n: "registration.step-2.input.opt.3"
                         input-id: "game-opt-3"
-                        input-name: "Game[opt-3]"
+                        input-name: "Game[adults-only]"
+                        input-class: ""
+                        input-type: "checkbox"
+                        input-role: "checkbox"
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-xs-6 col-m-3"
+                      input:
+                        label:
+                          label-for: "game-opt-4"
+                          label-text: "Womens only"
+                          label-text-i18n: "registration.step-2.input.opt.4"
+                        input-id: "game-opt-4"
+                        input-name: "Game[womens-only]"
                         input-class: ""
                         input-type: "checkbox"
                         input-role: "checkbox"
@@ -134,7 +147,7 @@ context:
                 group-row:
                   -
                     group-wrapper:
-                      group-wrapper-class: "col-xs-6"
+                      group-wrapper-class: "col-s-6"
                       button-link:
                         link:
                           label:
@@ -144,7 +157,7 @@ context:
                           link-href: "#form-1"
                   -
                     group-wrapper:
-                      group-wrapper-class: "col-xs-6 align-right"
+                      group-wrapper-class: "col-s-6 align-right"
                       input:
                         input-name: "User[id]"
                         input-class: "hidden"
@@ -163,11 +176,12 @@ i18n:
     'registration.step-2.input.title': "Titel deines Spiels"
     'registration.step-2.input.title.error': "Bitte trage einen Spieltitel ein"
     'registration.step-2.input.description': "Eine kurze Spielbeschreibung"
-    'registration.step-2.input.gametype': "Mit welchem Ruleset wirst du spielen? D&D, ShadowRun, Fade, ..."
-    'registration.step-2.article.opts': "<p>Bitte wählen</p>"
+    'registration.step-2.input.gametype': "Mit welchem Regelwerk wirst du spielen? D&D, ShadowRun, Fate, ..."
+    'registration.step-2.article.opts': "<p>Du möchtest etwas besonderes anbieten? Bitte wählen:</p>"
     'registration.step-2.input.opt.1': "Einsteigerfreundlich"
     'registration.step-2.input.opt.2': "Kinderfreundlich"
     'registration.step-2.input.opt.3': "nur für Erwachsene"
+    'registration.step-2.input.opt.4': "nur für Frauen"
     'registration.step-2.button.previous': "Zurück zur vorherigen Form"
     'registration.step-2.button.next': "Spiel eintragen"
   'en-EN':
@@ -176,11 +190,12 @@ i18n:
     'registration.step-2.input.title': "Title of your game"
     'registration.step-2.input.title.error': "Please enter a game name"
     'registration.step-2.input.description': "A short description of your game"
-    'registration.step-2.input.gametype': "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
-    'registration.step-2.article.opts': "<p>Please select</p>"
+    'registration.step-2.input.gametype': "Please enter ruleset you will play: D&D, ShadowRun, Fate, ..."
+    'registration.step-2.article.opts': "<p>You like to offer something special? Please select:</p>"
     'registration.step-2.input.opt.1': "For Beginners"
     'registration.step-2.input.opt.2': "For Kids"
     'registration.step-2.input.opt.3': "Adults only"
+    'registration.step-2.input.opt.4': "Womens only"
     'registration.step-2.button.previous': "Back to previous form"
     'registration.step-2.button.next': "Submit your game"
 

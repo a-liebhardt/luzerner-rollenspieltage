@@ -1,7 +1,9 @@
 {{render '@header'}}
-<main id="pagescroller" class="page-content">
-  <section data-anchor="page1">
-    {{> @article coc-article-config}}
-  </section>
+<main class="page-content">
+  <div class="row container">
+    <div class="col-xs-10 col-m-8">
+      {{> @article coc-article-config}}
+    </div>
+  </div>
 </main>
 {{render '@footer'}}

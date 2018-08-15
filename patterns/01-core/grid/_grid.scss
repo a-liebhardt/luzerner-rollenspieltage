@@ -5,6 +5,7 @@ $grid-gap: 1rem;
 .container {
   width: 100%;
   max-width: $page-maxWidth;
+  margin: 0 auto;
 }
 
 .row {

@@ -5,13 +5,13 @@ context:
       figure-class: "emotion"
       picture:
         picture-title: "Welcome to Luzerner Rollenspieltage"
-        picture-i18n: ""
+        picture-i18n: "panel1.image"
         picture-sources:
           -
             source: "/images/cover-dice-bag.jpg"
         image:
           image-alt: "Welcome to Luzerner Rollenspieltage"
-          image-i18n: ""
+          image-i18n: "panel1.image"
           # image-class: ""
           image-source: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
           image-lazyload: "/images/cover-dice-bag.jpg"
@@ -19,3 +19,12 @@ context:
     icon:
       icon-name: "LuzernerRollenspieltag"
       icon-class: "logo"
+i18n:
+  'de-DE':
+    'panel1.image': "Willkommen zu den Luzerner Rollenspieltage"
+    'panel1.h2': "6. Oktober 2018"
+    'panel1.h3': "von Samstag, 13 Uhr <br />auf Sonntag, 1 Uhr"
+  'en-EN':
+    'panel1.image': "Welcome to Luzerner Rollenspieltage"
+    'panel1.h2': "6. October 2018"
+    'panel1.h3': "from Saturday, 1 p.m. <br />to Sunday, 1 a.m."

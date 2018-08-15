@@ -90,11 +90,23 @@
     }
   }
 
+  & > .col-l-6 {
+    &.is-flipped {
+      .flipper {
+        padding: 0 0 4rem;
+      }
+    }
+  }
+
   @media screen and (min-width: #{$mq-l}) {
     & > .col-l-6 {
       &.is-flipped {
         width: 100%;
         max-width: 100%;
+
+        .flipper {
+          padding: 0 4rem 4rem;
+        }
       }
 
       &.is-not-flipped {

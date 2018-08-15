@@ -21,6 +21,9 @@ body {
 }
 
 body {
+  overflow-x: hidden;
+  overflow-y: auto;
+
   // Viewport overlay handling
   &.viewport-freeze {
     width: 100vw;
