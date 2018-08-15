@@ -11,9 +11,19 @@ context:
       form-items:
         -
           fieldset:
-            fieldset-legend: "Organization informations"
+            fieldset-legend: "About the Organization"
             fieldset-legend-i18n: "registration.step-3.fieldset"
             fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12 form-group"
+                      article:
+                        article-hide-header: true
+                        article-body: "<p>We like to offer up to 6 Slots each with 2 hours of game time. This should help Gamers to try different Games very easily. Please choose your prefered game slots:</p>"
+                        article-body-i18n: "registration.step-3.article.slots"
+                        article-hide-footer: true
               -
                 group-row:
                   -
@@ -132,7 +142,7 @@ context:
                       input:
                         label:
                           label-for: "coc"
-                          label-text: "I have read and accept the <a href='./code-of-conduct.html'>Code of Conduct</a>"
+                          label-text: "I have read and accept the <a href='./code-of-conduct.html' target='blank'>Code of Conduct</a>"
                           label-text-i18n: "registration.step-3.input.coc"
                         input-id: "coc"
                         input-name: "Organization[coc]"
@@ -166,7 +176,8 @@ context:
                         button-role: "button"
 i18n:
   'de-DE':
-    'registration.step-3.fieldset': "Organisatorisches"
+    'registration.step-3.fieldset': "Zwecks der Organisation"
+    'registration.step-3.article.slots': "<p>Wir möchten bis zu 6 Slots mit je 2 Std. Spielzeit anbieten. Das soll den Spieler helfen verschiedene Spiele sehr einfach zu testen. Bitte wähle deine gewünschten Gameslots:</p>"
     'registration.step-3.fieldset.time1': "Nachmittag"
     'registration.step-3.fieldset.time2': "Abend"
     'registration.step-3.fieldset.time3': "Nacht"
@@ -179,10 +190,11 @@ i18n:
     'registration.step-3.input.slot.error': "Bitte wähle mindestens einen Spiel Termin aus"
     'registration.step-3.button.previous': "Zurück zur vorherigen Form"
     'registration.step-3.button.next': "Registrierung abschliessen"
-    'registration.step-3.input.coc': "Ich habe den <a href='./code-of-conduct.html'>Code of Conduct</a> gelesen und aktzeptiere diesen"
+    'registration.step-3.input.coc': "Ich habe den <a href='./code-of-conduct.html' target='blank'>Code of Conduct</a> gelesen und aktzeptiere diesen"
     'registration.step-3.input.coc.error': "Bitte aktzeptiere unseren Code of Conduct"
   'en-EN':
-    'registration.step-3.fieldset': "Organization informations"
+    'registration.step-3.fieldset': "About the Organizations"
+    'registration.step-3.article.slots': "<p>We like to offer up to 6 Slots each with 2 hours of game time. This should help Gamers to try different Games very easily. Please choose your prefered game slots:</p>"
     'registration.step-3.fieldset.time1': "Afternoon"
     'registration.step-3.fieldset.time2': "Evening"
     'registration.step-3.fieldset.time3': "Night"
@@ -195,6 +207,6 @@ i18n:
     'registration.step-3.input.slot.error': "Please select at least one game slot"
     'registration.step-3.button.previous': "Back to previous form"
     'registration.step-3.button.next': "Finish registration"
-    'registration.step-3.input.coc': "I have read and accept the <a href='./code-of-conduct.html'>Code of Conduct</a>"
+    'registration.step-3.input.coc': "I have read and accept the <a href='./code-of-conduct.html' target='blank'>Code of Conduct</a>"
     'registration.step-3.input.coc.error': "Please accept our Code of Conduct"
 

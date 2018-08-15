@@ -3,6 +3,18 @@ article {
     p {
       font-size: 2rem;
       font-weight: 500;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  main {
+    p {
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }

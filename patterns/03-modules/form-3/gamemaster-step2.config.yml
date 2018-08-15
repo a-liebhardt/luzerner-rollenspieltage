@@ -11,9 +11,19 @@ context:
       form-items:
         -
           fieldset:
-            fieldset-legend: "Game informations"
+            fieldset-legend: "Informations to your Game"
             fieldset-legend-i18n: "registration.step-2.fieldset"
             fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12 form-group"
+                      article:
+                        article-hide-header: true
+                        article-body: "<p>Please share some information about the game you like to play. Whats the name? What is it about? What may the gamer expect?</p>"
+                        article-body-i18n: "registration.step-2.article.game"
+                        article-hide-footer: true
               -
                 group-row:
                   -
@@ -70,11 +80,21 @@ context:
                 group-row:
                   -
                     group-wrapper:
+                      group-wrapper-class: "col-m-12 form-group"
+                      article:
+                        article-hide-header: true
+                        article-body: "<p>Please select:</p>"
+                        article-body-i18n: "registration.step-2.article.opts"
+                        article-hide-footer: true
+              -
+                group-row:
+                  -
+                    group-wrapper:
                       group-wrapper-class: "col-xs-6 col-m-3"
                       input:
                         label:
                           label-for: "game-opt-1"
-                          label-text: "Is Fantasy"
+                          label-text: "For Beginners"
                           label-text-i18n: "registration.step-2.input.opt.1"
                         input-id: "game-opt-1"
                         input-name: "Game[opt-1]"
@@ -87,7 +107,7 @@ context:
                       input:
                         label:
                           label-for: "game-opt-2"
-                          label-text: "Is SciFi"
+                          label-text: "For Kids"
                           label-text-i18n: "registration.step-2.input.opt.2"
                         input-id: "game-opt-2"
                         input-name: "Game[opt-2]"
@@ -100,77 +120,10 @@ context:
                       input:
                         label:
                           label-for: "game-opt-3"
-                          label-text: "Is Noire"
+                          label-text: "Adults only"
                           label-text-i18n: "registration.step-2.input.opt.3"
                         input-id: "game-opt-3"
                         input-name: "Game[opt-3]"
-                        input-class: ""
-                        input-type: "checkbox"
-                        input-role: "checkbox"
-                  -
-                    group-wrapper:
-                      group-wrapper-class: "col-xs-6 col-m-3"
-                      input:
-                        label:
-                          label-for: "game-opt-4"
-                          label-text: "Is Different"
-                          label-text-i18n: "registration.step-2.input.opt.4"
-                        input-id: "game-opt-4"
-                        input-name: "Game[opt-4]"
-                        input-class: ""
-                        input-type: "checkbox"
-                        input-role: "checkbox"
-              -
-                group-row:
-                  -
-                    group-wrapper:
-                      group-wrapper-class: "col-xs-6 col-m-3"
-                      input:
-                        label:
-                          label-for: "game-opt-5"
-                          label-text: "For Beginners"
-                          label-text-i18n: "registration.step-2.input.opt.5"
-                        input-id: "game-opt-5"
-                        input-name: "Game[opt-5]"
-                        input-class: ""
-                        input-type: "checkbox"
-                        input-role: "checkbox"
-                  -
-                    group-wrapper:
-                      group-wrapper-class: "col-xs-6 col-m-3"
-                      input:
-                        label:
-                          label-for: "game-opt-6"
-                          label-text: "For Veterans"
-                          label-text-i18n: "registration.step-2.input.opt.6"
-                        input-id: "game-opt-6"
-                        input-name: "Game[opt-6]"
-                        input-class: ""
-                        input-type: "checkbox"
-                        input-role: "checkbox"
-                  -
-                    group-wrapper:
-                      group-wrapper-class: "col-xs-6 col-m-3"
-                      input:
-                        label:
-                          label-for: "game-opt-7"
-                          label-text: "For Kids only"
-                          label-text-i18n: "registration.step-2.input.opt.7"
-                        input-id: "game-opt-7"
-                        input-name: "Game[opt-7]"
-                        input-class: ""
-                        input-type: "checkbox"
-                        input-role: "checkbox"
-                  -
-                    group-wrapper:
-                      group-wrapper-class: "col-xs-6 col-m-3"
-                      input:
-                        label:
-                          label-for: "game-opt-8"
-                          label-text: "For Adults only"
-                          label-text-i18n: "registration.step-2.input.opt.8"
-                        input-id: "game-opt-8"
-                        input-name: "Game[opt-8]"
                         input-class: ""
                         input-type: "checkbox"
                         input-role: "checkbox"
@@ -205,35 +158,29 @@ context:
                         button-role: "button"
 i18n:
   'de-DE':
-    'registration.step-2.fieldset': "Spiel Daten"
+    'registration.step-2.fieldset': "Daten zu deinem Spiel"
+    'registration.step-2.article.game': "<p>Bitte teile ein paar Information über das Spiel mit das du gerne spielen möchtest. Was ist der Name? Um was geht es? Was kann der Spieler erwarten?</p>"
     'registration.step-2.input.title': "Titel deines Spiels"
     'registration.step-2.input.title.error': "Bitte trage einen Spieltitel ein"
     'registration.step-2.input.description': "Eine kurze Spielbeschreibung"
     'registration.step-2.input.gametype': "Mit welchem Ruleset wirst du spielen? D&D, ShadowRun, Fade, ..."
-    'registration.step-2.input.opt.1': "Fantasy"
-    'registration.step-2.input.opt.2': "SciFi"
-    'registration.step-2.input.opt.3': "Noire"
-    'registration.step-2.input.opt.4': "Etwas anderes"
-    'registration.step-2.input.opt.5': "Für Anfänger"
-    'registration.step-2.input.opt.6': "Für Fortgeschrittene"
-    'registration.step-2.input.opt.7': "Nur für Kinder"
-    'registration.step-2.input.opt.8': "Nur für Erwachsene"
+    'registration.step-2.article.opts': "<p>Bitte wählen</p>"
+    'registration.step-2.input.opt.1': "Einsteigerfreundlich"
+    'registration.step-2.input.opt.2': "Kinderfreundlich"
+    'registration.step-2.input.opt.3': "nur für Erwachsene"
     'registration.step-2.button.previous': "Zurück zur vorherigen Form"
     'registration.step-2.button.next': "Spiel eintragen"
   'en-EN':
-    'registration.step-2.fieldset': "Game informations"
+    'registration.step-2.fieldset': "Informations to your Game"
+    'registration.step-2.article.game': "<p>Please share some information about the game you like to play. Whats the name? What is it about? What may the gamer expect?</p>"
     'registration.step-2.input.title': "Title of your game"
     'registration.step-2.input.title.error': "Please enter a game name"
     'registration.step-2.input.description': "A short description of your game"
     'registration.step-2.input.gametype': "Please enter ruleset you will play: D&D, ShadowRun, Fade, ..."
-    'registration.step-2.input.opt.1': "Is Fantasy"
-    'registration.step-2.input.opt.2': "Is SciFi"
-    'registration.step-2.input.opt.3': "Is Noire"
-    'registration.step-2.input.opt.4': "Is Different"
-    'registration.step-2.input.opt.5': "For Beginners"
-    'registration.step-2.input.opt.6': "For Veterans"
-    'registration.step-2.input.opt.7': "For Kids only"
-    'registration.step-2.input.opt.8': "For Adults only"
+    'registration.step-2.article.opts': "<p>Please select</p>"
+    'registration.step-2.input.opt.1': "For Beginners"
+    'registration.step-2.input.opt.2': "For Kids"
+    'registration.step-2.input.opt.3': "Adults only"
     'registration.step-2.button.previous': "Back to previous form"
     'registration.step-2.button.next': "Submit your game"
 
