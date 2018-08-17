@@ -7,7 +7,7 @@ import Spinner from './02-ui/spinner/spinner-matrix';
 import Formular from './02-ui/formular/default';
 import Form from './02-ui/formular/form';
 import Map from './02-ui/map/map';
-// import Fullpage from './02-ui/pagescroller/fullpage';
+import Pagescroller from './02-ui/pagescroller/pagescroller';
 import Translation from './02-ui/translation/translation';
 // Modules
 // import Header from './03-modules/header/header';
@@ -47,7 +47,7 @@ ready(() => {
   Layout.init();
   Lightbox.init();
   Spinner.init();
-  // Fullpage.init();
+  Pagescroller.init();
 
   // Init pattern scripts
   Formular.init();

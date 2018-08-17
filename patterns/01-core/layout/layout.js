@@ -5,7 +5,7 @@ exports.init = (() => {
     let value;
 
     const refreshValue = () => {
-      value = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content').replace(/'/g, '');
+      value = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content').replace(/[^a-zA-Z0-9-]/g, '');
     };
     refreshValue();
 

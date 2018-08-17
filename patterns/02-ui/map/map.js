@@ -388,6 +388,7 @@ exports.init = (() => {
         }
         return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
       }
+      return false;
     };
 
     const addClass = (el, className) => {
