@@ -8,32 +8,62 @@ Use [yarn](https://yarnpkg.com) as your package manager, or npm.
     $ git clone https://github.com/a-liebhardt/luzerner-rollenspieltage.git
     $ cd luzerner-rollenspieltage
 
-    # Use node version defined in .nvrmc
-    # If you use nvm as node version manager
+### Install
+
+Use node version defined in .nvrmc, if you use nvm as node version manager:
+
     $ nvm use
 
-    # To install yarn
+To install yarn:
+
     $ npm install -g yarn
 
-    # Install dependencies (with yarn)
+Install dependencies (with yarn):
+
     $ yarn install
 
-    # Install dev dependencies (with npm)
+Or to install dev dependencies (with npm):
+
     $ npm install --only=dev
 
-    # Run to build all files (dev mode) and start a local server
+Last on root ./ you have to create a secrets.json manually and add key/value couples like this:
+
+    {
+      "replacements": [
+        { "search": "{KEY}", "replace": "XXX" },
+        { "search": "{KEY}", "replace": "XXX" },
+        ...
+      ]
+    }
+
+It will replace critical variables on build automatically. Variables in use:
+- {GOOGLE_MAP_APIKEY} -> /patterns/02-ui/map/map
+- {PHP_MAILER_HOST} -> /patterns/static_docker/src/form
+- {PHP_MAILER_USER} -> /patterns/static_docker/src/form
+- {PHP_MAILER_PASSWORD} -> /patterns/static_docker/src/form
+
+### Develop
+
+Run to build all files (dev mode) and start a local server:
+
     $ yarn start
 
-    # Run to generate a production ready styleguide build (root ./build)
+### Deploy
+
+Generate a production ready styleguide build (root ./build):
+
     $ yarn build
 
-    # Build the files for release.
+Or to build the release (with npm):
+
     $ npm run build
 
-    # Run to generate a production ready docker build (root ./docker)
+To generate a production ready docker build (root ./docker):
+
     $ yarn build:docker
 
-    # Deploy the files from current branch to gh-pages (after build).
+Deploy the files from current branch to gh-pages (after build):
+
     $ npm run deploy:github gh-pages
 
 
