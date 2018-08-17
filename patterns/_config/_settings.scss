@@ -89,14 +89,4 @@ $color--purple-80: rgb(51, 0, 51);
 
 // TYPOGRAPHY
 // ----------------------------------------
-$base--font-size: 10px; /* stylelint-disable-line unit-whitelist  */
-// For more information see: https://discourse.wicg.io/t/more-font-weight-names/892
-$base--font-weight-thin: 100;
-$base--font-weight-extralight: 200;
-$base--font-weight-light: 300;
-$base--font-weight-regular: 400;
-$base--font-weight-medium: 500;
-$base--font-weight-semibold: 600;
-$base--font-weight-bold: 700;
-$base--font-weight-extrabold: 800;
-$base--font-weight-black: 900;
+$document--font-size: 10px; /* stylelint-disable-line unit-whitelist  */

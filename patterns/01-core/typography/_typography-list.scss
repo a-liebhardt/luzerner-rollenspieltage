@@ -1,0 +1,53 @@
+ul,
+ol {
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 1.6em;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: $font--weight-light;
+
+  li {
+    margin-bottom: 1.2rem;
+  }
+
+  ul,
+  ol {
+    margin-top: 1.2rem;
+    margin-left: 0;
+  }
+}
+
+ul:not([role]) {
+  list-style: none;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: '\2013';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.6em;
+    }
+  }
+}
+
+ol:not([role]) {
+  list-style: none;
+  counter-reset: ol-counter;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: counter(ol-counter) '.';
+      counter-increment: ol-counter;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.6em;
+    }
+  }
+}

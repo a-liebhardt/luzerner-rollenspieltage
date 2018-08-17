@@ -1,0 +1,44 @@
+q {
+  font-weight: $font--weight-bold;
+
+  &::before {
+    content: '\00ab';
+  }
+
+  &::after {
+    content: '\00bb';
+  }
+}
+
+blockquote {
+  margin: 0 0 1em;
+
+  p {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-family: 'Gloria Hallelujah', sans-serif;
+    font-weight: $font--weight-regular;
+    position: relative;
+
+    &::before {
+      content: '\00ab';
+      font-size: 1em;
+      display: inline-block;
+      padding-right: 0.2em;
+    }
+
+    &::after {
+      content: '\00bb';
+      font-size: 1em;
+      display: inline-block;
+      padding-left: 0.2em;
+    }
+  }
+
+  footer {
+    font-size: 1.4rem;
+    font-weight: $font--weight-light;
+    width: 75%;
+    color: $color--black-60;
+  }
+}

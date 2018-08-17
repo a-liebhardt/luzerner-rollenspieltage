@@ -3,5 +3,6 @@
 Here is a list of layout classes, for general styling.
 
 ### body
-- <code>.viewport-freeze</code> Disable body scroll property
-- <code>.overlay</code> Show a overlay
+- `.viewport-freeze` Disable body scroll property
+- `.overlay` Show a overlay
+- `.align-left`, `.align-center`, `.align-right` Overwrite content alignment

@@ -1,0 +1,79 @@
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: $font--weight-semibold;
+}
+
+strong {
+  font-weight: $font--weight-bold;
+}
+
+span,
+label {
+  font-family: $font--family;
+  font-weight: inherit;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-rendering: auto;
+}
+
+// All links with a role
+a[role] {
+  color: inherit;
+  font-weight: $font--weight-regular;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: $font--family;
+  font-weight: $font--weight-regular;
+  margin: 0 0 1em;
+  text-rendering: auto;
+
+  // All standard links with no special role
+  a:not([role]) {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+pre {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: $font--family;
+  font-weight: $font--weight-regular;
+  margin: 0 0 1em;
+}
+
+code {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: $font--family;
+  font-weight: $font--weight-regular;
+  margin: 0 0 1em;
+}
+
+hr {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  border: 0;
+  border-top: 0.1rem solid $color--black-20;
+  margin: 1em 0;
+}
+
+small {
+  font-size: 0.7em;
+}
