@@ -3,10 +3,10 @@ context:
   step-2:
     form:
       form-name: "Game"
-      form-action: "http://localhost:3000/rest/form.json"
-      form-method: "get"
-      # form-action: "form.php"
-      # form-method: "post"
+      # form-action: "http://localhost:3000/rest/form.json"
+      # form-method: "get"
+      form-action: "form.php"
+      form-method: "post"
       form-class: "step-2 registration-step"
       form-items:
         -
