@@ -6,6 +6,7 @@ import Lightbox from './02-ui/lightbox/lightbox';
 import Spinner from './02-ui/spinner/spinner-matrix';
 import Formular from './02-ui/formular/default';
 import Form from './02-ui/formular/form';
+import Selector from './02-ui/formular-items/selector';
 import Map from './02-ui/map/map';
 import Pagescroller from './02-ui/pagescroller/pagescroller';
 import Translation from './02-ui/translation/translation';
@@ -52,6 +53,7 @@ ready(() => {
   // Init pattern scripts
   Formular.init();
   Form.init();
+  Selector.init();
   Map.init();
   Translation.init();
   // Header.init();
