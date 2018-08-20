@@ -193,6 +193,7 @@ const docker = function (args, done) {
   const root = 'docker/';
   const dockerWWW = `${root}src/`;
   const statuses = ['published'];
+  const secrets = require(path.join(__dirname, 'secrets.json'));
 
   const clonePages = (pageBody) => {
     let files = 0;
@@ -206,6 +207,9 @@ const docker = function (args, done) {
             htmlBody = htmlBody.replace(/[\s\t\n]{1,}/g, ' ');
             htmlBody = htmlBody.replace(/\> \</g, '><');
             htmlBody = htmlBody.replace(/<!--[^\[](.*?)-->/g, '');
+            secrets.replacements.production.forEach((secret) => {
+              htmlBody = htmlBody.replace(new RegExp(secret.search, 'g'), secret.replace);
+            });
             // Write file to dest
             fs.writeFile(path.join(__dirname, `${dockerWWW}${item.handle}.html`), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
               if (err) throw err;

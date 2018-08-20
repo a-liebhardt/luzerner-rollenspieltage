@@ -5,6 +5,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 const secrets = require(path.join(__dirname, 'secrets.json'));
 
 module.exports = () => {
+  const secretsConf = typeof secrets.replacements[process.env.NODE_ENV] === 'object' ? secrets.replacements[process.env.NODE_ENV] : secrets.replacements.development;
   let config = {};
 
   config = {
@@ -66,7 +67,7 @@ module.exports = () => {
           test: /\.(js|css|yml|html|php)$/,
           loader: 'string-replace-loader',
           options: {
-            multiple: secrets.replacements
+            multiple: secretsConf
           }
         },
       ],
@@ -75,11 +76,11 @@ module.exports = () => {
       extensions: ['.js'],
     },
     plugins: [
-      new ExtractTextPlugin({ // define where to save the file
+      new ExtractTextPlugin({ // Define where to save the file
         filename: 'public/[name].bundle.css',
         allChunks: true,
       }),
-      new CopyWebpackPlugin([
+      new CopyWebpackPlugin([ // Copy to build
         { from: 'patterns/static_www/**/*', to: '../', flatten: true },
         { from: 'patterns/vendor/*', to: '../vendor/', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
@@ -88,7 +89,7 @@ module.exports = () => {
         context: __dirname,
         copyUnmodified: true,
       }),
-      new CopyWebpackPlugin([
+      new CopyWebpackPlugin([ // Copy docker setup
         {
           from: '**/*',
           to: path.join(__dirname, '/docker'),
@@ -96,7 +97,7 @@ module.exports = () => {
           context: path.join(__dirname, '/patterns/static_docker'),
           transform (content, path) {
             content = content.toString();
-            secrets.replacements.forEach((obj) => {
+            secretsConf.forEach((obj) => {
               content = content.replace(obj.search, obj.replace);
             });
             return Promise.resolve(Buffer.from(content, 'utf8'));

@@ -26,14 +26,21 @@ Or to install dev dependencies (with npm):
 
     $ npm install --only=dev
 
-Last on root ./ you have to create a secrets.json manually and add key/value couples like this:
+Last on root ./ you have to create a secrets.json and add key/value couples for development as well as for production like this:
 
     {
-      "replacements": [
-        { "search": "{KEY}", "replace": "XXX" },
-        { "search": "{KEY}", "replace": "XXX" },
-        ...
-      ]
+      "replacements": {
+        "development": [
+          { "search": "{KEY}", "replace": "XXX" },
+          { "search": "{KEY}", "replace": "XXX" },
+          ...
+        ],
+        "production": [
+          { "search": "{KEY}", "replace": "XXX" },
+          { "search": "{KEY}", "replace": "XXX" },
+          ...
+        ]
+      }
     }
 
 It will replace critical variables on build automatically. Variables in use:
@@ -41,6 +48,9 @@ It will replace critical variables on build automatically. Variables in use:
 - {PHP_MAILER_HOST} -> /patterns/static_docker/src/form
 - {PHP_MAILER_USER} -> /patterns/static_docker/src/form
 - {PHP_MAILER_PASSWORD} -> /patterns/static_docker/src/form
+- {PHP_MAILER_PASSWORD} -> /patterns/static_docker/src/form
+- action="http://localhost:3000/rest/form.json" -> /patterns/03-modules/form-1,-2,-3
+- method="get" -> /patterns/03-modules/form-1,-2,-3
 
 ### Develop
 
