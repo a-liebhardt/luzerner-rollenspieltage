@@ -1,0 +1,8 @@
+status: wip
+context:
+  panel0-config: '@content-panel0'
+  panel1-config: '@content-panel1'
+  panel2-config: '@content-panel2'
+  panel3-config: '@content-panel3'
+  panel4-config: '@content-panel4b'
+  panel5-config: '@content-panel5'

@@ -13,10 +13,12 @@ import Translation from './02-ui/translation/translation';
 // Modules
 // import Header from './03-modules/header/header';
 import Panel4 from './03-modules/content-4/content-panel4';
+import Panel4b from './03-modules/content-4b/content-panel4b';
 import Panel5 from './03-modules/content-5/content-panel5';
 import Form1 from './03-modules/form-1/contact';
 import Form2 from './03-modules/form-2/keep-me-posted';
 import Form3 from './03-modules/form-3/gamemaster';
+import Form4 from './03-modules/form-4/player';
 
 // Custom scripts
 // https://www.npmjs.com/package/css-element-queries
@@ -58,8 +60,10 @@ ready(() => {
   Translation.init();
   // Header.init();
   Panel4.init();
+  Panel4b.init();
   Panel5.init();
   Form1.init();
   Form2.init();
   Form3.init();
+  Form4.init();
 });

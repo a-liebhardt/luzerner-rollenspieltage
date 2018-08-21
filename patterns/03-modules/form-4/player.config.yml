@@ -1,0 +1,11 @@
+status: wip
+context:
+  config-step-1: '@player-step1'
+  config-step-2: '@player-step2'
+  config-step-3: '@player-step3'
+i18n:
+  'de-DE':
+    'registration.form.request.error': "Deine Registrierung ist fehlgeschlagen. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Bitte kontaktiere uns hier</a>."
+  'en-EN':
+    'registration.form.request.error': "Your registration request failed. <br /><a href=\"mailto:mail@rollenspieltag.ch\">Please contact us here</a>."
+

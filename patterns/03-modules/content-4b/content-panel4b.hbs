@@ -1,0 +1,38 @@
+<div class="row row--center stage panel4b">
+  <a id="content-4" pagescroller></a>
+  <div class="col-l-12">
+    <section class="panel data">
+      {{> @article panel4-article-config}}
+    </section>
+  </div>
+  <div class="col-l-6">
+    <section class="flipper">
+      <div class="flip-front">
+        <!-- front content -->
+        {{> @icon gamer}}
+        {{> @article gamer-article-config}}
+        {{> @label keep-me-posted-label-config}}
+      </div>
+      <div class="flip-back">
+        <!-- back content -->
+        {{> @label close-config}}
+        {{> @player player-config}}
+      </div>
+    </section>
+  </div>
+  <div class="col-l-6">
+    <section class="flipper">
+      <div class="flip-front">
+        <!-- front content -->
+        {{> @icon gamemaster}}
+        {{> @article gamemaster-article-config}}
+        {{> @label gamemaster-label-config}}
+      </div>
+      <div class="flip-back">
+        <!-- back content -->
+        {{> @label close-config}}
+        {{> @gamemaster gamemaster-config}}
+      </div>
+    </section>
+  </div>
+</div>

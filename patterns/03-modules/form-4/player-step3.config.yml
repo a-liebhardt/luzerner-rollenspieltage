@@ -1,0 +1,19 @@
+status: published
+context:
+  step-3:
+    panel-class: "step-3 registration-step"
+    article:
+      article-hide-small: true
+      article-title: "Welcome Player"
+      article-title-i18n: "registration.player.step-3.article.title"
+      article-title-tag: "h3"
+      article-subtitle: "Thank you very much for helping us making this event a special one for every role player. <br />We will check your registration and come back to you in the next couple of days.<br />Have a good time, till we meet again.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+      article-subtitle-i18n: "registration.player.step-3.article.subtitle"
+i18n:
+  'de-DE':
+    'registration.player.step-3.article.title': "Herzlich Willkommen als Spieler"
+    'registration.player.step-3.article.subtitle': "Vielen Dank dafür, dass du uns dabei hilfst diesen Event zu etwas besonderen für alle Rollenspieler zu machen. <br />Wir prüfen deine Registrierung und würden uns in den nächsten Tagen wieder bei dir melden. <br /><br />Beste Grüsse<br />Dein Luzerner Rollenspieltage Team"
+  'en-EN':
+    'registration.player.step-3.article.title': "Welcome Player"
+    'registration.player.step-3.article.subtitle': "Thank you very much for helping us making this event a special one for every role player. <br />We will check your registration and come back to you in the next couple of days.<br />Have a good time, till we meet again.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+

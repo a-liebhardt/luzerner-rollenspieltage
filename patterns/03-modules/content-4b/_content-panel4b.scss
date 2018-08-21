@@ -1,0 +1,131 @@
+.panel4b {
+  min-height: 50vh;
+  padding: 4rem 0 8rem;
+
+  @media screen and (min-width: #{$mq-l}) {
+    min-height: 100vh;
+  }
+
+  a[pagescroller] {
+    position: absolute;
+    margin: 1rem 0 0 2rem;
+    padding: 2px;
+  }
+
+  .flipper {
+    padding: 0 4rem 4rem;
+  }
+
+  @media screen and (min-width: #{$mq-l}) {
+    padding: 0;
+    height: 100%;
+
+    [class*='col-'] {
+      height: 100%;
+    }
+
+    .flipper {
+      padding: 4rem 4rem 12rem;
+    }
+  }
+
+  .form-button {
+    @include btn-border-drawing($color--cyan-40, $color--yellow-20, 0.4rem, bottom, left, 100ms);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    padding: 1.2rem 4.2rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid transparent;
+    outline: none;
+
+    label {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    &:active {
+      border: 0.2rem solid $color--cyan-40;
+    }
+  }
+
+  article {
+    &.headline {
+      position: relative;
+      height: 16rem;
+
+      header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: $color--cyan-40;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: 7rem;
+          color: $color--black-5;
+          text-shadow: 0 0 0.8rem $color--black-80;
+        }
+      }
+    }
+  }
+
+  i.icon {
+    &.gamer,
+    &.gamemaster {
+      svg {
+        width: 40%;
+        height: auto;
+        min-width: 24rem;
+        max-width: 46rem;
+      }
+    }
+
+    &.gamer {
+      svg {
+        fill: $color--black-20;
+      }
+    }
+  }
+
+  & > .col-l-6 {
+    &.is-flipped {
+      .flipper {
+        padding: 0 0 4rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: #{$mq-l}) {
+    & > .col-l-6 {
+      &.is-flipped {
+        width: 100%;
+        max-width: 100%;
+
+        .flipper {
+          padding: 0 4rem 4rem;
+        }
+      }
+
+      &.is-not-flipped {
+        position: absolute;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

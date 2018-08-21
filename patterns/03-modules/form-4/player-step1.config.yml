@@ -1,0 +1,85 @@
+status: published
+context:
+  step-1:
+    form:
+      form-name: "User"
+      form-action: "http://localhost:3000/rest/form.json"
+      form-method: "get"
+      form-class: "step-1 registration-step active"
+      form-items:
+        -
+          fieldset:
+            fieldset-legend: "Player informations"
+            fieldset-legend-i18n: "registration.player.step-1.fieldset"
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "player-name"
+                          label-text: "Your Firstname, Lastname"
+                          label-text-i18n: "registration.player.step-1.input.name"
+                        input-id: "player-name"
+                        input-name: "User[name]"
+                        input-placeholder: "Your Firstname, Lastname"
+                        input-i18n: "registration.player.step-1.input.name"
+                        input-required: true
+                        input-class: ""
+                        # Don't need for text > input-type: "text"
+                        input-role: "input"
+                        input-autocomplete: "name"
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12"
+                      input:
+                        label:
+                          label-for: "player-email"
+                          label-text: "Your Email"
+                          label-text-i18n: "registration.player.step-1.email.name"
+                        input-id: "player-email"
+                        input-name: "User[email]"
+                        input-placeholder: "Your Email"
+                        input-i18n: "registration.player.step-1.email.name"
+                        input-required: true
+                        input-class: ""
+                        input-type: "email"
+                        input-role: "input"
+                        input-autocomplete: "email"
+        -
+          fieldset:
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      group-wrapper-class: "col-m-12 align-center"
+                      button:
+                        label:
+                          label-text: "Register as Player"
+                          label-text-i18n: "registration.player.step-1.button.next"
+                        button-class: "submit-group"
+                        button-type: "submit"
+                        button-role: "button"
+i18n:
+  'de-DE':
+    'registration.player.step-1.fieldset': "Spieler Daten"
+    'registration.player.step-1.input.name': "Dein Vorname, Nachname"
+    'registration.player.step-1.input.name.error': "Bitte trage deinen Namen ein"
+    'registration.player.step-1.email.name': "Deine E-Mail"
+    'registration.player.step-1.input.email.error.1': "Bitte trage deine E-Mail ein"
+    'registration.player.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
+    'registration.player.step-1.button.next': "Als Spieler registrieren"
+  'en-EN':
+    'registration.player.step-1.fieldset': "Player informations"
+    'registration.player.step-1.input.name': "Your Firstname, Lastname"
+    'registration.player.step-1.input.name.error': "Please enter your Name"
+    'registration.player.step-1.email.name': "Your Email"
+    'registration.player.step-1.input.email.error.1': "Please enter your Email"
+    'registration.player.step-1.input.email.error.2': "Email doesn't look correct"
+    'registration.player.step-1.button.next': "Register as Player"
+
