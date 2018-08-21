@@ -1,13 +1,25 @@
 .panel3 {
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 4rem 0 8rem;
+
+  @media screen and (min-width: #{$mq-l}) {
+    min-height: 100vh;
+  }
+
+  a[pagescroller] {
+    position: absolute;
+    margin: 1rem 0 0 2rem;
+    padding: 2px;
+  }
 
   .panel.data {
     padding: 0 4rem 4rem;
+    min-height: 100vh;
   }
 
   .panel.map {
     padding: 0 0 4rem;
+    min-height: 100vh;
   }
 
   @media screen and (min-width: #{$mq-l}) {

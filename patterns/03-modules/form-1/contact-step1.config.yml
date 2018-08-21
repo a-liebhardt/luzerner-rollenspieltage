@@ -72,6 +72,7 @@ context:
                         textarea-name: "ContactUs[message]"
                         textarea-placeholder: "Your message"
                         textarea-i18n: "contact.step-1.input.message"
+                        textarea-required: true
                         textarea-class: ""
                         textarea-role: "textarea"
         -
@@ -98,6 +99,7 @@ i18n:
     'contact.step-1.input.email.error.1': "Bitte trage deine E-Mail ein"
     'contact.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
     'contact.step-1.input.message': "Deine Nachricht"
+    'contact.step-1.input.message.error': "Bitte trage deine Nachricht ein"
     'contact.step-1.button.next': "Sende uns deine Nachricht"
   'en-EN':
     # 'contact.step-1.article.body': "<p>To send as a message please enter your name and email. Those fields are mandatory.</p>"
@@ -107,5 +109,6 @@ i18n:
     'contact.step-1.input.email.error.1': "Please enter your Email"
     'contact.step-1.input.email.error.2': "Email doesn't look correct"
     'contact.step-1.input.message': "Your message"
+    'contact.step-1.input.message.error': "Please enter your Message"
     'contact.step-1.button.next': "Send us your message"
 

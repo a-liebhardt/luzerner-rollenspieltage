@@ -15,6 +15,13 @@ exports.init = (() => {
   });
 
   /* eslint-disable */
+  // window.formRules.setValidator('textareaValue', function(value, options, key, attributes) {
+  //   if (value !== null && value.length) return;
+  //   return window.formRules.getMessage('contact.step-1.input.message.error', 'Please enter your Messag')
+  // });
+  /* eslint-enable */
+
+  /* eslint-disable */
   window.formRules.setRule({
     'ContactUs': {
       'ContactUs[name]': {
@@ -34,6 +41,13 @@ exports.init = (() => {
         email: {
           // message: '^Email doesn\'t look correct',
           message: window.formRules.getMessage('contact.step-1.input.email.error.2', 'Email doesn\'t look correct')
+        },
+      },
+      'ContactUs[message]': {
+        // Name is required
+        presence: {
+          // message: '^Please enter your Message',
+          message: window.formRules.getMessage('contact.step-1.input.message.error', 'Please enter your Message')
         },
       },
     },

@@ -7,9 +7,13 @@
   label {
     padding: 0.8rem 1.6rem 0;
     display: inline-block;
-    opacity: 0;
     transition: all 100ms ease-in-out;
     order: -1;
+
+    strong {
+      opacity: 0;
+      transition: all 100ms ease-in-out;
+    }
   }
 
   textarea {
@@ -37,13 +41,30 @@
 
   &.has-content {
     label {
-      opacity: 1;
       padding: 0.8rem 1.6rem 0;
+
+      strong {
+        opacity: 1;
+      }
     }
 
     textarea {
       transform: translateY(0);
       padding: 0.8rem 1rem 1.2rem 1.6rem;
+    }
+  }
+
+  textarea[required] + label {
+    position: relative;
+
+    &::after {
+      content: '*';
+      display: inline-block;
+      position: absolute;
+      top: 2rem;
+      left: -0.8rem;
+      font-size: 3rem;
+      color: $color--black-20;
     }
   }
 

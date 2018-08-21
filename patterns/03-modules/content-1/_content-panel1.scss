@@ -1,8 +1,18 @@
 .panel1 {
+  min-height: 50vh;
   background: $color--black-10;
   position: relative;
-  height: 100vh;
   overflow: hidden;
+
+  @media screen and (min-width: #{$mq-l}) {
+    min-height: 100vh;
+  }
+
+  a[pagescroller] {
+    position: absolute;
+    margin: 1rem 0 0 2rem;
+    padding: 2px;
+  }
 
   figure.emotion {
     width: 100%;
