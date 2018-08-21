@@ -1,86 +1,148 @@
 $breakpoints: xs, s, m, l, xl, xxl;
 $sizes: #{$mq-xs}, #{$mq-s}, #{$mq-m}, #{$mq-l}, #{$mq-xl}, #{$mq-xxl};
 $grid-gap: 1rem;
+$grid-demo-color: magenta;
+$grid-demo-height: 6.6rem;
+$stage-maxWidth: $page-maxWidth + $grid-gap + $grid-gap;
 
-.container {
-  width: 100%;
-  max-width: $page-maxWidth;
-  margin: 0 auto;
+.stage {
+	max-width: $page-maxWidth;
 }
 
 .row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	width: calc(100% + #{$grid-gap});
+	margin-left: -$grid-gap;
 
-  [class*='col-'] {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    transition: max-width 300ms ease-in-out;
+	.row {
+		margin-top: -$grid-gap;
+	}
 
-    &::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-  }
+	&.stage {
+		max-width: $stage-maxWidth;
+		padding: 0 $grid-gap;
+	}
 
-  @for $i from 1 through length($breakpoints) {
-    @media screen and (min-width: nth($sizes, $i)) {
-      $mq: nth($breakpoints, $i);
+	&.row--start {
+		margin-top: -$grid-gap;
+	}
 
-      .col-#{$mq}-0 {
-        width: 0;
-        max-width: 0;
-        overflow: hidden;
-      }
+	&.row--end {
+		margin-bottom: $grid-gap;
+	}
 
-      @for $j from 1 through 12 {
-        .col-#{$mq}-#{$j} {
-          max-width: calc(100% / 12 * #{$j});
-        }
-      }
-    }
-  }
+	// Align left
+	&.row--left {
+		margin: 0 auto 0 -#{$grid-gap};
+	}
+
+	// Align center
+	&.row--center {
+		margin-left: calc(50% - (#{$grid-gap} / 2));
+		transform: translateX(-50%);
+	}
+
+	// Align right
+	&.row--right {
+		margin-left: 100%;
+		transform: translateX(-100%);
+	}
+
+	// Align columns left
+	&.row--col-left {
+		text-align: left;
+	}
+
+	// Center columns
+	&.row--col-center {
+		text-align: center;
+	}
+
+	// Align columns right
+	&.row--col-right {
+		text-align: right;
+	}
+
+	[class*='col-'] {
+		display: inline-block;
+		vertical-align: top;
+		font-size: initial;
+		line-height: initial;
+		width: 100%;
+		max-width: 100%;
+		border-top: $grid-gap solid transparent;
+		border-left: $grid-gap solid transparent;
+
+		// If no alignent isset reset to default
+		&:not([class*='align-']) {
+			text-align: left;
+		}
+
+		// Add grid gap to any element with class row--gap-bottom
+		.row--gap-bottom {
+			border-bottom: $grid-gap solid transparent;
+		}
+	}
+
+	@for $i from 1 through length($breakpoints) {
+		@media screen and (min-width: nth($sizes, $i)) {
+			$mq: nth($breakpoints, $i);
+
+			.col-#{$mq}-0 {
+				width: 0;
+				max-width: 0;
+				overflow: hidden;
+			}
+
+			@for $j from 1 through 12 {
+				.col-#{$mq}-#{$j} {
+					max-width: calc(100% / 12 * #{$j});
+				}
+			}
+		}
+	}
 }
 
 // Make grid visible for demonstration
 .row .show-grid,
 .show-grid .row {
-  [class*='col-'] {
-    position: relative;
-    padding: 0.8rem 1.6rem;
+	[class*='col-'] {
+		position: relative;
+		min-height: $grid-demo-height;
 
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      border: 2px solid magenta;
-      text-align: center;
-      font-size: 1.4rem;
-      line-height: 1.4em;
-    }
+		&::before {
+			content: attr(data-grid-example-text);
+			display: table-cell;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0.2rem solid $grid-demo-color;
+			background: rgba($grid-demo-color, 0.2);
+			text-align: center;
+			font-size: 1rem;
+			line-height: 1.6;
+			padding: 0.8rem 1.6rem;
+		}
 
-    i {
-      white-space: nowrap;
-    }
+		i {
+			white-space: nowrap;
+		}
 
-    @for $i from 1 through length($breakpoints) {
-      @media screen and (min-width: nth($sizes, $i)) {
-        $mq: nth($breakpoints, $i);
+		@for $i from 1 through length($breakpoints) {
+			@media screen and (min-width: nth($sizes, $i)) {
+				$mq: nth($breakpoints, $i);
 
-        .marker-#{$mq} {
-          color: magenta;
-        }
-      }
-    }
-  }
+				.marker-#{$mq} {
+					color: $grid-demo-color;
+				}
+			}
+		}
+	}
 }
