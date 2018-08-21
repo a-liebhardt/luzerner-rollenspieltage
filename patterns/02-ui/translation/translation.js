@@ -79,6 +79,7 @@ exports.init = (() => {
           if (el.hasAttribute('alt')) el.setAttribute('alt', value);
           // Handle special elements
           if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.label = value;
+          else if (['meta'].indexOf(el.nodeName.toLowerCase()) > -1) el.content = value;
           // Update html of everything which has no value
           else if (typeof el.value === 'undefined' && ['figure', 'picture', 'img'].indexOf(el.nodeName.toLowerCase()) === -1) el.innerHTML = value;
         }

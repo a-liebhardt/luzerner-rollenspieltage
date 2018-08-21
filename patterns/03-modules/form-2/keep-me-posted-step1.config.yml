@@ -70,7 +70,7 @@ context:
       article-title: "Thank you for your interest."
       article-title-i18n: "keep-me-posted.form-2.article.title"
       article-title-tag: "h1"
-      article-subtitle: "We'll keep you posted as soon as our registration for Gamers opens.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+      article-subtitle: "We'll keep you posted as soon as our registration for Player opens.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
       article-subtitle-i18n: "keep-me-posted.form-2.article.subtitle"
 i18n:
   'de-DE':
@@ -86,4 +86,4 @@ i18n:
     'keep-me-posted.step-1.email.name': "Your Email"
     'keep-me-posted.step-1.input.email.error.1': "Please enter your Email"
     'keep-me-posted.step-1.input.email.error.2': "Email doesn't look correct"
-    'keep-me-posted.step-1.button.next': "Tell me when registration for Gamers opens"
+    'keep-me-posted.step-1.button.next': "Tell me when registration for Player opens"

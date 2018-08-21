@@ -22,7 +22,7 @@ context:
   gamer-article-config:
     article:
       article-hide-small: true
-      article-title: "Gamer"
+      article-title: "Player"
       article-title-i18n: "panel4.gamer.article.title"
       article-title-tag: "h3"
       article-body: "<p>As soon as the first game masters have contacted us, we will open the registrations for games. You can then reserve your seat at the table, online or spontaneously.</p><p>Would you like to be reminded as soon as the registration is open?</p>"
@@ -35,7 +35,7 @@ context:
   gamemaster-config: '@gamemaster'
   gamemaster-label-config:
     label:
-      label-text: "Click here to register as Gamemaster"
+      label-text: "Click here to register as Game master"
       label-text-i18n: "panel4.gamemaster.text"
       label-attr: "menu-close"
       label-class: "form-button"
@@ -46,7 +46,7 @@ context:
   gamemaster-article-config:
     article:
       article-hide-small: true
-      article-title: "Gamemaster"
+      article-title: "Game master"
       article-title-i18n: "panel4.gamemaster.article.title"
       article-title-tag: "h3"
       article-body: "<p>It goes without saying, to the game masters, how grateful we are for your efforts, but we do it anyway: Thank you very much! We would like to point out, that we ask you to bring along system-specific game material for your players. We take care of writing utensils.</p><p>If you have you never run a role-playing game or feel insecure as a game master, you are welcome to contact us in advance. If there is enough demand, we will offer a small workshop. Experienced game master, will also support you on site and are there to help and advise.</p>"
@@ -70,9 +70,9 @@ i18n:
     # 'panel4.article.title': "Möchtest du als Spielleiter helfen?"
     # 'panel4.article.body': "<p>Wir suchen Spielleiter welche uns an dem Event helfen möchten. So melde dich an wenn du helfen möchtest.</p>"
     'panel4.keep-me-posted.label.text': "Haltet mich auf dem laufenden"
-    'panel4.gamemaster.text': "Registriere dich als Gamemaster"
+    'panel4.gamemaster.text': "Registriere dich als Spielleiter"
     'panel4.gamer.article.title': "Spieler"
-    'panel4.gamer.article.text': "<p>Sobald die ersten Spielleiter sich bei uns gemeldet haben, werden wir die Spielrunden aufschalten. Du kannst dich dann online oder spontan vor Ort deinen Platz am Tisch reservieren.</p><p>Möchtest du gerne erinnert werden, sobald die ersten Runden online stehen?</p>"
+    'panel4.gamer.article.text': "<p>Sobald die ersten Spielleiter sich bei uns gemeldet haben, werden wir die Spielrunden aufschalten. Du kannst dich dann online anmelden oder spontan vor Ort deinen Platz am Tisch reservieren.</p><p>Möchtest du gerne erinnert werden, sobald die ersten Runden online stehen?</p>"
     'panel4.gamemaster.article.title': "Spielleiter"
     'panel4.gamemaster.article.text': "<p>Euch Spielleleitern müssten wir nicht erklären, wie dankbar wir für euren Einsatz sind. Wir tun es trotzdem: Danke vielmals! Wir möchten euch darauf hinweisen, dass ihr bitte System-spezifisches Spielmaterial für eure Spieler mitnehmt. Für Schreibzeug sorgen wir.</p><p>Hast du noch nie geleitet oder fühlst dich noch unsicher als Spielleiter, darfst du dich gerne bei uns im Vorfeld melden. Erfahrene Spielleiter unterstützen dich vor Ort und stehen mit Rat und Tat zur Seite.</p>"
   'en-EN':
@@ -80,8 +80,8 @@ i18n:
     # 'panel4.article.title': "Like to help as Gamemaster?"
     # 'panel4.article.body': "<p>We looking for gamemaster which help us out on this event. So if you are a gamemaster und you like to help please register.</p>"
     'panel4.keep-me-posted.label.text': "Keep me posted"
-    'panel4.gamemaster.text': "Register as Gamemaster"
-    'panel4.gamer.article.title': "Gamer"
+    'panel4.gamemaster.text': "Register as game master"
+    'panel4.gamer.article.title': "Player"
     'panel4.gamer.article.text': "<p>As soon as the first game masters have contacted us, we will open the registrations for games. You can then reserve your seat at the table, online or spontaneously.</p><p>Would you like to be reminded as soon as the registration is open?</p>"
-    'panel4.gamemaster.article.title': "Gamemaster"
+    'panel4.gamemaster.article.title': "Game master"
     'panel4.gamemaster.article.text': "<p>It goes without saying, to the game masters, how grateful we are for your efforts, but we do it anyway: Thank you very much! We would like to point out, that we ask you to bring along system-specific game material for your players. We take care of writing utensils.</p><p>If you have you never run a role-playing game or feel insecure as a game master, you are welcome to contact us in advance. If there is enough demand, we will offer a small workshop. Experienced game master, will also support you on site and are there to help and advise.</p>"

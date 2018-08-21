@@ -9,7 +9,7 @@ context:
       form-items:
         -
           fieldset:
-            fieldset-legend: "Gamemaster informations"
+            fieldset-legend: "Game master informations"
             fieldset-legend-i18n: "registration.step-1.fieldset"
             fieldset-items:
               -
@@ -60,7 +60,7 @@ context:
                       group-wrapper-class: "col-m-12 align-center"
                       button:
                         label:
-                          label-text: "Register as Gamemaster"
+                          label-text: "Register as game master"
                           label-text-i18n: "registration.step-1.button.next"
                         button-class: "submit-group"
                         button-type: "submit"
@@ -75,11 +75,11 @@ i18n:
     'registration.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
     'registration.step-1.button.next': "Als Spielleiter registrieren"
   'en-EN':
-    'registration.step-1.fieldset': "Gamemaster informations"
+    'registration.step-1.fieldset': "Game master informations"
     'registration.step-1.input.name': "Your Firstname, Lastname"
     'registration.step-1.input.name.error': "Please enter your Name"
     'registration.step-1.email.name': "Your Email"
     'registration.step-1.input.email.error.1': "Please enter your Email"
     'registration.step-1.input.email.error.2': "Email doesn't look correct"
-    'registration.step-1.button.next': "Register as Gamemaster"
+    'registration.step-1.button.next': "Register as game master"
 

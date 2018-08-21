@@ -7,7 +7,7 @@ context:
       article-title: "Thank you for your interest."
       article-title-i18n: "keep-me-posted.step-2.article.title"
       article-title-tag: "h3"
-      article-subtitle: "We'll inform you as soon as the registration for Gamers is open.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+      article-subtitle: "We'll inform you as soon as the registration for Players is open.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
       article-subtitle-i18n: "keep-me-posted.step-2.article.subtitle"
 i18n:
   'de-DE':
@@ -15,4 +15,4 @@ i18n:
     'keep-me-posted.step-2.article.subtitle': "Wir werden dich informieren sobald die Registrierung für Spieler geöffnet ist.<br /><br />Beste Grüsse<br />Das Luzerner Rollenspieltage Team"
   'en-EN':
     'keep-me-posted.step-2.article.title': "Thank you ver much for your interest."
-    'keep-me-posted.step-2.article.subtitle': "We'll inform you as soon as the registration for Gamers is open.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+    'keep-me-posted.step-2.article.subtitle': "We'll inform you as soon as the registration for Players is open.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"

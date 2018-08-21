@@ -26,10 +26,12 @@ context:
                 icon-name: "en"
                 icon-pos: "before"
                 icon-class: "icon-s"
-# i18n:
-#   'de-DE':
-#     'navigation.link.i18n.label.text.en': "EN (DE)"
-#     'navigation.link.i18n.label.text.de': "DE (DE)"
-#   'en-EN':
-#     'navigation.link.i18n.label.text.en': "EN (EN)"
-#     'navigation.link.i18n.label.text.de': "DE (EN)"
+i18n:
+  'de-DE':
+    'meta.description': "Luzerner Rollenspieltag, 6. Oktober 2018. Tauche mit uns ein in die unendliche Welt der Phantasie, wo wir gemeinsam einzigartige un wundervolle Geschichten erleben werden, die wir zusammen spinnen und ab und zu Entscheidungen dem Glück Überlassen, damit wir uns immer wieder von neuem Überraschen lassen können."
+    # 'navigation.link.i18n.label.text.en': "EN (DE)"
+    # 'navigation.link.i18n.label.text.de': "DE (DE)"
+  'en-EN':
+    'meta.description': "Luzerner Rollenspieltag, 6. October 2018. Immerse yourself in boundless worlds of fantasy, where we will weave wonderful tales, experiencing unique stories together to be surprised again and again."
+    # 'navigation.link.i18n.label.text.en': "EN (EN)"
+    # 'navigation.link.i18n.label.text.de': "DE (EN)"
