@@ -50,6 +50,18 @@ context:
                         input-autocomplete: "email"
         -
           fieldset:
+            fieldset-class: "hidden"
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      input:
+                        input-name: "KeepMePosted[language]"
+                        input-class: "hidden"
+                        input-type: "hidden"
+        -
+          fieldset:
             fieldset-items:
               -
                 group-row:

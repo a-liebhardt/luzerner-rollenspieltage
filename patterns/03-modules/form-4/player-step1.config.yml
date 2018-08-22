@@ -2,7 +2,7 @@ status: published
 context:
   step-1:
     form:
-      form-name: "User"
+      form-name: "Player"
       form-action: "http://localhost:3000/rest/form.json"
       form-method: "get"
       form-class: "step-1 registration-step active"
@@ -16,6 +16,16 @@ context:
                 group-row:
                   -
                     group-wrapper:
+                      group-wrapper-class: "col-m-12 form-group"
+                      article:
+                        article-hide-header: true
+                        article-body: "<p>To register as Player please use this form:</p>"
+                        article-body-i18n: "registration.player.step-1.article.intro"
+                        article-hide-footer: true
+              -
+                group-row:
+                  -
+                    group-wrapper:
                       group-wrapper-class: "col-m-12"
                       input:
                         label:
@@ -23,7 +33,7 @@ context:
                           label-text: "Your Firstname, Lastname"
                           label-text-i18n: "registration.player.step-1.input.name"
                         input-id: "player-name"
-                        input-name: "User[name]"
+                        input-name: "Player[name]"
                         input-placeholder: "Your Firstname, Lastname"
                         input-i18n: "registration.player.step-1.input.name"
                         input-required: true
@@ -42,7 +52,7 @@ context:
                           label-text: "Your Email"
                           label-text-i18n: "registration.player.step-1.email.name"
                         input-id: "player-email"
-                        input-name: "User[email]"
+                        input-name: "Player[email]"
                         input-placeholder: "Your Email"
                         input-i18n: "registration.player.step-1.email.name"
                         input-required: true
@@ -50,6 +60,18 @@ context:
                         input-type: "email"
                         input-role: "input"
                         input-autocomplete: "email"
+        -
+          fieldset:
+            fieldset-class: "hidden"
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      input:
+                        input-name: "Player[language]"
+                        input-class: "hidden"
+                        input-type: "hidden"
         -
           fieldset:
             fieldset-items:
@@ -67,6 +89,7 @@ context:
                         button-role: "button"
 i18n:
   'de-DE':
+    'registration.player.step-1.article.intro': "<p>Um dich als Spieler anzumelden nutze bitte dieses Formular:</p>"
     'registration.player.step-1.fieldset': "Spieler Daten"
     'registration.player.step-1.input.name': "Dein Vorname, Nachname"
     'registration.player.step-1.input.name.error': "Bitte trage deinen Namen ein"
@@ -75,6 +98,7 @@ i18n:
     'registration.player.step-1.input.email.error.2': "Die E-Mail sieht nicht korrekt aus"
     'registration.player.step-1.button.next': "Als Spieler registrieren"
   'en-EN':
+    'registration.player.step-1.article.intro': "<p>To register as Player please use this form:</p>"
     'registration.player.step-1.fieldset': "Player informations"
     'registration.player.step-1.input.name': "Your Firstname, Lastname"
     'registration.player.step-1.input.name.error': "Please enter your Name"

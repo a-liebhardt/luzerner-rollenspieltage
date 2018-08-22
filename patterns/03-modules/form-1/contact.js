@@ -12,6 +12,10 @@ exports.init = (() => {
   const forms = document.querySelectorAll(`.${formId} form`);
   forms.forEach((form) => {
     form.addEventListener('submit', handleFormSubmit);
+
+    form.querySelectorAll('input[name="ContactUs[language]"]').forEach((input) => {
+      input.value = window.i18n.getLanguage();
+    });
   });
 
   /* eslint-disable */

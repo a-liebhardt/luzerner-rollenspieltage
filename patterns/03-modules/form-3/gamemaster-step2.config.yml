@@ -140,6 +140,24 @@ context:
                         input-role: "checkbox"
         -
           fieldset:
+            fieldset-class: "hidden"
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      input:
+                        input-name: "User[language]"
+                        input-class: "hidden"
+                        input-type: "hidden"
+                  -
+                    group-wrapper:
+                      input:
+                        input-name: "User[id]"
+                        input-class: "hidden"
+                        input-type: "hidden"
+        -
+          fieldset:
             fieldset-items:
               -
                 group-row:
@@ -156,10 +174,6 @@ context:
                   -
                     group-wrapper:
                       group-wrapper-class: "col-s-6 align-right"
-                      input:
-                        input-name: "User[id]"
-                        input-class: "hidden"
-                        input-type: "hidden"
                       button:
                         label:
                           label-text: "Submit your game"

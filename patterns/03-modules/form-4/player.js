@@ -12,6 +12,10 @@ exports.init = (() => {
   const forms = document.querySelectorAll(`.${formId} form`);
   forms.forEach((form) => {
     form.addEventListener('submit', handleFormSubmit);
+
+    form.querySelectorAll('input[name="Player[language]"]').forEach((input) => {
+      input.value = window.i18n.getLanguage();
+    });
   });
 
   const handleBacklink = (e) => {
@@ -53,11 +57,11 @@ exports.init = (() => {
 
   // Set demo success
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('User', (data, status) => {
+  window.formCallOnSuccess.setFunc('Player', (data, status) => {
     // console.log('succes', 'gamemaster', data);
     if (data) {
       const user = JSON.parse(data);
-      const userIds = document.querySelectorAll('input[type="hidden"][name="User[id]"]');
+      const userIds = document.querySelectorAll('input[type="hidden"][name="Player[id]"]');
       userIds.forEach((userId) => {
         // For localhost testing
         if (user.response) userId.value = user.response;
@@ -72,21 +76,21 @@ exports.init = (() => {
     document.querySelector(`.${formId} .step-1`).classList.remove('active');
   });
 
-  window.formCallOnError.setFunc('User', (data, status) => {
-    console.log('error', 'User', data);
+  window.formCallOnError.setFunc('Player', (data, status) => {
+    // console.log('error', 'Player', data);
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('registration.player.form.request.error');
     if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
-    console.log('error', formId, data);
+    // console.log('error', formId, data);
   });
   /* eslint-enable */
 
   /* eslint-disable */
   window.formRules.setRule({
-    'Game': {
-      'Game[title]': {
+    'Playergames': {
+      'Playergames[title]': {
         // Email is required
         presence: {
           // message: '^Please enter a game name',
@@ -97,89 +101,21 @@ exports.init = (() => {
   });
   /* eslint-enable */
 
-  /* eslint-disable */
-  const slotValidator = function(value, attributes, attributeName, options, constraints) {
-
-  };
-
-  window.formRules.setValidator('checkboxList', function(value, options, key, attributes) {
-    const inputs = document.querySelectorAll(`.${formId} .slots input`);
-    let inputValue = 0;
-    inputs.forEach(function(input) {
-      input.closest('.form-group').classList.remove('has-error');
-      inputValue += input.checked ? 1 : 0;
-    });
-    if (inputValue > 0) return;
-    return window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-  });
-
-  window.formRules.setRule({
-    'Organization': {
-      'Organization[slot-1-3]': {
-        // Code of Coduct is required
-        checkboxList: {
-          message: window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-        },
-      },
-      'Organization[slot-3-5]': {
-        // Code of Coduct is required
-        checkboxList: {
-          message: window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-        },
-      },
-      'Organization[slot-5-7]': {
-        // Code of Coduct is required
-        checkboxList: {
-          message: window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-        },
-      },
-      'Organization[slot-7-9]': {
-        // Code of Coduct is required
-        checkboxList: {
-          message: window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-        },
-      },
-      'Organization[slot-9-11]': {
-        // Code of Coduct is required
-        checkboxList: {
-          message: window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-        },
-      },
-      'Organization[slot-11-1]': {
-        // Code of Coduct is required
-        checkboxList: {
-          message: window.formRules.getMessage('registration.player.step-3.input.slot.error', 'Please select at least one game slot')
-        },
-      },
-      'Organization[coc]': {
-        // Code of Coduct is required
-        presence: {
-          message: window.formRules.getMessage('registration.player.step-3.input.coc.error', 'Please accept our Code of Conduct')
-        },
-        inclusion: {
-          within: [true],
-          message: window.formRules.getMessage('registration.player.step-3.input.coc.error', 'Please accept our Code of Conduct')
-        }
-      },
-    },
-  });
-  /* eslint-enable */
-
   // Set demo success
   /* eslint-disable */
-  window.formCallOnSuccess.setFunc('Organization', (data, status) => {
+  window.formCallOnSuccess.setFunc('Playergames', (data, status) => {
     // console.log('succes', 'gamemaster', data);
     document.querySelector(`.${formId} .step-3`).classList.add('active');
     document.querySelector(`.${formId} .step-2`).classList.remove('active');
   });
 
-  window.formCallOnError.setFunc('Organization', (data, status) => {
+  window.formCallOnError.setFunc('Playergames', (data, status) => {
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('contact.form.request.error');
     if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
-    console.log('error', formId, data);
+    // console.log('error', formId, data);
   });
   /* eslint-enable */
 });

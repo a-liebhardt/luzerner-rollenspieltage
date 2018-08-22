@@ -77,6 +77,18 @@ context:
                         textarea-role: "textarea"
         -
           fieldset:
+            fieldset-class: "hidden"
+            fieldset-items:
+              -
+                group-row:
+                  -
+                    group-wrapper:
+                      input:
+                        input-name: "ContactUs[language]"
+                        input-class: "hidden"
+                        input-type: "hidden"
+        -
+          fieldset:
             fieldset-items:
               -
                 group-row:

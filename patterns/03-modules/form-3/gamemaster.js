@@ -12,6 +12,10 @@ exports.init = (() => {
   const forms = document.querySelectorAll(`.${formId} form`);
   forms.forEach((form) => {
     form.addEventListener('submit', handleFormSubmit);
+
+    form.querySelectorAll('input[name="User[language]"]').forEach((input) => {
+      input.value = window.i18n.getLanguage();
+    });
   });
 
   const handleBacklink = (e) => {
@@ -73,13 +77,13 @@ exports.init = (() => {
   });
 
   window.formCallOnError.setFunc('User', (data, status) => {
-    console.log('error', 'User', data);
+    // console.log('error', 'User', data);
     const btnFormGroup = document.querySelector(`.${formId} .form-group.submit-group`);
     let i18n = window.i18n.get('registration.form.request.error');
     if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
-    console.log('error', formId, data);
+    // console.log('error', formId, data);
   });
   /* eslint-enable */
 
@@ -111,7 +115,7 @@ exports.init = (() => {
     if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
-    console.log('error', formId, data);
+    // console.log('error', formId, data);
   });
   /* eslint-enable */
 
@@ -197,7 +201,7 @@ exports.init = (() => {
     if (!i18n) i18n = 'Your registration request failed. <br /><a href="mailto:mail@rollenspieltag.ch">Please contact us here</a>.';
     btnFormGroup.classList.add('has-error');
     btnFormGroup.querySelector('.messages').innerHTML = `<p>${i18n}</p>`;
-    console.log('error', formId, data);
+    // console.log('error', formId, data);
   });
   /* eslint-enable */
 });
