@@ -6,6 +6,7 @@ const secrets = require(path.join(__dirname, 'secrets.json'));
 
 module.exports = () => {
   const secretsConf = typeof secrets.replacements[process.env.NODE_ENV] === 'object' ? secrets.replacements[process.env.NODE_ENV] : secrets.replacements.development;
+  if (typeof secretsConf !== 'object') console.error('Error: Secrets couldn\'t be parsed. Please check your ./secrets.json and make sure it is up to date.');
   let config = {};
 
   config = {

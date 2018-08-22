@@ -2,12 +2,37 @@ exports.init = (() => {
   /* eslint-disable */
   const i18n = new function() {
     const self = this;
-    const browserLanguage = navigator.languages && navigator.languages[0] || // Chrome / Firefox
-      navigator.language || // All browsers
-      navigator.userLanguage; // IE <= 10
     const i18nUpdates = document.querySelectorAll('[i18n-update]');
     let translations = {};
     let language = '';
+
+    const getFirstBrowserLanguage = () => {
+      const nav = window.navigator;
+      const browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'];
+      let i;
+      let language;
+
+      // support for HTML 5.1 "navigator.languages"
+      if (Array.isArray(nav.languages)) {
+        for (i = 0; i < nav.languages.length; i++) {
+          language = nav.languages[i];
+          if (language && language.length) {
+            return language;
+          }
+        }
+      }
+
+      // support for other well known properties in browsers
+      for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+        language = nav[browserLanguagePropertyKeys[i]];
+        if (language && language.length) {
+          return language;
+        }
+      }
+
+      return null;
+    };
+    const browserLanguage = getFirstBrowserLanguage();
 
     this.get = function(key) {
       let iso = self.getLanguage();
@@ -86,7 +111,7 @@ exports.init = (() => {
       });
     };
 
-    self.setLanguage(browserLanguage);
+    self.setLanguage(self.getLanguage());
 
     const i18nRefreshAllUpdater = () => {
       const iso = self.getLanguage();
