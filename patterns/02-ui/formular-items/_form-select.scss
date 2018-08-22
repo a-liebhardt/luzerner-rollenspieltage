@@ -4,10 +4,10 @@
 	width: 100%;
 
   label {
-    padding: 0.8rem 1.6rem 0;
+    padding: 0.4rem 1.6rem 0;
     display: block;
     opacity: 0;
-    transition: all 100ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 
   select {
@@ -22,7 +22,7 @@
     box-sizing: border-box;
     width: 100%;
     height: auto;
-    padding: 0.4rem 1rem 1.6rem 1.6rem;
+    padding: 0.4rem 1rem 2rem 1.6rem;
     position: relative;
     z-index: 100;
     transform: translateY(-0.4em);

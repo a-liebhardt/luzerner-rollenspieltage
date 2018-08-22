@@ -9,22 +9,22 @@ context:
     select-id: "demo-select-1"
     select-name: "demo[select-1]"
     select-class: "example-select-class col-m-6"
-    select-items:
+    option-items:
       -
-        select-value: "-1"
-        select-label: "Demo Select Field 1"
+        option-value: "-1"
+        option-label: "Demo Select Field 1"
         option-i18n: "label.text.demo"
       -
-        select-value: "1"
-        select-label: "Opt 1"
+        option-value: "1"
+        option-label: "Opt 1"
         option-i18n: "option.demo.1"
       -
-        select-value: "2"
-        select-label: "Opt 2"
+        option-value: "2"
+        option-label: "Opt 2"
         option-i18n: "option.demo.2"
       -
-        select-value: "3"
-        select-label: "Opt 3"
+        option-value: "3"
+        option-label: "Opt 3"
         option-i18n: "option.demo.3"
 i18n:
   'de-DE':

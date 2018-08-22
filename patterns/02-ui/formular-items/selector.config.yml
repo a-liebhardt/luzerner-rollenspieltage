@@ -1,4 +1,4 @@
-# status: ready
+status: ready
 context:
   selector:
     label:
@@ -9,7 +9,7 @@ context:
     selector-id: "demo-selector-1"
     selector-name: "demo[selector-1]"
     selector-class: "example-selector-class col-m-6"
-    selector-items:
+    option-items:
       -
         option-value: "-1"
         option-label: "Demo Select Field 1"

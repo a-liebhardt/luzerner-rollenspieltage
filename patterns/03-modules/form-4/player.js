@@ -90,12 +90,15 @@ exports.init = (() => {
   /* eslint-disable */
   window.formRules.setRule({
     'Playergames': {
-      'Playergames[title]': {
-        // Email is required
+      'Playergames[coc]': {
+        // Code of Coduct is required
         presence: {
-          // message: '^Please enter a game name',
-          message: window.formRules.getMessage('registration.player.step-2.input.title.error', 'Please enter a game name')
+          message: window.formRules.getMessage('registration.step-3.input.coc.error', 'Please accept our Code of Conduct')
         },
+        inclusion: {
+          within: [true],
+          message: window.formRules.getMessage('registration.step-3.input.coc.error', 'Please accept our Code of Conduct')
+        }
       },
     },
   });

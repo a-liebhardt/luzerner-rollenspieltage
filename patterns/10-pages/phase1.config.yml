@@ -1,4 +1,4 @@
-status: wip
+status: ready
 context:
   panel0-config: '@content-panel0'
   panel1-config: '@content-panel1'

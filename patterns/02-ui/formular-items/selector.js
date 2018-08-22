@@ -57,8 +57,10 @@ exports.init = (() => {
     });
 
     const handleSelectorClickEvent = (e) => {
-      const target = e.target.classList.contains('selector') ? e.target : e.target.closest('.selector');
-      target.classList.toggle('is-active');
+      if (window.breakpoint() !== 'mobile') {
+        const target = e.target.classList.contains('selector') ? e.target : e.target.closest('.selector');
+        target.classList.toggle('is-active');
+      }
     };
 
     const selectors = document.querySelectorAll('.selector');

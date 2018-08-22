@@ -2,7 +2,7 @@
 <section class="form-group selector {{selector-class}}" role="select">
   {{> @label}}
   <select {{#if selector-id}}id="{{selector-id}}"{{/if}} {{#if selector-name}}name="{{selector-name}}"{{/if}} {{#if selector-info}}data-info="{{selector-info}}"{{/if}} {{#if selector-error}}data-error="{{selector-error}}"{{/if}} {{#if selector-multiple}}multiple{{/if}} {{#if selector-readonly}}readonly{{/if}} {{#if selector-disabled}}disabled{{/if}} {{#if selector-required}}required{{/if}} {{{selector-attr}}}>
-    {{#each selector-items}}
+    {{#each option-items}}
       <option {{#if option-value}}value="{{option-value}}"{{/if}} {{#if option-i18n}}i18n="{{option-i18n}}"{{/if}}>{{option-label}}</option>
     {{/each}}
   </select>
