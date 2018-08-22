@@ -51,17 +51,17 @@ $stage-maxWidth: $page-maxWidth + $grid-gap + $grid-gap;
   }
 
   // Align columns left
-  &.row--col-left {
+  &.row--align-left {
     text-align: left;
   }
 
   // Center columns
-  &.row--col-center {
+  &.row--align-center {
     text-align: center;
   }
 
   // Align columns right
-  &.row--col-right {
+  &.row--align-right {
     text-align: right;
   }
 
