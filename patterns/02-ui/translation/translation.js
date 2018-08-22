@@ -72,10 +72,20 @@ exports.init = (() => {
     };
 
     this.getLanguage = function() {
-      if (language.length) {
-        return language;
+      let iso = language.length ? language : browserLanguage;
+      if (typeof translations[iso] === 'undefined') {
+        iso = self.getLanguageIso();
+        for (var key in translations) {
+          if (key.match(new RegExp(`^${iso}`, 'g'))) {
+            iso = key;
+            break;
+          }
+          // if (translations.hasOwnProperty(key)) {
+          //   console.log(key, translations[key]);
+          // }
+        }
       }
-      return browserLanguage;
+      return iso;
     };
 
     this.getLanguageIso = function() {
@@ -110,8 +120,6 @@ exports.init = (() => {
         }
       });
     };
-
-    self.setLanguage(self.getLanguage());
 
     const i18nRefreshAllUpdater = () => {
       const iso = self.getLanguage();
@@ -162,6 +170,7 @@ exports.init = (() => {
       ajax.open('GET', '/translations.json', true);
       ajax.onload = () => {
         self.setAll(ajax.responseText);
+        self.setLanguage(self.getLanguage());
         document.querySelector('html').classList.add('i18n-ready');
         window.requestAnimationFrame(self.update);
       }
