@@ -85,6 +85,7 @@ module.exports = () => {
         { from: 'patterns/static_www/**/*', to: '../', flatten: true },
         { from: 'patterns/vendor/*', to: '../vendor/', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
+        { from: 'private_docker/src/**/*', to: '../', flatten: true }, // Special for this project
       ], {
         debug: false,
         context: __dirname,

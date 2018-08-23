@@ -22,6 +22,8 @@ assets/
 docker/
 build/
 public/
+private/
+private_docker/
 
 # Custom
 patterns/translations.js

@@ -121,4 +121,18 @@ exports.init = (() => {
     // console.log('error', formId, data);
   });
   /* eslint-enable */
+
+  const updatedPlayerGames = (games) => {
+    console.log(games);
+  };
+
+  const init = () => {
+    const ajax = new XMLHttpRequest();
+    ajax.open('GET', '/spielleiter.json', true);
+    ajax.onload = () => {
+      updatedPlayerGames(JSON.parse(ajax.responseText));
+    };
+    ajax.send();
+  };
+  init();
 });

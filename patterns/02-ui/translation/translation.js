@@ -173,9 +173,9 @@ exports.init = (() => {
         self.setLanguage(self.getLanguage());
         document.querySelector('html').classList.add('i18n-ready');
         window.requestAnimationFrame(self.update);
-      }
+      };
       ajax.send();
-    }
+    };
     init();
 
     return this;

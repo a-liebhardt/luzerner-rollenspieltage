@@ -26,7 +26,9 @@ Or to install dev dependencies (with npm):
 
     $ npm install --only=dev
 
-Last on root ./ you have to create a secrets.json and add key/value couples for development as well as for production like this:
+Next you have to add a `./private` folder. Then place all static files in a final folder structure inside of it. Those files and folders won't show up in GitHub but will be in the deployment process, too.
+
+Last on root `./` you have to create a `secrets.json` and add key/value couples for development as well as for production like this:
 
     {
       "replacements": {
@@ -43,14 +45,14 @@ Last on root ./ you have to create a secrets.json and add key/value couples for 
       }
     }
 
-It will replace critical variables on build automatically. Variables in use:
-- {GOOGLE_MAP_APIKEY} -> /patterns/02-ui/map/map
-- {PHP_MAILER_HOST} -> /patterns/static_docker/src/form
-- {PHP_MAILER_USER} -> /patterns/static_docker/src/form
-- {PHP_MAILER_PASSWORD} -> /patterns/static_docker/src/form
-- {PHP_MAILER_PASSWORD} -> /patterns/static_docker/src/form
-- action="http://localhost:3000/rest/form.json" -> /patterns/03-modules/form-1,-2,-3
-- method="get" -> /patterns/03-modules/form-1,-2,-3
+It will replace critical variables on build automatically. Variables in use are:
+- `{GOOGLE_MAP_APIKEY}` /patterns/02-ui/map/map
+- `{PHP_MAILER_HOST}` /patterns/static_docker/src/form
+- `{PHP_MAILER_USER}` /patterns/static_docker/src/form
+- `{PHP_MAILER_PASSWORD}` /patterns/static_docker/src/form
+- `{PHP_MAILER_PASSWORD}` /patterns/static_docker/src/form
+- `action="http://localhost:3000/rest/form.json"` /patterns/03-modules/form-1,-2,-3
+- `method="get"` /patterns/03-modules/form-1,-2,-3
 
 ### Develop
 
@@ -60,7 +62,7 @@ Run to build all files (dev mode) and start a local server:
 
 ### Deploy
 
-Generate a production ready styleguide build (root ./build):
+Generate a production ready styleguide build in `./build`:
 
     $ yarn build
 
@@ -68,7 +70,7 @@ Or to build the release (with npm):
 
     $ npm run build
 
-To generate a production ready docker build (root ./docker):
+To generate a production ready docker build in `./docker`:
 
     $ yarn build:docker
 
