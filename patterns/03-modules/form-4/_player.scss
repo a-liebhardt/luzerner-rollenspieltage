@@ -36,6 +36,10 @@
 }
 
 .games-selector ul li {
+  a[disabled] {
+    opacity: 0.4;
+  }
+
   h4 {
     font-size: 1.4rem;
     margin-bottom: 0.4rem;

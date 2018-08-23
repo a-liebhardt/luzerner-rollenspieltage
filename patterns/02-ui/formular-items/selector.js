@@ -68,7 +68,7 @@ exports.init = (() => {
     };
 
     const setEvents = () => {
-      const selectItems = document.querySelectorAll('.selector ul > li > a');
+      const selectItems = document.querySelectorAll('.selector ul > li > a:not([disabled])');
       selectItems.forEach((selectItem) => {
         selectItem.removeEventListener('click', handleSelectItemClickEvent);
         selectItem.addEventListener('click', handleSelectItemClickEvent, false);

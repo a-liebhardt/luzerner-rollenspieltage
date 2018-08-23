@@ -138,9 +138,11 @@ exports.init = (() => {
     if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
     if (game['adults-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.3');
     if (game['womens-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.4');
+    const disabled = !(game['registered-players'] < game['max-players']);
     const withGM = window.i18n.get('registration.step-2.with');
     const option = document.createElement('option');
     option.value = game.person;
+    if (disabled) option.disabled = true;
     option.text = `${game.title} ${withGM} ${game.person}${tags.length ? '\xA0\xA0\xA0\xA0\xA0\xA0| ' : ''}${tags.join(', ')}`;
     selector.querySelector('select').add(option);
   };
@@ -169,10 +171,11 @@ exports.init = (() => {
     if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
     if (game['adults-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.3');
     if (game['womens-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.4');
+    const disabled = !(game['registered-players'] < game['max-players']);
     const withGM = window.i18n.get('registration.step-2.with');
 
     const template = `<li>
-    <a role="link" href="#" class="link link-text">
+    <a role="link" href="#" class="link link-text" ${disabled ? 'disabled' : ''}>
       <main>
         <h4>${game.title} <small>${withGM} ${game.person}</small></h4>
         ${description}
