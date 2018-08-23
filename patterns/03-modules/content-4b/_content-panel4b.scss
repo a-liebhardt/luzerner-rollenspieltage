@@ -1,6 +1,8 @@
 .panel4b {
   min-height: 50vh;
   padding: 4rem 0 8rem;
+  position: relative;
+  z-index: 100;
 
   @media screen and (min-width: #{$mq-l}) {
     min-height: 100vh;
@@ -8,7 +10,7 @@
 
   a[pagescroller] {
     position: absolute;
-    top: 60vh;
+    top: 0;
   }
 
   .flipper {

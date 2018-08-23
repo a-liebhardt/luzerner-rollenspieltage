@@ -1,4 +1,4 @@
-status: wip
+status: published
 context:
   config-step-1: '@player-step1'
   config-step-2: '@player-step2'

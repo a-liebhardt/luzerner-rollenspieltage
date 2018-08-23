@@ -1,5 +1,8 @@
 exports.init = (() => {
-  const initializeSelect = () => {
+  /* eslint-disable */
+  const formSelector = new function() {
+    const self = this;
+
     /* eslint-disable */
     const hasClass = (el, className) => {
       if (typeof el !== 'undefined') {
@@ -51,23 +54,45 @@ exports.init = (() => {
       select.dispatchEvent(new Event('change'));
     };
 
-    const selectItems = document.querySelectorAll('.selector ul > li > a');
-    selectItems.forEach((selectItem) => {
-      selectItem.addEventListener('click', handleSelectItemClickEvent, false);
-    });
-
     const handleSelectorClickEvent = (e) => {
       if (window.breakpoint() !== 'mobile') {
         const target = e.target.classList.contains('selector') ? e.target : e.target.closest('.selector');
+        target.classList.add('ignore');
+        const selectors = document.querySelectorAll('.selector:not(.ignore)');
+        selectors.forEach((selector) => {
+          selector.classList.remove('is-active');
+        });
+        target.classList.remove('ignore');
         target.classList.toggle('is-active');
       }
     };
 
-    const selectors = document.querySelectorAll('.selector');
-    selectors.forEach((selector) => {
-      selector.addEventListener('click', handleSelectorClickEvent, false);
-    });
-  };
+    const setEvents = () => {
+      const selectItems = document.querySelectorAll('.selector ul > li > a');
+      selectItems.forEach((selectItem) => {
+        selectItem.removeEventListener('click', handleSelectItemClickEvent);
+        selectItem.addEventListener('click', handleSelectItemClickEvent, false);
+      });
 
-  initializeSelect();
+      const selectors = document.querySelectorAll('.selector');
+      selectors.forEach((selector) => {
+        selector.removeEventListener('click', handleSelectorClickEvent);
+        selector.addEventListener('click', handleSelectorClickEvent, false);
+      });
+    };
+
+    setEvents();
+
+    this.update = () => {
+      setEvents();
+    };
+
+    return this;
+  };
+  /* eslint-enable */
+
+  window.selector = formSelector;
+
+  // initializeSelect();
+  // window.selector();
 });

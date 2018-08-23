@@ -24,7 +24,6 @@
   }
 }
 
-
 .registration-step {
   background: $color--black-5;
   // border-radius: 1rem;
@@ -33,5 +32,31 @@
 
   &.step-3 {
     padding-bottom: 4rem;
+  }
+}
+
+.games-selector ul li {
+  h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+
+    small {
+      font-weight: 400;
+      color: $color--black;
+      font-size: 1.2rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    margin: 0;
+
+    li {
+      margin: 0;
+      font-size: 1.2rem;
+    }
   }
 }

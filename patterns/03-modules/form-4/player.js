@@ -1,5 +1,6 @@
 exports.init = (() => {
   const formId = 'player';
+  let games = [];
 
   const handleFormSubmit = (e) => {
     const forms = e.target.closest(`.${formId}`).querySelectorAll('form');
@@ -122,17 +123,104 @@ exports.init = (() => {
   });
   /* eslint-enable */
 
-  const updatedPlayerGames = (games) => {
-    console.log(games);
+  const resetOption = (selector) => {
+    const options = selector.querySelectorAll('select option');
+    options.forEach((option, i) => {
+      if (option.value !== '-1') {
+        option.remove(i);
+      }
+    });
+  };
+
+  const addOptionTo = (selector, game) => {
+    const tags = [];
+    if (game['for-beginners']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.1');
+    if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
+    if (game['adults-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.3');
+    if (game['womens-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.4');
+    const withGM = window.i18n.get('registration.step-2.with');
+    const option = document.createElement('option');
+    option.value = game.person;
+    option.text = `${game.title} ${withGM} ${game.person}${tags.length ? '\xA0\xA0\xA0\xA0\xA0\xA0| ' : ''}${tags.join(', ')}`;
+    selector.querySelector('select').add(option);
+  };
+
+  // const strip = (html) => {
+  //   const tmp = document.createElement('div');
+  //   tmp.innerHTML = html;
+  //   return tmp.textContent || tmp.innerText || '';
+  // }
+
+  const resetDropdown = (selector) => {
+    const lis = selector.querySelectorAll('ul li');
+    lis.forEach((li, i) => {
+      if (i > 0) {
+        li.remove(i);
+      }
+    });
+  };
+
+  const addDropdownTo = (selector, game) => {
+    // let description = strip(game.description);
+    // Remove links
+    const description = game.description.replace(/<a\b[^>]*>(.*?)<\/a>/i, '$1');
+    const tags = [];
+    if (game['for-beginners']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.1');
+    if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
+    if (game['adults-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.3');
+    if (game['womens-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.4');
+    const withGM = window.i18n.get('registration.step-2.with');
+
+    const template = `<li>
+    <a role="link" href="#" class="link link-text">
+      <main>
+        <h4>${game.title} <small>${withGM} ${game.person}</small></h4>
+        ${description}
+      </main>
+      <aside>
+        <p>${tags.join(', ')}</p>
+      </aside>
+    </a>
+  </li>`;
+    selector.querySelector('nav > ul').insertAdjacentHTML('beforeend', template);
+  };
+
+  const updatedPlayerGames = () => {
+    document.querySelectorAll('.games-selector').forEach((selector) => {
+      resetOption(selector);
+      resetDropdown(selector);
+    });
+
+    // console.log(games);
+    games.GameList.forEach((game) => {
+      if (window.i18n.getLanguageIso() === game.language) {
+        // console.log(game);
+        const date = new Date(game['time-from']);
+        // Hours part from the timestamp
+        const hours = date.getHours();
+        // console.log(hours);
+        document.querySelectorAll(`.games-selector.start-${hours}`).forEach((selector) => {
+          addOptionTo(selector, game);
+          addDropdownTo(selector, game);
+        });
+      }
+    });
+    window.selector.update();
   };
 
   const init = () => {
     const ajax = new XMLHttpRequest();
     ajax.open('GET', '/spielleiter.json', true);
     ajax.onload = () => {
-      updatedPlayerGames(JSON.parse(ajax.responseText));
+      games = JSON.parse(ajax.responseText);
+      updatedPlayerGames();
+
+      document.querySelectorAll('.i18n-selector li a').forEach((i18n) => {
+        i18n.addEventListener('click', updatedPlayerGames);
+      });
     };
     ajax.send();
   };
+
   init();
 });

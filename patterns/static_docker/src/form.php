@@ -29,6 +29,7 @@ if ($json) {
     foreach($obj as $key => $value) {
       $msg[] = "$key: $value";
       if ($formId === 'User' && $key === 'email') $userId = $value;
+      if ($formId === 'Player' && $key === 'email') $userId = $value;
     }
 
     $msg[] = "--";
@@ -69,7 +70,7 @@ if ($json) {
     $mail->Body    = implode("\r\n", $msg);
 
     $mail->send();
-    if ($formId === 'User') {
+    if ($formId === 'User' || $formId === 'Player') {
       echo "{\"id\":\"$userId\"}";
     } else {
       header("HTTP/1.0 202 Accepted");

@@ -2,12 +2,12 @@
   position: relative;
   max-height: 12rem;
 
-  nav {
+  & > nav {
     display: none;
   }
 
   @media screen and (min-width: $mq-m) {
-    nav {
+    & > nav {
       display: block;
       list-style: none;
       padding: 0;
@@ -28,7 +28,7 @@
         height: 100%;
       }
 
-      ul {
+      & > ul {
         margin-top: 100%;
         position: relative;
         top: 0.1rem;
@@ -44,7 +44,7 @@
         padding: 0;
         margin: 0;
 
-        li {
+        & > li {
           min-width: 4rem;
           background: $color--white;
           height: 100%;
@@ -111,31 +111,34 @@
         height: 100%;
       }
 
-      ul {
+      & > nav {
         z-index: 2000;
-        overflow: visible;
-        max-height: 100%;
 
-        &::before {
-          content: '';
-          position: absolute;
-          top: -0.1rem;
-          right: 0;
-          left: 0;
-          width: 100%;
-          border-top: 0.1rem solid $color--black;
-        }
-
-        li {
+        & > ul {
+          overflow: visible;
           max-height: 100%;
-          height: auto;
 
-          &:first-child {
-            padding-top: 0.4rem;
+          &::before {
+            content: '';
+            position: absolute;
+            top: -0.1rem;
+            right: 0;
+            left: 0;
+            width: 100%;
+            border-top: 0.1rem solid $color--black;
           }
 
-          &:last-child {
-            padding-bottom: 0.4rem;
+          & > li {
+            max-height: 100%;
+            height: auto;
+
+            &:first-child {
+              padding-top: 0.4rem;
+            }
+
+            &:last-child {
+              padding-bottom: 0.4rem;
+            }
           }
         }
       }
