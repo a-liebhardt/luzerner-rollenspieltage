@@ -47,6 +47,7 @@ exports.init = (() => {
     const handleSelectItemClickEvent = (e) => {
       e.preventDefault();
       const target = ['a'].indexOf(e.target.nodeName.toLowerCase()) > -1 ? e.target : e.target.closest('a');
+      if (target.hasAttribute('disabled')) return;
       const select = target.closest('.selector').querySelector('select');
       const index = getElIndex(target.closest('li'));
       const options = select.querySelectorAll('option');
@@ -68,7 +69,7 @@ exports.init = (() => {
     };
 
     const setEvents = () => {
-      const selectItems = document.querySelectorAll('.selector ul > li > a:not([disabled])');
+      const selectItems = document.querySelectorAll('.selector ul > li > a');
       selectItems.forEach((selectItem) => {
         selectItem.removeEventListener('click', handleSelectItemClickEvent);
         selectItem.addEventListener('click', handleSelectItemClickEvent, false);
