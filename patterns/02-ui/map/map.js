@@ -279,6 +279,7 @@ exports.init = (() => {
 
     google.maps.event.addDomListener(window, 'resize', () => {
       const active = self.querySelector('.marker-menu ul li a.active');
+      if (!active) return;
       const dataId = parseInt(active.getAttribute('data-id'));
       const latFloat = mapMarker[ dataId ].lat;
       const lngFloat = mapMarker[ dataId ].lng;
