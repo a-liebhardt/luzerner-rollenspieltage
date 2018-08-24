@@ -35,7 +35,7 @@ context:
                             group-row:
                               -
                                 group-wrapper:
-                                  group-wrapper-class: "col-xs-6"
+                                  group-wrapper-class: "col-m-6"
                                   selector:
                                     label:
                                       label-for: "mygame-1-3"
@@ -62,7 +62,7 @@ context:
                                               label-text-i18n: "registration.player.step-2.choose-1-3"
                               -
                                 group-wrapper:
-                                  group-wrapper-class: "col-xs-6"
+                                  group-wrapper-class: "col-m-6"
                                   selector:
                                     label:
                                       label-for: "mygame-3-5"
@@ -98,7 +98,7 @@ context:
                             group-row:
                               -
                                 group-wrapper:
-                                  group-wrapper-class: "col-xs-6"
+                                  group-wrapper-class: "col-m-6"
                                   selector:
                                     label:
                                       label-for: "mygame-5-7"
@@ -125,7 +125,7 @@ context:
                                               label-text-i18n: "registration.player.step-2.choose-5-7"
                               -
                                 group-wrapper:
-                                  group-wrapper-class: "col-xs-6"
+                                  group-wrapper-class: "col-m-6"
                                   selector:
                                     label:
                                       label-for: "mygame-7-9"
@@ -161,7 +161,7 @@ context:
                             group-row:
                               -
                                 group-wrapper:
-                                  group-wrapper-class: "col-xs-6"
+                                  group-wrapper-class: "col-m-6"
                                   selector:
                                     label:
                                       label-for: "mygame-9-11"
@@ -188,7 +188,7 @@ context:
                                               label-text-i18n: "registration.player.step-2.choose-9-11"
                               -
                                 group-wrapper:
-                                  group-wrapper-class: "col-xs-6"
+                                  group-wrapper-class: "col-m-6"
                                   selector:
                                     label:
                                       label-for: "mygame-11-1"
@@ -283,6 +283,7 @@ i18n:
     'registration.player.step-2.choose-7-9': "von 19 bis 21 Uhr"
     'registration.player.step-2.choose-9-11': "von 21 bis 23 Uhr"
     'registration.player.step-2.choose-11-1': "von 23 bis 1 Uhr"
+    'registration.player.step-2.players': "{1} Plätze frei"
     'registration.player.step-2.button.previous': "Zurück zur vorherigen Form"
     'registration.player.step-2.button.next': "Für Spiele anmelden"
     'registration.player.step-2.input.coc': "Ich habe den <a href='./code-of-conduct.html' target='blank'>Code of Conduct</a> gelesen und aktzeptiere diesen"
@@ -303,6 +304,7 @@ i18n:
     'registration.player.step-2.choose-7-9': "from 7 p.m. to 9 p.m."
     'registration.player.step-2.choose-9-11': "from 9 p.m. to 11 p.m."
     'registration.player.step-2.choose-11-1': "from 11 p.m. to 1 a.m."
+    'registration.player.step-2.players': "{1} spots left"
     'registration.player.step-2.button.previous': "Back to previous form"
     'registration.player.step-2.button.next': "Register for those games"
     'registration.player.step-2.input.coc': "I have read and accept the <a href='./code-of-conduct.html' target='blank'>Code of Conduct</a>"
