@@ -25,7 +25,7 @@ context:
       article-title: "Player"
       article-title-i18n: "panel4.gamer.article.title"
       article-title-tag: "h3"
-      article-body: "<p>Join our journey and experience a wonderfull time full of wonders, challenges, beautiful and tragic moments. Meet other players, meet friends, and new ones.</p>"
+      article-body: "<p>Join our journey and experience a wonderfull time full of wonders, challenges, beautiful and tragic moments. Meet other players, meet friends, and new ones.</p><p>Are you interested in creating your own role playing campaign? Do you like to become a game master but don't know how to start? No problem, we offer several Workshops to help you making your ideas come reality. Just register for one or more spots. You will be very welcome.</p>"
       article-body-i18n: "panel4.gamer.article.text"
       article-hide-footer: true
   gamer:
@@ -73,7 +73,7 @@ i18n:
     'panel4.keep-me-posted.label.text': "Als Spieler anmelden"
     'panel4.gamemaster.text': "Registriere dich als Spielleiter"
     'panel4.gamer.article.title': "Spieler"
-    'panel4.gamer.article.text': "<p>Schliesse dich unserer Reise an und erlebe eine wundervolle Zeit voller Wunder, Herausforderungen, schönen und tragischen Momenten. Treffe andere Spieler, treffe Freunde und welche die es noch werden können.</p>"
+    'panel4.gamer.article.text': "<p>Schliesse dich unserer Reise an und erlebe eine wundervolle Zeit voller Wunder, Herausforderungen, schönen und tragischen Momenten. Treffe andere Spieler, treffe Freunde und welche die es noch werden können.</p><p>Hast du Interesse deine eigene Rollenspiel Kampagne zu erstellen? Möchtest du als Spielleiter beginnen weist aber noch nicht wie? Kein Problem. Wir bieten verschiedene Workshops die dir helfen deine Ideen zu realisieren. Melde dich einfach für einen oder mehrere Spots an. Wir heissen dich jetzt schon herzlich Willkommen.</p>"
     'panel4.gamemaster.article.title': "Spielleiter"
     'panel4.gamemaster.article.text': "<p>Euch Spielleleitern müssten wir nicht erklären, wie dankbar wir für euren Einsatz sind. Wir tun es trotzdem: Danke vielmals! Wir möchten euch darauf hinweisen, dass ihr bitte System-spezifisches Spielmaterial für eure Spieler mitnehmt. Für Schreibzeug sorgen wir.</p><p>Hast du noch nie geleitet oder fühlst dich noch unsicher als Spielleiter, darfst du dich gerne bei uns im Vorfeld melden. Erfahrene Spielleiter unterstützen dich vor Ort und stehen mit Rat und Tat zur Seite.</p>"
   'en-EN':
@@ -83,6 +83,6 @@ i18n:
     'panel4.keep-me-posted.label.text': "Register as player"
     'panel4.gamemaster.text': "Register as game master"
     'panel4.gamer.article.title': "Player"
-    'panel4.gamer.article.text': "<p>Join our journey and experience a wonderfull time full of wonders, challenges, beautiful and tragic moments. Meet other players, meet friends, and new ones.</p>"
+    'panel4.gamer.article.text': "<p>Join our journey and experience a wonderfull time full of wonders, challenges, beautiful and tragic moments. Meet other players, meet friends, and new ones.</p><p>Are you interested in creating your own role playing campaign? Do you like to become a game master but don't know how to start? No problem, we offer several Workshops to help you making your ideas come reality. Just register for one or more spots. You will be very welcome.</p"
     'panel4.gamemaster.article.title': "Game master"
     'panel4.gamemaster.article.text': "<p>It goes without saying, to the game masters, how grateful we are for your efforts, but we do it anyway: Thank you very much! We would like to point out, that we ask you to bring along system-specific game material for your players. We take care of writing utensils.</p><p>If you have you never run a role-playing game or feel insecure as a game master, you are welcome to contact us in advance. If there is enough demand, we will offer a small workshop. Experienced game master, will also support you on site and are there to help and advise.</p>"

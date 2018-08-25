@@ -141,14 +141,16 @@ exports.init = (() => {
     let spotsLeft = window.i18n.get('registration.player.step-2.players');
     if (spotsLeft) {
       spotsLeft = spotsLeft.replace('{1}', game['max-players'] - game['registered-players']);
-      spotsLeft = ` (${spotsLeft})`;
+      spotsLeft = `${spotsLeft}, `;
+    } else {
+      spotsLeft = '';
     }
     const disabled = !(game['registered-players'] < game['max-players']);
     const withGM = window.i18n.get('registration.step-2.with');
     const option = document.createElement('option');
     option.value = game.person;
     if (disabled) option.disabled = true;
-    option.text = `${game.title} ${withGM} ${game.person}${spotsLeft}${tags.length ? '\xA0\xA0\xA0\xA0\xA0\xA0| ' : ''}${tags.join(', ')}`;
+    option.text = `${game.title} ${withGM} ${game.person} (${spotsLeft}${game.language.toUpperCase()})${tags.length ? '\xA0\xA0\xA0\xA0\xA0\xA0| ' : ''}${tags.join(', ')}`;
     selector.querySelector('select').add(option);
   };
 
@@ -179,7 +181,9 @@ exports.init = (() => {
     let spotsLeft = window.i18n.get('registration.player.step-2.players');
     if (spotsLeft) {
       spotsLeft = spotsLeft.replace('{1}', game['max-players'] - game['registered-players']);
-      spotsLeft = ` (${spotsLeft})`;
+      spotsLeft = `${spotsLeft}, `;
+    } else {
+      spotsLeft = '';
     }
     const disabled = !(game['registered-players'] < game['max-players']);
     const withGM = window.i18n.get('registration.step-2.with');
@@ -187,7 +191,7 @@ exports.init = (() => {
     const template = `<li>
     <a role="link" href="#" class="link link-text" ${disabled ? 'disabled' : ''}>
       <main>
-        <h4>${game.title} <small>${withGM} ${game.person}${spotsLeft}</small></h4>
+        <h4>${game.title} <small>${withGM} ${game.person} (${spotsLeft}${game.language.toUpperCase()})</small></h4>
         ${description}
       </main>
       <aside>
@@ -206,17 +210,15 @@ exports.init = (() => {
 
     // console.log(games);
     games.GameList.forEach((game) => {
-      if (window.i18n.getLanguageIso() === game.language) {
-        // console.log(game);
-        const date = new Date(game['time-from']);
-        // Hours part from the timestamp
-        const hours = date.getHours();
-        // console.log(hours);
-        document.querySelectorAll(`.games-selector.start-${hours}`).forEach((selector) => {
-          addOptionTo(selector, game);
-          addDropdownTo(selector, game);
-        });
-      }
+      // console.log(game);
+      const date = new Date(game['time-from']);
+      // Hours part from the timestamp
+      const hours = date.getHours();
+      // console.log(hours);
+      document.querySelectorAll(`.games-selector.start-${hours}`).forEach((selector) => {
+        addOptionTo(selector, game);
+        addDropdownTo(selector, game);
+      });
     });
     window.selector.update();
   };
