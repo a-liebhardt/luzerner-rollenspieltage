@@ -2,6 +2,7 @@ exports.init = (() => {
   /* eslint-disable */
   const i18n = new function() {
     const self = this;
+    const callbacks = [];
     const i18nUpdates = document.querySelectorAll('[i18n-update]');
     let translations = {};
     let language = '';
@@ -88,6 +89,18 @@ exports.init = (() => {
       return iso;
     };
 
+    this.onReady = (callback) => {
+      callbacks[callbacks.length] = callback;
+    };
+
+    const i18nFireOnReady = () => {
+      let i = 0;
+      const max = callbacks.length;
+      for (; i < max; i++) {
+        callbacks[i]();
+      }
+    };
+
     this.getLanguageIso = function() {
       if (language.length) {
         return language.split('-')[0];
@@ -102,6 +115,7 @@ exports.init = (() => {
 
     this.update = () => {
       i18nRefreshAllUpdater();
+      i18nFireOnReady();
       // Update all labels
       const els = document.querySelectorAll('[i18n]');
       els.forEach((el) => {

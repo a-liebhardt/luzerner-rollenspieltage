@@ -105,6 +105,7 @@
     &.is-flipped {
       .flipper {
         padding: 0 0 4rem;
+        z-index: 10000;
       }
     }
   }

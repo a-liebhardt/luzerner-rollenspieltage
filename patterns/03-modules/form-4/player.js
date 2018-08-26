@@ -181,17 +181,22 @@ exports.init = (() => {
     let spotsLeft = window.i18n.get('registration.player.step-2.players');
     if (spotsLeft) {
       spotsLeft = spotsLeft.replace('{1}', game['max-players'] - game['registered-players']);
-      spotsLeft = `${spotsLeft}, `;
+      spotsLeft = ` (${spotsLeft})`;
     } else {
       spotsLeft = '';
     }
+    const language = `<i class="icon icon--${game.language.toLowerCase()} icon-s">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <use xlink:href="#${game.language.toLowerCase()}"></use>
+    </svg>
+  </i>`;
     const disabled = !(game['registered-players'] < game['max-players']);
     const withGM = window.i18n.get('registration.step-2.with');
 
     const template = `<li>
     <a role="link" href="#" class="link link-text" ${disabled ? 'disabled' : ''}>
       <main>
-        <h4>${game.title} <small>${withGM} ${game.person} (${spotsLeft}${game.language.toUpperCase()})</small></h4>
+        <h4>${game.title} <small>${withGM} ${game.person} ${language}${spotsLeft}</small></h4>
         ${description}
       </main>
       <aside>
@@ -228,7 +233,7 @@ exports.init = (() => {
     ajax.open('GET', '/spielleiter.json', true);
     ajax.onload = () => {
       games = JSON.parse(ajax.responseText);
-      updatedPlayerGames();
+      window.i18n.onReady(updatedPlayerGames);
 
       document.querySelectorAll('.i18n-selector li a').forEach((i18n) => {
         i18n.addEventListener('click', updatedPlayerGames);

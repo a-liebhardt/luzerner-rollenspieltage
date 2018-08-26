@@ -48,6 +48,16 @@
       font-weight: 400;
       color: $color--black;
       font-size: 1.2rem;
+
+      i.icon {
+        margin: 0 0.4rem;
+        transform: translateY(0.4rem);
+
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
     }
   }
 
