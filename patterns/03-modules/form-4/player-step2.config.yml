@@ -245,7 +245,7 @@ context:
                           label-text: "I have read and accept the <a href='./code-of-conduct.html' target='blank'>Code of Conduct</a>"
                           label-text-i18n: "registration.player.step-2.input.coc"
                         input-id: "player-coc"
-                        input-name: "Playergames[player-coc]"
+                        input-name: "Playergames[coc]"
                         input-required: true
                         input-class: ""
                         input-type: "checkbox"

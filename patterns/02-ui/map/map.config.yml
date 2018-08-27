@@ -1,1 +1,9 @@
-status: ready
+status: published
+context:
+  icon:
+    icon-name: arrow-right
+i18n:
+  'de-DE':
+    'open.in.google.maps': "Zeige Anfahrt in Google Maps"
+  'en-EN':
+    'open.in.google.maps': "Show road planer in Google Maps"
