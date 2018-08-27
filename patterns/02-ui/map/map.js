@@ -236,7 +236,7 @@ exports.init = (() => {
       mapTypeId: 'roadmap',
       styles: gooleMapStyle,
       //disableDefaultUI: true,
-      zoomControl: false,
+      zoomControl: true,
       mapTypeControl: false,
       scaleControl: false,
       streetViewControl: false,
