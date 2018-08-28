@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -23,9 +22,8 @@ embedded above. They may be styled via CSS.
 
 -->
     <section>
-      <ul role="list">
-
-{{#shapes}}				<li title="{{name}}">
+      <ul role="list">{{#shapes}}
+        <li title="{{name}}">
           <div class="icon-box">
 
             <!-- {{name}} -->
@@ -38,8 +36,7 @@ embedded above. They may be styled via CSS.
           </div>
           <h2>{{name}}</h2>
         </li>
-{{/shapes}}			</ul>
-</section>
-
+      {{/shapes}}</ul>
+    </section>
   </body>
 </html>
