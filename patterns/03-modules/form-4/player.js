@@ -172,7 +172,7 @@ exports.init = (() => {
   const addDropdownTo = (selector, game) => {
     // let description = strip(game.description);
     // Remove links
-    const description = game.description.replace(/<a\b[^>]*>(.*?)<\/a>/i, '$1');
+    const description = game.description.replace(/(<a\b[^>]*>)|(<\/a>)/i, '');
     const tags = [];
     if (game['for-beginners']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.1');
     if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
