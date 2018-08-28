@@ -3,7 +3,17 @@
   <div class="col-m-4">
     <section class="panel data">
       {{> @article article-config}}
-      {{> @icon icon-config}}
+      <div class="row">
+        <div class="col-m-12">
+          {{> @article moreinfos-config}}
+        </div>
+        <div class="col-m-6">
+          <p><a href='https://chat.gildedernacht.ch/' target='blank'>{{> @icon icon-discord}}</a></p>
+        </div>
+        <div class="col-m-6">
+          <p><a href='https://www.facebook.com/events/2057218034550086/' target='blank'>{{> @icon icon-facebock}}</a></p>
+        </div>
+      </div>
     </section>
   </div>
   <div class="col-m-8">
