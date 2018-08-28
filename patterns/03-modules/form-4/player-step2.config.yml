@@ -39,7 +39,7 @@ context:
                                   selector:
                                     label:
                                       label-for: "mygame-1-3"
-                                      label-text: "from 1 p.m. to 3 p.m."
+                                      label-text: "from 1 p.m."
                                       label-text-i18n: "registration.player.step-2.choose-1-3"
                                     selector-role: "select"
                                     selector-id: "mygame-1-3"
@@ -48,7 +48,7 @@ context:
                                     option-items:
                                       -
                                         option-value: "-1"
-                                        option-label: "from 1 p.m. to 3 p.m."
+                                        option-label: "from 1 p.m."
                                         option-i18n: "registration.player.step-2.choose-1-3"
                                     navigation:
                                       # navigation-class: "example-class"
@@ -58,7 +58,7 @@ context:
                                           link:
                                             link-href: "#"
                                             label:
-                                              label-text: "from 1 p.m. to 3 p.m."
+                                              label-text: "from 1 p.m."
                                               label-text-i18n: "registration.player.step-2.choose-1-3"
                               -
                                 group-wrapper:
@@ -66,7 +66,7 @@ context:
                                   selector:
                                     label:
                                       label-for: "mygame-3-5"
-                                      label-text: "from 3 p.m. to 5 p.m."
+                                      label-text: "from 3 p.m."
                                       label-text-i18n: "registration.player.step-2.choose-3-5"
                                     selector-role: "select"
                                     selector-id: "mygame-3-5"
@@ -75,7 +75,7 @@ context:
                                     option-items:
                                       -
                                         option-value: "-1"
-                                        option-label: "from 3 p.m. to 5 p.m."
+                                        option-label: "from 3 p.m."
                                         option-i18n: "registration.player.step-2.choose-3-5"
                                     navigation:
                                       # navigation-class: "example-class"
@@ -85,7 +85,7 @@ context:
                                           link:
                                             link-href: "#"
                                             label:
-                                              label-text: "from 3 p.m. to 5 p.m."
+                                              label-text: "from 3 p.m."
                                               label-text-i18n: "registration.player.step-2.choose-3-5"
                   -
                     group-wrapper:
@@ -102,7 +102,7 @@ context:
                                   selector:
                                     label:
                                       label-for: "mygame-5-7"
-                                      label-text: "from 5 p.m. to 7 p.m."
+                                      label-text: "from 5 p.m."
                                       label-text-i18n: "registration.player.step-2.choose-5-7"
                                     selector-role: "select"
                                     selector-id: "mygame-5-7"
@@ -111,7 +111,7 @@ context:
                                     option-items:
                                       -
                                         option-value: "-1"
-                                        option-label: "from 5 p.m. to 7 p.m."
+                                        option-label: "from 5 p.m."
                                         option-i18n: "registration.player.step-2.choose-5-7"
                                     navigation:
                                       # navigation-class: "example-class"
@@ -121,7 +121,7 @@ context:
                                           link:
                                             link-href: "#"
                                             label:
-                                              label-text: "from 5 p.m. to 7 p.m."
+                                              label-text: "from 5 p.m."
                                               label-text-i18n: "registration.player.step-2.choose-5-7"
                               -
                                 group-wrapper:
@@ -129,7 +129,7 @@ context:
                                   selector:
                                     label:
                                       label-for: "mygame-7-9"
-                                      label-text: "from 7 p.m. to 9 p.m."
+                                      label-text: "from 7 p.m."
                                       label-text-i18n: "registration.player.step-2.choose-7-9"
                                     selector-role: "select"
                                     selector-id: "mygame-7-9"
@@ -138,7 +138,7 @@ context:
                                     option-items:
                                       -
                                         option-value: "-1"
-                                        option-label: "from 7 p.m. to 9 p.m."
+                                        option-label: "from 7 p.m."
                                         option-i18n: "registration.player.step-2.choose-7-9"
                                     navigation:
                                       # navigation-class: "example-class"
@@ -148,7 +148,7 @@ context:
                                           link:
                                             link-href: "#"
                                             label:
-                                              label-text: "from 7 p.m. to 9 p.m."
+                                              label-text: "from 7 p.m."
                                               label-text-i18n: "registration.player.step-2.choose-7-9"
                   -
                     group-wrapper:
@@ -165,7 +165,7 @@ context:
                                   selector:
                                     label:
                                       label-for: "mygame-9-11"
-                                      label-text: "from 9 p.m. to 11 p.m."
+                                      label-text: "from 9 p.m."
                                       label-text-i18n: "registration.player.step-2.choose-9-11"
                                     selector-role: "select"
                                     selector-id: "mygame-9-11"
@@ -174,7 +174,7 @@ context:
                                     option-items:
                                       -
                                         option-value: "-1"
-                                        option-label: "from 9 p.m. to 11 p.m."
+                                        option-label: "from 9 p.m."
                                         option-i18n: "registration.player.step-2.choose-9-11"
                                     navigation:
                                       # navigation-class: "example-class"
@@ -184,7 +184,7 @@ context:
                                           link:
                                             link-href: "#"
                                             label:
-                                              label-text: "from 9 p.m. to 11 p.m."
+                                              label-text: "from 9 p.m."
                                               label-text-i18n: "registration.player.step-2.choose-9-11"
                               -
                                 group-wrapper:
@@ -192,7 +192,7 @@ context:
                                   selector:
                                     label:
                                       label-for: "mygame-11-1"
-                                      label-text: "from 11 p.m. to 1 a.m."
+                                      label-text: "from 11 p.m."
                                       label-text-i18n: "registration.player.step-2.choose-11-1"
                                     selector-role: "select"
                                     selector-id: "mygame-11-1"
@@ -201,7 +201,7 @@ context:
                                     option-items:
                                       -
                                         option-value: "-1"
-                                        option-label: "from 11 p.m. to 1 a.m."
+                                        option-label: "from 11 p.m."
                                         option-i18n: "registration.player.step-2.choose-11-1"
                                     navigation:
                                       # navigation-class: "example-class"
@@ -211,7 +211,7 @@ context:
                                           link:
                                             link-href: "#"
                                             label:
-                                              label-text: "from 11 p.m. to 1 a.m."
+                                              label-text: "from 11 p.m."
                                               label-text-i18n: "registration.player.step-2.choose-11-1"
         -
           fieldset:
@@ -277,12 +277,12 @@ i18n:
     'registration.player.step-2.fieldset.time1': "Bitte wähle deine Spiele am Nachmittag"
     'registration.player.step-2.fieldset.time2': "Bitte wähle deine Spiele am Abend"
     'registration.player.step-2.fieldset.time3': "Bitte wähle deine Spiele in der Nacht"
-    'registration.player.step-2.choose-1-3': "von 13 bis 15 Uhr"
-    'registration.player.step-2.choose-3-5': "von 15 bis 17 Uhr"
-    'registration.player.step-2.choose-5-7': "von 17 bis 19 Uhr"
-    'registration.player.step-2.choose-7-9': "von 19 bis 21 Uhr"
-    'registration.player.step-2.choose-9-11': "von 21 bis 23 Uhr"
-    'registration.player.step-2.choose-11-1': "von 23 bis 1 Uhr"
+    'registration.player.step-2.choose-1-3': "ab 13 Uhr"
+    'registration.player.step-2.choose-3-5': "ab 15 Uhr"
+    'registration.player.step-2.choose-5-7': "ab 17 Uhr"
+    'registration.player.step-2.choose-7-9': "ab 19 Uhr"
+    'registration.player.step-2.choose-9-11': "ab 21 Uhr"
+    'registration.player.step-2.choose-11-1': "ab 23 Uhr"
     'registration.player.step-2.players': "{1} Plätze frei"
     'registration.player.step-2.button.previous': "Zurück zur vorherigen Form"
     'registration.player.step-2.button.next': "Für Spiele anmelden"
@@ -298,12 +298,12 @@ i18n:
     'registration.player.step-2.fieldset.time1': "Please choose your game at the afternoon"
     'registration.player.step-2.fieldset.time2': "Please choose your game at the evening"
     'registration.player.step-2.fieldset.time3': "Please choose your game at night"
-    'registration.player.step-2.choose-1-3': "from 1 p.m. to 3 p.m."
-    'registration.player.step-2.choose-3-5': "from 3 p.m. to 5 p.m."
-    'registration.player.step-2.choose-5-7': "from 5 p.m. to 7 p.m."
-    'registration.player.step-2.choose-7-9': "from 7 p.m. to 9 p.m."
-    'registration.player.step-2.choose-9-11': "from 9 p.m. to 11 p.m."
-    'registration.player.step-2.choose-11-1': "from 11 p.m. to 1 a.m."
+    'registration.player.step-2.choose-1-3': "from 1 p.m."
+    'registration.player.step-2.choose-3-5': "from 3 p.m."
+    'registration.player.step-2.choose-5-7': "from 5 p.m."
+    'registration.player.step-2.choose-7-9': "from 7 p.m."
+    'registration.player.step-2.choose-9-11': "from 9 p.m."
+    'registration.player.step-2.choose-11-1': "from 11 p.m."
     'registration.player.step-2.players': "{1} spots left"
     'registration.player.step-2.button.previous': "Back to previous form"
     'registration.player.step-2.button.next': "Register for those games"

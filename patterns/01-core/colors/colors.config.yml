@@ -58,10 +58,8 @@ context:
       '20': "rgb(204,0,204)"
       '10': "rgb(229,0,229)"
       '5': "rgb(250,0,250)"
-    'primary-':
-      'wine': "rgb(66,37,61);Wine"
-      'seaweed': "rgb(140,132,61);Seaweed"
-      'rose': "rgb(215,11,49);Rose"
-    'secondary-':
-      'honey': "rgb(234,171,6);Honey"
-      'ivory': "rgb(242,203,162);Ivory"
+    'primary-wine': "rgb(66,37,61);Wine"
+    'primary-seaweed': "rgb(140,132,61);Seaweed"
+    'primary-rose': "rgb(215,11,49);Rose"
+    'secondary-honey': "rgb(234,171,6);Honey"
+    'secondary-ivory': "rgb(242,203,162);Ivory"
