@@ -34,8 +34,8 @@ context:
       icon-class: "disocord"
   icon-facebock:
     icon:
-      icon-name: "facebock"
-      icon-class: "facebock"
+      icon-name: "facebook"
+      icon-class: "facebook"
   # close-config:
   #   label:
   #     label-attr: "flip-reset"
