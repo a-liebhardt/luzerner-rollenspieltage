@@ -89,15 +89,15 @@ exports.init = (() => {
       return iso;
     };
 
-    this.onReady = (callback) => {
-      callbacks[callbacks.length] = callback;
+    this.onReady = (callback, options) => {
+      callbacks[callbacks.length] = {func: callback, opt: options};
     };
 
     const i18nFireOnReady = () => {
       let i = 0;
       const max = callbacks.length;
       for (; i < max; i++) {
-        callbacks[i]();
+        callbacks[i].func(callbacks[i].opt);
       }
     };
 
@@ -127,7 +127,7 @@ exports.init = (() => {
           if (el.hasAttribute('title')) el.setAttribute('title', value);
           if (el.hasAttribute('alt')) el.setAttribute('alt', value);
           // Handle special elements
-          if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.label = value;
+          if (['option'].indexOf(el.nodeName.toLowerCase()) > -1) el.innerHTML = value;
           else if (['meta'].indexOf(el.nodeName.toLowerCase()) > -1) el.content = value;
           // Update html of everything which has no value
           else if (typeof el.value === 'undefined' && ['figure', 'picture', 'img'].indexOf(el.nodeName.toLowerCase()) === -1) el.innerHTML = value;

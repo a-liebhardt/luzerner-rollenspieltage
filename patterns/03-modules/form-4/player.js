@@ -1,6 +1,5 @@
 exports.init = (() => {
   const formId = 'player';
-  let games = [];
 
   const handleFormSubmit = (e) => {
     const forms = e.target.closest(`.${formId}`).querySelectorAll('form');
@@ -174,10 +173,13 @@ exports.init = (() => {
     // Remove links
     const description = game.description.replace(/(<a\b[^>]*>)|(<\/a>)/i, '');
     const tags = [];
-    if (game['for-beginners']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.1');
-    if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
-    if (game['adults-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.3');
-    if (game['womens-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.4');
+    // iIf i18n is ready
+    if (window.i18n.get('registration.player.step-2.input.opt.1')) {
+      if (game['for-beginners']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.1');
+      if (game['kids-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.2');
+      if (game['adults-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.3');
+      if (game['womens-only']) tags[tags.length] = window.i18n.get('registration.player.step-2.input.opt.4');
+    }
     let spotsLeft = window.i18n.get('registration.player.step-2.players');
     if (spotsLeft) {
       spotsLeft = spotsLeft.replace('{1}', game['max-players'] - game['registered-players']);
@@ -207,7 +209,7 @@ exports.init = (() => {
     selector.querySelector('nav > ul').insertAdjacentHTML('beforeend', template);
   };
 
-  const updatedPlayerGames = () => {
+  const updatedPlayerGames = (games) => {
     document.querySelectorAll('.games-selector').forEach((selector) => {
       resetOption(selector);
       resetDropdown(selector);
@@ -232,8 +234,9 @@ exports.init = (() => {
     const ajax = new XMLHttpRequest();
     ajax.open('GET', '/spielleiter.json', true);
     ajax.onload = () => {
-      games = JSON.parse(ajax.responseText);
-      window.i18n.onReady(updatedPlayerGames);
+      const games = JSON.parse(ajax.responseText);
+      updatedPlayerGames(games);
+      window.i18n.onReady(updatedPlayerGames, games);
 
       document.querySelectorAll('.i18n-selector li a').forEach((i18n) => {
         i18n.addEventListener('click', updatedPlayerGames);
