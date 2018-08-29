@@ -4,6 +4,7 @@ exports.init = (() => {
     const self = this;
     const callbacks = [];
     const i18nUpdates = document.querySelectorAll('[i18n-update]');
+    let i18nIsReady = false;
     let translations = {};
     let language = '';
 
@@ -90,6 +91,12 @@ exports.init = (() => {
     };
 
     this.onReady = (callback, options) => {
+      // If function is already good to go fire callback
+      if (i18nIsReady) {
+        callback(options);
+        return;
+      }
+      // Else store callback for on ready event
       callbacks[callbacks.length] = {func: callback, opt: options};
     };
 
@@ -183,6 +190,7 @@ exports.init = (() => {
       const ajax = new XMLHttpRequest();
       ajax.onreadystatechange = () => {
         if (ajax.readyState === 4 && ajax.status === 200) {
+          i18nIsReady = true;
           self.setAll(ajax.responseText);
           self.setLanguage(self.getLanguage());
           document.querySelector('html').classList.add('i18n-ready');
