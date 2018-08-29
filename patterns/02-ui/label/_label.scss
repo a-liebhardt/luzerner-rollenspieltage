@@ -13,6 +13,14 @@ label {
     font-weight: $font--weight-regular;
   }
 
+  &.label--align-left {
+    justify-content: flex-start;
+  }
+
+  &.label--align-right {
+    justify-content: flex-end;
+  }
+
   &[icon-pos='before'] {
     i {
       order: 1;

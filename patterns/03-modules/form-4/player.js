@@ -171,7 +171,7 @@ exports.init = (() => {
   const addDropdownTo = (selector, game) => {
     // let description = strip(game.description);
     // Remove links
-    const description = game.description.replace(/(<a\b[^>]*>)|(<\/a>)/i, '');
+    const description = game.description.replace(/(<a\b[^>]*>)|(<\/a>)/ig, '');
     const tags = [];
     // iIf i18n is ready
     if (window.i18n.get('registration.player.step-2.input.opt.1')) {
@@ -232,16 +232,18 @@ exports.init = (() => {
 
   const init = () => {
     const ajax = new XMLHttpRequest();
-    ajax.open('GET', '/spielleiter.json', true);
-    ajax.onload = () => {
-      const games = JSON.parse(ajax.responseText);
-      updatedPlayerGames(games);
-      window.i18n.onReady(updatedPlayerGames, games);
+    ajax.onreadystatechange = () => {
+      if (ajax.readyState === 4 && ajax.status === 200) {
+        const games = JSON.parse(ajax.responseText);
+        // updatedPlayerGames(games);
+        window.i18n.onReady(updatedPlayerGames, games);
 
-      document.querySelectorAll('.i18n-selector li a').forEach((i18n) => {
-        i18n.addEventListener('click', updatedPlayerGames);
-      });
+        document.querySelectorAll('.i18n-selector li a').forEach((i18n) => {
+          i18n.addEventListener('click', updatedPlayerGames);
+        });
+      }
     };
+    ajax.open('GET', '/spielleiter.json', true);
     ajax.send();
   };
 

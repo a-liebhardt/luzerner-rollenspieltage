@@ -115,7 +115,7 @@ exports.init = (() => {
 
     this.update = () => {
       i18nRefreshAllUpdater();
-      i18nFireOnReady();
+      window.requestAnimationFrame(i18nFireOnReady);
       // Update all labels
       const els = document.querySelectorAll('[i18n]');
       els.forEach((el) => {
@@ -181,13 +181,15 @@ exports.init = (() => {
 
     const init = () => {
       const ajax = new XMLHttpRequest();
-      ajax.open('GET', '/translations.json', true);
-      ajax.onload = () => {
-        self.setAll(ajax.responseText);
-        self.setLanguage(self.getLanguage());
-        document.querySelector('html').classList.add('i18n-ready');
-        window.requestAnimationFrame(self.update);
+      ajax.onreadystatechange = () => {
+        if (ajax.readyState === 4 && ajax.status === 200) {
+          self.setAll(ajax.responseText);
+          self.setLanguage(self.getLanguage());
+          document.querySelector('html').classList.add('i18n-ready');
+          window.requestAnimationFrame(self.update);
+        }
       };
+      ajax.open('GET', '/translations.json', true);
       ajax.send();
     };
     init();
