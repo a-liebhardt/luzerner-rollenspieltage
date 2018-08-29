@@ -2,13 +2,13 @@ status: published
 context:
   article-info-config:
     article:
-      article-hide-small: true
-      article-title: "Infos"
-      article-title-i18n: "panel3.article.info.title"
-      article-title-tag: "h3"
-      article-body: "<p>The Lucerne Role-Playing Day will take place on Saturday, 6th October 2018. We open the gates at midday and the first rounds begin at one o'clock.</p><p>Time: Saturday, 1pm to Sunday, 1am<br />Admission: 5 CHF per person / for game masters admission is free<br />Address: Pfarrei St. Johannes, Schadrätistrasse 26, 6006 Lucerne</p><p>From the Lucerne train station, the location is easily reached in 15 minutes by bus 8 (Würzenbachmatte) or bus 14 (Schlösslirain).</p><p>If you would like to stay overnight in Lucerne, we are happy to help you plan your stay. Please contact us via the contact form.</p>"
-      article-body-i18n: "panel3.article.info.body"
-      article-hide-footer: true
+      header:
+        article-title: "Infos"
+        article-title-i18n: "panel3.article.info.title"
+        article-title-tag: "h3"
+      main:
+        article-body: "<p>The Lucerne Role-Playing Day will take place on Saturday, 6th October 2018. We open the gates at midday and the first rounds begin at one o'clock.</p><p>Time: Saturday, 1pm to Sunday, 1am<br />Admission: 5 CHF per person / for game masters admission is free<br />Address: Pfarrei St. Johannes, Schadrätistrasse 26, 6006 Lucerne</p><p>From the Lucerne train station, the location is easily reached in 15 minutes by bus 8 (Würzenbachmatte) or bus 14 (Schlösslirain).</p><p>If you would like to stay overnight in Lucerne, we are happy to help you plan your stay. Please contact us via the contact form.</p>"
+        article-body-i18n: "panel3.article.info.body"
   icon:
     icon-name: "arrow-right"
     icon-class: "icon-xs"

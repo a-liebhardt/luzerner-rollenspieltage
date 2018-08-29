@@ -2,22 +2,22 @@ status: published
 context:
   article-welcome-config:
     article:
-      article-hide-small: true
-      article-title: "Welcome"
-      article-title-i18n: "panel2.article.welcome.title"
-      article-title-tag: "h3"
-      article-body: "<p>Immerse yourself in boundless worlds of fantasy, where we will weave wonderful tales, experiencing unique stories together to be surprised again and again.</p><p>If you have never played pen-and-paper role-playing games before, you will find many dedicated people here to support your first steps in this creative hobby. If you do not know what role-playing games are, we have a short explanation for you:</p>"
-      article-body-i18n: "panel2.article.welcome.body"
-      article-hide-footer: true
+      header:
+        article-title: "Welcome"
+        article-title-i18n: "panel2.article.welcome.title"
+        article-title-tag: "h3"
+      main:
+        article-body: "<p>Immerse yourself in boundless worlds of fantasy, where we will weave wonderful tales, experiencing unique stories together to be surprised again and again.</p><p>If you have never played pen-and-paper role-playing games before, you will find many dedicated people here to support your first steps in this creative hobby. If you do not know what role-playing games are, we have a short explanation for you:</p>"
+        article-body-i18n: "panel2.article.welcome.body"
   article-explained-config:
     article:
-      article-hide-small: true
-      article-title: "What is a Role-Playing Game?"
-      article-title-i18n: "panel2.article.explained.title"
-      article-title-tag: "h3"
-      article-body: "<p>A role-playing game, as played at our event, is often referred to as a tabletop role-playing game (because you play at a table) or a pen-and-paper role-playing game (because pens and paper are almost always involved).</p><p>Imagine a group of 3-5 people telling a story together. It compares well with improvisational theatre, with the addition of game rules and dice that may propel the story in an unforeseen direction.</p><p>In a classic role-playing game, one person at the table takes the role of the game master. The remaining players each take the role of a fictional character, while the game master takes care of the world where your story unfolds and the other characters that appear (so called non-player-characters).</p><p>Although it is the task of the game master to regularly challenge the characters, it's not about winning - cooperative storytelling is the focus and as long as you contribute something to the story you will feel like a winner.</p><p>If you would like to know more, <a href='#page5'>you are welcome to contact us.</a></p>"
-      article-body-i18n: "panel2.article.explained.body"
-      article-hide-footer: true
+      header:
+        article-title: "What is a Role-Playing Game?"
+        article-title-i18n: "panel2.article.explained.title"
+        article-title-tag: "h3"
+      main:
+        article-body: "<p>A role-playing game, as played at our event, is often referred to as a tabletop role-playing game (because you play at a table) or a pen-and-paper role-playing game (because pens and paper are almost always involved).</p><p>Imagine a group of 3-5 people telling a story together. It compares well with improvisational theatre, with the addition of game rules and dice that may propel the story in an unforeseen direction.</p><p>In a classic role-playing game, one person at the table takes the role of the game master. The remaining players each take the role of a fictional character, while the game master takes care of the world where your story unfolds and the other characters that appear (so called non-player-characters).</p><p>Although it is the task of the game master to regularly challenge the characters, it's not about winning - cooperative storytelling is the focus and as long as you contribute something to the story you will feel like a winner.</p><p>If you would like to know more, <a href='#page5'>you are welcome to contact us.</a></p>"
+        article-body-i18n: "panel2.article.explained.body"
 i18n:
   'de-DE':
     'panel2.article.welcome.title': "Willkommen"

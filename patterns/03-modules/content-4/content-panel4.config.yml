@@ -2,11 +2,10 @@ status: published
 context:
   panel4-article-config:
     article:
-      article-hide-small: true
-      article-title: "Register now"
-      article-title-i18n: "panel4.panel.title"
-      article-title-tag: "h2"
-      article-hide-footer: true
+      header:
+        article-title: "Register now"
+        article-title-i18n: "panel4.panel.title"
+        article-title-tag: "h2"
       article-class: "headline"
   keep-me-posted-config: '@keep-me-posted'
   keep-me-posted-label-config:
@@ -21,13 +20,13 @@ context:
         icon-class: "icon-xs"
   gamer-article-config:
     article:
-      article-hide-small: true
-      article-title: "Player"
-      article-title-i18n: "panel4.gamer.article.title"
-      article-title-tag: "h3"
-      article-body: "<p>As soon as the first game masters have contacted us, we will open the registrations for games. You can then reserve your seat at the table, online or spontaneously.</p><p>Would you like to be reminded as soon as the registration is open?</p>"
-      article-body-i18n: "panel4.gamer.article.text"
-      article-hide-footer: true
+      header:
+        article-title: "Player"
+        article-title-i18n: "panel4.gamer.article.title"
+        article-title-tag: "h3"
+      main:
+        article-body: "<p>As soon as the first game masters have contacted us, we will open the registrations for games. You can then reserve your seat at the table, online or spontaneously.</p><p>Would you like to be reminded as soon as the registration is open?</p>"
+        article-body-i18n: "panel4.gamer.article.text"
   gamer:
     icon:
       icon-name: "people"
@@ -45,13 +44,13 @@ context:
         icon-class: "icon-xs"
   gamemaster-article-config:
     article:
-      article-hide-small: true
-      article-title: "Game master"
-      article-title-i18n: "panel4.gamemaster.article.title"
-      article-title-tag: "h3"
-      article-body: "<p>It goes without saying, to the game masters, how grateful we are for your efforts, but we do it anyway: Thank you very much! We would like to point out, that we ask you to bring along system-specific game material for your players. We take care of writing utensils.</p><p>If you have you never run a role-playing game or feel insecure as a game master, you are welcome to contact us in advance. If there is enough demand, we will offer a small workshop. Experienced game master, will also support you on site and are there to help and advise.</p>"
-      article-body-i18n: "panel4.gamemaster.article.text"
-      article-hide-footer: true
+      header:
+        article-title: "Game master"
+        article-title-i18n: "panel4.gamemaster.article.title"
+        article-title-tag: "h3"
+      main:
+        article-body: "<p>It goes without saying, to the game masters, how grateful we are for your efforts, but we do it anyway: Thank you very much! We would like to point out, that we ask you to bring along system-specific game material for your players. We take care of writing utensils.</p><p>If you have you never run a role-playing game or feel insecure as a game master, you are welcome to contact us in advance. If there is enough demand, we will offer a small workshop. Experienced game master, will also support you on site and are there to help and advise.</p>"
+        article-body-i18n: "panel4.gamemaster.article.text"
   gamemaster:
     icon:
       icon-name: "user_group_man_women"

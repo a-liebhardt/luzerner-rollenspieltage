@@ -78,12 +78,12 @@ context:
   form-2:
     panel-class: "form-2 keep-me-posted-step"
     article:
-      article-hide-small: true
-      article-title: "Thank you for your interest."
-      article-title-i18n: "keep-me-posted.form-2.article.title"
-      article-title-tag: "h1"
-      article-subtitle: "We'll keep you posted as soon as our registration for Player opens.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
-      article-subtitle-i18n: "keep-me-posted.form-2.article.subtitle"
+      header:
+        article-title: "Thank you for your interest."
+        article-title-i18n: "keep-me-posted.form-2.article.title"
+        article-title-tag: "h1"
+        article-subtitle: "We'll keep you posted as soon as our registration for Player opens.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+        article-subtitle-i18n: "keep-me-posted.form-2.article.subtitle"
 i18n:
   'de-DE':
     'keep-me-posted.step-1.input.name': "Dein Vorname, Nachname"

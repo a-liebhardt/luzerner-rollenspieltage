@@ -1,9 +1,11 @@
 status: wip
 context:
   article:
-    article-hide-small: true
-    article-title: "totam et est rem quia"
-    article-title-tag: "h1"
-    article-subtitle: "Fugit ducimus accusamus rerum nihil accusantium omnis nihil et et et. ad omnis totam aut incidunt molestiae ullam hic voluptatem et et nisi sed. praesentium et exercitationem aliquid earum suscipit occaecati est. odit laboriosam nam quis dolores officiis sapiente eos ipsum voluptates"
-    article-body: "<p>Fugit ducimus accusamus rerum nihil accusantium omnis nihil et et et. ad omnis totam aut incidunt molestiae ullam hic voluptatem et et nisi sed. praesentium et exercitationem aliquid earum suscipit occaecati est. odit laboriosam nam quis dolores officiis sapiente eos ipsum voluptates</p><p>Can have <a href='#'>links</a> and <strong>important</strong> text.</p><p>Accusantium repellendus occaecati quis nulla cumque quia. quo velit ut laborum alias error iure vel deserunt rerum laboriosam sit ea. rerum iure id quidem praesentium ut numquam iure perferendis iusto dolorem. excepturi cumque error ab alias. accusantium praesentium sed nihil voluptas iusto</p><p><strong>Unordered list</strong></p><ul><li>The items are many</li><li>Many are them</li><li>No matter the order</li></ul><p><strong>Ordered List</strong></p><ol><li>When order is</li><li>Then numbers are</li><li>Stay clean</li></ol><p>This text contains <sup>superscript</sup> and <sub>subscript</sub> text.</p>"
-    article-footer-details: "<summary>Copyright 1999-2014.</summary><p> - by Lorem Ipsum. All Rights Reserved.</p><p>All content and graphics on this web site are the property of the company Refsnes Data.</p>"
+    header:
+      article-title: "totam et est rem quia"
+      article-title-tag: "h1"
+      article-subtitle: "Fugit ducimus accusamus rerum nihil accusantium omnis nihil et et et. ad omnis totam aut incidunt molestiae ullam hic voluptatem et et nisi sed. praesentium et exercitationem aliquid earum suscipit occaecati est. odit laboriosam nam quis dolores officiis sapiente eos ipsum voluptates"
+    main:
+      article-body: "<p>Fugit ducimus accusamus rerum nihil accusantium omnis nihil et et et. ad omnis totam aut incidunt molestiae ullam hic voluptatem et et nisi sed. praesentium et exercitationem aliquid earum suscipit occaecati est. odit laboriosam nam quis dolores officiis sapiente eos ipsum voluptates</p><p>Can have <a href='#'>links</a> and <strong>important</strong> text.</p><p>Accusantium repellendus occaecati quis nulla cumque quia. quo velit ut laborum alias error iure vel deserunt rerum laboriosam sit ea. rerum iure id quidem praesentium ut numquam iure perferendis iusto dolorem. excepturi cumque error ab alias. accusantium praesentium sed nihil voluptas iusto</p><p><strong>Unordered list</strong></p><ul><li>The items are many</li><li>Many are them</li><li>No matter the order</li></ul><p><strong>Ordered List</strong></p><ol><li>When order is</li><li>Then numbers are</li><li>Stay clean</li></ol><p>This text contains <sup>superscript</sup> and <sub>subscript</sub> text.</p>"
+    footer:
+      article-footer-details: "<summary>Copyright 1999-2014.</summary><p> - by Lorem Ipsum. All Rights Reserved.</p><p>All content and graphics on this web site are the property of the company Refsnes Data.</p>"

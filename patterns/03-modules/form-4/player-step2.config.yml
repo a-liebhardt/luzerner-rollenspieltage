@@ -18,10 +18,9 @@ context:
                     group-wrapper:
                       group-wrapper-class: "col-m-12 form-group"
                       article:
-                        article-hide-header: true
-                        article-body: "<p>Please select your prevered games:</p>"
-                        article-body-i18n: "registration.player.step-2.article.game"
-                        article-hide-footer: true
+                        main:
+                          article-body: "<p>Please select your prevered games:</p>"
+                          article-body-i18n: "registration.player.step-2.article.game"
               -
                 group-row:
                   -

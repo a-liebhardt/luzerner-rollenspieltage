@@ -3,12 +3,12 @@ context:
   step-4:
     panel-class: "step-4 registration-step"
     article:
-      article-hide-small: true
-      article-title: "Welcome game master"
-      article-title-i18n: "registration.step-4.article.title"
-      article-title-tag: "h3"
-      article-subtitle: "Thank you very much for helping us making this event a special one for every role player. <br />We will check your registration and come back to you in the next couple of days.<br />Have a good time, till we meet again.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
-      article-subtitle-i18n: "registration.step-4.article.subtitle"
+      header:
+        article-title: "Welcome game master"
+        article-title-i18n: "registration.step-4.article.title"
+        article-title-tag: "h3"
+        article-subtitle: "Thank you very much for helping us making this event a special one for every role player. <br />We will check your registration and come back to you in the next couple of days.<br />Have a good time, till we meet again.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+        article-subtitle-i18n: "registration.step-4.article.subtitle"
 i18n:
   'de-DE':
     'registration.step-4.article.title': "Herzlich Willkommen als Spielleiter"

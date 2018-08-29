@@ -2,13 +2,13 @@ status: published
 context:
   coc-article-config:
     article:
-      article-hide-small: true
-      article-title: "Code of Conduct"
-      article-title-i18n: "coc.article.title"
-      article-title-tag: "h1"
-      article-body: "<p>It is important for us that the Lucerne Role-Playing Day will be remembered as a beautiful and safe event for all visitors. Accordingly, we will not tolerate any behavior that is perceived as harassment or abuse, including sexism, racism, anti-semitism, homophobia or transphobia, as well as discrimination based on disability, age, appearance, background or religion.</p><p>If a person behaves on the Lucerne Role-Playing Day in a way that makes you or someone else feel insecure, uncomfortable or unwelcome, please notify the organizers, identified by their bright red shirts. Your concerns will be handled with respect and discretion.</p>"
-      article-body-i18n: "coc.article.body"
-      article-hide-footer: true
+      header:
+        article-title: "Code of Conduct"
+        article-title-i18n: "coc.article.title"
+        article-title-tag: "h1"
+      main:
+        article-body: "<p>It is important for us that the Lucerne Role-Playing Day will be remembered as a beautiful and safe event for all visitors. Accordingly, we will not tolerate any behavior that is perceived as harassment or abuse, including sexism, racism, anti-semitism, homophobia or transphobia, as well as discrimination based on disability, age, appearance, background or religion.</p><p>If a person behaves on the Lucerne Role-Playing Day in a way that makes you or someone else feel insecure, uncomfortable or unwelcome, please notify the organizers, identified by their bright red shirts. Your concerns will be handled with respect and discretion.</p>"
+        article-body-i18n: "coc.article.body"
 i18n:
   'de-DE':
     'coc.article.title': "Code of Conduct"

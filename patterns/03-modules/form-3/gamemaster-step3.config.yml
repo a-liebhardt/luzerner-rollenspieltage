@@ -18,10 +18,9 @@ context:
                     group-wrapper:
                       group-wrapper-class: "col-m-12 form-group"
                       article:
-                        article-hide-header: true
-                        article-body: "<p>We like to offer up to 6 Slots each with 2 hours of game time. This should help Gamers to try different Games very easily. Please choose your prefered game slots:</p>"
-                        article-body-i18n: "registration.step-3.article.slots"
-                        article-hide-footer: true
+                        main:
+                          article-body: "<p>We like to offer up to 6 Slots each with 2 hours of game time. This should help Gamers to try different Games very easily. Please choose your prefered game slots:</p>"
+                          article-body-i18n: "registration.step-3.article.slots"
               -
                 group-row:
                   -

@@ -3,12 +3,12 @@ context:
   step-3:
     panel-class: "step-3 registration-step"
     article:
-      article-hide-small: true
-      article-title: "Welcome Player"
-      article-title-i18n: "registration.player.step-3.article.title"
-      article-title-tag: "h3"
-      article-subtitle: "Thank you very much for your registration. <br />We looking forward to welcome you as Player to this special event.<br />Have a good time.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
-      article-subtitle-i18n: "registration.player.step-3.article.subtitle"
+      header:
+        article-title: "Welcome Player"
+        article-title-i18n: "registration.player.step-3.article.title"
+        article-title-tag: "h3"
+        article-subtitle: "Thank you very much for your registration. <br />We looking forward to welcome you as Player to this special event.<br />Have a good time.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+        article-subtitle-i18n: "registration.player.step-3.article.subtitle"
 i18n:
   'de-DE':
     'registration.player.step-3.article.title': "Herzlich Willkommen als Spieler"

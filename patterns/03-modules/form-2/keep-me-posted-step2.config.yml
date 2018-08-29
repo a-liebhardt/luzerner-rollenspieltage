@@ -3,12 +3,12 @@ context:
   step-2:
     panel-class: "step-2 keep-me-posted-step"
     article:
-      article-hide-small: true
-      article-title: "Thank you for your interest."
-      article-title-i18n: "keep-me-posted.step-2.article.title"
-      article-title-tag: "h3"
-      article-subtitle: "We'll inform you as soon as the registration for Players is open.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
-      article-subtitle-i18n: "keep-me-posted.step-2.article.subtitle"
+      header:
+        article-title: "Thank you for your interest."
+        article-title-i18n: "keep-me-posted.step-2.article.title"
+        article-title-tag: "h3"
+        article-subtitle: "We'll inform you as soon as the registration for Players is open.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+        article-subtitle-i18n: "keep-me-posted.step-2.article.subtitle"
 i18n:
   'de-DE':
     'keep-me-posted.step-2.article.title': "Vielen Dank für dein Interesse"

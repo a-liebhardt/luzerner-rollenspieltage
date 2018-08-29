@@ -18,10 +18,9 @@ context:
                     group-wrapper:
                       group-wrapper-class: "col-m-12 form-group"
                       article:
-                        article-hide-header: true
-                        article-body: "<p>To register as Player please use this form:</p>"
-                        article-body-i18n: "registration.player.step-1.article.intro"
-                        article-hide-footer: true
+                        main:
+                          article-body: "<p>To register as Player please use this form:</p>"
+                          article-body-i18n: "registration.player.step-1.article.intro"
               -
                 group-row:
                   -

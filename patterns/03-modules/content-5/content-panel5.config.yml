@@ -12,21 +12,19 @@ context:
   #       icon-class: "icon-xs"
   article-config:
     article:
-      article-hide-small: true
-      article-title: "Get in touch"
-      article-title-i18n: "panel5.article.title"
-      article-title-tag: "h3"
-      article-body: "<p>Since we may not have answered all your questions on our website, we look forward to your questions and input via the contact form. We will contact you within 24 hours.</p>"
-      article-body-i18n: "panel5.article.body"
-      article-hide-footer: true
+      header:
+        article-title: "Get in touch"
+        article-title-i18n: "panel5.article.title"
+        article-title-tag: "h3"
+      main:
+        article-body: "<p>Since we may not have answered all your questions on our website, we look forward to your questions and input via the contact form. We will contact you within 24 hours.</p>"
+        article-body-i18n: "panel5.article.body"
   moreinfos-config:
     article:
-      article-hide-small: true
-      article-title: "For more informations visit us:"
-      article-title-i18n: "panel5.moreinfos.title"
-      article-title-tag: "h5"
-      article-hide-body: true
-      article-hide-footer: true
+      header:
+        article-title: "For more informations visit us:"
+        article-title-i18n: "panel5.moreinfos.title"
+        article-title-tag: "h5"
       article-class: "more-infos"
   icon-discord:
     icon:

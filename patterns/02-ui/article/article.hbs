@@ -1,19 +1,19 @@
 {{#with article}}
 <article role="article" {{#if article-class}}class="{{article-class}}"{{/if}}>
-  {{#if article-link}}<a href="{{article-link}}">{{/if}}
-  {{^article-hide-header}}
+  {{#with link}}<a href="{{article-link}}" {{#if article-link-target}}target="{{article-link-target}}"{{/if}}>{{/with}}
+  {{#with header}}
   <header>
-    {{^article-hide-small}}
-      <small>
-        {{#if article-date}}
-          <!-- date -->
-          <time class="article-date" datetime="{{article-date}}">
-            <span class="day">{{article-date-day}}</span>
-            <span class="month">{{article-date-month}}</span>
-          </time>
-        {{/if}}
-      </small>
-    {{/article-hide-small}}
+    {{#with article-small}}
+    <small>
+      {{#if article-date}}
+        <!-- date -->
+        <time class="article-date" datetime="{{article-date}}">
+          <span class="day">{{article-date-day}}</span>
+          <span class="month">{{article-date-month}}</span>
+        </time>
+      {{/if}}
+    </small>
+    {{/with}}
     {{#if article-title}}
       <{{#if article-title-tag}}{{article-title-tag}}{{else}}h2{{/if}} {{#if article-title-i18n}}i18n="{{article-title-i18n}}"{{/if}}>{{{article-title}}}</{{#if article-title-tag}}{{article-title-tag}}{{else}}h2{{/if}}>
     {{/if}}
@@ -21,11 +21,11 @@
       <p {{#if article-subtitle-i18n}}i18n="{{article-subtitle-i18n}}"{{/if}}>{{{article-subtitle}}}</p>
     {{/if}}
   </header>
-  {{/article-hide-header}}
-  {{#if article-body}}
+  {{/with}}
+  {{#with main}}
   <main {{#if article-body-i18n}}i18n="{{article-body-i18n}}"{{/if}}>{{{article-body}}}</main>
-  {{/if}}
-  {{^article-hide-footer}}
+  {{/with}}
+  {{#with footer}}
   <footer>
       {{#if article-footer-label}}
         {{> label.label label-text=article-footer-label}}
@@ -34,7 +34,7 @@
         <details>{{{article-footer-details}}}</details>
       {{/if}}
   </footer>
-  {{/article-hide-footer}}
-  {{#if article-link}}</a>{{/if}}
+  {{/with}}
+  {{#with link}}</a>{{/with}}
 </article>
 {{/with}}

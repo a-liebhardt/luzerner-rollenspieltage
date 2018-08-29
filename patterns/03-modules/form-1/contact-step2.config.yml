@@ -3,12 +3,12 @@ context:
   step-2:
     panel-class: "step-2 contact-step"
     article:
-      article-hide-small: true
-      article-title: "Message recieved"
-      article-title-i18n: "contact.step-2.article.title"
-      article-title-tag: "h3"
-      article-subtitle: "Thank you very much. We looking forward to answer your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
-      article-subtitle-i18n: "contact.step-2.article.subtitle"
+      header:
+        article-title: "Message recieved"
+        article-title-i18n: "contact.step-2.article.title"
+        article-title-tag: "h3"
+        article-subtitle: "Thank you very much. We looking forward to answer your message.<br /><br />Best<br />Your Luzerner Rollenspieltage Team"
+        article-subtitle-i18n: "contact.step-2.article.subtitle"
 i18n:
   'de-DE':
     'contact.step-2.article.title': "Nachricht erhalten"
