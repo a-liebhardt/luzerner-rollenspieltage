@@ -98,7 +98,7 @@ $stage-maxWidth: $page-maxWidth + $grid-gap + $grid-gap;
 
       @for $j from 1 through 12 {
         .col-#{$mq}-#{$j} {
-          max-width: calc(100% / 12 * #{$j});
+          max-width: 100% / 12 * $j;
         }
       }
     }
