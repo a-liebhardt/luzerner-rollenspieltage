@@ -11,10 +11,10 @@ context:
           fieldset:
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       input:
                         label:
                           label-for: "keep-me-posted-name"
@@ -30,10 +30,10 @@ context:
                         input-role: "input"
                         input-autocomplete: "name"
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       input:
                         label:
                           label-for: "keep-me-posted-email"
@@ -53,9 +53,9 @@ context:
             fieldset-class: "hidden"
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
+                    form-wrapper:
                       input:
                         input-name: "KeepMePosted[language]"
                         input-class: "hidden"
@@ -64,10 +64,10 @@ context:
           fieldset:
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12 align-center"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12 align-center"
                       button:
                         label:
                           label-text: "Tell me when registration opens"

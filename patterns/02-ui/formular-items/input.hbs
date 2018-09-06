@@ -1,5 +1,5 @@
 {{#with input}}
-<section class="form-group {{input-class}}" role="{{#if input-role}}{{input-role}}{{^}}input{{/if}}">
+<section class="form-group input {{input-class}}" role="{{#if input-role}}{{input-role}}{{^}}input{{/if}}">
   <input type="{{#if input-type}}{{input-type}}{{^}}text{{/if}}" {{#if input-id}}id="{{input-id}}"{{/if}} {{#if input-name}}name="{{input-name}}"{{/if}} {{#if input-value}}value="{{input-value}}"{{/if}} {{#if input-placeholder}}placeholder="{{input-placeholder}}"{{/if}} {{#if input-info}}data-info="{{input-info}}"{{/if}} {{#if input-error}}data-error="{{input-error}}"{{/if}} {{#if input-readonly}}readonly{{/if}} {{#if input-disabled}}disabled{{/if}} {{#if input-required}}required{{/if}} {{#if input-pattern}}pattern="{{input-pattern}}"{{/if}} {{#if input-autocomplete}}autocomplete="{{input-autocomplete}}"{{/if}} {{#if input-i18n}}i18n="{{input-i18n}}"{{/if}} {{{input-attr}}}>
   {{> @label}}
   <aside class="messages"></aside>

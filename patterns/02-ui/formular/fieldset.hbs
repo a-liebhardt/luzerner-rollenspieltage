@@ -1,8 +1,8 @@
 {{#with fieldset}}
-<fieldset {{#if fieldset-name}}name="{{fieldset-name}}"{{/if}} {{#if fieldset-class}}class="{{fieldset-class}}"{{/if}} {{{fieldset-attr}}}>
+<fieldset {{#if fieldset-name}}name="{{fieldset-name}}"{{/if}} class="fieldset {{fieldset-class}}" {{{fieldset-attr}}}>
   {{#if fieldset-legend}}<legend {{#if fieldset-legend-i18n}}i18n="{{fieldset-legend-i18n}}"{{/if}}>{{fieldset-legend}}</legend>{{/if}}
   {{#each fieldset-items}}
-    {{> @group-row}}
+    {{> @form-row}}
   {{/each}}
 </fieldset>
 {{/with}}

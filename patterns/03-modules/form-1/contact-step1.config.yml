@@ -11,19 +11,19 @@ context:
           fieldset:
             fieldset-items:
               # -
-              #   group-row:
+              #   form-row:
               #     -
-              #       group-wrapper:
-              #         group-wrapper-class: "col-m-12"
+              #       form-wrapper:
+              #         form-wrapper-class: "col-m-12"
               #         article:
               #           main:
               #             article-body: "<p>To send as a message please enter your name and email. Those fields are mandatory.</p>"
               #             article-body-i18n: "contact.step-1.article.body"
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       input:
                         label:
                           label-for: "contact-name"
@@ -39,10 +39,10 @@ context:
                         input-role: "input"
                         input-autocomplete: "name"
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       input:
                         label:
                           label-for: "contact-email"
@@ -58,10 +58,10 @@ context:
                         input-role: "input"
                         input-autocomplete: "email"
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       textarea:
                         label:
                           label-for: "contact-message"
@@ -79,9 +79,9 @@ context:
             fieldset-class: "hidden"
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
+                    form-wrapper:
                       input:
                         input-name: "ContactUs[language]"
                         input-class: "hidden"
@@ -90,10 +90,10 @@ context:
           fieldset:
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12 align-center"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12 align-center"
                       button:
                         label:
                           label-text: "Send us your message"

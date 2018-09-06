@@ -1,5 +1,5 @@
-{{#with group-wrapper}}
-<div {{#if group-wrapper-class}}class="{{group-wrapper-class}}"{{/if}}>
+{{#with form-wrapper}}
+<div class="wrapper {{form-wrapper-class}}">
   {{> @article}}
   {{> @label}}
   {{> @input}}
@@ -9,6 +9,6 @@
   {{> @button}}
   {{> @button-link}}
   {{> @fieldset}}
-  {{> @group-wrapper}}
+  {{> @form-wrapper}}
 </div>
 {{/with}}

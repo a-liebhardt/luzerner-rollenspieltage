@@ -12,10 +12,10 @@ context:
           fieldset-legend: "Input Group 1"
           fieldset-items:
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-input-1"
@@ -28,8 +28,8 @@ context:
                       input-class: "example-input-class"
                       input-autocomplete: "input"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-input-2"
@@ -42,10 +42,10 @@ context:
                       input-class: "example-input-class"
                       input-autocomplete: "email"
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-input-3"
@@ -58,8 +58,8 @@ context:
                       input-class: "example-input-class"
                       input-autocomplete: "password"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-input-4"
@@ -78,10 +78,10 @@ context:
           fieldset-legend: "Select Group 2"
           fieldset-items:
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     select:
                       label:
                         label-for: "demo-select-1"
@@ -103,8 +103,8 @@ context:
                           select-value: "3"
                           select-label: "Opt 3"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     select:
                       label:
                         label-for: "demo-select-2"
@@ -149,10 +149,10 @@ context:
           fieldset-legend: "Checkbox Group 3"
           fieldset-items:
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-checkbox-1"
@@ -163,8 +163,8 @@ context:
                       input-name: "example-form[checkbox-1]"
                       input-class: "example-checkbox-class"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-checkbox-2"
@@ -181,10 +181,10 @@ context:
           fieldset-legend: "Radiobox Group 4"
           fieldset-items:
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-radiobox-1"
@@ -196,8 +196,8 @@ context:
                       input-class: "example-radiobox-class"
                       input-value: "radio-1 set"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-6"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-6"
                     input:
                       label:
                         label-for: "demo-radiobox-2"
@@ -215,10 +215,10 @@ context:
           fieldset-legend: "Textarea Group 5"
           fieldset-items:
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-12"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-12"
                     textarea:
                       label:
                         label-for: "demo-textarea-1"
@@ -231,10 +231,10 @@ context:
         fieldset:
           fieldset-items:
             -
-              group-row:
+              form-row:
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-4"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-4"
                     button-link:
                       link:
                         label:
@@ -242,16 +242,16 @@ context:
                         link-class: "button-link back-link"
                         link-href: "#"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-4 align-center"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-4 align-center"
                     button:
                       label:
                         label-text: "Reset form"
                       button-class: "example-button-class"
                       button-type: "reset"
                 -
-                  group-wrapper:
-                    group-wrapper-class: "col-m-4 align-right"
+                  form-wrapper:
+                    form-wrapper-class: "col-m-4 align-right"
                     button:
                       label:
                         label-text: "Submit form"

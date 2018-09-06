@@ -13,19 +13,19 @@ context:
             fieldset-legend-i18n: "registration.player.step-1.fieldset"
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12 form-group"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12 form-group"
                       article:
                         main:
                           article-body: "<p>To register as Player please use this form:</p>"
                           article-body-i18n: "registration.player.step-1.article.intro"
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       input:
                         label:
                           label-for: "player-name"
@@ -41,10 +41,10 @@ context:
                         input-role: "input"
                         input-autocomplete: "name"
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12"
                       input:
                         label:
                           label-for: "player-email"
@@ -64,9 +64,9 @@ context:
             fieldset-class: "hidden"
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
+                    form-wrapper:
                       input:
                         input-name: "Player[language]"
                         input-class: "hidden"
@@ -75,10 +75,10 @@ context:
           fieldset:
             fieldset-items:
               -
-                group-row:
+                form-row:
                   -
-                    group-wrapper:
-                      group-wrapper-class: "col-m-12 align-center"
+                    form-wrapper:
+                      form-wrapper-class: "col-m-12 align-center"
                       button:
                         label:
                           label-text: "Register as Player"
