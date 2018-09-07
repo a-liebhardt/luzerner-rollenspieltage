@@ -21,6 +21,29 @@
   "engines": {
     "node": ">=4"
   },
+  "defaultStatus": "prototype",
+  "statuses": {
+    "prototype": {
+      "label": "Prototype",
+      "description": "Do not implement.",
+      "color": "#FF3333"
+    },
+    "wip": {
+        "label": "WiP",
+        "description": "Work in progress. Implement with caution.",
+        "color": "#FF9233"
+    },
+    "ready": {
+        "label": "Ready",
+        "description": "Ready to implement.",
+        "color": "#29CC29"
+    },
+    "published": {
+      "label": "Published",
+      "description": "Is published. Do not change!",
+      "color": "#FF00E9"
+    }
+  },
   "scripts": {
     "start": "npm-run-all clean --parallel imagemin svgsprite color i18n:dev webpack:dev fractal:start",
     "build": "npm-run-all clean --parallel imagemin svgsprite color i18n:build webpack:build --sequential fractal:build",

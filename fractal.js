@@ -10,29 +10,8 @@ fractal.set('project.version', pkg.version);
  */
 fractal.components.set('path', path.join(__dirname, 'patterns'));
 fractal.components.set('label', 'Patterns');
-fractal.components.set('default.status', 'prototype');
-fractal.components.set('statuses', {
-  prototype: {
-    label: 'Prototype',
-    description: 'Do not implement.',
-    color: '#FF3333'
-  },
-  wip: {
-      label: 'WiP',
-      description: 'Work in progress. Implement with caution.',
-      color: '#FF9233'
-  },
-  ready: {
-      label: 'Ready',
-      description: 'Ready to implement.',
-      color: '#29CC29'
-  },
-  published: {
-    label: 'Published',
-    description: 'Is published. Do not change!',
-    color: '#FF00E9'
-  }
-});
+fractal.components.set('default.status', pkg.defaultStatus);
+fractal.components.set('statuses', pkg.statuses);
 
 /*
  * Documentation pages.
@@ -277,7 +256,6 @@ const i18n = function (args, done) {
   const endOfLine = os.EOL;
   const fileYML = './patterns/**/*.config.yml';
   const fileJS = './public/translations.json';
-  // const fileJSBody = `// This file is auto generated. DO NOT CHANGE!${endOfLine}// Translation can be managed in every *.config.yaml${endOfLine}// Just add a 'i18n' node, choose your ISO key like 'en-EN' and define i18n [key]:[value] pairs${endOfLine}// And don't forget to add they defined key to the element you like to translated using i18n="[key]"${endOfLine}exports.init = (() => {${endOfLine}  window.i18n.setAll('###BODY###');${endOfLine}});${endOfLine}`;
   let i18nBody = {};
   let statuses = [];
   if (typeof args.status !== 'undefined') {
@@ -304,7 +282,6 @@ const i18n = function (args, done) {
       }
     });
     // console.log(i18nBody);
-    // htmlBody = fileJSBody.replace(/###BODY###/g, JSON.stringify(i18nBody));
     htmlBody = JSON.stringify(i18nBody);
     // Write file to dest
     fs.writeFile(path.join(__dirname, fileJS), htmlBody, {encoding:'utf8', mode:0o666, flag:'w'}, (err) => {
