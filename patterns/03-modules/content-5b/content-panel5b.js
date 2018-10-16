@@ -1,0 +1,34 @@
+exports.init = (() => {
+  const flipReset = () => {
+    document.querySelectorAll('.panel4 .flipper').forEach((flipper) => {
+      flipper.classList.remove('no-flip');
+      flipper.classList.remove('flip');
+    });
+  };
+
+  const flip = (e) => {
+    document.querySelectorAll('.panel4 .flipper').forEach((flipper) => {
+      flipper.classList.add('no-flip');
+      flipper.classList.remove('flip');
+    });
+    e.target.closest('.flipper').classList.add('flip');
+    e.target.closest('.flipper').classList.remove('no-flip');
+  };
+
+  const panel = document.querySelector('.panel4');
+  if (panel) {
+    const fronts = panel.querySelectorAll('.flip-front');
+    if (fronts) {
+      fronts.forEach((flipFront) => {
+        flipFront.addEventListener('click', flip);
+      });
+    }
+
+    const resets = panel.querySelectorAll('[flip-reset]');
+    if (resets) {
+      resets.forEach((reset) => {
+        reset.addEventListener('click', flipReset);
+      });
+    }
+  }
+});

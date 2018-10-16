@@ -15,6 +15,7 @@ import Translation from './02-ui/translation/translation';
 import Panel4 from './03-modules/content-4/content-panel4';
 import Panel4b from './03-modules/content-4b/content-panel4b';
 import Panel5 from './03-modules/content-5/content-panel5';
+import Panel5b from './03-modules/content-5b/content-panel5b';
 import Form1 from './03-modules/form-1/contact';
 import Form2 from './03-modules/form-2/keep-me-posted';
 import Form3 from './03-modules/form-3/gamemaster';
@@ -62,6 +63,7 @@ ready(() => {
   Panel4.init();
   Panel4b.init();
   Panel5.init();
+  Panel5b.init();
   Form1.init();
   Form2.init();
   Form3.init();

@@ -215,6 +215,8 @@ exports.init = (() => {
       resetDropdown(selector);
     });
 
+    if (!games.GameList) return;
+
     // console.log(games);
     games.GameList.forEach((game) => {
       // console.log(game);
