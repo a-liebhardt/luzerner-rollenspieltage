@@ -82,7 +82,7 @@ module.exports = () => {
         allChunks: true,
       }),
       new CopyWebpackPlugin([ // Copy to build
-        { from: 'patterns/static_www/**/*', to: '../', flatten: true },
+        { from: 'static_files/www/**/*', to: '../', flatten: true },
         { from: 'patterns/vendor/*', to: '../vendor/', flatten: true },
         { from: 'patterns/**/*.json', to: '../rest/', flatten: true },
         { from: 'private_docker/src/**/*', to: '../', flatten: true }, // Special for this project
@@ -96,7 +96,7 @@ module.exports = () => {
           from: '**/*',
           to: path.join(__dirname, '/docker'),
           flatten: false,
-          context: path.join(__dirname, '/patterns/static_docker'),
+          context: path.join(__dirname, '/static_files/docker'),
           transform (content, path) {
             content = content.toString();
             secretsConf.forEach((obj) => {

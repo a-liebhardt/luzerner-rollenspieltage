@@ -49,10 +49,10 @@ Last create a `secrets.json` on root `./`. Then add key/value couples for develo
 
 It will replace critical variables on build automatically. Latest variables in use are:
 - `{GOOGLE_MAP_APIKEY}` /patterns/02-ui/map/map
-- `{PHP_MAILER_HOST}` /patterns/static_docker/src/form
-- `{PHP_MAILER_USER}` /patterns/static_docker/src/form
-- `{PHP_MAILER_PASSWORD}` /patterns/static_docker/src/form
-- `{PHP_MAILER_PASSWORD}` /patterns/static_docker/src/form
+- `{PHP_MAILER_HOST}` /static_files/docker/src/form
+- `{PHP_MAILER_USER}` /static_files/docker/src/form
+- `{PHP_MAILER_PASSWORD}` /static_files/docker/src/form
+- `{PHP_MAILER_PASSWORD}` /static_files/docker/src/form
 - `action="http://localhost:3000/rest/form.json"` /patterns/03-modules/form-1,-2,-3
 - `method="get"` /patterns/03-modules/form-1,-2,-3
 
