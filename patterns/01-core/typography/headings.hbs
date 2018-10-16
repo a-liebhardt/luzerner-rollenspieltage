@@ -1,19 +1,32 @@
-<p style="color:magenta;">Magenta border show box sizing only. It isn't part of any styling.</p>
-<div style="border:1px solid magenta">
+<section class="for-demonstration-only">
   <h1>Lorem ipsum - H1 heading</h1>
-</div>
-<div style="border-right:1px solid magenta; border-left:1px solid magenta; border-bottom:1px solid magenta;">
+</section>
+<section class="for-demonstration-only">
   <h2>Lorem ipsum - H2 heading</h2>
-</div>
-<div style="border-right:1px solid magenta; border-left:1px solid magenta; border-bottom:1px solid magenta;">
+</section>
+<section class="for-demonstration-only">
   <h3>Lorem ipsum - H3 heading</h3>
-</div>
-<div style="border-right:1px solid magenta; border-left:1px solid magenta; border-bottom:1px solid magenta;">
+</section>
+<section class="for-demonstration-only">
   <h4>Lorem ipsum - H4 heading</h4>
-</div>
-<div style="border-right:1px solid magenta; border-left:1px solid magenta; border-bottom:1px solid magenta;">
+</section>
+<section class="for-demonstration-only">
   <h5>Lorem ipsum - H5 heading</h5>
-</div>
-<div style="border-right:1px solid magenta; border-left:1px solid magenta; border-bottom:1px solid magenta;">
+</section>
+<section class="for-demonstration-only">
   <h6>Lorem ipsum - H6 heading</h6>
-</div>
+</section>
+<style>
+  /* Local styles, not for production */
+  section.for-demonstration-only {
+    border-top: 1px solid magenta;
+  }
+
+  section.for-demonstration-only>* {
+    background: white;
+  }
+
+  body {
+    background: rgba(255, 0, 255, 0.2);
+  }
+</style>

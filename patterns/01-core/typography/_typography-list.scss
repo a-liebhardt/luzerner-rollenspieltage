@@ -3,12 +3,14 @@ ol {
   list-style-position: outside;
   margin-left: 0;
   padding-left: 1.6em;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  font-weight: $font--weight-light;
 
   li {
-    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: $font--family;
+    font-weight: $font--weight-regular;
+    margin: 0 0 1em;
+    text-rendering: auto;
   }
 
   ul,
